@@ -1,0 +1,202 @@
+'use client';
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { 
+  Sparkles, 
+  ShieldCheck, 
+  Zap, 
+  Clock, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  MessageSquare, 
+  ArrowUpRight 
+} from 'lucide-react';
+import { siteConfig } from '@/config/site.config';
+import { SECTORS } from '@/config/demos.config';
+import { generateWhatsAppUrl } from '@/lib/utils';
+import { LegalModal } from './LegalModal';
+
+export const Footer: React.FC = () => {
+  const [legalModalType, setLegalModalType] = useState<'kvkk' | 'terms' | 'privacy' | null>(null);
+
+  return (
+    <footer className="bg-[#080B12] border-t border-card-border relative overflow-hidden pt-16 pb-12">
+      {/* Background glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-48 bg-brand-500/5 blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Top Guarantee Banner */}
+        <div className="bg-[#0D111A] rounded-2xl p-6 sm:p-8 mb-16 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div className="flex items-center gap-4">
+            <ShieldCheck className="w-8 h-8 text-emerald-400 shrink-0" />
+            <div>
+              <h4 className="text-lg font-bold text-white font-display">
+                3 Yıl Domain + SSL + Hosting Dahil
+              </h4>
+              <p className="text-sm text-slate-400 mt-1 max-w-xl">
+                Tüm paketlerimizde ilk 3 yıl sıfır yenileme masrafı: Vercel Global Edge CDN barındırması ve kurumsal alan adınız fiyata eksiksiz dahildir.
+              </p>
+            </div>
+          </div>
+          <a
+            href={generateWhatsAppUrl({})}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-all shadow-lg shadow-blue-600/30 shrink-0 flex items-center gap-2"
+          >
+            <span>Hemen Bilgi Alın</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
+        </div>
+
+        {/* Links Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+          {/* Brand Info */}
+          <div className="lg:col-span-2 space-y-4">
+            <Link href="/" className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center text-white">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <span className="text-2xl font-black text-white font-display">
+                Medi<span className="text-brand-400">Web</span>
+              </span>
+            </Link>
+            <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
+              Sektörünüze özel tasarlanmış, 3–5 günde anahtar teslim yayına alınan yeni nesil ürünleştirilmiş web ajansı vitrin platformu.
+            </p>
+            <div className="flex flex-col gap-2 pt-2 text-xs text-slate-300">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-brand-400 shrink-0" />
+                <span>{siteConfig.address}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-brand-400 shrink-0" />
+                <a href={`mailto:${siteConfig.email}`} className="hover:text-white transition-colors">{siteConfig.email}</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-brand-400 shrink-0" />
+                <span>{siteConfig.phoneDisplay}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Sektörel Tasarımlar */}
+          <div>
+            <h5 className="text-sm font-bold text-white uppercase tracking-wider mb-4 font-display">
+              Sektör Tasarımları
+            </h5>
+            <ul className="space-y-2 text-sm text-slate-400">
+              {SECTORS.filter(s => s.id !== 'all').map(sector => (
+                <li key={sector.id}>
+                  <Link 
+                    href={`/tasarimlar?sector=${sector.id}`}
+                    className="hover:text-white transition-colors flex items-center justify-between group"
+                  >
+                    <span>{sector.name}</span>
+                    <span className="text-xs text-slate-600 group-hover:text-brand-400 font-mono">3 Demo</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Paketler & Hizmetler */}
+          <div>
+            <h5 className="text-sm font-bold text-white uppercase tracking-wider mb-4 font-display">
+              Paketler & Fiyatlar
+            </h5>
+            <ul className="space-y-2 text-sm text-slate-400">
+              <li>
+                <Link href="/#paketler" className="hover:text-white transition-colors">
+                  Başlangıç (₺16.900)
+                </Link>
+              </li>
+              <li>
+                <Link href="/#paketler" className="hover:text-white transition-colors font-semibold text-brand-300">
+                  Profesyonel (₺29.900)
+                </Link>
+              </li>
+              <li>
+                <Link href="/#paketler" className="hover:text-white transition-colors">
+                  Kurumsal (₺59.900)
+                </Link>
+              </li>
+              <li>
+                <Link href="/#vergi-avantaji" className="hover:text-white transition-colors">
+                  Vergi İndirimi Simülasyonu
+                </Link>
+              </li>
+              <li>
+                <Link href="/#ek-hizmetler" className="hover:text-white transition-colors">
+                  AI Asistan & Ek Modüller
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Kurumsal & Yasal */}
+          <div>
+            <h5 className="text-sm font-bold text-white uppercase tracking-wider mb-4 font-display">
+              Kurumsal & Yasal
+            </h5>
+            <ul className="space-y-2 text-sm text-slate-400">
+              <li>
+                <Link href="/#nasil-calisir" className="hover:text-white transition-colors">
+                  Nasıl Çalışır? (4 Adım)
+                </Link>
+              </li>
+              <li>
+                <Link href="/#neden-biz" className="hover:text-white transition-colors">
+                  Geleneksel Ajans vs. Biz
+                </Link>
+              </li>
+              <li>
+                <button 
+                  onClick={() => setLegalModalType('kvkk')}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  KVKK Aydınlatma Metni
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => setLegalModalType('terms')}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Hizmet Sözleşmesi
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => setLegalModalType('privacy')}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Gizlilik & Çerez Politikası
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <p>© {new Date().getFullYear()} MediWeb Dijital Çözümler A.Ş. Tüm hakları saklıdır.</p>
+          <div className="flex items-center gap-6">
+            <span className="flex items-center gap-1.5 text-slate-400">
+              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+              3 Yıl Kesintisiz Barındırma & Hız Garantisi
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <LegalModal 
+        isOpen={legalModalType !== null} 
+        onClose={() => setLegalModalType(null)} 
+        type={legalModalType || 'kvkk'} 
+      />
+    </footer>
+  );
+};

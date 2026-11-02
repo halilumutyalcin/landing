@@ -1,0 +1,60 @@
+# MediWeb - Sektörünüze Özel Kurumsal Web Mimarisi
+
+> MediWeb, Türkiye'deki avukatlar, sağlık klinikleri, OSGB firmaları, mali müşavirler, gayrimenkul ofisleri ve B2B KOBİ'ler için 3–5 iş gününde anahtar teslim, yüksek performanslı web siteleri üreten modern bir dijital web mimarisi ajansıdır.
+
+## Temel Değer Önerisi
+- **Teslim Süresi**: 3–5 iş günü (Standartlaştırılmış mimari süreç)
+- **Barındırma**: 3 Yıl Domain (.com / .com.tr) + SSL + Vercel Global Edge CDN Dahil (0 TL Masraf)
+- **Altyapı**: WordPress kullanılmaz. Next.js 14, React ve Tailwind CSS ile özel yazılım standardında, 0.3 saniyede açılan ve hacklenmeyen altyapı.
+- **Dönüşüm Odaklı**: Ziyaretçiyi doğrudan WhatsApp ve telefon aramasına yönlendiren B2B satış mimarisi.
+- **Şeffaf Fiyat**: Gizli veya sürpriz faturalandırma yoktur. Fiyatlar tek seferliktir.
+
+## Paketler ve Fiyatlandırma
+1. **Başlangıç Paketi (17.500 ₺ + KDV)**
+   - Kapsam: Tek Sayfa (One-Page) veya 5 Sayfaya kadar temel yapı.
+   - Ödeme Planı: %100 Peşin
+   - Teslimat: 3–5 İş Günü
+   - 3 Yıl Domain ve SSL Sertifikalı Hosting Dahil.
+   - Sabit WhatsApp butonu, iletişim formu, Google Analytics, 2 adet kurumsal e-posta, 1 tur revizyon, 15 gün hata garantisi.
+
+2. **Profesyonel Paketi (32.500 ₺ + KDV) - En Çok Tercih Edilen**
+   - Kapsam: 10 Sayfaya kadar kurumsal site mimarisi (Anasayfa, Hakkımızda, Hizmetler, Ekip, Blog, SSS, İletişim vb.).
+   - Ödeme Planı: %50 Başlangıçta + %50 Teslimde
+   - Teslimat: 5–7 İş Günü
+   - 3 Yıl Domain ve SSL Sertifikalı Hosting Dahil.
+   - Google Haritalar (İşletme Profili) kaydı ve optimizasyonu, ilk 5-10 gerçek müşteri yorum stratejisi, Search Console, Schema JSON-LD, canlı destek altyapısı, 5 kurumsal e-posta, 2 tur revizyon, 30 gün garanti + 1 ay bakım dahil.
+
+3. **Kurumsal Paketi (59.900 ₺ + KDV)**
+   - Kapsam: 20 Sayfaya kadar zengin kurumsal mimari + Türkçe ve İngilizce 2 dil dahil.
+   - Ödeme Planı: %40 Başlangıçta + %30 Tasarım Onayında + %30 Yayında
+   - Teslimat: 7–10 İş Günü
+   - 3 Yıl Domain ve SSL Sertifikalı Hosting Dahil.
+   - 5 adet SEO uyumlu blog makalesi, anahtar teslim metin yazarlığı, Google Haritalar tam optimizasyon + masaüstü QR stant tasarımı, departman yönlendirmeli WhatsApp, 10 kurumsal e-posta, 3 tur revizyon, 60 gün garanti + 3 ay bakım dahil.
+
+## Ek Modüller ve Entegrasyonlar
+- AI Akıllı Asistan: 7/24 ziyaretçi karşılayan ve teklif toplayan yapay zeka chatbot.
+- WhatsApp Business: Departman yönlendirmeli kurumsal WhatsApp hattı.
+- SMS Bildirim: Form doldurulduğunda anlık SMS onayı ve randevu bildirimi.
+- Ek Yabancı Dil: Dil başına ~7.500 ₺ (Almanca, Arapça, Rusça, Fransızca).
+- Headless CMS / Panel: Tek seferlik ~9.900 ₺ (İçerikleri müşterinin kendisinin yönetebileceği modern bulut panel).
+- Aylık İleri SEO & Harita Yönetimi: Aylık 6.500 ₺'den başlayan abonelik.
+- Tam Kaynak Kod Teslimi: Paket bedeline ek +%75 (Kendi sunucusuna taşımak isteyenler için).
+- Profesyonel Metin Yazarlığı: Sayfa başı ~1.250 ₺.
+- Google Yorum & İtibar Kurgusu: Kurulum paketi ~3.500 ₺.
+- Aylık Rutin Bakım & Teknik Güvence: Aylık 2.500 ₺.
+
+## Desteklenen Sektörel Vitrin Mimarileri
+1. Hukuk & Danışmanlık (Ağırbaşlı lacivert tonlar, dava alanları, mevzuat blogu, acil vekalet/danışma hattı)
+2. Sağlık & Klinik (Steril beyaz/turkuaz, tedavi sayfaları, hekim kadrosu, WhatsApp randevu köprüsü)
+3. İş Sağlığı & Güvenliği / OSGB (Endüstriyel güvenilirlik, mevzuat uyum matrisi, teklif talep formu)
+4. Mali Müşavirlik & Denetim (Finansal güven, vergi takvimi, mevzuat bülteni, resmi belge sorgulama)
+5. Gayrimenkul & Yatırım (Görsel ağırlıklı portföy, bölge analizleri, değerleme hesaplayıcı, doğrudan arama)
+
+## Şeffaf İlkeler
+- Yapıyoruz: Müşteriyi telefon ve WhatsApp'a yönlendiren kurumsal ciddiyette vitrinler. 3 yıl boyunca sunucu faturasız anahtar teslim altyapı.
+- Yapmıyoruz: WordPress eklenti çöplüğü ve hacklenme riskleri sunmuyoruz. Anlaşılan net fiyat dışında gizli ek faturalar çıkartmıyoruz.
+
+## İletişim
+- Web: https://mediweb.com.tr
+- E-posta: bilgi@mediweb.com.tr
+- WhatsApp: +90 555 000 00 00

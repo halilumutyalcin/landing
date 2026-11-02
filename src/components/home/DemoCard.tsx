@@ -1,0 +1,135 @@
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { 
+  Eye, 
+  ArrowRight, 
+  Check, 
+  MessageSquare
+} from 'lucide-react';
+import { DemoItem } from '@/config/demos.config';
+import { generateWhatsAppUrl } from '@/lib/utils';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
+
+interface DemoCardProps {
+  demo: DemoItem;
+  onOpenPreview: (demo: DemoItem) => void;
+}
+
+export const DemoCard: React.FC<DemoCardProps> = ({ demo, onOpenPreview }) => {
+  return (
+    <div className="group bg-[#101522] hover:bg-[#141B2D] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+      {/* Thumbnail Area */}
+      <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
+        <Image
+          src={demo.previewImage}
+          alt={demo.name}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+        />
+
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#101522] via-transparent to-transparent opacity-80" />
+
+        {/* Top Badges */}
+        <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+          <span className="px-2.5 py-1 rounded-lg text-xs font-bold bg-[#0B0F19]/80 backdrop-blur-md text-brand-300 shadow">
+            {demo.sectorName}
+          </span>
+          {demo.badge && (
+            <span className="px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-500/90 text-slate-950 shadow">
+              {demo.badge}
+            </span>
+          )}
+        </div>
+
+        {/* Hover Quick View Button */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 backdrop-blur-xs transition-opacity duration-300 gap-2 p-4">
+          <button
+            onClick={() => onOpenPreview(demo)}
+            className="px-4 py-2.5 rounded-xl bg-white text-slate-950 font-bold text-xs shadow-xl flex items-center gap-1.5 hover:bg-brand-50 hover:scale-105 transition-all"
+          >
+            <Eye className="w-4 h-4 text-brand-600" />
+            <span>Canlı Önizle</span>
+          </button>
+          <Link
+            href={`/tasarimlar/${demo.slug}`}
+            className="px-4 py-2.5 rounded-xl bg-brand-600 text-white font-bold text-xs shadow-xl flex items-center gap-1.5 hover:bg-brand-500 hover:scale-105 transition-all"
+          >
+            <span>Detaylar</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+
+      {/* Content Area */}
+      <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+        <div>
+          {/* Style & Sector Tag */}
+          <div className="flex items-center justify-between mb-1.5">
+            <span className="text-xs font-medium text-slate-400">
+              {demo.style}
+            </span>
+            <span className="text-[11px] text-emerald-400 font-medium">
+              Mobil Uyumlu
+            </span>
+          </div>
+
+          <Link href={`/tasarimlar/${demo.slug}`} className="group-hover:text-brand-400 transition-colors">
+            <h3 className="text-xl font-bold text-white font-display mb-2">
+              {demo.name}
+            </h3>
+          </Link>
+
+          <p className="text-xs sm:text-sm text-slate-400 line-clamp-2 mb-4 leading-relaxed">
+            {demo.shortDesc}
+          </p>
+
+          {/* Features bullet list */}
+          <div className="space-y-1.5 pt-3 border-t border-white/5 mb-5">
+            {demo.keyFeatures.slice(0, 3).map((feature, idx) => (
+              <div key={idx} className="flex items-center gap-2 text-xs text-slate-300">
+                <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span className="truncate">{feature}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Delivery & Pricing Cue & Actions */}
+        <div>
+          <div className="flex items-center justify-between text-xs text-slate-400 mb-4 pt-2 border-t border-white/5">
+            <span>Anahtar Teslim Kurulum</span>
+            <span className="text-white font-medium">17.500 ₺'den başlayan</span>
+          </div>
+
+          <div className="grid grid-cols-2 gap-2">
+            <Link
+              href={`/tasarimlar/${demo.slug}`}
+              className="w-full text-center py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 font-semibold text-xs transition-colors flex items-center justify-center gap-1"
+            >
+              <span>İncele</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+
+            <a
+              href={generateWhatsAppUrl({
+                designName: `${demo.name} (${demo.sectorName})`,
+                packageName: 'Profesyonel Paket (32.500 ₺)',
+              })}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full text-center py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 transition-all flex items-center justify-center gap-1.5"
+            >
+              <WhatsAppIcon className="w-3.5 h-3.5 fill-current shrink-0" />
+              <span>Seç & Başla</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
