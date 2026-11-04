@@ -33,10 +33,10 @@ export const AgencyManifestoSection: React.FC = () => {
           </h2>
         </div>
 
-        {/* 3 Asymmetric Pillars */}
+        {/* 3 Asymmetric Pillars - Clean, Solid Surfaces Without Artificial Glow */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* Pillar 1 */}
-          <div className="studio-card studio-card-hover p-8 rounded-2xl border border-white/[0.08] flex flex-col justify-between">
+          <div className="bg-[#0E121A] hover:bg-[#121724] p-8 rounded-2xl flex flex-col justify-between transition-colors">
             <div>
               <div className="font-mono text-xs text-indigo-400 font-bold mb-4 tracking-wider">
                 // 01. PRENSİP
@@ -44,7 +44,7 @@ export const AgencyManifestoSection: React.FC = () => {
               <h3 className="text-2xl font-bold text-white mb-3 font-display">
                 Hantal Temalar Değil, Saf React Mimarisi
               </h3>
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-300 leading-relaxed">
                 40 tane güvensiz eklentiyle şişirilmiş, her ay çöken WordPress sitelerine son. 
                 Next.js 14 SSG ve Vercel Edge ile <strong>0.3 saniyede anında açılan</strong>, 
                 eklenti açığı ve veritabanı riski barındırmayan statik kod üretiyoruz.
@@ -57,7 +57,7 @@ export const AgencyManifestoSection: React.FC = () => {
           </div>
 
           {/* Pillar 2 */}
-          <div className="studio-card studio-card-hover p-8 rounded-2xl border border-white/[0.08] flex flex-col justify-between">
+          <div className="bg-[#0E121A] hover:bg-[#121724] p-8 rounded-2xl flex flex-col justify-between transition-colors">
             <div>
               <div className="font-mono text-xs text-emerald-400 font-bold mb-4 tracking-wider">
                 // 02. PRENSİP
@@ -65,7 +65,7 @@ export const AgencyManifestoSection: React.FC = () => {
               <h3 className="text-2xl font-bold text-white mb-3 font-display">
                 Ürünleştirilmiş & Şeffaf Tek Fiyat
               </h3>
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-300 leading-relaxed">
                 Ucu açık ajans teklifleri ve sonradan çıkan "sunucu açılışı", "SSL masrafı" gibi gizli faturalar yok. 
                 <strong>3 sabit tek fiyatımız</strong> vardır ve ne ödeyeceğinizi ilk saniyede bilirsiniz.
               </p>
@@ -77,7 +77,7 @@ export const AgencyManifestoSection: React.FC = () => {
           </div>
 
           {/* Pillar 3 */}
-          <div className="studio-card studio-card-hover p-8 rounded-2xl border border-white/[0.08] flex flex-col justify-between">
+          <div className="bg-[#0E121A] hover:bg-[#121724] p-8 rounded-2xl flex flex-col justify-between transition-colors">
             <div>
               <div className="font-mono text-xs text-cyan-400 font-bold mb-4 tracking-wider">
                 // 03. PRENSİP
@@ -85,7 +85,7 @@ export const AgencyManifestoSection: React.FC = () => {
               <h3 className="text-2xl font-bold text-white mb-3 font-display">
                 3 Yıl Domain + SSL + Hosting Dahil
               </h3>
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-300 leading-relaxed">
                 Her yıl gelen yenileme faturalarıyla sizi yormuyoruz. 
                 Tüm paketlerimizde .com / .com.tr alan adı, SSL sertifikası ve küresel Edge barındırma 
                 <strong>3 yıl boyunca ücretsizdir</strong>.

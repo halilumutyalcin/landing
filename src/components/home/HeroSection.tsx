@@ -11,10 +11,6 @@ import {
 export const HeroSection: React.FC = () => {
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-[#090B10] border-b border-white/[0.08] relative overflow-hidden">
-      
-      {/* Subtle Ambient Glow */}
-      <div className="absolute top-1/3 left-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none -z-0" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Asymmetrical Layout with Clean, Empty Right Side as requested */}

@@ -22,20 +22,17 @@ export const Footer: React.FC = () => {
   const [legalModalType, setLegalModalType] = useState<'kvkk' | 'terms' | 'privacy' | null>(null);
 
   return (
-    <footer className="bg-[#080B12] border-t border-card-border relative overflow-hidden pt-16 pb-12">
-      {/* Background glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-48 bg-brand-500/5 blur-3xl pointer-events-none" />
-
+    <footer className="bg-[#080B12] border-t border-white/[0.08] relative overflow-hidden pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Top Guarantee Banner */}
-        <div className="bg-[#0D111A] rounded-2xl p-6 sm:p-8 mb-16 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        {/* Top Guarantee Banner - Clean, Crisp Surface Without Fuzzy Blur Banding */}
+        <div className="bg-[#0E121B] rounded-2xl p-6 sm:p-8 mb-16 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div className="flex items-center gap-4">
             <ShieldCheck className="w-8 h-8 text-emerald-400 shrink-0" />
             <div>
               <h4 className="text-lg font-bold text-white font-display">
                 3 Yıl Domain + SSL + Hosting Dahil
               </h4>
-              <p className="text-sm text-slate-400 mt-1 max-w-xl">
+              <p className="text-sm text-slate-300 mt-1 max-w-xl leading-relaxed">
                 Tüm paketlerimizde ilk 3 yıl sıfır yenileme masrafı: Vercel Global Edge CDN barındırması ve kurumsal alan adınız fiyata eksiksiz dahildir.
               </p>
             </div>
@@ -44,7 +41,7 @@ export const Footer: React.FC = () => {
             href={generateWhatsAppUrl({})}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-all shadow-lg shadow-blue-600/30 shrink-0 flex items-center gap-2"
+            className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-all shrink-0 flex items-center gap-2"
           >
             <span>Hemen Bilgi Alın</span>
             <ArrowUpRight className="w-4 h-4" />
