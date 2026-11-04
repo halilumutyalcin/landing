@@ -122,7 +122,7 @@ export const DemoCard: React.FC<DemoCardProps> = ({ demo, onOpenPreview }) => {
               })}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full text-center py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 transition-all flex items-center justify-center gap-1.5"
+              className="w-full text-center py-2.5 px-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs shadow-md shadow-emerald-700/20 transition-all flex items-center justify-center gap-1.5"
             >
               <WhatsAppIcon className="w-3.5 h-3.5 fill-current shrink-0" />
               <span>Seç & Başla</span>

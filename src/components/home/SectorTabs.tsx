@@ -52,8 +52,8 @@ export const SectorTabs: React.FC<SectorTabsProps> = ({
               <span
                 className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono font-bold ${
                   isActive
-                    ? 'bg-white/25 text-white'
-                    : 'bg-white/10 text-slate-400'
+                    ? 'bg-black/35 text-white'
+                    : 'bg-white/10 text-slate-200'
                 }`}
               >
                 {sector.count}
