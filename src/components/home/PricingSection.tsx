@@ -37,6 +37,11 @@ export const PricingSection: React.FC = () => {
   const [billingMode, setBillingMode] = useState<'onetime' | 'waas'>('onetime');
   const [showTaxDeduction, setShowTaxDeduction] = useState<boolean>(false);
   const [showFullMatrix, setShowFullMatrix] = useState<boolean>(false);
+  const [expandedPackages, setExpandedPackages] = useState<Record<string, boolean>>({});
+
+  const toggleExpand = (id: string) => {
+    setExpandedPackages((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
 
   // Group the 26 criteria into 5 logical categories
   const matrixCategories: CategoryGroup[] = [
@@ -335,14 +340,45 @@ export const PricingSection: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Feature Checklist */}
-                  <div className="space-y-2.5 mb-8">
-                    {pkg.features.map((feat, idx) => (
+                  {/* Feature Checklist - Progressive Disclosure for Optimal Scannability */}
+                  <div className="space-y-2.5 mb-6">
+                    {pkg.features.slice(0, 5).map((feat, idx) => (
                       <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-200">
                         <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </div>
                     ))}
+
+                    {/* Expandable Extra Features */}
+                    {expandedPackages[pkg.id] && (
+                      <div className="space-y-2.5 pt-1 animate-in fade-in duration-200">
+                        {pkg.features.slice(5).map((feat, idx) => (
+                          <div key={idx + 5} className="flex items-start gap-2.5 text-xs text-slate-300">
+                            <Check className="w-4 h-4 text-emerald-400/80 shrink-0 mt-0.5" />
+                            <span>{feat}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {pkg.features.length > 5 && (
+                      <button
+                        type="button"
+                        onClick={() => toggleExpand(pkg.id)}
+                        className="w-full mt-2 py-2 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] text-[11px] font-bold text-blue-400 hover:text-blue-300 flex items-center justify-center gap-1.5 transition-colors"
+                      >
+                        <span>
+                          {expandedPackages[pkg.id]
+                            ? 'Daha Az Göster'
+                            : `+ ${pkg.features.length - 5} Özelliği Daha Gör`}
+                        </span>
+                        {expandedPackages[pkg.id] ? (
+                          <ChevronUp className="w-3.5 h-3.5" />
+                        ) : (
+                          <ChevronDown className="w-3.5 h-3.5" />
+                        )}
+                      </button>
+                    )}
                   </div>
                 </div>
 

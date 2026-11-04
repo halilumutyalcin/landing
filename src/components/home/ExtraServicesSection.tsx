@@ -136,12 +136,25 @@ const SERVICE_GROUPS: ServiceGroup[] = [
 ];
 
 export const ExtraServicesSection: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = React.useState<string>('all');
+
+  const categories = [
+    { id: 'all', label: 'Tüm Modüller', count: 12 },
+    { id: '0', label: 'İletişim & Yapay Zeka', count: 3 },
+    { id: '1', label: 'Panel & Global Dil', count: 3 },
+    { id: '2', label: 'Büyüme, Lansman & SEO', count: 6 },
+  ];
+
+  const displayedGroups = selectedCategory === 'all'
+    ? SERVICE_GROUPS
+    : [SERVICE_GROUPS[parseInt(selectedCategory, 10)]];
+
   return (
-    <section id="ek-hizmetler" className="py-24 bg-[#090B10]">
+    <section id="ek-hizmetler" className="py-20 bg-[#090B10] border-b border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header - Editorial & Clean */}
-        <div className="max-w-3xl mb-16">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">
             İhtiyaca Göre Genişletilebilir Mimari
           </div>
@@ -152,62 +165,84 @@ export const ExtraServicesSection: React.FC = () => {
             Standart paketinizin üzerine işletmenizin büyümesine paralel olarak dilediğiniz yapay zeka, 
             çoklu dil, SMS veya yönetim paneli modüllerini bağımsız olarak ekletebilirsiniz.
           </p>
+
+          {/* Interactive Category Filter Tabs */}
+          <div className="mt-8 inline-flex items-center p-1 rounded-2xl bg-[#121622] max-w-full overflow-x-auto shadow-inner">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setSelectedCategory(cat.id)}
+                className={`px-4 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap flex items-center gap-1.5 ${
+                  selectedCategory === cat.id
+                    ? 'bg-blue-600 text-white shadow'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <span>{cat.label}</span>
+                <span className={`px-1.5 py-0.2 rounded text-[10px] font-mono ${
+                  selectedCategory === cat.id ? 'bg-white/20 text-white' : 'bg-black/30 text-slate-400'
+                }`}>
+                  {cat.count}
+                </span>
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* 3 Editorial Group Columns (No heavy card boxes, no box borders, pure icons) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12">
-          {SERVICE_GROUPS.map((group, gIdx) => (
-            <div key={gIdx} className="space-y-6">
-              
-              {/* Group Header */}
-              <div className="pb-4 border-b border-white/10">
-                <h3 className="text-lg font-bold text-white tracking-tight">
-                  {group.groupTitle}
-                </h3>
-                <p className="text-xs text-slate-400 mt-1 leading-relaxed">
-                  {group.groupDesc}
-                </p>
-              </div>
+        {/* Filtered Grid - Compact & Responsive */}
+        <div className="space-y-10">
+          {displayedGroups.map((group, gIdx) => (
+            <div key={gIdx} className="space-y-5 animate-in fade-in duration-200">
+              {selectedCategory === 'all' && (
+                <div className="pb-3 border-b border-white/10 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                  <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                    {group.groupTitle}
+                  </h3>
+                  <p className="text-xs text-slate-400">
+                    {group.groupDesc}
+                  </p>
+                </div>
+              )}
 
-              {/* Service Cards - Distinct Background, High Contrast, Zero Borders */}
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {group.services.map((service) => {
                   const Icon = service.icon;
 
                   return (
                     <div 
                       key={service.id}
-                      className="group p-5 rounded-2xl bg-[#0E1320] hover:bg-[#131A2B] shadow-lg transition-all duration-200"
+                      className="p-5 rounded-2xl bg-[#0E1320] hover:bg-[#131A2B] transition-all duration-200 flex flex-col justify-between"
                     >
-                      {/* Title + Naked Icon */}
-                      <div className="flex items-start gap-3 mb-2">
-                        <Icon className="w-5 h-5 text-blue-400 shrink-0 mt-0.5 group-hover:text-blue-300 transition-colors" />
-                        <div>
-                          <h4 className="text-sm font-bold text-white group-hover:text-blue-300 transition-colors leading-snug">
-                            {service.title}
-                          </h4>
-                          <span className="text-[11px] font-semibold text-emerald-400 block mt-0.5">
-                            {service.pricing}
-                          </span>
+                      <div>
+                        {/* Title + Icon */}
+                        <div className="flex items-start gap-3 mb-2.5">
+                          <Icon className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+                          <div>
+                            <h4 className="text-sm font-bold text-white leading-snug">
+                              {service.title}
+                            </h4>
+                            <span className="text-[11px] font-semibold text-emerald-400 block mt-0.5">
+                              {service.pricing}
+                            </span>
+                          </div>
                         </div>
-                      </div>
 
-                      {/* Description */}
-                      <p className="text-xs text-slate-300 leading-relaxed pl-8">
-                        {service.description}
-                      </p>
+                        {/* Description */}
+                        <p className="text-xs text-slate-300 leading-relaxed pl-8">
+                          {service.description}
+                        </p>
+                      </div>
                     </div>
                   );
                 })}
               </div>
-
             </div>
           ))}
         </div>
 
-        {/* Unified Section Footer Note */}
-        <div className="mt-12 text-center text-xs text-slate-400">
-          İhtiyacınız olan ek bir entegrasyon veya özel bir modül varsa teklif aşamasında paketinize esnekçe dahil edilebilir.
+        {/* Section Footer Note */}
+        <div className="mt-10 text-center text-xs text-slate-400">
+          İhtiyacınız olan ek bir entegrasyon varsa teklif aşamasında paketinize esnekçe dahil edilebilir.
         </div>
 
       </div>

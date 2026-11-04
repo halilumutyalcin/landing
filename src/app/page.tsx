@@ -6,10 +6,8 @@ import { HeroSection } from '@/components/home/HeroSection';
 import { DemoGrid } from '@/components/home/DemoGrid';
 import { PricingSection } from '@/components/home/PricingSection';
 import { HowItWorksSection } from '@/components/home/HowItWorksSection';
-import { ComparisonSection } from '@/components/home/ComparisonSection';
-import { BeforeAfterSection } from '@/components/home/BeforeAfterSection';
+import { WhyUsUnifiedSection } from '@/components/home/WhyUsUnifiedSection';
 import { ExtraServicesSection } from '@/components/home/ExtraServicesSection';
-import { PrinciplesSection } from '@/components/home/PrinciplesSection';
 import { FaqSection } from '@/components/home/FaqSection';
 import { ContactSection } from '@/components/home/ContactSection';
 import { Calculator } from 'lucide-react';
@@ -37,22 +35,16 @@ export default function HomePage() {
       {/* 4. ŞEFFAF PAKETLER & 3 NET FİYAT (Pazarlama Stratejisi & Vergi İndirimi Entegre) */}
       <PricingSection />
 
-      {/* 5. GELENEKSEL AJANS VS. MEDİWEB MODELİ */}
-      <ComparisonSection />
+      {/* 5. NEDEN BİZ? - 3'LÜ İNTERAKTİF BİRLEŞİK SEKME (Geleneksel Ajans vs. Biz / WP vs. Next.js / İlkeler) */}
+      <WhyUsUnifiedSection />
 
-      {/* 6. ŞEFFAF İLKELERİMİZ (Ne Yapıyoruz / Ne Yapmıyoruz - Yüksek Güven Bloğu) */}
-      <PrinciplesSection />
-
-      {/* 7. HANTAL WORDPRESS VS. HIZLI EDGE MİMARİSİ KIYASLAMASI */}
-      <BeforeAfterSection />
-
-      {/* 8. EK MODÜLLER & ENTEGRASYONLAR (Her Biri Renkli & Dikkat Çekici 8 Kart) */}
+      {/* 6. EK MODÜLLER & ENTEGRASYONLAR */}
       <ExtraServicesSection />
 
-      {/* 9. SIKÇA SORULAN SORULAR */}
+      {/* 7. SIKÇA SORULAN SORULAR */}
       <FaqSection />
 
-      {/* 10. İLETİŞİM & TEKLİF FORMU */}
+      {/* 8. İLETİŞİM & TEKLİF FORMU */}
       <ContactSection />
 
       {/* Sabit Hızlı Teklif Hesaplayıcı Butonu */}
