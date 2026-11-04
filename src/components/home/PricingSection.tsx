@@ -12,7 +12,12 @@ import {
   Zap, 
   PhoneCall,
   CheckCircle2,
-  Minus
+  Minus,
+  Sparkles,
+  Palette,
+  CreditCard,
+  MapPin,
+  Code2
 } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
 import { generateWhatsAppUrl } from '@/lib/utils';
@@ -29,6 +34,7 @@ interface CategoryGroup {
 }
 
 export const PricingSection: React.FC = () => {
+  const [billingMode, setBillingMode] = useState<'onetime' | 'waas'>('onetime');
   const [showTaxDeduction, setShowTaxDeduction] = useState<boolean>(false);
   const [showFullMatrix, setShowFullMatrix] = useState<boolean>(false);
 
@@ -132,36 +138,72 @@ export const PricingSection: React.FC = () => {
             İhtiyacınıza uygun sayfa sayısını seçin; <strong>3 yıl alan adı ve barındırma dahil</strong> yayına alalım.
           </p>
 
-          {/* Interactive B2B Tax Toggle */}
-          <div className="mt-6 inline-flex items-center p-1 rounded-xl bg-[#121622]">
-            <button
-              onClick={() => setShowTaxDeduction(false)}
-              className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
-                !showTaxDeduction
-                  ? 'bg-blue-600 text-white shadow'
-                  : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              Standart Fiyatlar
-            </button>
-            <button
-              onClick={() => setShowTaxDeduction(true)}
-              className={`px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all ${
-                showTaxDeduction
-                  ? 'bg-emerald-600 text-white shadow'
-                  : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              <Building2 className="w-3.5 h-3.5" />
-              <span>Şirketler İçin Net Maliyet (Vergi İndirimi Sonrası)</span>
-            </button>
-          </div>
+          {/* Billing Mode & B2B Tax Toggles */}
+          <div className="mt-8 flex flex-col items-center gap-3">
+            {/* Primary Toggle: One-Time vs WaaS Subscription */}
+            <div className="inline-flex items-center p-1 rounded-2xl bg-[#121622] shadow-inner max-w-full overflow-x-auto">
+              <button
+                onClick={() => setBillingMode('onetime')}
+                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${
+                  billingMode === 'onetime'
+                    ? 'bg-blue-600 text-white shadow-lg'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                Tek Seferlik Ödeme (3 Yıl Dahil)
+              </button>
+              <button
+                onClick={() => setBillingMode('waas')}
+                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all whitespace-nowrap ${
+                  billingMode === 'waas'
+                    ? 'bg-emerald-600 text-white shadow-lg'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <span>Aylık Abonelik (WaaS)</span>
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-black uppercase bg-emerald-400/20 text-emerald-300">
+                  12 Ay Taahhütlü
+                </span>
+              </button>
+            </div>
 
-          {showTaxDeduction && (
-            <p className="text-xs text-emerald-400 mt-2.5 animate-in fade-in duration-200">
-              %20 KDV mahsubu ve %25–%35 kurumlar/gelir vergisi gider indirimi düşüldükten sonra cebinizden çıkan net tutardır.
-            </p>
-          )}
+            {/* Secondary Toggle (Only relevant for One-time) */}
+            {billingMode === 'onetime' ? (
+              <div className="inline-flex items-center p-1 rounded-xl bg-[#0E121A] text-xs">
+                <button
+                  onClick={() => setShowTaxDeduction(false)}
+                  className={`px-3 py-1.5 rounded-lg font-semibold transition-all ${
+                    !showTaxDeduction
+                      ? 'bg-white/10 text-white'
+                      : 'text-slate-400 hover:text-slate-200'
+                  }`}
+                >
+                  Standart Fiyatlar
+                </button>
+                <button
+                  onClick={() => setShowTaxDeduction(true)}
+                  className={`px-3 py-1.5 rounded-lg font-semibold flex items-center gap-1.5 transition-all ${
+                    showTaxDeduction
+                      ? 'bg-emerald-600 text-white'
+                      : 'text-slate-400 hover:text-slate-200'
+                  }`}
+                >
+                  <Building2 className="w-3.5 h-3.5" />
+                  <span>Şirketler İçin Net Maliyet (Vergi İndirimi Sonrası)</span>
+                </button>
+              </div>
+            ) : (
+              <p className="text-xs text-emerald-400 animate-in fade-in duration-200">
+                Peşin bütçe ayırmadan, düşük kurulum bedeli ve aylık sabit taksitlerle hemen yayına girin.
+              </p>
+            )}
+
+            {billingMode === 'onetime' && showTaxDeduction && (
+              <p className="text-xs text-emerald-400 mt-1 animate-in fade-in duration-200">
+                %20 KDV mahsubu ve %25–%35 kurumlar/gelir vergisi gider indirimi düşüldükten sonra cebinizden çıkan net tutardır.
+              </p>
+            )}
+          </div>
         </div>
 
         {/* 3 Packages Cards - Pure Background Separation, Zero Borders */}
@@ -174,6 +216,22 @@ export const PricingSection: React.FC = () => {
               : pkg.id === 'pro' 
               ? '21.125 TL' 
               : '38.935 TL';
+
+            const displayPrice = billingMode === 'waas'
+              ? pkg.waasMonthlyFormatted || '1.450 ₺'
+              : showTaxDeduction 
+              ? netPrice 
+              : pkg.priceFormatted;
+
+            const priceSubText = billingMode === 'waas'
+              ? '/ ay'
+              : showTaxDeduction 
+              ? 'Net Gider' 
+              : '+ KDV (Tek Sefer)';
+
+            const whatsAppPackageName = billingMode === 'waas'
+              ? `${pkg.name} Paket (Abonelik / WaaS: ${pkg.waasSetupFormatted} Kurulum + ${pkg.waasMonthlyFormatted}/ay)`
+              : `${pkg.name} Paket (${pkg.priceFormatted})`;
 
             return (
               <div
@@ -214,29 +272,43 @@ export const PricingSection: React.FC = () => {
 
                     <div className="flex items-baseline gap-2">
                       <span className="text-3xl sm:text-4xl font-black text-white">
-                        {showTaxDeduction ? netPrice : pkg.priceFormatted}
+                        {displayPrice}
                       </span>
                       <span className="text-xs text-slate-400 font-medium">
-                        {showTaxDeduction ? 'Net Gider' : '+ KDV (Tek Sefer)'}
+                        {priceSubText}
                       </span>
                     </div>
 
-                    {/* Payment Terms Tag */}
+                    {/* Payment Terms / Setup Fee Tag */}
                     <div className="mt-2 flex items-center justify-between text-[11px] pt-2 border-t border-white/5">
-                      <span className="text-slate-400">Ödeme Planı:</span>
-                      <span className="font-semibold text-amber-400">{pkg.paymentTerms}</span>
+                      <span className="text-slate-400">
+                        {billingMode === 'waas' ? 'Kurulum Bedeli:' : 'Ödeme Planı:'}
+                      </span>
+                      <span className="font-semibold text-amber-400">
+                        {billingMode === 'waas' 
+                          ? `${pkg.waasSetupFormatted} (Tek Seferlik)` 
+                          : pkg.paymentTerms}
+                      </span>
                     </div>
 
-                    {showTaxDeduction && (
-                      <div className="text-[11px] text-emerald-400 mt-1 font-semibold">
-                        Gider gösterildiğinde %35-40 net tasarruf
+                    {billingMode === 'waas' ? (
+                      <div className="text-xs text-emerald-400 font-medium mt-2 flex items-center gap-1.5 pt-2 border-t border-white/5">
+                        <ShieldCheck className="w-4 h-4 shrink-0" />
+                        <span>12 Ay Taahhütlü · Barındırma, Bakım & Güncelleme Dahil</span>
                       </div>
+                    ) : (
+                      <>
+                        {showTaxDeduction && (
+                          <div className="text-[11px] text-emerald-400 mt-1 font-semibold">
+                            Gider gösterildiğinde %35-40 net tasarruf
+                          </div>
+                        )}
+                        <div className="text-xs text-emerald-400 font-medium mt-2 flex items-center gap-1.5 pt-2 border-t border-white/5">
+                          <ShieldCheck className="w-4 h-4 shrink-0" />
+                          <span>3 Yıl Domain + SSL + CDN Dahil (0 TL Masraf)</span>
+                        </div>
+                      </>
                     )}
-
-                    <div className="text-xs text-emerald-400 font-medium mt-2 flex items-center gap-1.5 pt-2 border-t border-white/5">
-                      <ShieldCheck className="w-4 h-4 shrink-0" />
-                      <span>3 Yıl Domain + SSL + CDN Dahil (0 TL Masraf)</span>
-                    </div>
                   </div>
 
                   {/* Target Audience */}
@@ -278,7 +350,7 @@ export const PricingSection: React.FC = () => {
                 <div>
                   <a
                     href={generateWhatsAppUrl({
-                      packageName: `${pkg.name} Paket (${pkg.priceFormatted})`,
+                      packageName: whatsAppPackageName,
                     })}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -289,12 +361,120 @@ export const PricingSection: React.FC = () => {
                     }`}
                   >
                     <WhatsAppIcon className="w-4 h-4 fill-current shrink-0" />
-                    <span>Bu Paketi Seç & WhatsApp ile Başla</span>
+                    <span>
+                      {billingMode === 'waas' ? 'Abonelikle Başla (WhatsApp)' : 'Bu Paketi Seç & WhatsApp ile Başla'}
+                    </span>
                   </a>
                 </div>
               </div>
             );
           })}
+        </div>
+
+        {/* 360° Dijital Lansman Paketi - High-Ticket All-in-One Solution for New & Rebranding Companies */}
+        <div className="mb-14 rounded-3xl bg-[#111728] p-7 sm:p-10 shadow-2xl relative overflow-hidden">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8 pb-8 border-b border-white/10">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-wider mb-3">
+                <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+                <span>Tek Elden Çözüm · Sıfırdan Zirveye</span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+                360° Dijital Lansman Paketi
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Yeni kurulan veya kurumsal kabuk değiştiren şirketlerin en büyük problemi; logoyu birine, web sitesini birine, haritayı birine yaptırıp zaman ve para kaybetmektir. 
+                Tüm kurumsal dijital varlığınızı tek elden, tek muhatapla ve 7 iş gününde anahtar teslim kuruyoruz.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-black/40 lg:min-w-[280px] shrink-0">
+              <div className="text-[11px] text-slate-400 line-through mb-1">
+                Ayrı Ayrı Alındığında: ~65.000 TL
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl sm:text-4xl font-black text-white font-mono">
+                  39.500 ₺
+                </span>
+                <span className="text-xs text-slate-400 font-medium">+ KDV (Tek Seferlik)</span>
+              </div>
+              <div className="text-[11px] text-emerald-400 mt-1 font-semibold flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
+                <span>3 Yıl Domain + Hosting Dahil (0 TL Masraf)</span>
+              </div>
+            </div>
+          </div>
+
+          {/* 4 Core Pillars Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <div className="p-4 rounded-xl bg-white/[0.03]">
+              <div className="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center mb-3">
+                <Palette className="w-4 h-4" />
+              </div>
+              <strong className="text-white text-xs font-bold block mb-1">
+                1. Vektörel Logo & Renk Paleti
+              </strong>
+              <p className="text-[11px] text-slate-300 leading-relaxed">
+                AI destekli ve vektörel (SVG, AI, PDF, PNG) olarak teslim edilen, her mecraya uyumlu özgün logo ve kurumsal renk rehberi.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-white/[0.03]">
+              <div className="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center mb-3">
+                <CreditCard className="w-4 h-4" />
+              </div>
+              <strong className="text-white text-xs font-bold block mb-1">
+                2. Kartvizit & Kurumsal Evraklar
+              </strong>
+              <p className="text-[11px] text-slate-300 leading-relaxed">
+                Matbaa baskısına hazır PDF formatında kartvizit, antetli kağıt, fatura şablonu ve kurumsal e-posta imza tasarımı.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-white/[0.03]">
+              <div className="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 flex items-center justify-center mb-3">
+                <MapPin className="w-4 h-4" />
+              </div>
+              <strong className="text-white text-xs font-bold block mb-1">
+                3. Google Harita (Maps) & Yerel SEO
+              </strong>
+              <p className="text-[11px] text-slate-300 leading-relaxed">
+                Google İşletme Profili doğrulaması, yerel arama anahtar kelimeleri optimizasyonu ve ilk müşteri yorum stratejisi.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-white/[0.03]">
+              <div className="w-8 h-8 rounded-lg bg-amber-600/20 text-amber-400 flex items-center justify-center mb-3">
+                <Zap className="w-4 h-4" />
+              </div>
+              <strong className="text-white text-xs font-bold block mb-1">
+                4. Ultra Hızlı Web Sitesi + 3 Yıl
+              </strong>
+              <p className="text-[11px] text-slate-300 leading-relaxed">
+                10 sayfaya kadar Profesyonel paket web sitesi, 0.3 sn açılış hızı ve 36 ay boyunca sıfır sunucu/domain masrafı.
+              </p>
+            </div>
+          </div>
+
+          {/* 360 Action CTA */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/10">
+            <div className="text-xs text-slate-300 flex items-center gap-2">
+              <Clock className="w-4 h-4 text-blue-400 shrink-0" />
+              <span>Teslimat Süresi: <strong>7 İş Günü</strong> · Ödeme: %50 Başlangıçta + %50 Yayında</span>
+            </div>
+
+            <a
+              href={generateWhatsAppUrl({
+                packageName: '360° Dijital Lansman Paketi (39.500 ₺)',
+              })}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm tracking-normal flex items-center justify-center gap-2.5 transition-all shadow-lg shadow-emerald-900/30"
+            >
+              <WhatsAppIcon className="w-4 h-4 fill-current shrink-0" />
+              <span>360° Lansman Paketini Seç & WhatsApp ile Başla</span>
+            </a>
+          </div>
         </div>
 
         {/* 25-Row Comparison Matrix Toggle & Grouped Table */}
@@ -443,6 +623,33 @@ export const PricingSection: React.FC = () => {
             </div>
           </div>
 
+        </div>
+
+        {/* Custom Software / API & CRM Architecture Strip - High-Trust Subtle Strip */}
+        <div className="mt-8 rounded-2xl bg-[#0E131F] p-5 sm:p-6 max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5">
+          <div className="flex items-center gap-4 text-left">
+            <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0">
+              <Code2 className="w-5 h-5" />
+            </div>
+            <div>
+              <h4 className="text-sm sm:text-base font-bold text-white">
+                CRM, ERP, Rezervasyon veya Özel API Entegrasyonuna mı İhtiyacınız Var?
+              </h4>
+              <p className="text-xs text-slate-400 mt-0.5">
+                Standart kurumsal paketlerin ötesindeki iş süreçleriniz için projenize özel mimari kurguluyoruz.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="https://wa.me/905438533844?text=Merhaba%20MediWeb!%20CRM%2C%20ERP%2C%20Rezervasyon%20veya%20Özel%20API%20entegrasyonu%20ihtiyacımız%20bulunuyor.%20Projemize%20özel%20mimari%20için%20görüşmek%20istiyoruz."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full md:w-auto px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-xs whitespace-nowrap transition-all flex items-center justify-center gap-2 shrink-0 shadow"
+          >
+            <WhatsAppIcon className="w-3.5 h-3.5 fill-current shrink-0" />
+            <span>Özel Mimari İçin İletişime Geçin</span>
+          </a>
         </div>
 
       </div>

@@ -24,7 +24,8 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
       text: `1. Hizmet Kapsamı: MediWeb, seçilen tasarım ve paket kapsamında web sitesini 3–5 iş günü (Kurumsal pakette 7–10 iş günü) içerisinde anahtar teslim olarak hazırlar ve Vercel Global Edge CDN altyapısına bağlar.
 2. 3 Yıl Domain ve Hosting: Paket bedeline 3 yıl boyunca .com/.com.tr alan adı, SSL sertifikası ve yüksek hızlı barındırma dahildir. 3 yıl sonunda müşteri dilerse yıllık standart maliyetle yeniler veya kaynak kodunu devralabilir.
 3. Revizyon Hakları: Başlangıç paketinde 1 tur, Profesyonel pakette 2 tur, Kurumsal pakette 3 tur revizyon hakkı sağlanır.
-4. Fatura ve İade: Tüm işlemler %20 KDV dahil kurumsal faturalandırılır. Dijital hizmet ve özel alan adı tahsisi başladıktan sonra cayma hakkı kapsam dışıdır; ancak hata garantisi süresince teknik düzeltmeler koşulsuz sağlanır.`
+4. Fatura ve İade: Tüm işlemler %20 KDV dahil kurumsal faturalandırılır. Dijital hizmet ve özel alan adı tahsisi başladıktan sonra cayma hakkı kapsam dışıdır; ancak hata garantisi süresince teknik düzeltmeler koşulsuz sağlanır.
+5. Ajans İmzası ve White-Label: Varsayılan olarak hazırlanan sitelerin alt bilgi (footer) alanında 'Mimari: MediWeb' ibaresi yer alır. Müşteri dilerse tek seferlik White-Label bedeli (+3.500 ₺) karşılığında bu ibareyi tamamen kaldırtma hakkına sahiptir.`
     },
     privacy: {
       title: 'Gizlilik ve Çerez Politikası',

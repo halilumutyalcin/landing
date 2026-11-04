@@ -19,6 +19,12 @@ export interface PackageItem {
   notIncluded: string[];
   isPopular: boolean;
   ctaText: string;
+  // WaaS (Aylık Abonelik Modeli)
+  waasSetupPrice: number;
+  waasSetupFormatted: string;
+  waasMonthlyPrice: number;
+  waasMonthlyFormatted: string;
+  waasCommitment: string;
 }
 
 export interface ComparisonMatrixRow {
@@ -115,6 +121,11 @@ export const siteConfig = {
       ],
       isPopular: false,
       ctaText: 'Başlangıç Paketini Seç',
+      waasSetupPrice: 2500,
+      waasSetupFormatted: '2.500 ₺',
+      waasMonthlyPrice: 1450,
+      waasMonthlyFormatted: '1.450 ₺',
+      waasCommitment: '12 Ay Taahhütlü',
     },
     {
       id: 'pro',
@@ -153,6 +164,11 @@ export const siteConfig = {
       ],
       isPopular: true,
       ctaText: 'En Çok Tercih Edileni Seç',
+      waasSetupPrice: 4500,
+      waasSetupFormatted: '4.500 ₺',
+      waasMonthlyPrice: 2450,
+      waasMonthlyFormatted: '2.450 ₺',
+      waasCommitment: '12 Ay Taahhütlü',
     },
     {
       id: 'enterprise',
@@ -186,6 +202,11 @@ export const siteConfig = {
       notIncluded: [],
       isPopular: false,
       ctaText: 'Kurumsal Paketi Seç',
+      waasSetupPrice: 8500,
+      waasSetupFormatted: '8.500 ₺',
+      waasMonthlyPrice: 4250,
+      waasMonthlyFormatted: '4.250 ₺',
+      waasCommitment: '12 Ay Taahhütlü',
     }
   ] as PackageItem[],
 
@@ -285,6 +306,20 @@ export const siteConfig = {
       title: 'Google Yorum & İtibar Kurgusu',
       description: 'Masaüstü QR stant tasarımı, memnun müşteri yönlendirme linki ve ilk 10 inceleme stratejisi.',
       pricing: 'Kurulum paketi ~3.500 ₺',
+    },
+    {
+      id: 'white-label',
+      icon: 'ShieldOff',
+      title: 'White-Label / Ajans İmzası Kaldırma',
+      description: 'Sitenin altındaki "Mimari: MediWeb" ibaresinin tamamen kaldırılması ve sitenin %100 kendi bağımsız kurumsal markanız altında sunulması.',
+      pricing: '+3.500 ₺ (Tek Seferlik)',
+    },
+    {
+      id: '360-launch',
+      icon: 'Sparkles',
+      title: '360° Logo & Kurumsal Kimlik Paketi',
+      description: 'Vektörel logo tasarımı, renk kılavuzu, kartvizit ve kurumsal e-posta imza şablonu ile Google Harita resmi doğrulaması.',
+      pricing: 'Pakete Ek ~9.500 ₺ (Pro+ Pakette Dahil)',
     },
     {
       id: 'maintenance',

@@ -29,16 +29,19 @@ export const ProposalModal: React.FC<ProposalModalProps> = ({
 }) => {
   const [selectedSector, setSelectedSector] = useState<string>('Hukuk & Avukatlık');
   const [selectedPackage, setSelectedPackage] = useState<'starter' | 'pro' | 'enterprise'>(initialPackage);
+  const [billingModel, setBillingModel] = useState<'onetime' | 'waas'>('onetime');
   const [selectedExtras, setSelectedExtras] = useState<string[]>([]);
   const [companyType, setCompanyType] = useState<'ltd' | 'individual'>('ltd');
 
   if (!isOpen) return null;
 
   const pkg = siteConfig.packages.find((p) => p.id === selectedPackage) || siteConfig.packages[1];
-  const basePrice = pkg.price;
+  const basePrice = billingModel === 'waas' ? (pkg.waasSetupPrice || 2500) : pkg.price;
 
-  // Extra service prices mock for instant calculation
+  // Extra service prices for instant calculation
   const extraPrices: Record<string, number> = {
+    '360-launch': 9500,
+    'white-label': 3500,
     'ai-assistant': 4500,
     'whatsapp-business': 2500,
     'sms-integration': 1900,
@@ -65,13 +68,14 @@ export const ProposalModal: React.FC<ProposalModalProps> = ({
 
   const handleWhatsAppSubmit = () => {
     const text = `Merhaba MediWeb! Landing page üzerinden teklif konfigürasyonu oluşturdum:
- Sektörüm: ${selectedSector}
- Seçtiğim Paket: ${pkg.name} (${pkg.priceFormatted})
- Ek Hizmetler: ${selectedExtras.length > 0 ? selectedExtras.join(', ') : 'Seçilmedi'}
- Şirket Türü: ${companyType === 'ltd' ? 'LTD./A.Ş.' : 'Şahıs İşletmesi'}
- Tahmini Net Maliyet: ${formatCurrency(netEffectiveCost)} (KDV Mahsubu Dahil)
+- Sektörüm: ${selectedSector}
+- Seçtiğim Paket: ${pkg.name} (${billingModel === 'waas' ? `WaaS Abonelik: ${pkg.waasSetupFormatted} Kurulum + ${pkg.waasMonthlyFormatted}/ay` : pkg.priceFormatted})
+- Ödeme Modeli: ${billingModel === 'waas' ? 'Aylık Abonelik (12 Ay Taahhütlü)' : 'Tek Seferlik (3 Yıl Dahil)'}
+- Ek Hizmetler: ${selectedExtras.length > 0 ? selectedExtras.join(', ') : 'Seçilmedi'}
+- Şirket Türü: ${companyType === 'ltd' ? 'LTD./A.Ş.' : 'Şahıs İşletmesi'}
+- Tahmini Net Başlangıç Maliyeti: ${formatCurrency(netEffectiveCost)} (KDV Mahsubu Dahil)${billingModel === 'waas' ? ` + ${pkg.waasMonthlyFormatted}/ay` : ''}
 
-Detayları görüşüp 3-5 günde yayına almak için bilgi alabilir miyim?`;
+Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
 
     const url = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
@@ -137,14 +141,42 @@ Detayları görüşüp 3-5 günde yayına almak için bilgi alabilir miyim?`;
             </div>
           </div>
 
-          {/* 2. Package Choice */}
+          {/* 2. Package Choice & Billing Model */}
           <div>
-            <label className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 block">
-              2. Paketinizi Belirleyin (3 Yıl Domain+Hosting Dahil)
-            </label>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+              <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                2. Paketinizi & Ödeme Modelini Belirleyin
+              </label>
+              <div className="inline-flex items-center p-0.5 rounded-lg bg-black/40 text-[11px]">
+                <button
+                  onClick={() => setBillingModel('onetime')}
+                  className={`px-2.5 py-1 rounded-md font-bold transition-all ${
+                    billingModel === 'onetime' ? 'bg-blue-600 text-white' : 'text-slate-400'
+                  }`}
+                >
+                  Tek Seferlik (3 Yıl Dahil)
+                </button>
+                <button
+                  onClick={() => setBillingModel('waas')}
+                  className={`px-2.5 py-1 rounded-md font-bold transition-all ${
+                    billingModel === 'waas' ? 'bg-emerald-600 text-white' : 'text-slate-400'
+                  }`}
+                >
+                  Abonelik (WaaS)
+                </button>
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {siteConfig.packages.map((p) => {
                 const isSelected = selectedPackage === p.id;
+                const priceLabel = billingModel === 'waas'
+                  ? `${p.waasMonthlyFormatted}/ay`
+                  : p.priceFormatted;
+                const subLabel = billingModel === 'waas'
+                  ? `${p.waasSetupFormatted} Kurulum`
+                  : p.deliveryTime;
+
                 return (
                   <button
                     key={p.id}
@@ -161,8 +193,8 @@ Detayları görüşüp 3-5 günde yayına almak için bilgi alabilir miyim?`;
                       </span>
                     )}
                     <div className="text-xs font-bold text-slate-200">{p.name}</div>
-                    <div className="text-base font-black text-white font-mono mt-1">{p.priceFormatted}</div>
-                    <div className="text-[10px] text-slate-400 mt-1">{p.deliveryTime}</div>
+                    <div className="text-base font-black text-white font-mono mt-1">{priceLabel}</div>
+                    <div className="text-[10px] text-slate-400 mt-1">{subLabel}</div>
                   </button>
                 );
               })}
@@ -172,10 +204,12 @@ Detayları görüşüp 3-5 günde yayına almak için bilgi alabilir miyim?`;
           {/* 3. Extras */}
           <div>
             <label className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 block">
-              3. İsteğe Bağlı Ek Modüller
+              3. İsteğe Bağlı Ek Modüller & Kurumsal Çözümler
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {[
+                { id: '360-launch', label: '360° Logo & Kurumsal Kimlik Paketi', price: '+9.500 ₺' },
+                { id: 'white-label', label: 'White-Label / Ajans İmzası Kaldırma', price: '+3.500 ₺' },
                 { id: 'ai-assistant', label: 'AI Ziyaretçi Asistanı', price: '+4.500 ₺' },
                 { id: 'whatsapp-business', label: 'WhatsApp Departman Yönlendirme', price: '+2.500 ₺' },
                 { id: 'extra-lang', label: 'Ek Yabancı Dil (İngilizce/Almanca)', price: '+7.500 ₺' },
@@ -252,10 +286,19 @@ Detayları görüşüp 3-5 günde yayına almak için bilgi alabilir miyim?`;
         {/* Footer Actions */}
         <div className="p-6 bg-[#0B0F19] border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <div className="text-xs text-slate-400">Efektif Net Maliyetiniz:</div>
-            <div className="text-2xl font-black text-emerald-400 font-mono">
+            <div className="text-xs text-slate-400">
+              {billingModel === 'waas' ? 'Efektif Başlangıç & Aylık Taahhüt:' : 'Efektif Net Maliyetiniz:'}
+            </div>
+            <div className="text-xl sm:text-2xl font-black text-emerald-400 font-mono">
               {formatCurrency(netEffectiveCost)}
-              <span className="text-xs text-slate-400 font-sans font-normal ml-2">(KDV & Vergi İndirimi Sonrası)</span>
+              {billingModel === 'waas' && (
+                <span className="text-base sm:text-lg text-white font-mono font-bold ml-1.5">
+                  + {pkg.waasMonthlyFormatted}/ay
+                </span>
+              )}
+              <span className="text-xs text-slate-400 font-sans font-normal ml-2 block sm:inline">
+                (KDV & Vergi İndirimi Sonrası)
+              </span>
             </div>
           </div>
 

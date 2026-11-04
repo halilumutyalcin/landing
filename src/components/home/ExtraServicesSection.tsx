@@ -11,7 +11,9 @@ import {
   Code2, 
   PenTool, 
   Star,
-  ShieldCheck
+  ShieldCheck,
+  ShieldOff,
+  Sparkles
 } from 'lucide-react';
 
 interface ServiceItem {
@@ -107,6 +109,20 @@ const SERVICE_GROUPS: ServiceGroup[] = [
         description: 'Masaüstü QR stant tasarımı, memnun müşteri yönlendirme linki ve ilk 10 organik inceleme stratejisi.',
         pricing: 'Kurulum paketi ~3.500 ₺',
         icon: Star,
+      },
+      {
+        id: 'white-label',
+        title: 'White-Label / Ajans İmzası Kaldırma',
+        description: 'Sitenin altındaki "Mimari: MediWeb" ibaresinin tamamen kaldırılması; sitenin %100 kendi bağımsız kurumsal markanız olarak sunulması.',
+        pricing: '+3.500 ₺ (Tek Seferlik)',
+        icon: ShieldOff,
+      },
+      {
+        id: '360-launch',
+        title: '360° Logo & Kurumsal Kimlik Paketi',
+        description: 'Vektörel logo tasarımı, renk kılavuzu, kartvizit ve kurumsal e-posta imza şablonu ile Google Harita resmi doğrulaması.',
+        pricing: 'Pakete Ek ~9.500 ₺ (Pro+ Pakette Dahil)',
+        icon: Sparkles,
       },
       {
         id: 'maintenance',
