@@ -114,11 +114,11 @@ export const PricingSection: React.FC = () => {
     <section id="paketler" className="py-20 bg-[#090B10] border-b border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Scarcity / Urgency Banner */}
+        {/* High-Trust Delivery Commitment Banner */}
         <div className="max-w-3xl mx-auto mb-10 p-3.5 rounded-xl bg-blue-950/40 text-center flex items-center justify-center gap-2.5 text-xs text-blue-200">
           <Clock className="w-4 h-4 text-blue-400 shrink-0" />
           <span>
-            <strong>Bu Ay İçin Kalan Lansman Kontenjanı:</strong> 2 İşletme. (Hızlı ve kusursuz teslimat için aylık sınırlı kota ile çalışıyoruz).
+            <strong>Dakik Teslim Taahhüdü:</strong> Her proje için teslimat takvimi sözleşmeyle belirlenir; gecikme ve ucu açık süreçler yaşanmaz.
           </span>
         </div>
 

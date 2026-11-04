@@ -81,9 +81,9 @@ export const BeforeAfterSection: React.FC = () => {
               </div>
 
               <div className="p-4 rounded-xl bg-black/40">
-                <div className="text-xs font-bold text-blue-400 mb-1">Google Konumu</div>
-                <div className="text-3xl font-black text-white">1. Sıra</div>
-                <div className="text-[11px] text-blue-300 mt-1">Harita & Arama Uyumlu</div>
+                <div className="text-xs font-bold text-blue-400 mb-1">Google Uyumu</div>
+                <div className="text-3xl font-black text-white">Hazır</div>
+                <div className="text-[11px] text-blue-300 mt-1">Harita, Arama & Schema Kayıtlı</div>
               </div>
 
               <div className="p-4 rounded-xl bg-black/40">
@@ -138,9 +138,9 @@ export const BeforeAfterSection: React.FC = () => {
               </div>
 
               <div className="p-4 rounded-xl bg-black/40">
-                <div className="text-xs font-bold text-rose-400 mb-1">Google Konumu</div>
-                <div className="text-3xl font-black text-rose-400">Görünmez</div>
-                <div className="text-[11px] text-rose-400 mt-1">Ağır Kod Sebebiyle Düşüş</div>
+                <div className="text-xs font-bold text-rose-400 mb-1">Google Uyumu</div>
+                <div className="text-3xl font-black text-rose-400">Eksik</div>
+                <div className="text-[11px] text-rose-400 mt-1">Hantal Kod ve Şema Eksikliği</div>
               </div>
 
               <div className="p-4 rounded-xl bg-black/40">

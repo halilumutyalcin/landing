@@ -47,7 +47,7 @@ export const AgencyManifestoSection: React.FC = () => {
               <p className="text-sm text-slate-400 leading-relaxed">
                 40 tane güvensiz eklentiyle şişirilmiş, her ay çöken WordPress sitelerine son. 
                 Next.js 14 SSG ve Vercel Edge ile <strong>0.3 saniyede anında açılan</strong>, 
-                asla hacklenemeyen statik kod üretiyoruz.
+                eklenti açığı ve veritabanı riski barındırmayan statik kod üretiyoruz.
               </p>
             </div>
             <div className="pt-6 mt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">
@@ -105,7 +105,7 @@ export const AgencyManifestoSection: React.FC = () => {
               "İyi bir web sitesi bir masraf değil, şirketinize 7/24 müşteri getiren en saygın ofisinizdir."
             </h4>
             <p className="text-xs text-slate-400 font-mono">
-              MEDISAN STUDIO MİMARİ İLKELERİ · İSTANBUL 2026
+              MEDİWEB MİMARİ İLKELERİ · İSTANBUL 2026
             </p>
           </div>
           <div className="flex items-center gap-4 shrink-0 font-mono text-xs">

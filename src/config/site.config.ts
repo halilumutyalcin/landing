@@ -144,7 +144,7 @@ export const siteConfig = {
         'Canlı Destek Kurulumu (Tawk.to vb.)',
         '5 Adet Kurumsal E-posta DNS Kurulumu',
         'Sosyal Paylaşım Kartları (Open Graph)',
-        'Işık Hızında Mobil ve Masaüstü Açılış (Lighthouse 95+)',
+        'Hızlı Mobil ve Masaüstü Açılış (Lighthouse 95+)',
         'İlk 1 Ay İçerik Güncelleme & Bakım Desteği Dahil',
       ],
       notIncluded: [
@@ -333,7 +333,7 @@ export const siteConfig = {
     {
       feature: 'Fiyatlandırma',
       traditional: 'Değişken & Sürpriz ek maliyetler',
-      mediweb: 'Net Sabit Tek Fiyat (16.900 ₺ / 29.900 ₺ / 59.900 ₺)',
+      mediweb: 'Net Sabit Tek Fiyat (17.500 ₺ / 32.500 ₺ / 59.900 ₺)',
     },
     {
       feature: 'Barındırma & Domain',

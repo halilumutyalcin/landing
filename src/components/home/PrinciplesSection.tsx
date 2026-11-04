@@ -35,7 +35,7 @@ export const PrinciplesSection: React.FC = () => {
               </p>
 
               <div className="pt-4 border-t border-white/5 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
-                <span className="text-white font-semibold">MediWeb Mimarlık & Geliştirme Ekibi</span>
+                <span className="text-white font-semibold">MediWeb Ekibi</span>
                 <span className="text-emerald-400 font-medium flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5" />
                   <span>İstanbul & Ankara</span>
@@ -77,32 +77,40 @@ export const PrinciplesSection: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
                   <div>
-                    <strong className="text-white block mb-0.5 text-sm">Sektörünüze Özel Prestij:</strong>
-                    Hukuk, sağlık, danışmanlık, muhasebe ve emlak sektörünün kurumsal ciddiyetine uygun, güven ve saygı uyandıran vitrinler teslim ediyoruz.
+                    <h4 className="text-white font-semibold text-sm mb-0.5">Kurumsal Ciddiyete Uygun Vitrin</h4>
+                    <p className="text-slate-300 text-xs sm:text-sm">
+                      Hukuk, sağlık, danışmanlık, muhasebe ve emlak sektörünün beklentilerine uygun, güven uyandıran tasarımlar hazırlıyoruz.
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
                   <div>
-                    <strong className="text-white block mb-0.5 text-sm">Ziyaretçiyi Bekletmeyen Açılış:</strong>
-                    Mobilde ve masaüstünde 0.3 saniyede anında açılan, müşteriyi doğrudan WhatsApp veya telefon aramasına yönlendiren temiz mimari.
+                    <h4 className="text-white font-semibold text-sm mb-0.5">Ziyaretçiyi Bekletmeyen Açılış</h4>
+                    <p className="text-slate-300 text-xs sm:text-sm">
+                      Mobilde ve masaüstünde 0.3 saniyede açılan, müşteriyi doğrudan WhatsApp veya telefon aramasına yönlendiren temiz mimari.
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
                   <div>
-                    <strong className="text-white block mb-0.5 text-sm">3 Yıl Boyunca Sıfır Sunucu Masrafı:</strong>
-                    Alan adı, SSL güvenlik sertifikası ve bulut barındırmayı ilk 3 yıl boyunca tamamen biz karşılıyoruz (0 ₺ ek maliyet).
+                    <h4 className="text-white font-semibold text-sm mb-0.5">3 Yıl Boyunca Sıfır Sunucu Masrafı</h4>
+                    <p className="text-slate-300 text-xs sm:text-sm">
+                      Alan adı, SSL güvenlik sertifikası ve bulut barındırmayı ilk 3 yıl boyunca karşılıyoruz; ek bakım masrafı çıkmaz.
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
                   <div>
-                    <strong className="text-white block mb-0.5 text-sm">Resmi Fatura ve Vergi Avantajı:</strong>
-                    Tüm işlemlerimiz kurumsal faturalandırılır; şirketinizin kurumlar/gelir vergisinden düşülerek net %35–40 vergi tasarrufu sağlar.
+                    <h4 className="text-white font-semibold text-sm mb-0.5">Resmi Fatura ve Vergi Avantajı</h4>
+                    <p className="text-slate-300 text-xs sm:text-sm">
+                      Tüm paketlerimiz kurumsal faturalandırılır; şirketinizin kurumlar veya gelir vergisinden düşülerek net vergi tasarrufu sağlar.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -131,32 +139,40 @@ export const PrinciplesSection: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-1" />
                   <div>
-                    <strong className="text-white block mb-0.5 text-sm">Ağır ve Güvensiz Sistemler Yok:</strong>
-                    Sayısız eklenti açığı barındıran, sürekli yama isteyen veya çökebilen eski tip WordPress şablonları teslim etmiyoruz.
+                    <h4 className="text-white font-semibold text-sm mb-0.5">Eklenti Çöplüğü ve Güvenlik Açıkları</h4>
+                    <p className="text-slate-300 text-xs sm:text-sm">
+                      Sürekli yama isteyen, yavaşlayan veya virüs riski taşıyan eski tip WordPress temaları kullanmıyoruz.
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-1" />
                   <div>
-                    <strong className="text-white block mb-0.5 text-sm">Gizli Faturalar ve Ek Harçlar Yok:</strong>
-                    Süreç başladıktan sonra "sunucu açılışı", "SSL bedeli", "lisans güncellemesi" gibi bahanelerle sürpriz masraf çıkarmıyoruz.
+                    <h4 className="text-white font-semibold text-sm mb-0.5">Sonradan Çıkan Gizli Maliyetler</h4>
+                    <p className="text-slate-300 text-xs sm:text-sm">
+                      İşe başladıktan sonra sunucu açılışı, SSL bedeli veya lisans güncellemesi adı altında sürpriz masraf çıkarmıyoruz.
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-1" />
                   <div>
-                    <strong className="text-white block mb-0.5 text-sm">Haftalarca Süren Oyalama Yok:</strong>
-                    2 aylık ucu açık tasarım süreçleriyle işinizi aksatmıyoruz; 3–5 iş gününde eksiksiz çalışan sitenizi teslim ediyoruz.
+                    <h4 className="text-white font-semibold text-sm mb-0.5">Haftalarca Süren Oyalayıcı Süreçler</h4>
+                    <p className="text-slate-300 text-xs sm:text-sm">
+                      Aylarca süren ucu açık tasarım revizyonlarıyla işinizi aksatmıyoruz; 3–5 iş gününde eksiksiz teslim ediyoruz.
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-1" />
                   <div>
-                    <strong className="text-white block mb-0.5 text-sm">Ulaşılamayan Destek Yok:</strong>
-                    Siteyi teslim ettikten sonra kaybolmuyoruz; WhatsApp hattımızdan acil güncellemeleriniz ve sorularınız için anında yanıt veriyoruz.
+                    <h4 className="text-white font-semibold text-sm mb-0.5">Teslimat Sonrası Ulaşılamayan Ekipler</h4>
+                    <p className="text-slate-300 text-xs sm:text-sm">
+                      Site yayına girdikten sonra iletişimi kesmiyoruz; WhatsApp hattımızdan güncellemeleriniz için doğrudan destek veriyoruz.
+                    </p>
                   </div>
                 </div>
               </div>
