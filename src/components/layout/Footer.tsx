@@ -82,23 +82,43 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Sektörel Tasarımlar */}
+          {/* Sektörel Çözümler (SEO & Vitrin) */}
           <div>
             <h5 className="text-sm font-bold text-white uppercase tracking-wider mb-4 font-display">
-              Sektör Tasarımları
+              Sektörel Çözümler
             </h5>
             <ul className="space-y-2 text-sm text-slate-400">
-              {SECTORS.filter(s => s.id !== 'all').map(sector => (
-                <li key={sector.id}>
-                  <Link 
-                    href={`/tasarimlar?sector=${sector.id}`}
-                    className="hover:text-white transition-colors flex items-center justify-between group"
-                  >
-                    <span>{sector.name}</span>
-                    <span className="text-xs text-slate-600 group-hover:text-brand-400 font-mono">3 Demo</span>
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/sektorler/dis-klinigi-web-sitesi" className="hover:text-white transition-colors">
+                  Diş Kliniği Web Sitesi
+                </Link>
+              </li>
+              <li>
+                <Link href="/sektorler/hukuk-burosu-web-sitesi" className="hover:text-white transition-colors">
+                  Hukuk Bürosu Web Sitesi
+                </Link>
+              </li>
+              <li>
+                <Link href="/sektorler/mimarlik-web-sitesi" className="hover:text-white transition-colors">
+                  Mimarlık Ofisi Web Sitesi
+                </Link>
+              </li>
+              <li>
+                <Link href="/sektorler/lojistik-web-sitesi" className="hover:text-white transition-colors">
+                  Lojistik Firması Web Sitesi
+                </Link>
+              </li>
+              <li>
+                <Link href="/sektorler/mali-musavir-web-sitesi" className="hover:text-white transition-colors">
+                  Mali Müşavir & YMM Sitesi
+                </Link>
+              </li>
+              <li>
+                <Link href="/sektorler" className="text-blue-400 font-semibold hover:text-blue-300 transition-colors flex items-center gap-1 pt-1">
+                  <span>Tüm Sektörel Paketler</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -41,11 +41,20 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     locale: 'tr_TR',
     type: 'website',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} — Kurumsal Web Mimarisi`,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: `Kurumsal Web Tasarım Ajansı & Sektörel Vitrinler | ${siteConfig.name}`,
     description: 'WordPress hantallığına son. 3–5 günde anahtar teslim web mimarisi, 3 yıl domain + hosting fiyata dahil.',
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,

@@ -58,6 +58,12 @@ export const Navbar: React.FC = () => {
             Sektörel Mimariler
           </Link>
           <Link 
+            href="/sektorler" 
+            className="hover:text-white transition-colors"
+          >
+            Sektörler
+          </Link>
+          <Link 
             href="/#nasil-calisir" 
             className="hover:text-white transition-colors"
           >
@@ -118,6 +124,13 @@ export const Navbar: React.FC = () => {
               className="block p-3 rounded-lg text-blue-400 font-bold bg-blue-500/10"
             >
               Sektörel Mimariler (Canlı Vitrinler)
+            </Link>
+            <Link
+              href="/sektorler"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block p-3 rounded-lg text-slate-200 hover:bg-white/5 font-semibold"
+            >
+              Sektörel Çözümler (Özel Paketler)
             </Link>
             <Link
               href="/#nasil-calisir"

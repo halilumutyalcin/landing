@@ -405,52 +405,52 @@ export const PricingSection: React.FC = () => {
             </div>
           </div>
 
-          {/* 4 Core Pillars Grid */}
+          {/* 4 Core Pillars Grid - Exact Visual Alignment with Value Pillars */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            <div className="p-4 rounded-xl bg-white/[0.03]">
-              <div className="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center mb-3">
-                <Palette className="w-4 h-4" />
+            <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
+              <div className="flex items-center gap-2.5">
+                <Palette className="w-5 h-5 text-blue-400 shrink-0" />
+                <strong className="text-white text-sm font-bold">
+                  1. Vektörel Logo & Renk
+                </strong>
               </div>
-              <strong className="text-white text-xs font-bold block mb-1">
-                1. Vektörel Logo & Renk Paleti
-              </strong>
-              <p className="text-[11px] text-slate-300 leading-relaxed">
+              <p className="text-xs text-slate-300 leading-relaxed pt-1">
                 AI destekli ve vektörel (SVG, AI, PDF, PNG) olarak teslim edilen, her mecraya uyumlu özgün logo ve kurumsal renk rehberi.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white/[0.03]">
-              <div className="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center mb-3">
-                <CreditCard className="w-4 h-4" />
+            <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
+              <div className="flex items-center gap-2.5">
+                <CreditCard className="w-5 h-5 text-emerald-400 shrink-0" />
+                <strong className="text-white text-sm font-bold">
+                  2. Kartvizit & Evraklar
+                </strong>
               </div>
-              <strong className="text-white text-xs font-bold block mb-1">
-                2. Kartvizit & Kurumsal Evraklar
-              </strong>
-              <p className="text-[11px] text-slate-300 leading-relaxed">
+              <p className="text-xs text-slate-300 leading-relaxed pt-1">
                 Matbaa baskısına hazır PDF formatında kartvizit, antetli kağıt, fatura şablonu ve kurumsal e-posta imza tasarımı.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white/[0.03]">
-              <div className="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 flex items-center justify-center mb-3">
-                <MapPin className="w-4 h-4" />
+            <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
+              <div className="flex items-center gap-2.5">
+                <MapPin className="w-5 h-5 text-purple-400 shrink-0" />
+                <strong className="text-white text-sm font-bold">
+                  3. Google Harita & Yerel SEO
+                </strong>
               </div>
-              <strong className="text-white text-xs font-bold block mb-1">
-                3. Google Harita (Maps) & Yerel SEO
-              </strong>
-              <p className="text-[11px] text-slate-300 leading-relaxed">
+              <p className="text-xs text-slate-300 leading-relaxed pt-1">
                 Google İşletme Profili doğrulaması, yerel arama anahtar kelimeleri optimizasyonu ve ilk müşteri yorum stratejisi.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white/[0.03]">
-              <div className="w-8 h-8 rounded-lg bg-amber-600/20 text-amber-400 flex items-center justify-center mb-3">
-                <Zap className="w-4 h-4" />
+            <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
+              <div className="flex items-center gap-2.5">
+                <Zap className="w-5 h-5 text-amber-400 shrink-0" />
+                <strong className="text-white text-sm font-bold">
+                  4. Ultra Hızlı Site + 3 Yıl
+                </strong>
               </div>
-              <strong className="text-white text-xs font-bold block mb-1">
-                4. Ultra Hızlı Web Sitesi + 3 Yıl
-              </strong>
-              <p className="text-[11px] text-slate-300 leading-relaxed">
+              <p className="text-xs text-slate-300 leading-relaxed pt-1">
                 10 sayfaya kadar Profesyonel paket web sitesi, 0.3 sn açılış hızı ve 36 ay boyunca sıfır sunucu/domain masrafı.
               </p>
             </div>
