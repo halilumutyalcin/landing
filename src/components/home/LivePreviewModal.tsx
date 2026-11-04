@@ -41,7 +41,12 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/90 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-7xl bg-[#0F172A] border border-white/10 rounded-2xl sm:rounded-3xl flex flex-col h-[92vh] shadow-2xl overflow-hidden">
+      <div 
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="preview-modal-title"
+        className="relative w-full max-w-7xl bg-[#0F172A] border border-white/10 rounded-2xl sm:rounded-3xl flex flex-col h-[92vh] shadow-2xl overflow-hidden"
+      >
         {/* Top Control Bar */}
         <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 bg-[#0B0F19] border-b border-white/10">
           {/* Demo Details */}
@@ -49,7 +54,7 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
             <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 hidden sm:block" />
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="text-sm sm:text-base font-bold text-white font-display">
+                <h3 id="preview-modal-title" className="text-sm sm:text-base font-bold text-white font-display">
                   {demo.name}
                 </h3>
                 <span className="text-[11px] px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-medium">

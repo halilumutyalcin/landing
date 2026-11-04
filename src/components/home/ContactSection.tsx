@@ -147,13 +147,14 @@ export const ContactSection: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label htmlFor="contact-fullName" className="block text-xs font-semibold text-slate-300 mb-1.5">
                       Ad Soyad *
                     </label>
                     <input
+                      id="contact-fullName"
                       {...register('fullName')}
                       placeholder="Örn: Av. Mehmet Yılmaz"
-                      className="w-full bg-[#090C14] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      className="w-full bg-[#090C14] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus-visible:ring-2 focus-visible:ring-blue-500"
                     />
                     {errors.fullName && (
                       <p className="text-rose-400 text-[11px] mt-1">{errors.fullName.message}</p>
@@ -161,13 +162,14 @@ export const ContactSection: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label htmlFor="contact-phone" className="block text-xs font-semibold text-slate-300 mb-1.5">
                       Telefon Numarası *
                     </label>
                     <input
+                      id="contact-phone"
                       {...register('phone')}
                       placeholder="05XX XXX XX XX"
-                      className="w-full bg-[#090C14] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      className="w-full bg-[#090C14] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus-visible:ring-2 focus-visible:ring-blue-500"
                     />
                     {errors.phone && (
                       <p className="text-rose-400 text-[11px] mt-1">{errors.phone.message}</p>
@@ -177,13 +179,14 @@ export const ContactSection: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label htmlFor="contact-email" className="block text-xs font-semibold text-slate-300 mb-1.5">
                       E-posta Adresi *
                     </label>
                     <input
+                      id="contact-email"
                       {...register('email')}
                       placeholder="info@firmaniz.com"
-                      className="w-full bg-[#090C14] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      className="w-full bg-[#090C14] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus-visible:ring-2 focus-visible:ring-blue-500"
                     />
                     {errors.email && (
                       <p className="text-rose-400 text-[11px] mt-1">{errors.email.message}</p>
@@ -191,12 +194,13 @@ export const ContactSection: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label htmlFor="contact-sector" className="block text-xs font-semibold text-slate-300 mb-1.5">
                       Sektörünüz
                     </label>
                     <select
+                      id="contact-sector"
                       {...register('sector')}
-                      className="w-full bg-[#090C14] rounded-xl px-3 py-3 text-xs text-white focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      className="w-full bg-[#090C14] rounded-xl px-3 py-3 text-xs text-white focus:outline-none focus:ring-1 focus:ring-blue-500 focus-visible:ring-2 focus-visible:ring-blue-500"
                     >
                       <option value="hukuk">Hukuk & Avukatlık</option>
                       <option value="klinik">Sağlık & Klinik</option>
@@ -208,12 +212,13 @@ export const ContactSection: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label htmlFor="contact-package" className="block text-xs font-semibold text-slate-300 mb-1.5">
                       Paket Tercihi
                     </label>
                     <select
+                      id="contact-package"
                       {...register('selectedPackage')}
-                      className="w-full bg-[#090C14] rounded-xl px-3 py-3 text-xs text-white focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      className="w-full bg-[#090C14] rounded-xl px-3 py-3 text-xs text-white focus:outline-none focus:ring-1 focus:ring-blue-500 focus-visible:ring-2 focus-visible:ring-blue-500"
                     >
                       <option value="starter">Başlangıç (17.500 ₺)</option>
                       <option value="pro">Profesyonel (32.500 ₺)</option>
@@ -223,14 +228,15 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                  <label htmlFor="contact-message" className="block text-xs font-semibold text-slate-300 mb-1.5">
                     Ek İstekler & Notlar (Opsiyonel)
                   </label>
                   <textarea
+                    id="contact-message"
                     {...register('message')}
                     rows={3}
                     placeholder="Mevcut bir alan adınız var mı, ek yabancı dil veya özel bir modül istiyor musunuz?"
-                    className="w-full bg-[#090C14] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    className="w-full bg-[#090C14] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus-visible:ring-2 focus-visible:ring-blue-500"
                   />
                 </div>
 

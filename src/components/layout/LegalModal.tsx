@@ -37,17 +37,23 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="relative w-full max-w-2xl bg-card border border-card-border rounded-2xl p-6 md:p-8 shadow-2xl text-left">
+      <div 
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="legal-modal-title"
+        className="relative w-full max-w-2xl bg-card border border-card-border rounded-2xl p-6 md:p-8 shadow-2xl text-left"
+      >
         <div className="flex items-center justify-between pb-4 border-b border-white/10">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
               <Icon className="w-5 h-5" />
             </div>
-            <h3 className="text-xl font-bold text-white">{content.title}</h3>
+            <h3 id="legal-modal-title" className="text-xl font-bold text-white">{content.title}</h3>
           </div>
           <button
             onClick={onClose}
-            className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-white/5 transition-colors"
+            aria-label="Kapat"
+            className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-white/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             <X className="w-5 h-5" />
           </button>

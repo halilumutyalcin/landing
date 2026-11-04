@@ -80,7 +80,12 @@ Detayları görüşüp 3-5 günde yayına almak için bilgi alabilir miyim?`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="bg-[#0D121F] rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl relative">
+      <div 
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="proposal-modal-title"
+        className="bg-[#0D121F] rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl relative"
+      >
         {/* Header */}
         <div className="p-6 border-b border-white/5 flex items-center justify-between sticky top-0 bg-[#0D121F]/90 backdrop-blur-md z-10">
           <div className="flex items-center gap-3">
@@ -88,13 +93,14 @@ Detayları görüşüp 3-5 günde yayına almak için bilgi alabilir miyim?`;
               <Calculator className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-white">Akıllı Teklif & Maliyet Hesaplayıcı</h3>
+              <h3 id="proposal-modal-title" className="text-lg font-bold text-white">Akıllı Teklif & Maliyet Hesaplayıcı</h3>
               <p className="text-xs text-slate-400">İhtiyacınızı seçin, anında net maliyeti ve vergi avantajını görün</p>
             </div>
           </div>
           <button 
             onClick={onClose}
-            className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white flex items-center justify-center transition-colors"
+            aria-label="Hesaplayıcıyı Kapat"
+            className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             <X className="w-4 h-4" />
           </button>
