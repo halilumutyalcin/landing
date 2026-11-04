@@ -109,7 +109,7 @@ export const LegoThemeStudioSection: React.FC = () => {
           <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
             Biz hantal WordPress temalarını indirip metinleri değiştirmiyoruz. 
             13 kategoride 195 adet test edilmiş ve optimize edilmiş bağımsız React varyantını, 
-            sektörünüze özel renk matematiğiyle <strong>3–5 iş gününde</strong> kusursuzca harmanlıyoruz.
+            sektörünüze özel renk matematiğiyle <strong>3–5 iş gününde</strong> yayına alıyoruz.
           </p>
         </div>
 

@@ -337,7 +337,7 @@ export const DEMO_CATALOG: DemoItem[] = [
     },
     highlights: {
       headline: 'Mobil Sağlık ve Eğitimde Güçlü Çözüm',
-      subheadline: 'Gezici tarama araçlarınız ve eğitim kadronuzla fark yaratın.',
+      subheadline: 'Gezici tarama araçlarınızı ve yetkili hekim kadronuzu eksiksiz sergileyin.',
       stats: [
         { label: 'Araç Tanıtımı', value: 'Özel' },
         { label: 'Hız Skoru', value: '99' },

@@ -42,7 +42,7 @@ export const AgencyManifestoSection: React.FC = () => {
                 // 01. PRENSİP
               </div>
               <h3 className="text-2xl font-bold text-white mb-3 font-display">
-                Hantal Temalar Değil, Saf React Mimarisi
+                WordPress Yerine Saf Next.js ve React Mimarisi
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
                 40 tane güvensiz eklentiyle şişirilmiş, her ay çöken WordPress sitelerine son. 
