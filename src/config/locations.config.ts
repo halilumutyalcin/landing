@@ -203,7 +203,7 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     title: 'Maslak Web Tasarım & Plaza Kurumsal Web Mimarisi | MediWeb',
     metaDescription: 'Maslak plazalarında yer alan teknoloji, hukuk, finans ve holding iştirakleri için ultra hızlı ve üst düzey kurumsal web mimarisi.',
     heroHeadline: 'Maslak Plazaları İçin Üst Düzey Kurumsal Web Çözümleri',
-    heroSubheadline: 'Vercel Global Edge CDN altyapısında 0.3 saniyede açılan, kurumsal prestijinizi eksiksiz yansıtan modern dijital vitrin.',
+    heroSubheadline: 'Işık hızında global bulut altyapısında 0.3 saniyede açılan, kurumsal prestijinizi eksiksiz yansıtan modern dijital vitrin.',
     commercialHubs: ['Maslak Meydan & Sun Plaza', 'Spine Tower & Veko Giz', 'İTÜ Arı Teknokent Aksı', 'Ayazağa & Vadi İstanbul'],
     focusSectors: ['Teknoloji & SaaS', 'Büyük Ölçekli Hukuk Ortaklıkları', 'Varlık Yönetimi & Fonlar', 'İhracat & İmalat'],
     localGuarantee: 'Maslak bölgesindeki plazalara doğrudan kurumsal sunum ve NDA (gizlilik) güvencesi.',

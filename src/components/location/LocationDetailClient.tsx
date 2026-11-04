@@ -134,7 +134,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
               </div>
               <h3 className="text-base font-bold text-white mb-2">3 Yıl Sıfır Ek Masraf</h3>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                Alan adı, SSL güvenlik sertifikası ve Vercel Global Edge CDN barındırma 3 yıl boyunca tek fiyata dahildir. Sürpriz yenileme faturaları yok.
+                Alan adı, SSL güvenlik sertifikası ve yüksek hızlı bulut barındırma 3 yıl boyunca tek fiyata dahildir. Sürpriz yenileme faturaları yok.
               </p>
             </div>
 

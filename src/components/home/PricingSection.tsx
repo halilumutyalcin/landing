@@ -82,7 +82,7 @@ export const PricingSection: React.FC = () => {
         { feature: 'Temel SEO altyapısı', starter: 'Meta, sitemap, robots.txt', pro: 'Dahil', enterprise: 'Dahil' },
         { feature: 'Gelişmiş SEO & Schema', starter: '—', pro: 'JSON-LD Schema & Search Console', enterprise: 'Sayfa bazlı derin SEO & iç bağlantı mimarisi' },
         { feature: 'Google Analytics & Search Console', starter: 'Temel Analytics', pro: 'Analytics + Search Console kurulumu', enterprise: 'İleri seviye hedef & dönüşüm takibi' },
-        { feature: 'Site hız optimizasyonu', starter: 'Temel (Vercel Edge CDN)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri seviye (0.3 sn anında yükleme)' },
+        { feature: 'Site hız optimizasyonu', starter: 'Temel (Yüksek Hızlı Bulut Ağı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri seviye (0.3 sn anında yükleme)' },
         { feature: 'Güvenlik / SSL sertifikası', starter: '3 Yıl Ücretsiz SSL', pro: '3 Yıl Ücretsiz SSL', enterprise: '3 Yıl Kurumsal SSL & DDoS koruması' },
       ]
     },
@@ -94,7 +94,7 @@ export const PricingSection: React.FC = () => {
         { feature: 'Yönetilebilir içerik yapısı', starter: '—', pro: '—', enterprise: 'Modüler ve genişletilebilir mimari' },
         { feature: 'Admin / CMS altyapısı', starter: '—', pro: 'Opsiyonel (~9.900 ₺)', enterprise: 'Opsiyonel (~9.900 ₺)' },
         { feature: 'Tasarım revizyon hakkı', starter: '1 Tur revizyon', pro: '2 Tur revizyon', enterprise: '3 Tur revizyon' },
-        { feature: 'Yayınlama & 3 Yıl Hosting', starter: '3 Yıl Domain + SSL + CDN Dahil', pro: '3 Yıl Domain + SSL + CDN Dahil', enterprise: '3 Yıl Domain + SSL + CDN Dahil' },
+        { feature: 'Yayınlama & 3 Yıl Hosting', starter: '3 Yıl Domain + SSL + Bulut Barındırma Dahil', pro: '3 Yıl Domain + SSL + Bulut Barındırma Dahil', enterprise: '3 Yıl Domain + SSL + Bulut Barındırma Dahil' },
         { feature: 'Teknik destek & Garanti', starter: '15 gün hata garantisi', pro: '30 gün garanti + 1 ay bakım dahil', enterprise: '60 gün garanti + 3 ay bakım dahil' },
       ]
     }
@@ -312,7 +312,7 @@ export const PricingSection: React.FC = () => {
                         )}
                         <div className="text-xs text-emerald-400 font-medium mt-2 flex items-center gap-1.5 pt-2 border-t border-white/5">
                           <ShieldCheck className="w-4 h-4 shrink-0" />
-                          <span>3 Yıl Domain + SSL + CDN Dahil (0 TL Masraf)</span>
+                          <span>3 Yıl Domain + SSL + Bulut Barındırma Dahil (0 TL Masraf)</span>
                         </div>
                       </>
                     )}
@@ -609,7 +609,7 @@ export const PricingSection: React.FC = () => {
                   <strong className="text-white text-sm font-bold">3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi</strong>
                 </div>
                 <p className="text-slate-300 leading-relaxed pt-1">
-                  Alan adı, SSL güvenlik sertifikası ve Vercel Global Edge CDN barındırma için ilk 36 ay boyunca 1 TL dahi sunucu faturası ödemezsiniz.
+                  Alan adı, SSL güvenlik sertifikası ve yüksek hızlı global bulut barındırma için ilk 36 ay boyunca 1 TL dahi sunucu faturası ödemezsiniz.
                 </p>
               </div>
 
@@ -668,13 +668,13 @@ export const PricingSection: React.FC = () => {
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-wider mb-3">
                 <Code2 className="w-3.5 h-3.5" />
-                <span>Enterprise Çözümler &amp; Entegrasyon</span>
+                <span>Kurumsal Özel Yazılım &amp; Entegrasyon</span>
               </div>
               <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
                 Standart Sitelerin Ötesinde: İşletmenize Özel Web Yazılımı &amp; Entegrasyon
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 mt-2.5 leading-relaxed">
-                Hazır paketlerin yetersiz kaldığı karmaşık iş süreçleriniz için; modern Next.js, güvenli veritabanı (PostgreSQL) ve yüksek hızlı API altyapısıyla terzi usulü sistemler inşa ediyoruz.
+                Hazır paketlerin yetersiz kaldığı karmaşık iş süreçleriniz için; yeni nesil yazılım mimarisi, güvenli bulut veritabanı ve anlık sistem entegrasyonlarıyla firmanıza özel terzi usulü çözümler inşa ediyoruz.
               </p>
             </div>
 
@@ -749,11 +749,11 @@ export const PricingSection: React.FC = () => {
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
                 <Zap className="w-3.5 h-3.5 text-blue-400" />
-                REST &amp; Webhook API
+                Canlı Sistem &amp; Muhasebe Entegrasyonu
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
                 <Clock className="w-3.5 h-3.5 text-purple-400" />
-                %99.9 Uptime SLA
+                %99.9 Kesintisiz Yayın Garantisi
               </span>
             </div>
 

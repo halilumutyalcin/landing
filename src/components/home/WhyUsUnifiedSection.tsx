@@ -160,7 +160,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                 </div>
 
                 {/* Metrics Showcase Right */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto pl-12 sm:pl-24">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto">
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-emerald-400 mb-1">Açılış Hızı</div>
                     <div className="text-3xl font-black text-white font-mono">0.3 sn</div>
@@ -170,7 +170,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-blue-400 mb-1">Google Uyumu</div>
                     <div className="text-3xl font-black text-white font-mono">Hazır</div>
-                    <div className="text-[11px] text-blue-300 mt-1">Harita & SEO Kayıtlı</div>
+                    <div className="text-[11px] text-blue-300 mt-1">Harita &amp; SEO Kayıtlı</div>
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
@@ -180,7 +180,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-indigo-400 mb-1">Çökme & Virüs</div>
+                    <div className="text-xs font-bold text-indigo-400 mb-1">Çökme &amp; Virüs</div>
                     <div className="text-3xl font-black text-white font-mono">%0 Risk</div>
                     <div className="text-[11px] text-indigo-300 mt-1">Eklenti Açıkları Yok</div>
                   </div>
@@ -198,21 +198,21 @@ export const WhyUsUnifiedSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* BEFORE (Old WordPress / Left Side Layer) */}
+              {/* BEFORE (Old WordPress / Left Side Layer - Clipped) */}
               <div 
-                className="absolute inset-y-0 left-0 bg-[#160B0F] p-6 sm:p-10 flex flex-col justify-between overflow-hidden border-r-2 border-white/40 shadow-2xl transition-none"
-                style={{ width: `${sliderPos}%` }}
+                className="absolute inset-0 bg-[#160B0F] p-6 sm:p-10 flex flex-col justify-between overflow-hidden shadow-2xl transition-none pointer-events-none select-none"
+                style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
               >
-                <div className="min-w-[320px]">
+                <div>
                   <span className="text-xs font-bold uppercase tracking-wider text-rose-400 mb-1 block">
                     Geleneksel WordPress Siteleri
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">Yavaş, Hantal & Güvensiz</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white">Yavaş, Hantal &amp; Güvensiz</h3>
                   <p className="text-xs sm:text-sm text-slate-300">4.8 saniyede açılan, her yıl sunucu faturası çıkaran eski sistemler</p>
                 </div>
 
                 {/* Metrics Showcase Left */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto min-w-[500px] pr-12">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto">
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-rose-400 mb-1">Açılış Hızı</div>
                     <div className="text-3xl font-black text-white font-mono">4.8 sn</div>
@@ -238,7 +238,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-sm text-slate-300 font-medium min-w-[320px]">
+                <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-sm text-slate-300 font-medium">
                   <span className="flex items-center gap-1.5 text-rose-300">
                     <XCircle className="w-4 h-4 text-rose-400 shrink-0" />
                     Haftalarca Süren Belirsizlik
@@ -250,12 +250,12 @@ export const WhyUsUnifiedSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Slider Handle Knob */}
+              {/* Slider Divider Line & Handle Knob */}
               <div 
-                className="absolute inset-y-0 w-8 -ml-4 flex items-center justify-center pointer-events-none"
+                className="absolute inset-y-0 w-0.5 bg-white/70 pointer-events-none shadow-[0_0_12px_rgba(255,255,255,0.6)]"
                 style={{ left: `${sliderPos}%` }}
               >
-                <div className="w-8 h-8 rounded-full bg-white text-black shadow-2xl flex items-center justify-center font-black text-xs">
+                <div className="absolute top-1/2 -translate-y-1/2 -left-4 w-8 h-8 rounded-full bg-white text-black shadow-2xl flex items-center justify-center font-black text-xs select-none">
                   ‹›
                 </div>
               </div>

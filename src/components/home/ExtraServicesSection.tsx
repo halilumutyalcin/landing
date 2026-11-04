@@ -167,19 +167,19 @@ export const ExtraServicesSection: React.FC = () => {
           </p>
 
           {/* Interactive Category Filter Tabs */}
-          <div className="mt-8 inline-flex items-center p-1 rounded-2xl bg-[#121622] max-w-full overflow-x-auto shadow-inner">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-2 p-1.5 rounded-2xl bg-[#121622] max-w-4xl mx-auto shadow-inner">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`px-4 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap flex items-center gap-1.5 ${
+                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap flex items-center gap-2 ${
                   selectedCategory === cat.id
                     ? 'bg-blue-600 text-white shadow'
-                    : 'text-slate-400 hover:text-white'
+                    : 'text-slate-400 hover:text-white hover:bg-white/5'
                 }`}
               >
                 <span>{cat.label}</span>
-                <span className={`px-1.5 py-0.2 rounded text-[10px] font-mono ${
+                <span className={`px-2 py-0.5 rounded text-[11px] font-mono ${
                   selectedCategory === cat.id ? 'bg-white/20 text-white' : 'bg-black/30 text-slate-400'
                 }`}>
                   {cat.count}

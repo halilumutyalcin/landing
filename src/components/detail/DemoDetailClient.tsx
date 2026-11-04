@@ -323,7 +323,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
             <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-xs text-slate-400 flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>3 Yıl Domain, SSL ve Vercel Global Edge CDN barındırması fiyata dahildir.</span>
+                <span>3 Yıl Domain, SSL ve yüksek hızlı bulut barındırması fiyata dahildir.</span>
               </div>
               <a
                 href={generateWhatsAppUrl({

@@ -118,7 +118,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       }
     ],
     keyFeatures: [
-      '3 Yıl .com veya .av.tr Uyumlu Domain + SSL + CDN Barındırma Dahil',
+      '3 Yıl .com veya .av.tr Uyumlu Domain + SSL + Yüksek Hızlı Barındırma Dahil',
       'Türkiye Barolar Birliği Reklam Yönetmeliği Standartları',
       'Çalışma Alanları (Ceza, Ticaret, İş Hukuku vb.) Zengin Sayfaları',
       'Hukuki Makale, Blog ve Duyuru Yayın Altyapısı',
@@ -168,7 +168,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       },
       {
         title: '0.3 Saniye Yüklenen Yüksek Kalite Görseller',
-        description: 'Büyük render ve fotoğraf dosyalarını yeni nesil WebP/AVIF formatlarıyla anında yükleyen CDN altyapısı.'
+        description: 'Büyük render ve fotoğraf dosyalarını yeni nesil WebP/AVIF formatlarıyla anında yükleyen yüksek hızlı bulut dağıtım ağı.'
       },
       {
         title: 'Ödüller, Basın & Felsefe Bölümü',
@@ -180,7 +180,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       }
     ],
     keyFeatures: [
-      '3 Yıl Domain + Yüksek Kapasiteli Görsel CDN Dahil',
+      '3 Yıl Domain + Yüksek Kapasiteli Bulut Barındırma Dahil',
       'Kategorize Edilebilir İnteraktif Proje Portfolyosu',
       'Tam Ekran Görsel Önizleme ve Proje Hikayesi Sayfaları',
       'Mimari Yaklaşım & Ekip Tanıtım Alanı',
@@ -190,7 +190,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     faqs: [
       {
         question: 'Yüksek kaliteli render ve fotoğraflar siteyi yavaşlatır mı?',
-        answer: 'Hayır. Next.js ve Vercel CDN üzerinde çalışan otomatik görsel optimizasyonu sayesinde devasa mimari görseller dahi 0.3 saniyede açılır.'
+        answer: 'Hayır. Yeni nesil otomatik görsel optimizasyonu sayesinde devasa mimari görseller dahi 0.3 saniyede açılır.'
       },
       {
         question: 'İleride yeni projelerimizi nasıl ekleyeceğiz?',
@@ -238,17 +238,17 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       }
     ],
     keyFeatures: [
-      '3 Yıl Global CDN + Kurumsal E-posta Altyapısı Dahil',
+      '3 Yıl Küresel Bulut Barındırma + Kurumsal E-posta Altyapısı Dahil',
       'Kapsamlı Navlun ve Fiyat Teklif Formu',
       'Karayolu, Denizyolu, Havayolu ve İntermodal Hizmet Sayfaları',
       'Yetki Belgeleri (TİO, C2 vb.) ve ISO Kalite Sertifikaları Vitrini',
       'İhracatçılar İçin WhatsApp Hızlı Destek Butonu',
-      'Dünya Çapında Hızlı Yüklenen Global Edge Dağıtımı'
+      'Dünya Çapında Hızlı Yüklenen Global Bulut Ağı'
     ],
     faqs: [
       {
         question: 'Yabancı ülkelerden sitemize girenler de hızlı açılış yaşar mı?',
-        answer: 'Kesinlikle. Vercel Global Edge CDN altyapımız dünya genelinde 300+ veri merkezine dağıtıldığı için siteniz Frankfurt, Dubai veya Şanghay\'dan da 0.3 saniyede açılır.'
+        answer: 'Kesinlikle. Bulut altyapımız dünya genelinde 300+ veri merkezine dağıtıldığı için siteniz Frankfurt, Dubai veya Şanghay\'dan da 0.3 saniyede açılır.'
       },
       {
         question: 'Navlun teklif formları kime iletilir?',

@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
                 3 Yıl Domain + SSL + Hosting Dahil
               </h4>
               <p className="text-sm text-slate-300 mt-1 max-w-xl leading-relaxed">
-                Tüm paketlerimizde ilk 3 yıl sıfır yenileme masrafı: Vercel Global Edge CDN barındırması ve kurumsal alan adınız fiyata eksiksiz dahildir.
+                Tüm paketlerimizde ilk 3 yıl sıfır yenileme masrafı: Yüksek hızlı küresel bulut barındırması ve kurumsal alan adınız fiyata eksiksiz dahildir.
               </p>
             </div>
           </div>
