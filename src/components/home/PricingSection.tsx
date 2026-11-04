@@ -17,7 +17,9 @@ import {
   Palette,
   CreditCard,
   MapPin,
-  Code2
+  Code2,
+  Calendar,
+  FileCheck2
 } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
 import { generateWhatsAppUrl } from '@/lib/utils';
@@ -411,8 +413,7 @@ export const PricingSection: React.FC = () => {
         <div className="mb-14 rounded-3xl bg-[#111728] p-7 sm:p-10 shadow-2xl relative overflow-hidden">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8 pb-8 border-b border-white/10">
             <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-wider mb-3">
-                <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-wider mb-3">
                 <span>Tek Elden Çözüm · Sıfırdan Zirveye</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
@@ -661,31 +662,105 @@ export const PricingSection: React.FC = () => {
 
         </div>
 
-        {/* Custom Software / API & CRM Architecture Strip - High-Trust Subtle Strip */}
-        <div className="mt-8 rounded-2xl bg-[#0E131F] p-5 sm:p-6 max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5">
-          <div className="flex items-center gap-4 text-left">
-            <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0">
-              <Code2 className="w-5 h-5" />
+        {/* Custom Software & Enterprise Integration Architecture Section */}
+        <div className="mt-12 rounded-3xl bg-gradient-to-b from-[#0F1422] to-[#0A0D15] border border-white/10 p-6 sm:p-10 max-w-5xl mx-auto shadow-2xl">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-white/10">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-wider mb-3">
+                <Code2 className="w-3.5 h-3.5" />
+                <span>Enterprise Çözümler &amp; Entegrasyon</span>
+              </div>
+              <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
+                Standart Sitelerin Ötesinde: İşletmenize Özel Web Yazılımı &amp; Entegrasyon
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 mt-2.5 leading-relaxed">
+                Hazır paketlerin yetersiz kaldığı karmaşık iş süreçleriniz için; modern Next.js, güvenli veritabanı (PostgreSQL) ve yüksek hızlı API altyapısıyla terzi usulü sistemler inşa ediyoruz.
+              </p>
             </div>
-            <div>
-              <h4 className="text-sm sm:text-base font-bold text-white">
-                CRM, ERP, Rezervasyon veya Özel API Entegrasyonuna mı İhtiyacınız Var?
-              </h4>
-              <p className="text-xs text-slate-400 mt-0.5">
-                Standart kurumsal paketlerin ötesindeki iş süreçleriniz için projenize özel mimari kurguluyoruz.
+
+            <a
+              href="https://wa.me/905550000000?text=Merhaba%20MediWeb!%20Özel%20yazılım%20ve%20kurumsal%20entegrasyon%20projemiz%20için%20mimari%20değerlendirme%20ve%20teklif%20almak%20istiyoruz."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm whitespace-nowrap transition-all flex items-center justify-center gap-2.5 shrink-0 shadow-lg shadow-blue-600/30"
+            >
+              <WhatsAppIcon className="w-4 h-4 fill-current shrink-0" />
+              <span>Özel Mimari İçin Teklif Alın</span>
+            </a>
+          </div>
+
+          {/* 4 Concrete Real-World Scenarios */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-8">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-blue-500/30 transition-colors">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0">
+                  <Building2 className="w-4 h-4" />
+                </div>
+                <h4 className="text-sm font-bold text-white">Bayi &amp; Cari Hesap Portalı</h4>
+              </div>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Toptancı ve imalatçılar için şifreli bayi girişi, kişiselleştirilmiş iskonto oranları, online sipariş toplama ve anlık cari ekstre indirme.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-emerald-500/30 transition-colors">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                  <Calendar className="w-4 h-4" />
+                </div>
+                <h4 className="text-sm font-bold text-white">Online Randevu &amp; SMS Otomasyonu</h4>
+              </div>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Klinik ve servisler için webden anında randevu alma, Google/Apple Takvim senkronizasyonu ve otomatik SMS/WhatsApp onay bildirimleri.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-purple-500/30 transition-colors">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0">
+                  <Server className="w-4 h-4" />
+                </div>
+                <h4 className="text-sm font-bold text-white">Ön Muhasebe &amp; ERP Entegrasyonu</h4>
+              </div>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Siteden gelen teklif ve form taleplerinin Paraşüt, Logo, Mikro veya Bizmu sistemlerine el değmeden otomatik müşteri ve sipariş kaydı olarak aktarımı.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 transition-colors">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                  <FileCheck2 className="w-4 h-4" />
+                </div>
+                <h4 className="text-sm font-bold text-white">Online Evrak &amp; Rapor Sorgulama</h4>
+              </div>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Otomotiv ekspertiz raporları, laboratuvar tahlil sonuçları veya sertifikaların plaka/TC/barkod ile webden anında güvenli sorgulanması.
               </p>
             </div>
           </div>
 
-          <a
-            href="https://wa.me/905438533844?text=Merhaba%20MediWeb!%20CRM%2C%20ERP%2C%20Rezervasyon%20veya%20Özel%20API%20entegrasyonu%20ihtiyacımız%20bulunuyor.%20Projemize%20özel%20mimari%20için%20görüşmek%20istiyoruz."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full md:w-auto px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-xs whitespace-nowrap transition-all flex items-center justify-center gap-2 shrink-0 shadow"
-          >
-            <WhatsAppIcon className="w-3.5 h-3.5 fill-current shrink-0" />
-            <span>Özel Mimari İçin İletişime Geçin</span>
-          </a>
+          {/* Technical Architecture Badges Strip */}
+          <div className="mt-8 pt-6 border-t border-white/[0.08] flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                KVKK Uyumlu Veritabanı
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
+                <Zap className="w-3.5 h-3.5 text-blue-400" />
+                REST &amp; Webhook API
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
+                <Clock className="w-3.5 h-3.5 text-purple-400" />
+                %99.9 Uptime SLA
+              </span>
+            </div>
+
+            <span className="text-[11px] font-medium text-slate-400">
+              Ortalama teslim süresi proje kapsamına göre 2–4 haftadır.
+            </span>
+          </div>
         </div>
 
       </div>

@@ -129,7 +129,7 @@ export const DEMO_CATALOG: DemoItem[] = [
     },
     highlights: {
       headline: 'Fikri Derinlik ve Modern Tipografi',
-      subheadline: 'Görüş ve makalelerinizi öne çıkaran kusursuz editoryal akış.',
+      subheadline: 'Görüş ve makalelerinizi doğrudan okunabilir kılan editoryal akış.',
       stats: [
         { label: 'Okunabilirlik', value: '100' },
         { label: 'Hız Endeksi', value: '0.6s' },
