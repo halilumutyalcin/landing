@@ -287,7 +287,7 @@ export const DEMO_CATALOG: DemoItem[] = [
     themeColor: 'slate',
     badge: 'Sanayi & Ağır İSG',
     liveUrl: '/preview/zirveosgb',
-    previewImage: 'https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80',
+    previewImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
     shortDesc: 'Kaza analiz metrikleri, risk analizi adımları ve teknik dashboard hissi veren koyu tema.',
     targetAudience: 'Sanayi ve ağır tehlike sınıfı işletmelere hizmet veren büyük ölçekli OSGB şirketleri.',
     keyFeatures: [
