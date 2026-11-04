@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { DEMO_CATALOG } from '@/config/demos.config';
 import { SECTORS_SEO_DATA } from '@/config/sectors.config';
+import { LOCATIONS_SEO_DATA } from '@/config/locations.config';
 import { siteConfig } from '@/config/site.config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -26,6 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/bolgeler`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
   ];
 
   // 2. Dynamic sector showcase detail routes (15 Designs)
@@ -44,5 +51,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticRoutes, ...demoRoutes, ...sectorRoutes];
+  // 4. Programmatic Local/Regional SEO routes (/bolgeler/[ilce]-web-tasarim)
+  const locationRoutes: MetadataRoute.Sitemap = LOCATIONS_SEO_DATA.map((loc) => ({
+    url: `${baseUrl}/bolgeler/${loc.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.85,
+  }));
+
+  return [...staticRoutes, ...demoRoutes, ...sectorRoutes, ...locationRoutes];
 }
