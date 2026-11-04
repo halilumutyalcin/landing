@@ -249,7 +249,11 @@ export const ContactSection: React.FC = () => {
                   <span>Teklif Al & WhatsApp ile Gönder</span>
                 </button>
 
-                <p className="text-center text-[11px] text-slate-500">
+                <p className="text-center text-[11px] text-slate-400">
+                  Bilgileriniz 256-bit SSL ile korunur. Asla spam arama yapılmaz; yalnızca teklifiniz için WhatsApp üzerinden irtibata geçilir.
+                </p>
+
+                <p className="text-center text-[10px] text-slate-500">
                   Formu göndererek KVKK aydınlatma metnini okuduğunuzu ve kabul ettiğinizi beyan edersiniz.
                 </p>
               </form>

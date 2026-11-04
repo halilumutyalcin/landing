@@ -1,10 +1,16 @@
 'use client';
 
 import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
 import { DEMO_CATALOG, DemoItem } from '@/config/demos.config';
 import { SectorTabs } from './SectorTabs';
 import { DemoCard } from './DemoCard';
-import { LivePreviewModal } from './LivePreviewModal';
+
+// Defer heavy iframe preview modal from initial page bundle (vercel-react-best-practices)
+const LivePreviewModal = dynamic(
+  () => import('./LivePreviewModal').then((mod) => mod.LivePreviewModal),
+  { ssr: false }
+);
 
 interface DemoGridProps {
   initialSector?: string;

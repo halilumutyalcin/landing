@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
 import { HeroSection } from '@/components/home/HeroSection';
 import { DemoGrid } from '@/components/home/DemoGrid';
 import { PricingSection } from '@/components/home/PricingSection';
@@ -11,8 +12,13 @@ import { ExtraServicesSection } from '@/components/home/ExtraServicesSection';
 import { PrinciplesSection } from '@/components/home/PrinciplesSection';
 import { FaqSection } from '@/components/home/FaqSection';
 import { ContactSection } from '@/components/home/ContactSection';
-import { ProposalModal } from '@/components/home/ProposalModal';
 import { Calculator } from 'lucide-react';
+
+// Defer non-critical modal to reduce initial First Load JS (vercel-react-best-practices)
+const ProposalModal = dynamic(
+  () => import('@/components/home/ProposalModal').then((mod) => mod.ProposalModal),
+  { ssr: false }
+);
 
 export default function HomePage() {
   const [isProposalModalOpen, setIsProposalModalOpen] = useState(false);
