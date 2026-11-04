@@ -135,12 +135,12 @@ export const PricingSection: React.FC = () => {
           </h2>
           <p className="text-base text-slate-300 leading-relaxed">
             Beğendiğiniz tasarım için ekstra bir ücret ödemezsiniz. 
-            İhtiyacınıza uygun sayfa sayısını seçin; <strong>3 yıl alan adı ve barındırma dahil</strong> yayına alalım.
+            İhtiyacınıza uygun paketi seçin; <strong>3 Yıl Boyunca Sıfır Ek Masraf (0 ₺ Yenileme Güvencesi)</strong> ile yayına alalım.
           </p>
 
           {/* Billing Mode & B2B Tax Toggles */}
           <div className="mt-8 flex flex-col items-center gap-3">
-            {/* Primary Toggle: One-Time vs WaaS Subscription */}
+            {/* Primary Toggle: One-Time vs Flexible Monthly Subscription */}
             <div className="inline-flex items-center p-1 rounded-2xl bg-[#121622] shadow-inner max-w-full overflow-x-auto">
               <button
                 onClick={() => setBillingMode('onetime')}
@@ -150,7 +150,7 @@ export const PricingSection: React.FC = () => {
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
-                Tek Seferlik Ödeme (3 Yıl Dahil)
+                Tek Seferlik (3 Yıl Sıfır Ek Masraf)
               </button>
               <button
                 onClick={() => setBillingMode('waas')}
@@ -160,9 +160,9 @@ export const PricingSection: React.FC = () => {
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
-                <span>Aylık Abonelik (WaaS)</span>
+                <span>Sıfır Peşinatla Başlayın: Esnek Aylık Model</span>
                 <span className="px-1.5 py-0.5 rounded text-[10px] font-black uppercase bg-emerald-400/20 text-emerald-300">
-                  12 Ay Taahhütlü
+                  Sabit Taksit
                 </span>
               </button>
             </div>
@@ -569,7 +569,7 @@ export const PricingSection: React.FC = () => {
               <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
                 <div className="flex items-center gap-2.5">
                   <Server className="w-5 h-5 text-blue-400 shrink-0" />
-                  <strong className="text-white text-sm font-bold">3 Yıl Sıfır Masraf Güvencesi</strong>
+                  <strong className="text-white text-sm font-bold">3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi</strong>
                 </div>
                 <p className="text-slate-300 leading-relaxed pt-1">
                   Alan adı, SSL güvenlik sertifikası ve Vercel Global Edge CDN barındırma için ilk 36 ay boyunca 1 TL dahi sunucu faturası ödemezsiniz.
@@ -592,7 +592,7 @@ export const PricingSection: React.FC = () => {
                   <strong className="text-white text-sm font-bold">Dönüşüm & WhatsApp Köprüsü</strong>
                 </div>
                 <p className="text-slate-300 leading-relaxed pt-1">
-                  Sadece şık görünmekle kalmaz; ziyaretçiyi WhatsApp'tan mesaj atmaya ve telefonla aramaya yönlendiren kanıtlanmış B2B psikolojisiyle kurgulanır.
+                  Sadece şık görünmekle kalmaz; ziyaretçiyi WhatsApp'tan mesaj atmaya ve telefonla aramaya yönlendiren kanıtlanmış kurumsal satış psikolojisiyle kurgulanır.
                 </p>
               </div>
             </div>

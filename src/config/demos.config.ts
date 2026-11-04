@@ -294,7 +294,7 @@ export const DEMO_CATALOG: DemoItem[] = [
       'İstatistik ve Kaza Önleme Sayaçları',
       'Adım Adım Risk Değerlendirme Süreç Şeması',
       'Ortam Ölçümleri ve Periyodik Kontrol Tablosu',
-      'Kurumsal B2B Teklif Formu'
+      'Kurumsal Şirket Teklif Formu'
     ],
     pageBreakdown: {
       singlePage: ['Hero & Metrikler', 'Risk Analiz Süreci', 'Hizmetlerimiz', 'Referanslar', 'Teklif Formu & İletişim'],
@@ -305,7 +305,7 @@ export const DEMO_CATALOG: DemoItem[] = [
       headline: 'Sıfır İş Kazası Hedefli Dijital Vitrin',
       subheadline: 'Fabrika ve şantiyelerin aradığı teknik yetkinlik ve disiplin.',
       stats: [
-        { label: 'B2B Güven', value: 'En Yüksek' },
+        { label: 'Kurumsal Güven', value: 'En Yüksek' },
         { label: 'Lighthouse', value: '97' },
         { label: 'Metrik Paneli', value: 'Canlı' }
       ]
@@ -392,12 +392,12 @@ export const DEMO_CATALOG: DemoItem[] = [
     badge: 'Hesaplama Araçlı',
     liveUrl: '/preview/denetimpro',
     previewImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
-    shortDesc: 'Mevzuat sirküleri bülteni, bordro/KDV hesaplama widgetları ve B2B danışmanlık vitrini.',
+    shortDesc: 'Mevzuat sirküleri bülteni, bordro/KDV hesaplama araçları ve kurumsal mali danışmanlık vitrini.',
     targetAudience: 'Yeminli Mali Müşavirler (YMM), vergi denetim şirketleri ve bordro ajansları.',
     keyFeatures: [
       'İnteraktif Netten Brütte / KDV Hesaplama Araçları',
       'PDF Formatında Sirküler Bülteni İndirici',
-      'Kurumsal B2B İletişim & Teklif Formu',
+      'Kurumsal Şirket Teklif & İletişim Formu',
       'Vergi İnceleme ve Raporlama Danışmanlığı'
     ],
     pageBreakdown: {

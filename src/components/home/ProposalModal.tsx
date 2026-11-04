@@ -69,8 +69,8 @@ export const ProposalModal: React.FC<ProposalModalProps> = ({
   const handleWhatsAppSubmit = () => {
     const text = `Merhaba MediWeb! Landing page üzerinden teklif konfigürasyonu oluşturdum:
 - Sektörüm: ${selectedSector}
-- Seçtiğim Paket: ${pkg.name} (${billingModel === 'waas' ? `WaaS Abonelik: ${pkg.waasSetupFormatted} Kurulum + ${pkg.waasMonthlyFormatted}/ay` : pkg.priceFormatted})
-- Ödeme Modeli: ${billingModel === 'waas' ? 'Aylık Abonelik (12 Ay Taahhütlü)' : 'Tek Seferlik (3 Yıl Dahil)'}
+- Seçtiğim Paket: ${pkg.name} (${billingModel === 'waas' ? `Esnek Aylık Model: ${pkg.waasSetupFormatted} Kurulum + ${pkg.waasMonthlyFormatted}/ay` : `${pkg.priceFormatted} + KDV`})
+- Ödeme Modeli: ${billingModel === 'waas' ? 'Sıfır Peşinatla Başlayın: Esnek Aylık Model (Sabit Taksit)' : 'Tek Seferlik (3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi)'}
 - Ek Hizmetler: ${selectedExtras.length > 0 ? selectedExtras.join(', ') : 'Seçilmedi'}
 - Şirket Türü: ${companyType === 'ltd' ? 'LTD./A.Ş.' : 'Şahıs İşletmesi'}
 - Tahmini Net Başlangıç Maliyeti: ${formatCurrency(netEffectiveCost)} (KDV Mahsubu Dahil)${billingModel === 'waas' ? ` + ${pkg.waasMonthlyFormatted}/ay` : ''}
@@ -154,7 +154,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
                     billingModel === 'onetime' ? 'bg-blue-600 text-white' : 'text-slate-400'
                   }`}
                 >
-                  Tek Seferlik (3 Yıl Dahil)
+                  Tek Seferlik (3 Yıl 0 ₺ Masraf)
                 </button>
                 <button
                   onClick={() => setBillingModel('waas')}
@@ -162,7 +162,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
                     billingModel === 'waas' ? 'bg-emerald-600 text-white' : 'text-slate-400'
                   }`}
                 >
-                  Abonelik (WaaS)
+                  Sıfır Peşinat: Esnek Aylık Model
                 </button>
               </div>
             </div>

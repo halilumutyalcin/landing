@@ -32,7 +32,7 @@ export const HeroSection: React.FC = () => {
             <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
               Aylarca süren ajans toplantılarına ve sürpriz yenileme faturalarına son. 
               Hukuk, klinik, OSGB, muhasebe ve emlak sektörüne özel geliştirilmiş 15 prestijli mimariyi inceleyin; 
-              firmanızın kurumsal kimliğiyle 3–5 günde anahtar teslim yayına alalım. <strong>3 yıl alan adı ve barındırma fiyata dahildir.</strong>
+              firmanızın kurumsal kimliğiyle 3–5 günde anahtar teslim yayına alalım. <strong>3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi.</strong>
             </p>
 
             {/* Direct Action Button */}
@@ -51,8 +51,8 @@ export const HeroSection: React.FC = () => {
               <div className="flex items-start gap-2.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block mb-0.5">3 Yıl Kesintisiz Barındırma</strong>
-                  <span className="text-slate-400">Yıllık sunucu masrafı yok (0 ₺)</span>
+                  <strong className="text-white block mb-0.5">3 Yıl Sıfır Ek Masraf</strong>
+                  <span className="text-slate-400">0 ₺ Yenileme Güvencesi</span>
                 </div>
               </div>
 
