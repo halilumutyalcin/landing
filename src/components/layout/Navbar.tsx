@@ -49,25 +49,25 @@ export const Navbar: React.FC = () => {
           </div>
         </Link>
 
-        {/* Clean, Spacious Navigation Links */}
+        {/* Clean, Focused Navigation Links */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
           <Link 
             href="/#tasarimlar" 
             className="hover:text-white transition-colors"
           >
-            Şablonlar
+            Canlı Demolar
           </Link>
           <Link 
-            href="/sektorler" 
+            href="/#nasil-calisir" 
             className="hover:text-white transition-colors"
           >
-            Sektörler
+            3 Günde Teslim
           </Link>
           <Link 
-            href="/bolgeler" 
+            href="/#paketler" 
             className="hover:text-white transition-colors"
           >
-            Bölgeler
+            Fiyatlandırma
           </Link>
         </nav>
 
@@ -105,21 +105,21 @@ export const Navbar: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="block p-3 rounded-lg text-blue-400 font-bold bg-blue-500/10"
             >
-              Şablonlar
+              Canlı Demolar
             </Link>
             <Link
-              href="/sektorler"
+              href="/#nasil-calisir"
               onClick={() => setMobileMenuOpen(false)}
               className="block p-3 rounded-lg text-slate-200 hover:bg-white/5 font-semibold"
             >
-              Sektörler
+              3 Günde Teslim
             </Link>
             <Link
-              href="/bolgeler"
+              href="/#paketler"
               onClick={() => setMobileMenuOpen(false)}
               className="block p-3 rounded-lg text-slate-200 hover:bg-white/5 font-semibold"
             >
-              Bölgeler
+              Fiyatlandırma
             </Link>
           </div>
 
