@@ -69,7 +69,7 @@ export const siteConfig = {
   name: 'MediWeb',
   domain: 'mediweb.com.tr',
   tagline: 'Sektörünüze Özel Kurumsal Web Mimarisi. 3–5 Günde Canlıda, 3 Yıl Boyunca Sıfır Ek Masraf (0 ₺ Yenileme Güvencesi).',
-  description: 'Haftalarca süren ajans toplantılarını ve sürpriz faturaları geride bırakın. Sektörünüze göre optimize edilmiş kurumsal web mimarisiyle, 3 yıl boyunca sıfır ek masraf güvencesiyle anahtar teslim dijital prestij.',
+  description: 'Web sitesi için haftalarca beklemenize ve sürpriz faturalarla uğraşmanıza gerek yok. Sektörünüze göre optimize edilmiş kurumsal web mimarisiyle, 3 yıl boyunca sıfır ek masraf güvencesiyle anahtar teslim dijital prestij.',
   whatsappNumber: '905550000000',
   whatsappDisplay: '+90 555 000 00 00',
   phoneDisplay: '0850 300 00 00',

@@ -19,7 +19,7 @@ export const HeroSection: React.FC = () => {
           {/* Left Column: Authoritative, Prestigious Positioning (8 Cols) */}
           <div className="lg:col-span-8 space-y-7 text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08]">
-              Kurumsal saygınlığınızı ilk saniyede hissettirin.{' '}
+              Markanıza yakışan ilk izlenim.{' '}
               <span className="text-slate-400 font-normal block mt-2">
                 Firmanıza özel web mimarisi, 3–5 günde yayında.
               </span>

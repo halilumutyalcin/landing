@@ -25,7 +25,7 @@ export const AgencyManifestoSection: React.FC = () => {
             <span>Ajans Manifestosu & Üretim İlkeleri</span>
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight leading-[1.02]">
-            Haftalarca Süren Ajans Toplantılarını Geride Bırakın.{' '}
+            Web sitesi için haftalarca beklemenize gerek yok!{' '}
             <br />
             <span className="text-slate-500 font-light">
               Biz Yeni Standardı İnşa Ediyoruz.
