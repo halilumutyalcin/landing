@@ -43,17 +43,17 @@ export const SectorTabs: React.FC<SectorTabsProps> = ({
               onClick={() => onSelectSector(sector.id)}
               className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 ${
                 isActive
-                  ? 'bg-blue-600 text-white shadow-md shadow-blue-600/30'
-                  : 'bg-[#121622] text-slate-300 hover:text-white hover:bg-[#1C2436]'
+                  ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
+                  : 'bg-[#0A0A0C] border border-white/[0.08] text-zinc-300 hover:text-white hover:bg-[#121216] hover:border-white/20'
               }`}
             >
-              <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-blue-400'}`} />
+              <Icon className={`w-4 h-4 ${isActive ? 'text-black' : 'text-amber-400'}`} />
               <span>{sector.name}</span>
               <span
                 className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono font-bold ${
                   isActive
-                    ? 'bg-black/35 text-white'
-                    : 'bg-white/10 text-slate-200'
+                    ? 'bg-black/10 text-black'
+                    : 'bg-white/10 text-zinc-300'
                 }`}
               >
                 {sector.count}

@@ -155,7 +155,7 @@ export const ExtraServicesSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
+          <div className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">
             İhtiyaca Göre Genişletilebilir Mimari
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
@@ -167,20 +167,20 @@ export const ExtraServicesSection: React.FC = () => {
           </p>
 
           {/* Interactive Category Filter Tabs - Side-by-side (Grid, No Scroll) */}
-          <div className="mt-8 w-full max-w-4xl mx-auto grid grid-cols-4 p-1 sm:p-1.5 rounded-2xl bg-[#121622] gap-1 sm:gap-2 shadow-inner">
+          <div className="mt-8 w-full max-w-4xl mx-auto grid grid-cols-4 p-1 sm:p-1.5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] gap-1 sm:gap-2 shadow-inner">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`w-full px-1.5 sm:px-3 md:px-5 py-2 sm:py-2.5 rounded-xl text-[10px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1 sm:gap-1.5 text-center ${
                   selectedCategory === cat.id
-                    ? 'bg-blue-600 text-white shadow'
-                    : 'text-slate-400 hover:text-white hover:bg-white/5'
+                    ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
+                    : 'text-zinc-400 hover:text-white hover:bg-white/[0.04]'
                 }`}
               >
                 <span>{cat.label}</span>
                 <span className={`hidden sm:inline-flex px-1.5 py-0.5 rounded text-[10px] font-mono shrink-0 ${
-                  selectedCategory === cat.id ? 'bg-white/20 text-white' : 'bg-black/30 text-slate-400'
+                  selectedCategory === cat.id ? 'bg-black/10 text-black' : 'bg-white/10 text-zinc-400'
                 }`}>
                   {cat.count}
                 </span>

@@ -31,40 +31,40 @@ export const HeroSection: React.FC = () => {
               firmanızın kurumsal kimliğiyle 3–5 günde anahtar teslim yayına alalım. <strong>3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi.</strong>
             </p>
 
-            {/* Direct Action Button - High Contrast Monokrom / Amber Detay */}
+            {/* Direct Action Button - Electric Indigo / Linear Style */}
             <div className="pt-2">
               <a
                 href="#tasarimlar"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white hover:bg-zinc-100 text-black font-bold text-sm shadow-xl transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-xl shadow-indigo-600/30 transition-all hover:-translate-y-0.5"
               >
                 <span>15 Canlı Mimarimizi İnceleyin</span>
-                <ArrowRight className="w-4 h-4 text-zinc-700" />
+                <ArrowRight className="w-4 h-4 text-white" />
               </a>
             </div>
 
             {/* 3 Clear Authority Badges */}
-            <div className="pt-8 border-t border-white/[0.08] grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-zinc-300 max-w-3xl">
+            <div className="pt-8 border-t border-white/[0.08] grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-slate-300 max-w-3xl">
               <div className="flex items-start gap-2.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block mb-0.5">3 Yıl Sıfır Ek Masraf</strong>
-                  <span className="text-zinc-400">0 ₺ Yenileme Güvencesi</span>
+                  <span className="text-slate-400">0 ₺ Yenileme Güvencesi</span>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Clock className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <Clock className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block mb-0.5">3–5 Günde Hızlı Lansman</strong>
-                  <span className="text-zinc-400">Gecikmeyen dakik teslimat</span>
+                  <span className="text-slate-400">Gecikmeyen dakik teslimat</span>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Zap className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <Zap className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block mb-0.5">Görerek Satın Alma</strong>
-                  <span className="text-zinc-400">Canlı demoyu önceden test edin</span>
+                  <span className="text-slate-400">Canlı demoyu önceden test edin</span>
                 </div>
               </div>
             </div>

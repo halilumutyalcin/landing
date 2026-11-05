@@ -60,16 +60,16 @@ export const WhyUsUnifiedSection: React.FC = () => {
           </p>
 
           {/* Interactive Unified Segmented Tabs - Side-by-side (Grid, No Scroll) */}
-          <div className="mt-8 w-full max-w-3xl mx-auto grid grid-cols-3 p-1 sm:p-1.5 rounded-2xl bg-[#121622] gap-1 sm:gap-1.5 shadow-inner">
+          <div className="mt-8 w-full max-w-3xl mx-auto grid grid-cols-3 p-1 sm:p-1.5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] gap-1 sm:gap-1.5 shadow-inner">
             <button
               onClick={() => setActiveTab('agency-vs-us')}
               className={`w-full px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
                 activeTab === 'agency-vs-us'
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
+                  : 'text-zinc-400 hover:text-white'
               }`}
             >
-              <Scale className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <Scale className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'agency-vs-us' ? 'text-black' : 'text-amber-400'}`} />
               <span>Geleneksel Ajans vs. Biz</span>
             </button>
 
@@ -77,11 +77,11 @@ export const WhyUsUnifiedSection: React.FC = () => {
               onClick={() => setActiveTab('wp-vs-next')}
               className={`w-full px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
                 activeTab === 'wp-vs-next'
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
+                  : 'text-zinc-400 hover:text-white'
               }`}
             >
-              <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 shrink-0" />
+              <Zap className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'wp-vs-next' ? 'text-black' : 'text-amber-400'}`} />
               <span>WordPress vs. Next.js Hız Kıyası</span>
             </button>
 
@@ -89,11 +89,11 @@ export const WhyUsUnifiedSection: React.FC = () => {
               onClick={() => setActiveTab('principles')}
               className={`w-full px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
                 activeTab === 'principles'
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
+                  : 'text-zinc-400 hover:text-white'
               }`}
             >
-              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 shrink-0" />
+              <ShieldCheck className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'principles' ? 'text-black' : 'text-amber-400'}`} />
               <span>Şeffaf İlkelerimiz & Taahhütler</span>
             </button>
           </div>
@@ -101,8 +101,8 @@ export const WhyUsUnifiedSection: React.FC = () => {
 
         {/* TAB 1: Geleneksel Ajans vs. MediWeb (Comparison Table) */}
         {activeTab === 'agency-vs-us' && (
-          <div className="bg-[#121622] rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto animate-in fade-in duration-300">
-            <div className="grid grid-cols-1 md:grid-cols-3 bg-[#0C0F17] text-xs sm:text-sm font-semibold text-slate-400 p-4 sm:p-5 border-b border-white/5">
+          <div className="bg-[#0A0A0C] border border-white/[0.08] rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto animate-in fade-in duration-300">
+            <div className="grid grid-cols-1 md:grid-cols-3 bg-[#121214] text-xs sm:text-sm font-semibold text-zinc-400 p-4 sm:p-5 border-b border-white/5">
               <div className="hidden md:block">Karşılaştırma Kriteri</div>
               <div className="text-rose-400 flex items-center gap-2">
                 <XCircle className="w-4 h-4 text-rose-400 shrink-0" />
@@ -220,7 +220,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-amber-400 mb-1">Google Uyumu</div>
+                    <div className="text-xs font-bold text-indigo-400 mb-1">Google Uyumu</div>
                     <div className="text-3xl font-black text-white font-mono">Kötü</div>
                     <div className="text-[11px] text-amber-300 mt-1">Düşük Mobil Performans</div>
                   </div>
@@ -275,7 +275,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
               <div className="space-y-3.5 text-left">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <div>
-                    <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">
+                    <div className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-1">
                       Ajans Manifestosu & Samimi Taahhüt
                     </div>
                     <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">

@@ -48,7 +48,7 @@ export const HowItWorksSection: React.FC = () => {
         
         {/* Section Header - Human & Direct */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
+          <div className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">
             Zahmetsiz & Şeffaf Süreç
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
@@ -79,7 +79,7 @@ export const HowItWorksSection: React.FC = () => {
                       <span className="text-3xl sm:text-4xl font-black font-mono text-white tracking-tight">
                         {item.step}
                       </span>
-                      <Icon className="w-5 h-5 text-slate-400 group-hover:text-amber-400 transition-colors" />
+                      <Icon className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
                     </div>
 
                     <h3 className="text-base sm:text-lg font-bold text-white mb-2.5 leading-snug">

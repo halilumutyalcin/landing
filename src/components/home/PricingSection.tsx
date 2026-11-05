@@ -148,13 +148,13 @@ export const PricingSection: React.FC = () => {
           {/* Billing Mode & B2B Tax Toggles */}
           <div className="mt-8 flex flex-col items-center gap-3">
             {/* Primary Toggle: One-Time vs Flexible Monthly Subscription */}
-            <div className="inline-flex items-center p-1 rounded-2xl bg-[#121622] shadow-inner max-w-full overflow-x-auto">
+            <div className="inline-flex items-center p-1 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] shadow-inner max-w-full overflow-x-auto">
               <button
                 onClick={() => setBillingMode('onetime')}
                 className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${
                   billingMode === 'onetime'
-                    ? 'bg-blue-600 text-white shadow-lg'
-                    : 'text-slate-400 hover:text-white'
+                    ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
+                    : 'text-zinc-400 hover:text-white'
                 }`}
               >
                 Tek Seferlik (3 Yıl Sıfır Ek Masraf)
@@ -163,8 +163,8 @@ export const PricingSection: React.FC = () => {
                 onClick={() => setBillingMode('waas')}
                 className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all whitespace-nowrap ${
                   billingMode === 'waas'
-                    ? 'bg-emerald-600 text-white shadow-lg'
-                    : 'text-slate-400 hover:text-white'
+                    ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20 font-extrabold ring-1 ring-amber-400'
+                    : 'text-zinc-400 hover:text-white'
                 }`}
               >
                 <span>Sıfır Peşinatla Başlayın: Esnek Aylık Model</span>
@@ -247,13 +247,13 @@ export const PricingSection: React.FC = () => {
                 transition={{ duration: 0.35, ease: 'easeInOut' }}
                 className={`rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-all relative ${
                   isPro
-                    ? 'bg-[#121216] border-2 border-amber-500/50 shadow-2xl lg:-translate-y-2'
-                    : 'bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20'
+                    ? 'bg-[#121624] border-2 border-indigo-500/40 shadow-2xl lg:-translate-y-2'
+                    : 'bg-[#0F121C] border border-white/[0.08] hover:border-white/20'
                 }`}
               >
                 {/* Popular Ribbon */}
                 {isPro && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-amber-500 text-black text-[11px] font-bold tracking-normal shadow-lg">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-indigo-600 text-white text-[11px] font-bold tracking-normal shadow-lg shadow-indigo-600/40">
                     En Çok Tercih Edilen Paket
                   </div>
                 )}
@@ -261,7 +261,7 @@ export const PricingSection: React.FC = () => {
                 <div>
                   {/* Top Header */}
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold text-amber-400 tracking-normal">
+                    <span className="text-xs font-semibold text-indigo-400 tracking-normal">
                       {pkg.name} Paketi
                     </span>
                     <span className="text-xs text-zinc-400 font-medium">
@@ -293,7 +293,7 @@ export const PricingSection: React.FC = () => {
                       <span className="text-slate-400">
                         {billingMode === 'waas' ? 'Kurulum Bedeli:' : 'Ödeme Planı:'}
                       </span>
-                      <span className="font-semibold text-amber-400">
+                      <span className="font-semibold text-indigo-400">
                         {billingMode === 'waas' 
                           ? `${pkg.waasSetupFormatted} (Tek Seferlik)` 
                           : pkg.paymentTerms}
@@ -380,7 +380,7 @@ export const PricingSection: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => toggleExpand(pkg.id)}
-                        className="w-full mt-2 py-2 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] text-[11px] font-bold text-amber-400 hover:text-amber-300 flex items-center justify-center gap-1.5 transition-colors"
+                        className="w-full mt-2 py-2 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] text-[11px] font-bold text-indigo-400 hover:text-indigo-300 flex items-center justify-center gap-1.5 transition-colors"
                       >
                         <span>
                           {expandedPackages[pkg.id]
@@ -407,11 +407,11 @@ export const PricingSection: React.FC = () => {
                     rel="noopener noreferrer"
                     className={`w-full py-3.5 rounded-xl font-bold text-sm tracking-normal flex items-center justify-center gap-2.5 transition-all shadow-md ${
                       isPro
-                        ? 'bg-white hover:bg-zinc-200 text-black shadow-lg shadow-white/10'
-                        : 'bg-white/10 hover:bg-white/20 text-white border border-white/10'
+                        ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/30'
+                        : 'bg-white/10 hover:bg-white/15 text-white border border-white/10'
                     }`}
                   >
-                    <WhatsAppIcon className="w-4 h-4 fill-emerald-500 shrink-0" />
+                    <WhatsAppIcon className="w-4 h-4 fill-emerald-400 shrink-0" />
                     <span>
                       {billingMode === 'waas' ? 'Abonelikle Başla (WhatsApp)' : 'Bu Paketi Seç & WhatsApp ile Başla'}
                     </span>
@@ -423,10 +423,10 @@ export const PricingSection: React.FC = () => {
         </div>
 
         {/* 360° Dijital Lansman Paketi - High-Ticket All-in-One Solution for New & Rebranding Companies */}
-        <div className="mb-14 rounded-3xl bg-[#0F0F12] border border-amber-500/30 p-7 sm:p-10 shadow-2xl relative overflow-hidden">
+        <div className="mb-14 rounded-3xl bg-[#0F1322] border border-indigo-500/30 p-7 sm:p-10 shadow-2xl relative overflow-hidden">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8 pb-8 border-b border-white/10">
             <div className="max-w-2xl">
-              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-bold uppercase tracking-wider mb-3">
                 <span>Tek Elden Çözüm · Sıfırdan Zirveye</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
@@ -495,7 +495,7 @@ export const PricingSection: React.FC = () => {
 
             <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
               <div className="flex items-center gap-2.5">
-                <Zap className="w-5 h-5 text-amber-400 shrink-0" />
+                <Zap className="w-5 h-5 text-indigo-400 shrink-0" />
                 <strong className="text-white text-sm font-bold">
                   4. Ultra Hızlı Site + 3 Yıl
                 </strong>
@@ -604,7 +604,7 @@ export const PricingSection: React.FC = () => {
           {/* Header & 3 Value Pillars */}
           <div className="p-7 sm:p-10">
             <div className="text-center max-w-2xl mx-auto mb-10">
-              <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
+              <div className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">
                 Değer & Yatırım Mantığı
               </div>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -665,7 +665,7 @@ export const PricingSection: React.FC = () => {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+              <ShieldCheck className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
               <div>
                 <strong className="text-white block mb-0.5">15–60 Gün Hata Garantisi</strong>
                 <span className="text-slate-400">Teslimattan sonra fark edilen tüm teknik aksaklıklar ekibimizce anında ve ücretsiz giderilir.</span>
@@ -730,9 +730,9 @@ export const PricingSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 transition-colors">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-indigo-500/30 transition-colors">
               <div className="flex items-center gap-2.5 mb-2">
-                <FileCheck2 className="w-5 h-5 text-amber-400 shrink-0" />
+                <FileCheck2 className="w-5 h-5 text-indigo-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Online Evrak &amp; Rapor Sorgulama</h4>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
