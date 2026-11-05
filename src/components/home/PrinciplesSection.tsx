@@ -5,7 +5,7 @@ import { CheckCircle, XCircle, MapPin } from 'lucide-react';
 
 export const PrinciplesSection: React.FC = () => {
   return (
-    <section id="neden-biz" className="py-24 bg-[#090B10]">
+    <section id="neden-biz" className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Human Touch / Founder's Authentic Note (No heavy borders, clean typography) */}

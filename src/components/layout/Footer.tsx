@@ -22,10 +22,10 @@ export const Footer: React.FC = () => {
   const [legalModalType, setLegalModalType] = useState<'kvkk' | 'terms' | 'privacy' | null>(null);
 
   return (
-    <footer className="bg-[#080B12] border-t border-white/[0.08] relative overflow-hidden pt-16 pb-12">
+    <footer className="bg-black border-t border-white/[0.08] relative overflow-hidden pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Top Guarantee Banner - Clean, Crisp Surface Without Fuzzy Blur Banding */}
-        <div className="bg-[#0E121B] rounded-2xl p-6 sm:p-8 mb-16 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div className="bg-[#0A0A0C] rounded-2xl p-6 sm:p-8 mb-16 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div className="flex items-center gap-4">
             <ShieldCheck className="w-8 h-8 text-emerald-400 shrink-0" />
             <div>

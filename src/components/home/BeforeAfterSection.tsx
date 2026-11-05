@@ -35,12 +35,12 @@ export const BeforeAfterSection: React.FC = () => {
   };
 
   return (
-    <section id="oncesi-sonrasi" className="py-24 bg-[#0B0E14] border-b border-white/[0.08]">
+    <section id="oncesi-sonrasi" className="py-24 bg-black border-b border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">
+          <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
             İşletmeniz İçin Gerçek Fark
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">

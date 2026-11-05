@@ -14,12 +14,12 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section id="sss" className="py-24 bg-[#090B10]">
+    <section id="sss" className="py-24 bg-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">
+          <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
             Aklınıza Takılan Sorular
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight mb-4">

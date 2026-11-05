@@ -60,14 +60,14 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="iletisim" className="py-24 bg-[#090B10] relative">
+    <section id="iletisim" className="py-24 bg-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Column: Natural, Human Agency Directory (No artificial boxed cards) */}
           <div className="lg:col-span-5 space-y-7">
             <div>
-              <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">
+              <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
                 Doğrudan İletişim & Kurulum
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight leading-tight">

@@ -43,12 +43,12 @@ export const HowItWorksSection: React.FC = () => {
   ];
 
   return (
-    <section id="nasil-calisir" className="py-24 bg-[#090B10] border-b border-white/[0.08] relative overflow-hidden">
+    <section id="nasil-calisir" className="py-24 bg-black border-b border-white/[0.08] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header - Human & Direct */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">
+          <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
             Zahmetsiz & Şeffaf Süreç
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
@@ -76,10 +76,10 @@ export const HowItWorksSection: React.FC = () => {
                   <div>
                     {/* Step Number + Naked Icon */}
                     <div className="flex items-center justify-between mb-5">
-                      <span className="text-3xl sm:text-4xl font-black font-mono text-blue-400 tracking-tight">
+                      <span className="text-3xl sm:text-4xl font-black font-mono text-white tracking-tight">
                         {item.step}
                       </span>
-                      <Icon className="w-5 h-5 text-slate-400 group-hover:text-blue-400 transition-colors" />
+                      <Icon className="w-5 h-5 text-slate-400 group-hover:text-amber-400 transition-colors" />
                     </div>
 
                     <h3 className="text-base sm:text-lg font-bold text-white mb-2.5 leading-snug">

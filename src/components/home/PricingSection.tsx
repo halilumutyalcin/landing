@@ -124,7 +124,7 @@ export const PricingSection: React.FC = () => {
   };
 
   return (
-    <section id="paketler" className="py-20 bg-[#090B10] border-b border-white/[0.08]">
+    <section id="paketler" className="py-20 bg-black border-b border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* High-Trust Delivery Commitment Banner */}
@@ -245,15 +245,15 @@ export const PricingSection: React.FC = () => {
                 key={pkg.id}
                 layout
                 transition={{ duration: 0.35, ease: 'easeInOut' }}
-                className={`rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-colors relative ${
+                className={`rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-all relative ${
                   isPro
-                    ? 'bg-[#141B2D] shadow-2xl lg:-translate-y-2'
-                    : 'bg-[#0E121A] hover:bg-[#121724]'
+                    ? 'bg-[#121216] border-2 border-amber-500/50 shadow-2xl lg:-translate-y-2'
+                    : 'bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20'
                 }`}
               >
                 {/* Popular Ribbon */}
                 {isPro && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-blue-600 text-white text-[11px] font-semibold tracking-normal shadow">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-amber-500 text-black text-[11px] font-bold tracking-normal shadow-lg">
                     En Çok Tercih Edilen Paket
                   </div>
                 )}
@@ -261,15 +261,15 @@ export const PricingSection: React.FC = () => {
                 <div>
                   {/* Top Header */}
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold text-blue-400 tracking-normal">
+                    <span className="text-xs font-semibold text-amber-400 tracking-normal">
                       {pkg.name} Paketi
                     </span>
-                    <span className="text-xs text-slate-400 font-medium">
+                    <span className="text-xs text-zinc-400 font-medium">
                       {pkg.deliveryTime}
                     </span>
                   </div>
 
-                  <p className="text-xs text-slate-300 mb-6 leading-relaxed">
+                  <p className="text-xs text-zinc-300 mb-6 leading-relaxed">
                     {pkg.tagline}
                   </p>
 
@@ -380,7 +380,7 @@ export const PricingSection: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => toggleExpand(pkg.id)}
-                        className="w-full mt-2 py-2 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] text-[11px] font-bold text-blue-400 hover:text-blue-300 flex items-center justify-center gap-1.5 transition-colors"
+                        className="w-full mt-2 py-2 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] text-[11px] font-bold text-amber-400 hover:text-amber-300 flex items-center justify-center gap-1.5 transition-colors"
                       >
                         <span>
                           {expandedPackages[pkg.id]
@@ -397,7 +397,7 @@ export const PricingSection: React.FC = () => {
                   </div>
                 </div>
 
-                {/* CTA Action with Official WhatsApp Icon */}
+                {/* CTA Action with High Contrast Focus */}
                 <div>
                   <a
                     href={generateWhatsAppUrl({
@@ -407,11 +407,11 @@ export const PricingSection: React.FC = () => {
                     rel="noopener noreferrer"
                     className={`w-full py-3.5 rounded-xl font-bold text-sm tracking-normal flex items-center justify-center gap-2.5 transition-all shadow-md ${
                       isPro
-                        ? 'bg-emerald-600 hover:bg-emerald-500 text-white'
-                        : 'bg-white/10 hover:bg-white/15 text-white'
+                        ? 'bg-white hover:bg-zinc-200 text-black shadow-lg shadow-white/10'
+                        : 'bg-white/10 hover:bg-white/20 text-white border border-white/10'
                     }`}
                   >
-                    <WhatsAppIcon className="w-4 h-4 fill-current shrink-0" />
+                    <WhatsAppIcon className="w-4 h-4 fill-emerald-500 shrink-0" />
                     <span>
                       {billingMode === 'waas' ? 'Abonelikle Başla (WhatsApp)' : 'Bu Paketi Seç & WhatsApp ile Başla'}
                     </span>
@@ -423,10 +423,10 @@ export const PricingSection: React.FC = () => {
         </div>
 
         {/* 360° Dijital Lansman Paketi - High-Ticket All-in-One Solution for New & Rebranding Companies */}
-        <div className="mb-14 rounded-3xl bg-[#111728] p-7 sm:p-10 shadow-2xl relative overflow-hidden">
+        <div className="mb-14 rounded-3xl bg-[#0F0F12] border border-amber-500/30 p-7 sm:p-10 shadow-2xl relative overflow-hidden">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8 pb-8 border-b border-white/10">
             <div className="max-w-2xl">
-              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-wider mb-3">
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
                 <span>Tek Elden Çözüm · Sıfırdan Zirveye</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
@@ -604,7 +604,7 @@ export const PricingSection: React.FC = () => {
           {/* Header & 3 Value Pillars */}
           <div className="p-7 sm:p-10">
             <div className="text-center max-w-2xl mx-auto mb-10">
-              <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">
+              <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
                 Değer & Yatırım Mantığı
               </div>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">

@@ -95,7 +95,7 @@ export const LegoThemeStudioSection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<'hero' | 'beforeafter' | 'comparison' | 'process'>('hero');
 
   return (
-    <section id="lego-studio" className="py-24 bg-[#080C14] relative overflow-hidden border-b border-white/5">
+    <section id="lego-studio" className="py-24 bg-black relative overflow-hidden border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

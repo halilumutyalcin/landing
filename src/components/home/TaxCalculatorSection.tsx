@@ -13,7 +13,7 @@ export const TaxCalculatorSection: React.FC = () => {
   const [companyType, setCompanyType] = useState<'ltd' | 'individual'>('ltd');
 
   return (
-    <section id="vergi-avantaji" className="py-20 bg-[#0B0E14] border-b border-white/[0.08]">
+    <section id="vergi-avantaji" className="py-20 bg-black border-b border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header - Clean & Direct */}

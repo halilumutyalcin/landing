@@ -44,7 +44,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
   };
 
   return (
-    <section id="neden-biz" className="py-20 bg-[#090B10] border-b border-white/[0.08] relative overflow-hidden">
+    <section id="neden-biz" className="py-20 bg-black border-b border-white/[0.08] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -275,7 +275,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
               <div className="space-y-3.5 text-left">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <div>
-                    <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">
+                    <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">
                       Ajans Manifestosu & Samimi Taahhüt
                     </div>
                     <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">

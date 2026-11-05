@@ -9,7 +9,7 @@ import { siteConfig } from '@/config/site.config';
 
 export const ComparisonSection: React.FC = () => {
   return (
-    <section id="neden-biz" className="py-20 bg-[#0B0E14] border-b border-white/[0.08]">
+    <section id="neden-biz" className="py-20 bg-black border-b border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

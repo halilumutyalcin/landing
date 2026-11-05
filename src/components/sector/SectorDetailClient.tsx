@@ -46,7 +46,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
   });
 
   return (
-    <div className="pt-24 pb-20 bg-[#090B10]">
+    <div className="pt-24 pb-20 bg-black">
       {/* 1. Breadcrumbs */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-slate-400">

@@ -31,12 +31,12 @@ export const DemoGrid: React.FC<DemoGridProps> = ({ initialSector = 'all' }) => 
   };
 
   return (
-    <section id="tasarimlar" className="py-20 bg-[#0B0E14] border-b border-white/[0.08]">
+    <section id="tasarimlar" className="py-20 bg-black border-b border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header - Clean & Direct */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="text-sm font-semibold text-blue-400 mb-2">
+          <div className="text-sm font-semibold text-amber-400 mb-2">
             Kanıtlanmış Sektörel Çözümler
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
