@@ -235,7 +235,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
           </div>
 
           {/* 4. Company Tax Saving Simulator - Zero Outer Border */}
-          <div className="p-4 rounded-2xl bg-[#0B0F19]">
+          <div className="p-4 rounded-2xl bg-black">
             <div className="flex items-center justify-between mb-3">
               <span className="text-xs font-bold text-slate-300 flex items-center gap-2">
                 <Building2 className="w-4 h-4 text-amber-400" />
@@ -284,7 +284,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
         </div>
 
         {/* Footer Actions */}
-        <div className="p-6 bg-[#0B0F19] border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="p-6 bg-black border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <div className="text-xs text-slate-400">
               {billingModel === 'waas' ? 'Efektif Başlangıç & Aylık Taahhüt:' : 'Efektif Net Maliyetiniz:'}

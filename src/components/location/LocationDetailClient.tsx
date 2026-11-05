@@ -35,7 +35,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
   )}`;
 
   return (
-    <div className="min-h-screen bg-[#07090E] text-slate-100">
+    <div className="min-h-screen bg-black text-slate-100">
       {/* 1. HERO SECTION */}
       <section className="relative pt-24 pb-20 overflow-hidden border-b border-white/[0.08]">
         {/* Subtle Background Glow */}
@@ -116,7 +116,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
       </section>
 
       {/* 2. VALUE PROPOSITION: WHY LOCAL BUSINESSES CHOOSE US */}
-      <section className="py-16 border-b border-white/[0.08] bg-[#0A0D15]">
+      <section className="py-16 border-b border-white/[0.08] bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
@@ -233,7 +233,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
       </section>
 
       {/* 4. PRICING SUMMARY FOR LOCAL CLIENTS */}
-      <section className="py-20 border-b border-white/[0.08] bg-[#0A0D15]">
+      <section className="py-20 border-b border-white/[0.08] bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">

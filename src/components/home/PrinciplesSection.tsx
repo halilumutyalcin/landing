@@ -9,7 +9,7 @@ export const PrinciplesSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Human Touch / Founder's Authentic Note (No heavy borders, clean typography) */}
-        <div className="max-w-4xl mx-auto mb-16 p-7 sm:p-9 rounded-3xl bg-[#0E1320] shadow-2xl relative overflow-hidden">
+        <div className="max-w-4xl mx-auto mb-16 p-7 sm:p-9 rounded-3xl bg-[#0A0A0C] border border-white/[0.08] shadow-2xl relative overflow-hidden">
           <div className="space-y-3.5 text-left">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div>
@@ -61,7 +61,7 @@ export const PrinciplesSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           
           {/* Ne Yapıyoruz */}
-          <div className="bg-[#0C1520] rounded-3xl p-7 sm:p-9 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+          <div className="bg-[#0A0A0C] border border-white/[0.08] rounded-3xl p-7 sm:p-9 flex flex-col justify-between shadow-2xl relative overflow-hidden">
             <div>
               <div className="flex items-center gap-3.5 mb-7">
                 <CheckCircle className="w-8 h-8 text-amber-400 shrink-0" />

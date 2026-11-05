@@ -48,7 +48,7 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
         className="relative w-full max-w-7xl bg-[#0F172A] border border-white/10 rounded-2xl sm:rounded-3xl flex flex-col h-[92vh] shadow-2xl overflow-hidden"
       >
         {/* Top Control Bar */}
-        <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 bg-[#0B0F19] border-b border-white/10">
+        <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 bg-black border-b border-white/10">
           {/* Demo Details */}
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 hidden sm:block" />
@@ -144,7 +144,7 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
         {/* Viewport Frame Area */}
         <div className="flex-1 bg-[#090D16] p-2 sm:p-6 flex items-center justify-center overflow-auto">
           <div
-            className={`transition-all duration-300 bg-[#0B0F19] rounded-xl border border-white/10 shadow-2xl overflow-hidden flex flex-col ${deviceWidths[device]}`}
+            className={`transition-all duration-300 bg-black rounded-xl border border-white/10 shadow-2xl overflow-hidden flex flex-col ${deviceWidths[device]}`}
           >
             {/* Mock Browser Header */}
             <div className="bg-[#1E293B] px-4 py-2.5 flex items-center justify-between border-b border-white/5 shrink-0">
@@ -153,7 +153,7 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
                 <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
               </div>
-              <div className="text-[11px] text-slate-400 font-mono bg-[#0B0F19] px-4 py-1 rounded-md border border-white/5 max-w-sm truncate">
+              <div className="text-[11px] text-slate-400 font-mono bg-black px-4 py-1 rounded-md border border-white/5 max-w-sm truncate">
                 https://demo-{demo.slug}.mediweb.com.tr
               </div>
               <div className="text-[10px] text-emerald-400 font-mono flex items-center gap-1">
@@ -173,7 +173,7 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
         </div>
 
         {/* Bottom Banner Bar */}
-        <div className="px-6 py-2.5 bg-[#0B0F19] border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-400">
+        <div className="px-6 py-2.5 bg-black border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-400">
           <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-brand-400" />
             <span>

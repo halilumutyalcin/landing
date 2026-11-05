@@ -247,7 +247,7 @@ export const PricingSection: React.FC = () => {
                 transition={{ duration: 0.35, ease: 'easeInOut' }}
                 className={`rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-all relative ${
                   isPro
-                    ? 'bg-[#121624] border-2 border-amber-500/30 shadow-2xl lg:-translate-y-2'
+                    ? 'bg-[#0A0A0C] border-2 border-amber-500/30 shadow-2xl lg:-translate-y-2'
                     : 'bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20'
                 }`}
               >
@@ -649,7 +649,7 @@ export const PricingSection: React.FC = () => {
           </div>
 
           {/* Integrated Trust Guarantees Footer Strip (No awkward second card) */}
-          <div className="border-t border-white/10 bg-[#0A0D15] p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300">
+          <div className="border-t border-white/10 bg-black p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300">
             <div className="flex items-start gap-3">
               <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
               <div>

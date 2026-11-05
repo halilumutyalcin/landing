@@ -64,7 +64,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
 
       {/* 2. Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="p-8 sm:p-12 rounded-3xl bg-[#0E1322] relative overflow-hidden">
+        <div className="p-8 sm:p-12 rounded-3xl bg-[#0A0A0C] border border-white/[0.08] relative overflow-hidden">
           <div className="max-w-3xl">
             {/* Top Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider mb-5">
@@ -253,7 +253,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
 
       {/* 5. Pakete Dahil Hizmetler (Checklist) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="rounded-3xl bg-[#0E1322] p-8 sm:p-10">
+        <div className="rounded-3xl bg-[#0A0A0C] border border-white/[0.08] p-8 sm:p-10">
           <div className="max-w-2xl mb-8">
             <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
               Eksiksiz Kurulum

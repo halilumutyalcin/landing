@@ -58,7 +58,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
   };
 
   return (
-    <div className="pt-24 pb-24 min-h-screen bg-[#0B0F19]">
+    <div className="pt-24 pb-24 min-h-screen bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 1. ÜST BREADCRUMB & KONTROL ÇUBUĞU */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 py-4 mb-6 border-b border-white/10">
@@ -136,7 +136,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
 
         {/* 2. BÜYÜK CANLI ÖNİZLEME ÇERÇEVESİ */}
         <div className="bg-[#090D16] border border-white/10 rounded-3xl p-3 sm:p-6 mb-16 flex items-center justify-center shadow-2xl overflow-hidden">
-          <div className={`transition-all duration-300 bg-[#0B0F19] rounded-2xl border border-white/10 shadow-2xl overflow-hidden flex flex-col ${deviceWidths[device]}`}>
+          <div className={`transition-all duration-300 bg-black rounded-2xl border border-white/10 shadow-2xl overflow-hidden flex flex-col ${deviceWidths[device]}`}>
             {/* Mock browser header */}
             <div className="bg-[#1E293B] px-4 py-2.5 flex items-center justify-between border-b border-white/5 shrink-0">
               <div className="flex items-center gap-2">
@@ -144,7 +144,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
                 <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
               </div>
-              <div className="text-[11px] text-slate-400 font-mono bg-[#0B0F19] px-4 py-1 rounded-md border border-white/5 max-w-sm truncate">
+              <div className="text-[11px] text-slate-400 font-mono bg-black px-4 py-1 rounded-md border border-white/5 max-w-sm truncate">
                 https://demo-{demo.slug}.mediweb.com.tr
               </div>
               <div className="text-[10px] text-emerald-400 font-mono flex items-center gap-1">
@@ -186,7 +186,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
               {/* Stats Highlight */}
               <div className="grid grid-cols-3 gap-3 mt-6 pt-6 border-t border-white/10">
                 {demo.highlights.stats.map((st, idx) => (
-                  <div key={idx} className="text-center p-3 rounded-xl bg-[#0B0F19] border border-white/5">
+                  <div key={idx} className="text-center p-3 rounded-xl bg-black border border-white/5">
                     <div className="text-base sm:text-lg font-black text-brand-400 font-display">
                       {st.value}
                     </div>
@@ -248,7 +248,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
               className={`p-4 rounded-2xl text-left border transition-all ${
                 selectedPackageTier === 'starter'
                   ? 'bg-brand-600 border-brand-400 text-white shadow-lg'
-                  : 'bg-[#0B0F19] border-white/10 text-slate-400 hover:text-white'
+                  : 'bg-black border-white/10 text-slate-400 hover:text-white'
               }`}
             >
               <div className="text-xs font-bold uppercase tracking-wider text-slate-300">Başlangıç</div>
@@ -261,7 +261,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
               className={`p-4 rounded-2xl text-left border transition-all ${
                 selectedPackageTier === 'pro'
                   ? 'bg-brand-600 border-brand-400 text-white shadow-lg ring-2 ring-brand-400/50'
-                  : 'bg-[#0B0F19] border-white/10 text-slate-400 hover:text-white'
+                  : 'bg-black border-white/10 text-slate-400 hover:text-white'
               }`}
             >
               <div className="text-xs font-bold uppercase tracking-wider flex items-center justify-between text-white">
@@ -277,7 +277,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
               className={`p-4 rounded-2xl text-left border transition-all ${
                 selectedPackageTier === 'enterprise'
                   ? 'bg-brand-600 border-brand-400 text-white shadow-lg'
-                  : 'bg-[#0B0F19] border-white/10 text-slate-400 hover:text-white'
+                  : 'bg-black border-white/10 text-slate-400 hover:text-white'
               }`}
             >
               <div className="text-xs font-bold uppercase tracking-wider text-slate-300">Kurumsal</div>
@@ -287,7 +287,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
           </div>
 
           {/* Active Package Breakdown Details */}
-          <div className="bg-[#0B0F19] border border-white/10 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
+          <div className="bg-black border border-white/10 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
               <div>
                 <span className="text-xs font-bold text-brand-400 uppercase tracking-wider">

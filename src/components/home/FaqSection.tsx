@@ -38,7 +38,7 @@ export const FaqSection: React.FC = () => {
             return (
               <div
                 key={index}
-                className="bg-[#0E1320] rounded-2xl overflow-hidden transition-colors"
+                className="bg-[#0A0A0C] border border-white/[0.08] rounded-2xl overflow-hidden transition-colors"
               >
                 <button
                   onClick={() => toggleFaq(index)}
@@ -65,7 +65,7 @@ export const FaqSection: React.FC = () => {
         </div>
 
         {/* Bottom Clean CTA Box (No heavy gradient, no artificial border, authentic WhatsAppIcon) */}
-        <div className="bg-[#0E1320] rounded-3xl p-8 sm:p-10 text-center shadow-xl">
+        <div className="bg-[#0A0A0C] border border-white/[0.08] rounded-3xl p-8 sm:p-10 text-center shadow-xl">
           <h3 className="text-xl sm:text-2xl font-bold text-white font-display mb-2">
             Sorunuzu Burada Göremediniz mi?
           </h3>

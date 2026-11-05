@@ -25,7 +25,7 @@ export default function BolgelerIndexPage() {
   const avrupa = LOCATIONS_SEO_DATA.filter((l) => l.side === 'avrupa');
 
   return (
-    <div className="min-h-screen bg-[#07090E] text-slate-100 py-24">
+    <div className="min-h-screen bg-black text-slate-100 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-16">

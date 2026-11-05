@@ -179,8 +179,8 @@ export const ExtraServicesSection: React.FC = () => {
                 }`}
               >
                 <span>{cat.label}</span>
-                <span className={`hidden sm:inline-flex px-1.5 py-0.5 rounded text-[10px] font-mono shrink-0 ${
-                  selectedCategory === cat.id ? 'bg-black/10 text-black' : 'bg-white/10 text-zinc-400'
+                <span className={`hidden sm:inline-flex px-1.5 py-0.5 rounded text-[10px] font-mono font-bold shrink-0 ${
+                  selectedCategory === cat.id ? 'bg-amber-400/20 text-amber-900 ring-1 ring-amber-500/30' : 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
                 }`}>
                   {cat.count}
                 </span>
@@ -211,7 +211,7 @@ export const ExtraServicesSection: React.FC = () => {
                   return (
                     <div 
                       key={service.id}
-                      className="p-5 rounded-2xl bg-[#0E1320] hover:bg-[#131A2B] transition-all duration-200 flex flex-col justify-between"
+                      className="p-5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] hover:border-amber-500/40 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
                     >
                       <div>
                         {/* Title + Icon */}
@@ -221,14 +221,14 @@ export const ExtraServicesSection: React.FC = () => {
                             <h4 className="text-sm font-bold text-white leading-snug">
                               {service.title}
                             </h4>
-                            <span className="text-[11px] font-semibold text-emerald-400 block mt-0.5">
+                            <span className="text-[11px] font-semibold text-amber-400 font-mono block mt-0.5">
                               {service.pricing}
                             </span>
                           </div>
                         </div>
 
                         {/* Description */}
-                        <p className="text-xs text-slate-300 leading-relaxed pl-8">
+                        <p className="text-xs text-zinc-300 leading-relaxed pl-8">
                           {service.description}
                         </p>
                       </div>

@@ -46,7 +46,7 @@ function CatalogContent() {
   };
 
   return (
-    <div className="pt-28 pb-24 min-h-screen bg-[#0B0F19]">
+    <div className="pt-28 pb-24 min-h-screen bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Breadcrumb & Title */}
         <div className="mb-10 text-center sm:text-left flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/10 pb-8">
@@ -130,7 +130,7 @@ function CatalogContent() {
 
 export default function CatalogPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-[#0B0F19] pt-32 text-center text-slate-400">Yükleniyor...</div>}>
+    <Suspense fallback={<div className="min-h-screen bg-black pt-32 text-center text-slate-400">Yükleniyor...</div>}>
       <CatalogContent />
     </Suspense>
   );

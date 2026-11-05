@@ -120,7 +120,7 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Right Column: Clean Form (No heavy artificial border styling) */}
-          <div className="lg:col-span-7 bg-[#0E1320] rounded-3xl p-6 sm:p-10 shadow-2xl relative">
+          <div className="lg:col-span-7 bg-[#0A0A0C] border border-white/[0.08] rounded-3xl p-6 sm:p-10 shadow-2xl relative">
             {isSubmitted ? (
               <div className="py-12 text-center space-y-4">
                 <div className="w-16 h-16 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 mx-auto">

@@ -86,7 +86,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen bg-[#0B0F19] text-[#F8FAFC] antialiased selection:bg-brand-500 selection:text-white">
+      <body className="min-h-screen bg-black text-[#F8FAFC] antialiased selection:bg-brand-500 selection:text-white">
         <JsonLd />
         <Navbar />
         <main className="min-h-screen">

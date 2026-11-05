@@ -56,7 +56,7 @@ export const FloatingWhatsApp: React.FC = () => {
               <select
                 value={sector}
                 onChange={(e) => setSector(e.target.value)}
-                className="w-full bg-[#0B0F19] border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                className="w-full bg-black border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
               >
                 <option value="Hukuk / Avukatlık">Hukuk / Avukatlık</option>
                 <option value="Sağlık / Klinik">Sağlık / Diş / Klinik</option>
@@ -74,7 +74,7 @@ export const FloatingWhatsApp: React.FC = () => {
               <select
                 value={selectedPackage}
                 onChange={(e) => setSelectedPackage(e.target.value)}
-                className="w-full bg-[#0B0F19] border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
+                className="w-full bg-black border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500"
               >
                 <option value="Başlangıç (17.500 ₺)">Başlangıç Paketi (17.500 ₺)</option>
                 <option value="Profesyonel (32.500 ₺)">Profesyonel Paket (32.500 ₺)</option>

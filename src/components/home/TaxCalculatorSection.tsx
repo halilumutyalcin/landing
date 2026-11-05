@@ -109,19 +109,19 @@ export const TaxCalculatorSection: React.FC = () => {
 
         {/* Explainers Footer */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-slate-400">
-          <div className="p-4 rounded-xl bg-[#0E1320] flex items-start gap-2.5">
+          <div className="p-4 rounded-xl bg-[#0A0A0C] border border-white/[0.08] flex items-start gap-2.5">
             <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
             <div>
               <strong className="text-white">KDV Mahsubu:</strong> Faturadaki %20 KDV tutarını, aylık KDV beyannamenizde devlete ödeyeceğiniz KDV'den doğrudan düşersiniz.
             </div>
           </div>
-          <div className="p-4 rounded-xl bg-[#0E1320] flex items-start gap-2.5">
+          <div className="p-4 rounded-xl bg-[#0A0A0C] border border-white/[0.08] flex items-start gap-2.5">
             <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
             <div>
               <strong className="text-white">Resmi Gider:</strong> Faturanın net tutarı şirketin resmi gideri kabul edilerek dönem sonu vergi matrahından düşülür.
             </div>
           </div>
-          <div className="p-4 rounded-xl bg-[#0E1320] flex items-start gap-2.5">
+          <div className="p-4 rounded-xl bg-[#0A0A0C] border border-white/[0.08] flex items-start gap-2.5">
             <CheckCircle2 className="w-4 h-4 text-slate-300 shrink-0 mt-0.5" />
             <div>
               <strong className="text-white">Anında E-Fatura:</strong> Siparişiniz onaylandığında kurumsal e-faturanız muhasebe e-postanıza aynı gün iletilir.
