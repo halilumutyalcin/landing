@@ -50,7 +50,7 @@ export const ComparisonSection: React.FC = () => {
                   <span>{item.traditional}</span>
                 </div>
                 <div className="text-zinc-300 font-semibold">
-                  <span className="text-emerald-400 font-bold mr-1 md:hidden">MediWeb:</span>
+                  <span className="text-amber-400 font-bold mr-1 md:hidden">MediWeb:</span>
                   <span>{item.mediweb}</span>
                 </div>
               </div>

@@ -100,7 +100,7 @@ export default function BolgelerIndexPage() {
         <div>
           <div className="flex items-center gap-3 pb-4 border-b border-white/[0.08] mb-8">
             <h2 className="text-xl font-bold text-white tracking-tight">Avrupa Yakası Bölgelerimiz</h2>
-            <span className="text-xs px-2.5 py-0.5 rounded-full bg-emerald-950/60 text-emerald-400 font-semibold border border-emerald-500/20">
+            <span className="text-xs px-2.5 py-0.5 rounded-full bg-emerald-950/60 text-amber-400 font-semibold border border-emerald-500/20">
               {avrupa.length} Plaza &amp; Ticaret Aksı
             </span>
           </div>
@@ -114,7 +114,7 @@ export default function BolgelerIndexPage() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">
+                    <span className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
                       {loc.name}
                     </span>
                     <span className="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300">
@@ -140,7 +140,7 @@ export default function BolgelerIndexPage() {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-bold text-emerald-400 group-hover:translate-x-1 transition-transform">
+                <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-bold text-amber-400 group-hover:translate-x-1 transition-transform">
                   <span>Bölge Sayfasını İncele</span>
                   <ArrowRight className="w-4 h-4" />
                 </div>

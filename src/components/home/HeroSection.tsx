@@ -45,7 +45,7 @@ export const HeroSection: React.FC = () => {
             {/* 3 Clear Authority Badges */}
             <div className="pt-8 border-t border-white/[0.08] grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-slate-300 max-w-3xl">
               <div className="flex items-start gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <ShieldCheck className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block mb-0.5">3 Yıl Sıfır Ek Masraf</strong>
                   <span className="text-slate-400">0 ₺ Yenileme Güvencesi</span>

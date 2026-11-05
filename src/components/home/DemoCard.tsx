@@ -20,9 +20,9 @@ interface DemoCardProps {
 
 export const DemoCard: React.FC<DemoCardProps> = ({ demo, onOpenPreview }) => {
   return (
-    <div className="group bg-[#101522] hover:bg-[#0A0A0C] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+    <div className="bg-[#0A0A0C] border border-white/[0.08] hover:border-amber-500/40 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group">
       {/* Thumbnail Area */}
-      <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
+      <div className="relative aspect-[16/10] overflow-hidden bg-zinc-950">
         <Image
           src={demo.previewImage}
           alt={demo.name}
@@ -32,15 +32,15 @@ export const DemoCard: React.FC<DemoCardProps> = ({ demo, onOpenPreview }) => {
         />
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#101522] via-transparent to-transparent opacity-80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-transparent to-transparent opacity-80" />
 
         {/* Top Badges */}
         <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-          <span className="px-2.5 py-1 rounded-lg text-xs font-bold bg-[#0B0F19]/80 backdrop-blur-md text-brand-300 shadow">
+          <span className="px-2.5 py-1 rounded-lg text-xs font-bold bg-black/80 backdrop-blur-md text-zinc-300 border border-white/10 shadow">
             {demo.sectorName}
           </span>
           {demo.badge && (
-            <span className="px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-500/90 text-slate-950 shadow">
+            <span className="px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-500 text-black shadow">
               {demo.badge}
             </span>
           )}

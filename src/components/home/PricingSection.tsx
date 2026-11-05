@@ -471,7 +471,7 @@ export const PricingSection: React.FC = () => {
 
             <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
               <div className="flex items-center gap-2.5">
-                <CreditCard className="w-5 h-5 text-emerald-400 shrink-0" />
+                <CreditCard className="w-5 h-5 text-amber-400 shrink-0" />
                 <strong className="text-white text-sm font-bold">
                   2. Marka Kimliği
                 </strong>
@@ -628,7 +628,7 @@ export const PricingSection: React.FC = () => {
 
               <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
                 <div className="flex items-center gap-2.5">
-                  <Zap className="w-5 h-5 text-emerald-400 shrink-0" />
+                  <Zap className="w-5 h-5 text-amber-400 shrink-0" />
                   <strong className="text-white text-sm font-bold">Özel Yazılım Altyapısı</strong>
                 </div>
                 <p className="text-slate-300 leading-relaxed pt-1">
@@ -651,7 +651,7 @@ export const PricingSection: React.FC = () => {
           {/* Integrated Trust Guarantees Footer Strip (No awkward second card) */}
           <div className="border-t border-white/10 bg-[#0A0D15] p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300">
             <div className="flex items-start gap-3">
-              <ShieldCheck className="w-5 h-5 text-zinc-400 shrink-0 mt-0.5" />
+              <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
               <div>
                 <strong className="text-white block mb-0.5">Sürpriz Ek Ücret Yok</strong>
                 <span className="text-slate-400">Anlaşılan net fiyat geçerlidir. "Sunucu açılışı" veya "SSL bedeli" adı altında gizli faturalar çıkmaz.</span>
@@ -712,7 +712,7 @@ export const PricingSection: React.FC = () => {
 
             <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-emerald-500/30 transition-colors">
               <div className="flex items-center gap-2.5 mb-2">
-                <Calendar className="w-5 h-5 text-emerald-400 shrink-0" />
+                <Calendar className="w-5 h-5 text-amber-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Online Randevu &amp; SMS Otomasyonu</h4>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
@@ -745,7 +745,7 @@ export const PricingSection: React.FC = () => {
           <div className="mt-8 pt-6 border-t border-white/[0.08] flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
                 KVKK Uyumlu Veritabanı
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">

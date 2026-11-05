@@ -82,7 +82,7 @@ export const ContactSection: React.FC = () => {
             {/* Clean Editorial Contact Details - Pure naked icons, no boxed cards */}
             <div className="space-y-6 pt-2">
               <div className="flex items-start gap-4">
-                <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <div className="text-sm font-bold text-white">3 Yıl Domain & Barındırma Fiyata Dahil</div>
                   <div className="text-xs text-slate-400 mt-0.5">Gizli veya sürpriz yıllık yenileme faturası çıkmaz.</div>
@@ -100,7 +100,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <Phone className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
+                <Phone className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <div className="text-sm font-bold text-white">Telefon & WhatsApp Danışma</div>
                   <a href={`tel:${siteConfig.phoneDisplay.replace(/\s+/g, '')}`} className="text-xs text-slate-300 hover:text-white transition-colors block mt-0.5">

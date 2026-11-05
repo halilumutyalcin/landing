@@ -64,7 +64,7 @@ export const PrinciplesSection: React.FC = () => {
           <div className="bg-[#0C1520] rounded-3xl p-7 sm:p-9 flex flex-col justify-between shadow-2xl relative overflow-hidden">
             <div>
               <div className="flex items-center gap-3.5 mb-7">
-                <CheckCircle className="w-8 h-8 text-emerald-400 shrink-0" />
+                <CheckCircle className="w-8 h-8 text-amber-400 shrink-0" />
                 <div>
                   <span className="text-xs font-semibold text-emerald-400 block">MediWeb Standartları</span>
                   <h3 className="text-2xl font-bold text-white font-display">
@@ -75,7 +75,7 @@ export const PrinciplesSection: React.FC = () => {
 
               <div className="space-y-5 text-xs sm:text-sm text-slate-300 leading-relaxed">
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
+                  <CheckCircle className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
                   <div>
                     <h4 className="text-white font-semibold text-sm mb-0.5">Kurumsal Ciddiyete Uygun Vitrin</h4>
                     <p className="text-slate-300 text-xs sm:text-sm">
@@ -85,7 +85,7 @@ export const PrinciplesSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
+                  <CheckCircle className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
                   <div>
                     <h4 className="text-white font-semibold text-sm mb-0.5">Ziyaretçiyi Bekletmeyen Açılış</h4>
                     <p className="text-slate-300 text-xs sm:text-sm">
@@ -95,7 +95,7 @@ export const PrinciplesSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
+                  <CheckCircle className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
                   <div>
                     <h4 className="text-white font-semibold text-sm mb-0.5">3 Yıl Boyunca Sıfır Sunucu Masrafı</h4>
                     <p className="text-slate-300 text-xs sm:text-sm">
@@ -105,7 +105,7 @@ export const PrinciplesSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
+                  <CheckCircle className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
                   <div>
                     <h4 className="text-white font-semibold text-sm mb-0.5">Resmi Fatura ve Vergi Avantajı</h4>
                     <p className="text-slate-300 text-xs sm:text-sm">

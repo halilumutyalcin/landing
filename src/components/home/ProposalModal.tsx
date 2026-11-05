@@ -238,7 +238,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
           <div className="p-4 rounded-2xl bg-[#0B0F19]">
             <div className="flex items-center justify-between mb-3">
               <span className="text-xs font-bold text-slate-300 flex items-center gap-2">
-                <Building2 className="w-4 h-4 text-cyan-400" />
+                <Building2 className="w-4 h-4 text-amber-400" />
                 Şirket Türü & Vergi İndirimi
               </span>
               <div className="flex items-center gap-1 bg-black/40 p-1 rounded-xl">
@@ -272,8 +272,8 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
                 <div className="text-xs font-mono font-bold text-slate-300 mt-0.5">{formatCurrency(kdvAmount)}</div>
               </div>
               <div className="p-2 rounded-lg bg-black/30">
-                <div className="text-[10px] text-cyan-400 uppercase">Vergi Tasarrufu</div>
-                <div className="text-xs font-mono font-bold text-cyan-400 mt-0.5">-{formatCurrency(corporateTaxSaving)}</div>
+                <div className="text-[10px] text-amber-400 uppercase">Vergi Tasarrufu</div>
+                <div className="text-xs font-mono font-bold text-amber-400 mt-0.5">-{formatCurrency(corporateTaxSaving)}</div>
               </div>
               <div className="p-2 rounded-lg bg-emerald-500/10">
                 <div className="text-[10px] text-emerald-300 font-bold uppercase">Net Maliyet</div>

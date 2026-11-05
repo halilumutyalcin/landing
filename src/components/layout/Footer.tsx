@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
         {/* Top Guarantee Banner - Clean, Crisp Surface Without Fuzzy Blur Banding */}
         <div className="bg-[#0A0A0C] rounded-2xl p-6 sm:p-8 mb-16 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div className="flex items-center gap-4">
-            <ShieldCheck className="w-8 h-8 text-emerald-400 shrink-0" />
+            <ShieldCheck className="w-8 h-8 text-amber-400 shrink-0" />
             <div>
               <h4 className="text-lg font-bold text-white font-display">
                 3 Yıl Domain + SSL + Hosting Dahil

@@ -87,7 +87,7 @@ export const BeforeAfterSection: React.FC = () => {
               </div>
 
               <div className="p-4 rounded-xl bg-black/40">
-                <div className="text-xs font-bold text-cyan-400 mb-1">Sunucu Faturası</div>
+                <div className="text-xs font-bold text-amber-400 mb-1">Sunucu Faturası</div>
                 <div className="text-3xl font-black text-white">3 Yıl 0 ₺</div>
                 <div className="text-[11px] text-cyan-300 mt-1">Sürpriz Ek Masraf Yok</div>
               </div>

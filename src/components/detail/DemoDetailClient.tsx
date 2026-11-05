@@ -299,7 +299,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
               </div>
               <div className="text-left sm:text-right">
                 <span className="text-xs text-slate-400">Teslimat Süresi</span>
-                <div className="text-sm font-bold text-emerald-400">{selectedPkgConfig?.deliveryTime}</div>
+                <div className="text-sm font-bold text-amber-400">{selectedPkgConfig?.deliveryTime}</div>
               </div>
             </div>
 

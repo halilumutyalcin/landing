@@ -128,7 +128,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                     <span>{item.traditional}</span>
                   </div>
                   <div className="text-zinc-300 font-semibold">
-                    <span className="text-emerald-400 font-bold mr-1 md:hidden">MediWeb:</span>
+                    <span className="text-amber-400 font-bold mr-1 md:hidden">MediWeb:</span>
                     <span>{item.mediweb}</span>
                   </div>
                 </div>
@@ -174,7 +174,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-cyan-400 mb-1">Sunucu Faturası</div>
+                    <div className="text-xs font-bold text-amber-400 mb-1">Sunucu Faturası</div>
                     <div className="text-3xl font-black text-white font-mono">3 Yıl 0 ₺</div>
                     <div className="text-[11px] text-cyan-300 mt-1">Sürpriz Ek Masraf Yok</div>
                   </div>
@@ -312,7 +312,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
               <div className="bg-[#0C1520] rounded-3xl p-7 flex flex-col justify-between shadow-2xl">
                 <div>
                   <div className="flex items-center gap-3 mb-6">
-                    <CheckCircle className="w-7 h-7 text-emerald-400 shrink-0" />
+                    <CheckCircle className="w-7 h-7 text-amber-400 shrink-0" />
                     <div>
                       <span className="text-xs font-semibold text-emerald-400 block">MediWeb Standartları</span>
                       <h4 className="text-xl font-bold text-white">Neleri Yapıyoruz?</h4>

@@ -71,7 +71,7 @@ export const HowItWorksSection: React.FC = () => {
               return (
                 <div
                   key={item.step}
-                  className="p-6 sm:p-7 rounded-2xl bg-[#0F1422] hover:bg-[#0A0A0C] shadow-xl flex flex-col justify-between transition-all duration-200 group"
+                  className="p-6 sm:p-7 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] hover:border-amber-500/40 shadow-xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group"
                 >
                   <div>
                     {/* Step Number + Naked Icon */}
@@ -79,22 +79,22 @@ export const HowItWorksSection: React.FC = () => {
                       <span className="text-3xl sm:text-4xl font-black font-mono text-white tracking-tight">
                         {item.step}
                       </span>
-                      <Icon className="w-5 h-5 text-slate-400 group-hover:text-amber-400 transition-colors" />
+                      <Icon className="w-5 h-5 text-zinc-400 group-hover:text-amber-400 transition-colors" />
                     </div>
 
                     <h3 className="text-base sm:text-lg font-bold text-white mb-2.5 leading-snug">
                       {item.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                    <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-6">
                       {item.desc}
                     </p>
                   </div>
 
                   {/* Milestone Footnote */}
                   <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs font-semibold">
-                    <span className="text-emerald-400">{item.milestone}</span>
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span className="text-amber-400">{item.milestone}</span>
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
                   </div>
                 </div>
               );

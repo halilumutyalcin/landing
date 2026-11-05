@@ -99,7 +99,7 @@ export const LegoThemeStudioSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">
             <Cpu className="w-3.5 h-3.5" />
             <span>Modular Agency Core v2.0 Teknolojisi</span>
           </div>
@@ -167,10 +167,10 @@ export const LegoThemeStudioSection: React.FC = () => {
             <div className="glass-card rounded-3xl p-6 border border-white/10 shadow-xl">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
-                  <Layers className="w-4 h-4 text-emerald-400" />
+                  <Layers className="w-4 h-4 text-amber-400" />
                   2. LEGO Bileşenini Değiştirin
                 </span>
-                <span className="text-[11px] font-mono text-emerald-400 font-bold">195 Varyant</span>
+                <span className="text-[11px] font-mono text-amber-400 font-bold">195 Varyant</span>
               </div>
 
               <div className="grid grid-cols-2 gap-2">
@@ -284,7 +284,7 @@ export const LegoThemeStudioSection: React.FC = () => {
                     <div className="space-y-2 text-xs sm:text-sm">
                       <div className="flex items-center justify-between p-3 rounded-lg bg-white/5">
                         <span className="text-slate-300">3 Yıl Domain + SSL + Hosting</span>
-                        <span className="font-bold font-mono text-emerald-400">Dahil (0 ₺)</span>
+                        <span className="font-bold font-mono text-amber-400">Dahil (0 ₺)</span>
                       </div>
                       <div className="flex items-center justify-between p-3 rounded-lg bg-white/5">
                         <span className="text-slate-300">Teslim Süresi</span>
