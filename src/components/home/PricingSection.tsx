@@ -128,8 +128,8 @@ export const PricingSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* High-Trust Delivery Commitment Banner */}
-        <div className="max-w-3xl mx-auto mb-10 p-3.5 rounded-xl bg-blue-950/40 text-center flex items-center justify-center gap-2.5 text-xs text-blue-200">
-          <Clock className="w-4 h-4 text-blue-400 shrink-0" />
+        <div className="max-w-3xl mx-auto mb-10 p-3.5 rounded-xl bg-zinc-900/60 border border-white/10 text-center flex items-center justify-center gap-2.5 text-xs text-zinc-300">
+          <Clock className="w-4 h-4 text-amber-400 shrink-0" />
           <span>
             <strong>Dakik Teslim Taahhüdü:</strong> Her proje için teslimat takvimi sözleşmeyle belirlenir; gecikme ve ucu açık süreçler yaşanmaz.
           </span>
@@ -176,7 +176,7 @@ export const PricingSection: React.FC = () => {
 
             {/* Secondary Toggle (Only relevant for One-time) */}
             {billingMode === 'onetime' ? (
-              <div className="inline-flex items-center p-1 rounded-xl bg-[#0E121A] text-xs">
+              <div className="inline-flex items-center p-1 rounded-xl bg-[#0A0A0C] text-xs">
                 <button
                   onClick={() => setShowTaxDeduction(false)}
                   className={`px-3 py-1.5 rounded-lg font-semibold transition-all ${
@@ -247,13 +247,13 @@ export const PricingSection: React.FC = () => {
                 transition={{ duration: 0.35, ease: 'easeInOut' }}
                 className={`rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-all relative ${
                   isPro
-                    ? 'bg-[#121624] border-2 border-indigo-500/40 shadow-2xl lg:-translate-y-2'
-                    : 'bg-[#0F121C] border border-white/[0.08] hover:border-white/20'
+                    ? 'bg-[#121624] border-2 border-amber-500/30 shadow-2xl lg:-translate-y-2'
+                    : 'bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20'
                 }`}
               >
                 {/* Popular Ribbon */}
                 {isPro && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-indigo-600 text-white text-[11px] font-bold tracking-normal shadow-lg shadow-indigo-600/40">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black text-white text-[11px] font-bold tracking-normal shadow-lg shadow-white/10">
                     En Çok Tercih Edilen Paket
                   </div>
                 )}
@@ -261,7 +261,7 @@ export const PricingSection: React.FC = () => {
                 <div>
                   {/* Top Header */}
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold text-indigo-400 tracking-normal">
+                    <span className="text-xs font-semibold text-amber-400 tracking-normal">
                       {pkg.name} Paketi
                     </span>
                     <span className="text-xs text-zinc-400 font-medium">
@@ -293,7 +293,7 @@ export const PricingSection: React.FC = () => {
                       <span className="text-slate-400">
                         {billingMode === 'waas' ? 'Kurulum Bedeli:' : 'Ödeme Planı:'}
                       </span>
-                      <span className="font-semibold text-indigo-400">
+                      <span className="font-semibold text-amber-400">
                         {billingMode === 'waas' 
                           ? `${pkg.waasSetupFormatted} (Tek Seferlik)` 
                           : pkg.paymentTerms}
@@ -380,7 +380,7 @@ export const PricingSection: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => toggleExpand(pkg.id)}
-                        className="w-full mt-2 py-2 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] text-[11px] font-bold text-indigo-400 hover:text-indigo-300 flex items-center justify-center gap-1.5 transition-colors"
+                        className="w-full mt-2 py-2 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] text-[11px] font-bold text-amber-400 hover:text-zinc-300 flex items-center justify-center gap-1.5 transition-colors"
                       >
                         <span>
                           {expandedPackages[pkg.id]
@@ -407,7 +407,7 @@ export const PricingSection: React.FC = () => {
                     rel="noopener noreferrer"
                     className={`w-full py-3.5 rounded-xl font-bold text-sm tracking-normal flex items-center justify-center gap-2.5 transition-all shadow-md ${
                       isPro
-                        ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/30'
+                        ? 'bg-white hover:bg-zinc-200 text-black font-bold shadow-lg shadow-white/10'
                         : 'bg-white/10 hover:bg-white/15 text-white border border-white/10'
                     }`}
                   >
@@ -423,10 +423,10 @@ export const PricingSection: React.FC = () => {
         </div>
 
         {/* 360° Dijital Lansman Paketi - High-Ticket All-in-One Solution for New & Rebranding Companies */}
-        <div className="mb-14 rounded-3xl bg-[#0F1322] border border-indigo-500/30 p-7 sm:p-10 shadow-2xl relative overflow-hidden">
+        <div className="mb-14 rounded-3xl bg-[#0A0A0C] border border-amber-500/30 p-7 sm:p-10 shadow-2xl relative overflow-hidden">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8 pb-8 border-b border-white/10">
             <div className="max-w-2xl">
-              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-bold uppercase tracking-wider mb-3">
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
                 <span>Tek Elden Çözüm · Sıfırdan Zirveye</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
@@ -459,7 +459,7 @@ export const PricingSection: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
               <div className="flex items-center gap-2.5">
-                <Palette className="w-5 h-5 text-blue-400 shrink-0" />
+                <Palette className="w-5 h-5 text-amber-400 shrink-0" />
                 <strong className="text-white text-sm font-bold">
                   1. Logo & Renkler
                 </strong>
@@ -483,7 +483,7 @@ export const PricingSection: React.FC = () => {
 
             <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
               <div className="flex items-center gap-2.5">
-                <MapPin className="w-5 h-5 text-purple-400 shrink-0" />
+                <MapPin className="w-5 h-5 text-amber-400 shrink-0" />
                 <strong className="text-white text-sm font-bold">
                   3. Google Haritalar & SEO
                 </strong>
@@ -495,7 +495,7 @@ export const PricingSection: React.FC = () => {
 
             <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
               <div className="flex items-center gap-2.5">
-                <Zap className="w-5 h-5 text-indigo-400 shrink-0" />
+                <Zap className="w-5 h-5 text-amber-400 shrink-0" />
                 <strong className="text-white text-sm font-bold">
                   4. Ultra Hızlı Site + 3 Yıl
                 </strong>
@@ -509,7 +509,7 @@ export const PricingSection: React.FC = () => {
           {/* 360 Action CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/10">
             <div className="text-xs text-slate-300 flex items-center gap-2">
-              <Clock className="w-4 h-4 text-blue-400 shrink-0" />
+              <Clock className="w-4 h-4 text-amber-400 shrink-0" />
               <span>Teslimat Süresi: <strong>7 İş Günü</strong> · Ödeme: %50 Başlangıçta + %50 Yayında</span>
             </div>
 
@@ -532,29 +532,29 @@ export const PricingSection: React.FC = () => {
           <div className="text-center mb-6">
             <button
               onClick={() => setShowFullMatrix(!showFullMatrix)}
-              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-[#121622] hover:bg-[#182030] text-white text-xs sm:text-sm font-bold transition-all shadow-lg"
+              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-[#0A0A0C] hover:bg-[#182030] text-white text-xs sm:text-sm font-bold transition-all shadow-lg"
             >
               <span>{showFullMatrix ? 'Detaylı Karşılaştırmayı Gizle' : 'Tüm Paket Özelliklerini Karşılaştırın (25 Kriter)'}</span>
               {showFullMatrix ? (
-                <ChevronUp className="w-4 h-4 text-blue-400" />
+                <ChevronUp className="w-4 h-4 text-amber-400" />
               ) : (
-                <ChevronDown className="w-4 h-4 text-blue-400" />
+                <ChevronDown className="w-4 h-4 text-amber-400" />
               )}
             </button>
           </div>
 
           {showFullMatrix && (
-            <div className="bg-[#121622] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-in fade-in duration-300">
+            <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-in fade-in duration-300">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs sm:text-sm border-collapse">
                   <thead>
                     <tr className="bg-[#0A0D14] border-b border-white/10 text-slate-300">
                       <th className="p-4 sm:p-5 font-bold text-white w-1/4">Özellik / Kriter</th>
-                      <th className="p-4 sm:p-5 font-bold text-blue-300 w-1/4">Başlangıç (17.500 ₺)</th>
-                      <th className="p-4 sm:p-5 font-bold text-emerald-400 bg-blue-950/30 border-x border-blue-500/20 w-1/4">
+                      <th className="p-4 sm:p-5 font-bold text-zinc-300 w-1/4">Başlangıç (17.500 ₺)</th>
+                      <th className="p-4 sm:p-5 font-bold text-emerald-400 bg-zinc-900/60 border-x border-amber-500/30 w-1/4">
                         Profesyonel (32.500 ₺)
                       </th>
-                      <th className="p-4 sm:p-5 font-bold text-purple-300 w-1/4">Kurumsal (59.900 ₺)</th>
+                      <th className="p-4 sm:p-5 font-bold text-amber-400 w-1/4">Kurumsal (59.900 ₺)</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-white/5">
@@ -564,7 +564,7 @@ export const PricingSection: React.FC = () => {
                         <tr className="bg-[#0B101D] border-t-2 border-white/10">
                           <td 
                             colSpan={4} 
-                            className="py-2.5 px-4 sm:px-5 font-extrabold text-blue-400 text-xs uppercase tracking-wider"
+                            className="py-2.5 px-4 sm:px-5 font-extrabold text-amber-400 text-xs uppercase tracking-wider"
                           >
                             {group.title}
                           </td>
@@ -573,7 +573,7 @@ export const PricingSection: React.FC = () => {
                         {group.items.map((row, rIdx) => (
                           <tr 
                             key={rIdx}
-                            className={rIdx % 2 === 0 ? 'bg-[#121622]' : 'bg-[#0E121A] hover:bg-white/[0.02]'}
+                            className={rIdx % 2 === 0 ? 'bg-[#0A0A0C]' : 'bg-[#0A0A0C] hover:bg-white/[0.02]'}
                           >
                             <td className="p-3.5 sm:p-4 font-semibold text-white">
                               {row.feature}
@@ -581,7 +581,7 @@ export const PricingSection: React.FC = () => {
                             <td className="p-3.5 sm:p-4">
                               {renderTableCell(row.starter)}
                             </td>
-                            <td className="p-3.5 sm:p-4 bg-blue-950/20 border-x border-blue-500/20">
+                            <td className="p-3.5 sm:p-4 bg-zinc-900/60 border-x border-amber-500/30">
                               {renderTableCell(row.pro, true)}
                             </td>
                             <td className="p-3.5 sm:p-4">
@@ -599,12 +599,12 @@ export const PricingSection: React.FC = () => {
         </div>
 
         {/* UNIFIED Master Value & Guarantee Block: "Ne İçin Ödeme Yapıyorsunuz?" */}
-        <div className="mt-8 rounded-3xl bg-[#0E121A] max-w-5xl mx-auto shadow-2xl overflow-hidden">
+        <div className="mt-8 rounded-3xl bg-[#0A0A0C] max-w-5xl mx-auto shadow-2xl overflow-hidden">
           
           {/* Header & 3 Value Pillars */}
           <div className="p-7 sm:p-10">
             <div className="text-center max-w-2xl mx-auto mb-10">
-              <div className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">
+              <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
                 Değer & Yatırım Mantığı
               </div>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -618,7 +618,7 @@ export const PricingSection: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300">
               <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
                 <div className="flex items-center gap-2.5">
-                  <Server className="w-5 h-5 text-blue-400 shrink-0" />
+                  <Server className="w-5 h-5 text-amber-400 shrink-0" />
                   <strong className="text-white text-sm font-bold">3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi</strong>
                 </div>
                 <p className="text-slate-300 leading-relaxed pt-1">
@@ -638,7 +638,7 @@ export const PricingSection: React.FC = () => {
 
               <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
                 <div className="flex items-center gap-2.5">
-                  <PhoneCall className="w-5 h-5 text-purple-400 shrink-0" />
+                  <PhoneCall className="w-5 h-5 text-amber-400 shrink-0" />
                   <strong className="text-white text-sm font-bold">Dönüşüm & WhatsApp Köprüsü</strong>
                 </div>
                 <p className="text-slate-300 leading-relaxed pt-1">
@@ -658,14 +658,14 @@ export const PricingSection: React.FC = () => {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <ShieldCheck className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+              <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
               <div>
                 <strong className="text-white block mb-0.5">Görerek Karar Verme</strong>
                 <span className="text-slate-400">Beğendiğiniz canlı demoyu görmeden karar vermezsiniz; ne teslim alacağınızı en baştan bilirsiniz.</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <ShieldCheck className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
+              <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
               <div>
                 <strong className="text-white block mb-0.5">15–60 Gün Hata Garantisi</strong>
                 <span className="text-slate-400">Teslimattan sonra fark edilen tüm teknik aksaklıklar ekibimizce anında ve ücretsiz giderilir.</span>
@@ -691,7 +691,7 @@ export const PricingSection: React.FC = () => {
               href="https://wa.me/905550000000?text=Merhaba%20MediWeb!%20Özel%20yazılım%20ve%20kurumsal%20entegrasyon%20projemiz%20için%20mimari%20değerlendirme%20ve%20teklif%20almak%20istiyoruz."
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm whitespace-nowrap transition-all flex items-center justify-center gap-2.5 shrink-0 shadow-lg shadow-blue-600/30"
+              className="px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold text-xs sm:text-sm whitespace-nowrap transition-all flex items-center justify-center gap-2.5 shrink-0 shadow-lg shadow-white/10"
             >
               <WhatsAppIcon className="w-4 h-4 fill-current shrink-0" />
               <span>Özel Mimari İçin Teklif Alın</span>
@@ -700,9 +700,9 @@ export const PricingSection: React.FC = () => {
 
           {/* 4 Concrete Real-World Scenarios */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-8">
-            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-blue-500/30 transition-colors">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 transition-colors">
               <div className="flex items-center gap-2.5 mb-2">
-                <Building2 className="w-5 h-5 text-blue-400 shrink-0" />
+                <Building2 className="w-5 h-5 text-amber-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Bayi &amp; Cari Hesap Portalı</h4>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
@@ -720,9 +720,9 @@ export const PricingSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-purple-500/30 transition-colors">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 transition-colors">
               <div className="flex items-center gap-2.5 mb-2">
-                <Server className="w-5 h-5 text-purple-400 shrink-0" />
+                <Server className="w-5 h-5 text-amber-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Ön Muhasebe &amp; ERP Entegrasyonu</h4>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
@@ -730,9 +730,9 @@ export const PricingSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-indigo-500/30 transition-colors">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 transition-colors">
               <div className="flex items-center gap-2.5 mb-2">
-                <FileCheck2 className="w-5 h-5 text-indigo-400 shrink-0" />
+                <FileCheck2 className="w-5 h-5 text-amber-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Online Evrak &amp; Rapor Sorgulama</h4>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
@@ -749,11 +749,11 @@ export const PricingSection: React.FC = () => {
                 KVKK Uyumlu Veritabanı
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
-                <Zap className="w-3.5 h-3.5 text-blue-400" />
+                <Zap className="w-3.5 h-3.5 text-amber-400" />
                 Canlı Sistem &amp; Muhasebe Entegrasyonu
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
-                <Clock className="w-3.5 h-3.5 text-purple-400" />
+                <Clock className="w-3.5 h-3.5 text-amber-400" />
                 %99.9 Kesintisiz Yayın Garantisi
               </span>
             </div>

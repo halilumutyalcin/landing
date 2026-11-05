@@ -52,7 +52,7 @@ export default function HomePage() {
         onClick={() => setIsProposalModalOpen(true)}
         className="fixed bottom-6 left-6 z-40 px-4 py-3 rounded-xl bg-[#161B26] hover:bg-[#1E2536] text-white shadow-xl flex items-center gap-2.5 text-xs sm:text-sm font-semibold transition-all hover:scale-105"
       >
-        <div className="w-6 h-6 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center">
+        <div className="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center">
           <Calculator className="w-3.5 h-3.5" />
         </div>
         <span className="hidden sm:inline">Hızlı Teklif & Vergi Hesapla</span>

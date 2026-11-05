@@ -93,7 +93,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
         {/* Header */}
         <div className="p-6 border-b border-white/5 flex items-center justify-between sticky top-0 bg-[#0D121F]/90 backdrop-blur-md z-10">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-white text-black font-bold/20 text-amber-400 flex items-center justify-center">
               <Calculator className="w-5 h-5" />
             </div>
             <div>
@@ -131,7 +131,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
                   onClick={() => setSelectedSector(sec)}
                   className={`p-2.5 rounded-xl text-left text-xs transition-all ${
                     selectedSector === sec
-                      ? 'bg-blue-600 text-white font-semibold shadow-md'
+                      ? 'bg-white text-black font-bold text-white font-semibold shadow-md'
                       : 'bg-white/5 text-slate-300 hover:bg-white/10'
                   }`}
                 >
@@ -151,7 +151,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
                 <button
                   onClick={() => setBillingModel('onetime')}
                   className={`px-2.5 py-1 rounded-md font-bold transition-all ${
-                    billingModel === 'onetime' ? 'bg-blue-600 text-white' : 'text-slate-400'
+                    billingModel === 'onetime' ? 'bg-white text-black font-bold text-white' : 'text-slate-400'
                   }`}
                 >
                   Tek Seferlik (3 Yıl 0 ₺ Masraf)
@@ -183,7 +183,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
                     onClick={() => setSelectedPackage(p.id)}
                     className={`p-3.5 rounded-2xl text-left transition-all relative ${
                       isSelected
-                        ? 'bg-blue-600 text-white shadow-lg'
+                        ? 'bg-white text-black font-bold text-white shadow-lg'
                         : 'bg-white/5 text-slate-300 hover:bg-white/10'
                     }`}
                   >

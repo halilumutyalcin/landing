@@ -13,7 +13,7 @@ export const PrinciplesSection: React.FC = () => {
           <div className="space-y-3.5 text-left">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div>
-                <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">
+                <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">
                   Ajans Manifestosu & Samimi Taahhüt
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">

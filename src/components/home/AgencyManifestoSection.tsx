@@ -21,7 +21,7 @@ export const AgencyManifestoSection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-slate-300 uppercase tracking-wider mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
             <span>Ajans Manifestosu & Üretim İlkeleri</span>
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight leading-[1.02]">
@@ -36,9 +36,9 @@ export const AgencyManifestoSection: React.FC = () => {
         {/* 3 Asymmetric Pillars - Clean, Solid Surfaces Without Artificial Glow */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* Pillar 1 */}
-          <div className="bg-[#0E121A] hover:bg-[#121724] p-8 rounded-2xl flex flex-col justify-between transition-colors">
+          <div className="bg-[#0A0A0C] hover:bg-[#121214] p-8 rounded-2xl flex flex-col justify-between transition-colors">
             <div>
-              <div className="font-mono text-xs text-indigo-400 font-bold mb-4 tracking-wider">
+              <div className="font-mono text-xs text-amber-400 font-bold mb-4 tracking-wider">
                 // 01. PRENSİP
               </div>
               <h3 className="text-2xl font-bold text-white mb-3 font-display">
@@ -57,7 +57,7 @@ export const AgencyManifestoSection: React.FC = () => {
           </div>
 
           {/* Pillar 2 */}
-          <div className="bg-[#0E121A] hover:bg-[#121724] p-8 rounded-2xl flex flex-col justify-between transition-colors">
+          <div className="bg-[#0A0A0C] hover:bg-[#121214] p-8 rounded-2xl flex flex-col justify-between transition-colors">
             <div>
               <div className="font-mono text-xs text-emerald-400 font-bold mb-4 tracking-wider">
                 // 02. PRENSİP
@@ -77,7 +77,7 @@ export const AgencyManifestoSection: React.FC = () => {
           </div>
 
           {/* Pillar 3 */}
-          <div className="bg-[#0E121A] hover:bg-[#121724] p-8 rounded-2xl flex flex-col justify-between transition-colors">
+          <div className="bg-[#0A0A0C] hover:bg-[#121214] p-8 rounded-2xl flex flex-col justify-between transition-colors">
             <div>
               <div className="font-mono text-xs text-cyan-400 font-bold mb-4 tracking-wider">
                 // 03. PRENSİP

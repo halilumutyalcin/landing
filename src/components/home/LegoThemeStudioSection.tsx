@@ -59,9 +59,9 @@ const THEMES: ThemePreset[] = [
     bgClass: 'from-[#0B0F2A] to-[#050714]',
     cardBg: 'bg-[#101538]/90',
     accentColor: '#6366F1',
-    borderClass: 'border-indigo-800/40',
-    badgeBg: 'bg-indigo-500/15 text-indigo-300 border-indigo-500/30',
-    textColor: 'text-indigo-50',
+    borderClass: 'border-white/10',
+    badgeBg: 'bg-amber-500/15 text-zinc-300 border-amber-500/30',
+    textColor: 'text-zinc-100',
     previewBg: 'bg-[#080B1E]'
   },
   {

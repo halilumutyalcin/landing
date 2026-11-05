@@ -40,7 +40,7 @@ export const BeforeAfterSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">
+          <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
             İşletmeniz İçin Gerçek Fark
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
@@ -60,7 +60,7 @@ export const BeforeAfterSection: React.FC = () => {
           onMouseLeave={() => setIsDragging(false)}
           onMouseMove={handleMouseMove}
           onTouchMove={handleTouchMove}
-          className="relative w-full h-[480px] sm:h-[500px] rounded-3xl overflow-hidden select-none shadow-2xl cursor-ew-resize bg-[#0E121A]"
+          className="relative w-full h-[480px] sm:h-[500px] rounded-3xl overflow-hidden select-none shadow-2xl cursor-ew-resize bg-[#0A0A0C]"
         >
           {/* AFTER (MediWeb / Right Side - Full Layer) */}
           <div className="absolute inset-0 bg-[#0C1422] p-6 sm:p-10 flex flex-col justify-between">
@@ -81,9 +81,9 @@ export const BeforeAfterSection: React.FC = () => {
               </div>
 
               <div className="p-4 rounded-xl bg-black/40">
-                <div className="text-xs font-bold text-blue-400 mb-1">Google Uyumu</div>
+                <div className="text-xs font-bold text-amber-400 mb-1">Google Uyumu</div>
                 <div className="text-3xl font-black text-white">Hazır</div>
-                <div className="text-[11px] text-blue-300 mt-1">Harita, Arama & Schema Kayıtlı</div>
+                <div className="text-[11px] text-zinc-300 mt-1">Harita, Arama & Schema Kayıtlı</div>
               </div>
 
               <div className="p-4 rounded-xl bg-black/40">
@@ -93,9 +93,9 @@ export const BeforeAfterSection: React.FC = () => {
               </div>
 
               <div className="p-4 rounded-xl bg-black/40">
-                <div className="text-xs font-bold text-indigo-400 mb-1">Çökme & Virüs</div>
+                <div className="text-xs font-bold text-amber-400 mb-1">Çökme & Virüs</div>
                 <div className="text-3xl font-black text-white">%0 Risk</div>
-                <div className="text-[11px] text-indigo-300 mt-1">Eklenti Açıkları Yok</div>
+                <div className="text-[11px] text-zinc-300 mt-1">Eklenti Açıkları Yok</div>
               </div>
             </div>
 

@@ -29,7 +29,7 @@ export default function BolgelerIndexPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">
             <MapPin className="w-3.5 h-3.5" />
             <span>İstanbul Kurumsal Hizmet Bölgeleri</span>
           </div>
@@ -47,7 +47,7 @@ export default function BolgelerIndexPage() {
         <div className="mb-16">
           <div className="flex items-center gap-3 pb-4 border-b border-white/[0.08] mb-8">
             <h2 className="text-xl font-bold text-white tracking-tight">Anadolu Yakası Bölgelerimiz</h2>
-            <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-950/60 text-blue-400 font-semibold border border-blue-500/20">
+            <span className="text-xs px-2.5 py-0.5 rounded-full bg-zinc-900/60 text-amber-400 font-semibold border border-amber-500/30">
               {anadolu.length} İlçe / Ticaret Aksı
             </span>
           </div>
@@ -57,14 +57,14 @@ export default function BolgelerIndexPage() {
               <Link
                 key={loc.id}
                 href={`/bolgeler/${loc.slug}`}
-                className="group p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-blue-500/40 hover:bg-white/[0.04] transition-all flex flex-col justify-between"
+                className="group p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 hover:bg-white/[0.04] transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+                    <span className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
                       {loc.name}
                     </span>
-                    <span className="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-blue-500/10 text-blue-300">
+                    <span className="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-amber-500/10 text-zinc-300">
                       Yerinde Keşif
                     </span>
                   </div>
@@ -87,7 +87,7 @@ export default function BolgelerIndexPage() {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-bold text-blue-400 group-hover:translate-x-1 transition-transform">
+                <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-bold text-amber-400 group-hover:translate-x-1 transition-transform">
                   <span>Bölge Sayfasını İncele</span>
                   <ArrowRight className="w-4 h-4" />
                 </div>

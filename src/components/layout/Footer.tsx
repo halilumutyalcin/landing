@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
     <footer className="bg-black border-t border-white/[0.08] relative overflow-hidden pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Top Guarantee Banner - Clean, Crisp Surface Without Fuzzy Blur Banding */}
-        <div className="bg-[#0F121C] rounded-2xl p-6 sm:p-8 mb-16 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div className="bg-[#0A0A0C] rounded-2xl p-6 sm:p-8 mb-16 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div className="flex items-center gap-4">
             <ShieldCheck className="w-8 h-8 text-emerald-400 shrink-0" />
             <div>
@@ -41,10 +41,10 @@ export const Footer: React.FC = () => {
             href={generateWhatsAppUrl({})}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-all shrink-0 flex items-center gap-2"
+            className="px-6 py-3 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold text-sm transition-all shrink-0 flex items-center gap-2"
           >
             <span>Hemen Bilgi Alın</span>
-            <ArrowUpRight className="w-4 h-4" />
+            <ArrowUpRight className="w-4 h-4 text-zinc-700" />
           </a>
         </div>
 
@@ -53,11 +53,11 @@ export const Footer: React.FC = () => {
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-base shadow-md">
+              <div className="w-9 h-9 rounded-xl bg-white text-black font-bold flex items-center justify-center text-white font-black text-base shadow-md">
                 M
               </div>
               <span className="text-2xl font-black text-white font-display">
-                Medi<span className="text-blue-400">Web</span>
+                Medi<span className="text-amber-400">Web</span>
               </span>
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
@@ -111,7 +111,7 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/sektorler" className="text-blue-400 font-semibold hover:text-blue-300 transition-colors flex items-center gap-1 pt-1">
+                <Link href="/sektorler" className="text-amber-400 font-semibold hover:text-zinc-300 transition-colors flex items-center gap-1 pt-1">
                   <span>Tüm Sektörel Paketler</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>

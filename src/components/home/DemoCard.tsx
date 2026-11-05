@@ -20,7 +20,7 @@ interface DemoCardProps {
 
 export const DemoCard: React.FC<DemoCardProps> = ({ demo, onOpenPreview }) => {
   return (
-    <div className="group bg-[#101522] hover:bg-[#141B2D] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+    <div className="group bg-[#101522] hover:bg-[#0A0A0C] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
       {/* Thumbnail Area */}
       <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
         <Image

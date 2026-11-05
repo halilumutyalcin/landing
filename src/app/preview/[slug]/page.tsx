@@ -50,10 +50,10 @@ export default function MockPreviewPage({ params }: PageProps) {
     blue: {
       bg: 'bg-slate-950 text-slate-100',
       heroBg: 'bg-gradient-to-b from-[#060D1F] via-[#0A1630] to-slate-950',
-      accent: 'text-blue-400',
-      button: 'bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/30',
-      card: 'bg-slate-900/90 border-blue-900/40',
-      badge: 'bg-blue-500/20 text-blue-300 border border-blue-500/30',
+      accent: 'text-amber-400',
+      button: 'bg-white hover:bg-zinc-200 text-black font-bold shadow-lg shadow-white/10',
+      card: 'bg-slate-900/90 border-white/10',
+      badge: 'bg-amber-500/15 text-zinc-300 border border-amber-500/30',
     },
     amber: {
       bg: 'bg-[#0E0C0A] text-amber-50',
@@ -82,10 +82,10 @@ export default function MockPreviewPage({ params }: PageProps) {
   }[demo.themeColor] || {
     bg: 'bg-slate-950 text-slate-100',
     heroBg: 'bg-slate-900',
-    accent: 'text-indigo-400',
-    button: 'bg-indigo-600 text-white',
+    accent: 'text-amber-400',
+    button: 'bg-white text-black text-white',
     card: 'bg-slate-900 border-slate-800',
-    badge: 'bg-indigo-500/20 text-indigo-300',
+    badge: 'bg-amber-500/10 text-zinc-300',
   };
 
   return (

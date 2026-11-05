@@ -155,7 +155,7 @@ export const ExtraServicesSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">
+          <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
             İhtiyaca Göre Genişletilebilir Mimari
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
@@ -216,7 +216,7 @@ export const ExtraServicesSection: React.FC = () => {
                       <div>
                         {/* Title + Icon */}
                         <div className="flex items-start gap-3 mb-2.5">
-                          <Icon className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+                          <Icon className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                           <div>
                             <h4 className="text-sm font-bold text-white leading-snug">
                               {service.title}

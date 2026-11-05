@@ -35,7 +35,7 @@ export const HeroSection: React.FC = () => {
             <div className="pt-2">
               <a
                 href="#tasarimlar"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-xl shadow-indigo-600/30 transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold font-bold text-sm shadow-xl shadow-white/10 transition-all hover:-translate-y-0.5"
               >
                 <span>15 Canlı Mimarimizi İnceleyin</span>
                 <ArrowRight className="w-4 h-4 text-white" />
@@ -53,7 +53,7 @@ export const HeroSection: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Clock className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
+                <Clock className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block mb-0.5">3–5 Günde Hızlı Lansman</strong>
                   <span className="text-slate-400">Gecikmeyen dakik teslimat</span>
@@ -61,7 +61,7 @@ export const HeroSection: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Zap className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
+                <Zap className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block mb-0.5">Görerek Satın Alma</strong>
                   <span className="text-slate-400">Canlı demoyu önceden test edin</span>

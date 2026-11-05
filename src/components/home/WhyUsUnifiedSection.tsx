@@ -49,7 +49,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="text-xs font-bold uppercase tracking-wider text-blue-400 mb-3">
+          <div className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">
             Neden MediWeb? · Şeffaf ve Modern Standart
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-3">
@@ -147,7 +147,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
               onMouseLeave={() => setIsDragging(false)}
               onMouseMove={handleMouseMove}
               onTouchMove={handleTouchMove}
-              className="relative w-full h-[460px] sm:h-[480px] rounded-3xl overflow-hidden select-none shadow-2xl cursor-ew-resize bg-[#0E121A]"
+              className="relative w-full h-[460px] sm:h-[480px] rounded-3xl overflow-hidden select-none shadow-2xl cursor-ew-resize bg-[#0A0A0C]"
             >
               {/* AFTER (MediWeb / Right Side) */}
               <div className="absolute inset-0 bg-[#0C1422] p-6 sm:p-10 flex flex-col justify-between">
@@ -168,9 +168,9 @@ export const WhyUsUnifiedSection: React.FC = () => {
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-blue-400 mb-1">Google Uyumu</div>
+                    <div className="text-xs font-bold text-amber-400 mb-1">Google Uyumu</div>
                     <div className="text-3xl font-black text-white font-mono">Hazır</div>
-                    <div className="text-[11px] text-blue-300 mt-1">Harita &amp; SEO Kayıtlı</div>
+                    <div className="text-[11px] text-zinc-300 mt-1">Harita &amp; SEO Kayıtlı</div>
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
@@ -180,9 +180,9 @@ export const WhyUsUnifiedSection: React.FC = () => {
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-indigo-400 mb-1">Çökme &amp; Virüs</div>
+                    <div className="text-xs font-bold text-amber-400 mb-1">Çökme &amp; Virüs</div>
                     <div className="text-3xl font-black text-white font-mono">%0 Risk</div>
-                    <div className="text-[11px] text-indigo-300 mt-1">Eklenti Açıkları Yok</div>
+                    <div className="text-[11px] text-zinc-300 mt-1">Eklenti Açıkları Yok</div>
                   </div>
                 </div>
 
@@ -220,7 +220,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-indigo-400 mb-1">Google Uyumu</div>
+                    <div className="text-xs font-bold text-amber-400 mb-1">Google Uyumu</div>
                     <div className="text-3xl font-black text-white font-mono">Kötü</div>
                     <div className="text-[11px] text-amber-300 mt-1">Düşük Mobil Performans</div>
                   </div>
@@ -275,7 +275,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
               <div className="space-y-3.5 text-left">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <div>
-                    <div className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-1">
+                    <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">
                       Ajans Manifestosu & Samimi Taahhüt
                     </div>
                     <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">

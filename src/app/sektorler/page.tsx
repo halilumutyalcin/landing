@@ -46,13 +46,13 @@ export default function SectorsIndexPage() {
             Ana Sayfa
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-slate-600" />
-          <span className="text-blue-400 font-semibold">Sektörel Çözümler</span>
+          <span className="text-amber-400 font-semibold">Sektörel Çözümler</span>
         </nav>
       </div>
 
       {/* 2. Page Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-wider mb-4">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Sektöre Özel Mimari</span>
         </div>
@@ -70,11 +70,11 @@ export default function SectorsIndexPage() {
           {SECTORS_SEO_DATA.map((sector) => (
             <div
               key={sector.slug}
-              className="rounded-2xl bg-[#0E121A] hover:bg-[#121724] p-7 flex flex-col justify-between transition-all group hover:-translate-y-1 shadow-xl"
+              className="rounded-2xl bg-[#0A0A0C] hover:bg-[#121214] p-7 flex flex-col justify-between transition-all group hover:-translate-y-1 shadow-xl"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-wider">
+                  <span className="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 text-[10px] font-bold uppercase tracking-wider">
                     {sector.badge}
                   </span>
                   <span className="text-xs text-slate-400 font-medium">
@@ -82,7 +82,7 @@ export default function SectorsIndexPage() {
                   </span>
                 </div>
 
-                <h2 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors mb-2">
+                <h2 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors mb-2">
                   {sector.name}
                 </h2>
 
@@ -108,7 +108,7 @@ export default function SectorsIndexPage() {
 
                 <Link
                   href={`/sektorler/${sector.slug}`}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-colors"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold text-xs font-bold transition-colors"
                 >
                   <span>Çözümü İncele</span>
                   <ArrowRight className="w-3 h-3" />
@@ -121,7 +121,7 @@ export default function SectorsIndexPage() {
 
       {/* 4. Bottom Value Proposition */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-[#111728] p-8 sm:p-12 text-center flex flex-col items-center justify-center gap-6 shadow-2xl">
+        <div className="rounded-3xl bg-[#0A0A0C] p-8 sm:p-12 text-center flex flex-col items-center justify-center gap-6 shadow-2xl">
           <div className="max-w-2xl">
             <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
               Sektörünüz Listede Yok mu?

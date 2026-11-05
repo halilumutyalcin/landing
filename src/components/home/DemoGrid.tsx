@@ -36,7 +36,7 @@ export const DemoGrid: React.FC<DemoGridProps> = ({ initialSector = 'all' }) => 
         
         {/* Section Header - Clean & Direct */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="text-sm font-semibold text-indigo-400 mb-2">
+          <div className="text-sm font-semibold text-amber-400 mb-2">
             Kanıtlanmış Sektörel Çözümler
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">

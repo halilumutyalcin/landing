@@ -19,7 +19,7 @@ export const FaqSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">
+          <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
             Aklınıza Takılan Sorular
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight mb-4">
@@ -42,7 +42,7 @@ export const FaqSection: React.FC = () => {
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-semibold text-white hover:text-blue-300 transition-colors"
+                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-semibold text-white hover:text-zinc-300 transition-colors"
                 >
                   <span className="text-sm sm:text-base">{faq.question}</span>
                   <div

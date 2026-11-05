@@ -49,8 +49,8 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
               <span>/</span>
               <Link href="/bolgeler" className="hover:text-white transition-colors">Bölgeler</Link>
               <span>/</span>
-              <span className="text-blue-400 font-bold">{location.name}</span>
-              <span className="ml-2 px-2.5 py-0.5 rounded-full text-[10px] uppercase font-black tracking-wider bg-blue-500/10 border border-blue-500/20 text-blue-300">
+              <span className="text-amber-400 font-bold">{location.name}</span>
+              <span className="ml-2 px-2.5 py-0.5 rounded-full text-[10px] uppercase font-black tracking-wider bg-amber-500/10 border border-amber-500/30 text-zinc-300">
                 {location.side === 'anadolu' ? 'Anadolu Yakası' : 'Avrupa Yakası'}
               </span>
             </div>
@@ -66,8 +66,8 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
             </p>
 
             {/* Local Guarantee Card */}
-            <div className="p-4 rounded-xl bg-blue-950/30 border border-blue-500/20 flex items-start gap-3 mb-8">
-              <MapPin className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+            <div className="p-4 rounded-xl bg-zinc-900/60 border border-amber-500/30 flex items-start gap-3 mb-8">
+              <MapPin className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
               <div className="text-xs sm:text-sm text-slate-200">
                 <strong className="text-white block mb-0.5">{location.name} Bölgesine Özel Güvence:</strong>
                 <span>{location.localGuarantee}</span>
@@ -139,7 +139,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
             </div>
 
             <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
-              <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-4">
                 <Zap className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-white mb-2">&lt; 0.5 Saniyede Anında Açılış</h3>
@@ -149,7 +149,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
             </div>
 
             <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
-              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-4">
                 <Clock className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-white mb-2">3–5 Günde Dakik Teslimat</h3>
@@ -166,7 +166,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
             <div>
-              <span className="text-xs uppercase font-bold tracking-wider text-blue-400 block mb-2">
+              <span className="text-xs uppercase font-bold tracking-wider text-amber-400 block mb-2">
                 Canlı Mimariler
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -175,7 +175,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
             </div>
             <Link
               href="/#tasarimlar"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 hover:text-zinc-300 transition-colors"
             >
               <span>15 Tasarımın Tamamını İnceleyin</span>
               <ArrowRight className="w-4 h-4" />
@@ -186,7 +186,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
             {featuredDemos.map((demo) => (
               <div
                 key={demo.id}
-                className="group rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-blue-500/30 transition-all flex flex-col justify-between overflow-hidden"
+                className="group rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 transition-all flex flex-col justify-between overflow-hidden"
               >
                 <div>
                   <div className="aspect-[16/10] bg-slate-900 overflow-hidden relative">
@@ -220,7 +220,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
                 <div className="p-5 pt-0">
                   <Link
                     href={`/preview/${demo.slug}`}
-                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-white/[0.04] hover:bg-blue-600 hover:text-white text-xs font-bold text-slate-300 transition-all"
+                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white text-black font-bold hover:text-white text-xs font-bold text-slate-300 transition-all"
                   >
                     <span>Canlı Demoyu Aç</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -250,13 +250,13 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
                 key={pkg.id}
                 className={`p-6 rounded-2xl flex flex-col justify-between transition-all ${
                   pkg.isPopular
-                    ? 'bg-blue-950/20 border-2 border-blue-500/40 relative'
+                    ? 'bg-zinc-900/60 border-2 border-amber-500/30 relative'
                     : 'bg-white/[0.02] border border-white/[0.06]'
                 }`}
               >
                 <div>
                   {pkg.isPopular && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-[10px] uppercase font-black tracking-wider bg-blue-600 text-white shadow-md">
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-[10px] uppercase font-black tracking-wider bg-white text-black font-bold text-white shadow-md">
                       En Çok Tercih Edilen
                     </span>
                   )}
@@ -291,7 +291,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
                   rel="noopener noreferrer"
                   className={`w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-bold transition-all ${
                     pkg.isPopular
-                      ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-lg'
+                      ? 'bg-white hover:bg-zinc-200 text-black font-bold shadow-lg'
                       : 'bg-white/[0.05] hover:bg-white/[0.1] text-white'
                   }`}
                 >
@@ -315,7 +315,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
               <Link
                 key={otherLoc.id}
                 href={`/bolgeler/${otherLoc.slug}`}
-                className="px-3.5 py-2 rounded-lg bg-white/[0.02] hover:bg-blue-600/20 border border-white/[0.06] hover:border-blue-500/30 text-xs font-medium text-slate-300 hover:text-white transition-all"
+                className="px-3.5 py-2 rounded-lg bg-white/[0.02] hover:bg-white text-black font-bold/20 border border-white/[0.06] hover:border-amber-500/30 text-xs font-medium text-slate-300 hover:text-white transition-all"
               >
                 {otherLoc.name} Web Tasarım
               </Link>

@@ -67,7 +67,7 @@ export const ContactSection: React.FC = () => {
           {/* Left Column: Natural, Human Agency Directory (No artificial boxed cards) */}
           <div className="lg:col-span-5 space-y-7">
             <div>
-              <div className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">
+              <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
                 Doğrudan İletişim & Kurulum
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight leading-tight">
@@ -90,7 +90,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <Mail className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+                <Mail className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <div className="text-sm font-bold text-white">E-posta ile İletişim</div>
                   <a href={`mailto:${siteConfig.email}`} className="text-xs text-slate-300 hover:text-white transition-colors block mt-0.5">
@@ -110,7 +110,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <MapPin className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <div className="text-sm font-bold text-white">Ofis & Operasyon</div>
                   <div className="text-xs text-slate-400 mt-0.5">Levent, İstanbul & Çankaya, Ankara</div>
@@ -134,7 +134,7 @@ export const ContactSection: React.FC = () => {
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}
-                  className="px-6 py-2.5 rounded-xl bg-blue-600 text-white font-semibold text-xs hover:bg-blue-500 transition-colors"
+                  className="px-6 py-2.5 rounded-xl bg-white text-black font-bold text-white font-semibold text-xs hover:bg-zinc-200 transition-colors"
                 >
                   Yeni Form Doldur
                 </button>

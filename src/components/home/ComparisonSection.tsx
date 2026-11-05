@@ -23,7 +23,7 @@ export const ComparisonSection: React.FC = () => {
         </div>
 
         {/* Comparison Table */}
-        <div className="bg-[#121622] rounded-2xl overflow-hidden shadow-xl max-w-5xl mx-auto">
+        <div className="bg-[#0A0A0C] rounded-2xl overflow-hidden shadow-xl max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 bg-[#0C0F17] text-xs sm:text-sm font-semibold tracking-normal text-slate-400 p-4 sm:p-5">
             <div className="hidden md:block">Karşılaştırma Kriteri</div>
             <div className="text-rose-400 flex items-center gap-2">

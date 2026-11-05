@@ -58,7 +58,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
             Sektörel Çözümler
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-slate-600" />
-          <span className="text-blue-400 font-semibold">{sector.name} Web Sitesi</span>
+          <span className="text-amber-400 font-semibold">{sector.name} Web Sitesi</span>
         </nav>
       </div>
 
@@ -67,7 +67,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
         <div className="p-8 sm:p-12 rounded-3xl bg-[#0E1322] relative overflow-hidden">
           <div className="max-w-3xl">
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-wider mb-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider mb-5">
               <Sparkles className="w-3.5 h-3.5" />
               <span>{sector.badge} · 3–5 Günde Canlıda</span>
             </div>
@@ -123,7 +123,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
       {/* 3. Sektörel İhtiyaçlar & Özel Mimari Çözümleri */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">
+          <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
             Sektörel Uzmanlık
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -138,10 +138,10 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
           {sector.sectorSpecificNeeds.map((need, idx) => (
             <div 
               key={idx} 
-              className="p-6 sm:p-7 rounded-2xl bg-[#0E121A] hover:bg-[#121724] transition-all space-y-2"
+              className="p-6 sm:p-7 rounded-2xl bg-[#0A0A0C] hover:bg-[#121214] transition-all space-y-2"
             >
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold text-xs shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-white text-black font-bold/20 text-amber-400 flex items-center justify-center font-bold text-xs shrink-0">
                   0{idx + 1}
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-white">
@@ -174,7 +174,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
 
             <Link
               href="/tasarimlar"
-              className="inline-flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 font-bold self-start md:self-auto"
+              className="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:text-zinc-300 font-bold self-start md:self-auto"
             >
               <span>Tüm 15 Tasarımı Gör</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -185,7 +185,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
             {relatedDemos.map((demo) => (
               <div
                 key={demo.id}
-                className="rounded-2xl bg-[#0E121A] overflow-hidden flex flex-col justify-between transition-all group hover:-translate-y-1"
+                className="rounded-2xl bg-[#0A0A0C] overflow-hidden flex flex-col justify-between transition-all group hover:-translate-y-1"
               >
                 <div>
                   <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
@@ -196,7 +196,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     {demo.badge && (
-                      <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-blue-600/90 backdrop-blur-md text-white text-[10px] font-bold shadow">
+                      <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white text-black font-bold/90 backdrop-blur-md text-white text-[10px] font-bold shadow">
                         {demo.badge}
                       </span>
                     )}
@@ -204,7 +204,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
 
                   <div className="p-5">
                     <div className="flex items-center justify-between mb-1.5">
-                      <h4 className="text-base font-bold text-white group-hover:text-blue-400 transition-colors">
+                      <h4 className="text-base font-bold text-white group-hover:text-amber-400 transition-colors">
                         {demo.name}
                       </h4>
                       <span className="text-[11px] text-slate-400 font-medium">
@@ -239,7 +239,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
 
                   <Link
                     href={`/tasarimlar/${demo.slug}`}
-                    className="py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold flex items-center justify-center gap-1.5 transition-colors"
+                    className="py-2.5 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold text-xs font-bold flex items-center justify-center gap-1.5 transition-colors"
                   >
                     <span>Detaylar</span>
                     <ArrowRight className="w-3 h-3" />
@@ -255,7 +255,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="rounded-3xl bg-[#0E1322] p-8 sm:p-10">
           <div className="max-w-2xl mb-8">
-            <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">
+            <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
               Eksiksiz Kurulum
             </div>
             <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
@@ -287,7 +287,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
       {/* 6. Sektörel Sık Sorulan Sorular (FAQ) */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-10">
-          <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">
+          <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
             Merak Edilenler
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -301,15 +301,15 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-[#0E121A] overflow-hidden transition-all"
+                className="rounded-2xl bg-[#0A0A0C] overflow-hidden transition-all"
               >
                 <button
                   onClick={() => setOpenFaq(isOpen ? null : idx)}
-                  className="w-full p-5 text-left flex items-center justify-between gap-4 text-sm font-bold text-white hover:text-blue-300 transition-colors"
+                  className="w-full p-5 text-left flex items-center justify-between gap-4 text-sm font-bold text-white hover:text-zinc-300 transition-colors"
                 >
                   <span>{faq.question}</span>
                   {isOpen ? (
-                    <ChevronUp className="w-4 h-4 text-blue-400 shrink-0" />
+                    <ChevronUp className="w-4 h-4 text-amber-400 shrink-0" />
                   ) : (
                     <ChevronDown className="w-4 h-4 text-slate-500 shrink-0" />
                   )}
@@ -341,10 +341,10 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
             <Link
               key={other.slug}
               href={`/sektorler/${other.slug}`}
-              className="p-3.5 rounded-xl bg-[#0E121A] hover:bg-[#121724] text-xs font-semibold text-slate-300 hover:text-white transition-all flex items-center justify-between group"
+              className="p-3.5 rounded-xl bg-[#0A0A0C] hover:bg-[#121214] text-xs font-semibold text-slate-300 hover:text-white transition-all flex items-center justify-between group"
             >
               <span className="truncate">{other.name}</span>
-              <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-400 shrink-0 ml-1" />
+              <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-amber-400 shrink-0 ml-1" />
             </Link>
           ))}
         </div>
