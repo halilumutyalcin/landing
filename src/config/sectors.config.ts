@@ -325,61 +325,61 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     ]
   },
   {
-    slug: 'osgb-is-guvenligi-web-sitesi',
-    shortSlug: 'osgb',
-    name: 'OSGB & İş Sağlığı Güvenliği',
-    title: 'OSGB Web Sitesi Tasarımı | İş Sağlığı ve Güvenliği Şirketleri',
-    metaDescription: 'Ortak Sağlık Güvenlik Birimleri için İSG teklif alma modüllü, mevzuat uyumlu, tehlike sınıfı rehberli ve 3 yıl barındırma dahil OSGB sitesi.',
-    heroHeadline: 'Fabrika ve Şantiyelerden İSG Teklifi Toplayan OSGB Sitesi',
-    heroSubheadline: 'İşyeri hekimliği, iş güvenliği uzmanlığı, patlamadan korunma ve periyodik kontrol hizmetlerinizi kurumsal şirketlere pazarlayan özel mimari.',
-    targetAudience: 'OSGB firmaları, çevre danışmanlık şirketleri, periyodik kontrol ve İSG eğitim kuruluşları.',
-    badge: 'Sanayi & İSG Çözümü',
-    relatedDemoSlugs: ['safepoint', 'zirveosgb', 'proguard'],
+    slug: 'sanayi-imalat-web-sitesi',
+    shortSlug: 'sanayi',
+    name: 'Sanayi & İmalatçı',
+    title: 'Sanayi ve İmalatçı Web Sitesi Tasarımı | Fabrika & Üretim',
+    metaDescription: 'Fabrikalar, makine imalatçıları ve endüstriyel üreticiler için ürün kataloglu, teknik çizim teklif formlu ve 3 yıl barındırma dahil kurumsal site.',
+    heroHeadline: 'Yurt İçi ve Yurt Dışı Alıcılardan Teklif Toplayan Sanayi Sitesi',
+    heroSubheadline: 'Talaşlı imalat, kalıp, makine üretimi ve endüstriyel tedarik hizmetlerinizi kurumsal şirketlere ve ihracat alıcılarına tanıtan yüksek hızlı mimari.',
+    targetAudience: 'Fabrikalar, talaşlı imalat atölyeleri, kalıp ve plastik üreticileri, makine imalatçıları ve sanayi kuruluşları.',
+    badge: 'Fabrika & İmalat Çözümü',
+    relatedDemoSlugs: ['safepoint', 'zirvemakine', 'proguard'],
     sectorSpecificNeeds: [
       {
-        title: 'Tehlike Sınıfı & Personel Sayısı Teklif Modülü',
-        description: 'Sanayi kuruluşlarının tehlike sınıfı (Az Tehlikeli, Tehlikeli, Çok Tehlikeli) ve personel sayısıyla İSG teklifi istemesi.'
+        title: 'Makine Parkuru & Teknik Kapasite Listesi',
+        description: 'Sanayi alıcılarının CNC, torna, pres ve üretim kapasitenizi görebileceği şeffaf teknik spec sheet.'
       },
       {
-        title: 'Hizmet Kapsamının Detaylı Tanıtımı',
-        description: 'İşyeri hekimi, İSG uzmanı, risk analizi, acil durum eylem planı ve yangın eğitimi gibi zorunlu hizmetlerin açık dökümü.'
+        title: 'Teknik Çizim (CAD/CAM) Teklif Formu',
+        description: 'Müşterilerinizin parça teknik çizimlerini (PDF/STEP) yükleyip anında fiyat teklifi talep edebilmesi.'
       },
       {
-        title: 'Bakanlık Yetki Belgesi ve Sertifikalar',
-        description: 'Çalışma ve Sosyal Güvenlik Bakanlığı yetki belgesi vitrini ve İSG-KATİP entegrasyon bilgilendirmesi.'
+        title: 'ISO 9001, CE ve Kalite Sertifikaları',
+        description: 'TSE, ISO 9001, CE ve sanayi akreditasyonlarının güven verici yüksek çözünürlüklü vitrini.'
       },
       {
-        title: 'Referanslar ve Sanayi Tesisleri Portföyü',
-        description: 'Birlikte çalışılan fabrika, lojistik ve inşaat referanslarının kurumsal logo galerisi.'
+        title: 'Referanslar ve Fabrika Portföyü',
+        description: 'Parça tedariği sağladığınız ana sanayi, otomotiv ve kurumsal şirketlerin logo galerisi.'
       }
     ],
     keyFeatures: [
-      '3 Yıl Domain, Kurumsal E-posta ve Barındırma Dahil',
-      'İSG Hizmet Teklif Hesaplama ve Talep Formu',
-      'İşyeri Hekimliği, İSG Uzmanlığı ve Ölçüm Sayfaları',
-      'Yetki Belgeleri ve Akreditasyon Alanı',
-      'Fabrika Yetkilileri İçin Doğrudan WhatsApp Destek Hattı',
-      'Google\'da "OSGB [Şehir]" Aramalarında Yerel SEO Avantajı'
+      '3 Yıl Boyunca Sıfır Ek Masraf (Domain + CDN Hosting Dahil)',
+      'Teknik Çizim & Şartname Dosyası Yüklenebilen Teklif Formu',
+      'İmalat Kapasitesi ve Tolerans Matrisi Sayfası',
+      'ISO, CE ve Kalite Akreditasyonları Alanı',
+      'Satın Alma Yetkilileri İçin Doğrudan WhatsApp Hattı',
+      'Google\'da "Sanayi İmalatı [Şehir]" Aramalarında Yerel SEO Avantajı'
     ],
     faqs: [
       {
-        question: 'Fabrikalardan gelen teklif talepleri nasıl bildirilir?',
-        answer: 'Web sitesi üzerinden tehlike sınıfı ve çalışan sayısını belirten teklif formları anında şirketinizin e-posta ve WhatsApp hattına bildirim olarak düşer.'
+        question: 'Teklif formunda müşteriler teknik çizim (CAD/PDF) yükleyebilir mi?',
+        answer: 'Evet, satın alma ve üretim yetkilileri teknik çizimlerini, şartnamelerini veya tolerans detaylarını doğrudan form üzerinden yükleyip şirketinize iletebilir.'
       },
       {
-        question: 'OSGB sitemiz mobil cihazlarda nasıl görünür?',
-        answer: 'Tamamen duyarlı (responsive) mimari sayesinde mobil telefonlarda 0.3 saniyede açılır ve fabrika müdürlerinin tek tıkla arama yapmasını sağlar.'
+        question: 'Sitemiz yurt dışı alıcılar için İngilizceye uyarlanabilir mi?',
+        answer: 'Evet, tüm sanayi şablonlarımız çoklu dil (İngilizce/Almanca) altyapısına %100 hazırdır; ihracat müşterilerinizi kolayca karşılarsınız.'
       },
       {
-        question: 'Referans logolarımızı ekleyebilir miyiz?',
-        answer: 'Evet, hizmet verdiğiniz tanınmış markaları ve sanayi tesislerini ana sayfada prestijli bir kaydırıcıyla sergileyebilirsiniz.'
+        question: 'Referans fabrika logolarımızı ekleyebilir miyiz?',
+        answer: 'Evet, parça veya hizmet tedarik ettiğiniz ana sanayi ve kurumsal markaları ana sayfada şık bir güven bandıyla sergileyebilirsiniz.'
       }
     ],
-    statHeadline: 'OSGB Sektörel Etki',
+    statHeadline: 'Sanayi Sektörel Etki',
     stats: [
-      { label: 'İSG Teklif Oranı', value: '+%80' },
+      { label: 'B2B Teklif Artışı', value: '+%75' },
       { label: 'Açılış Hızı', value: '0.3 sn' },
-      { label: 'Bakım Güvencesi', value: '3 Yıl' }
+      { label: 'Sıfır Masraf', value: '3 Yıl' }
     ]
   },
   {

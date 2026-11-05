@@ -55,7 +55,7 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     heroHeadline: 'Tuzla Sanayi & OSB Firmaları İçin İhracat Odaklı Web Siteleri',
     heroSubheadline: 'Fabrika ve imalatçıların yurt içi ve yurt dışı alıcılar karşısındaki kurumsal güvenini artıran teknik ve hızlı altyapı.',
     commercialHubs: ['İstanbul Deri Organize Sanayi (İDOSB)', 'Tuzla Kimyacılar OSB', 'Tuzla Tersaneler Bölgesi', 'Birlik Organize Sanayi Sitesi'],
-    focusSectors: ['Sanayi, İmalatçı & Fabrikalar', 'Lojistik & Depolama', 'OSGB & İş Güvenliği', 'Dış Ticaret'],
+    focusSectors: ['Sanayi, İmalatçı & Fabrikalar', 'Lojistik & Depolama', 'Metal & Makine İmalatı', 'Dış Ticaret'],
     localGuarantee: 'Tuzla OSB bölgelerindeki üretim tesislerinize doğrudan yerinde ziyaret ve proje planlama.',
     targetKeywords: ['tuzla web tasarım', 'tuzla osb web sitesi', 'tuzla sanayi web yazılım', 'tuzla tersane web tasarım'],
     sampleClients: ['Tuzla Dış Ticaret A.Ş.', 'İDOSB Kimya İmalat', 'Tuzla Tersane Tedarik']
@@ -100,7 +100,7 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     heroHeadline: 'Ümraniye, İMES & Dudullu İçin Yüksek Performanslı Web Mimarisi',
     heroSubheadline: 'İmalatçı, yedek parça ve toptancı firmaların dijitalde güvenle müşteri bulmasını sağlayan hızlı web platformları.',
     commercialHubs: ['İMES Sanayi Sitesi', 'Dudullu Organize Sanayi Bölgesi (DES)', 'Modoko Mobilya Kenti', 'Ümraniye Çarşı & Alemdağ Aksı'],
-    focusSectors: ['Sanayi & Yedek Parça', 'Mobilya & İç Mekan', 'OSGB & Mühendislik', 'Toptan Ticaret'],
+    focusSectors: ['Sanayi & Yedek Parça', 'Mobilya & İç Mekan', 'Kalıp & Talaşlı İmalat', 'Toptan Ticaret'],
     localGuarantee: 'İMES ve Dudullu sanayi bölgelerine yerinde teknik keşif hizmeti.',
     targetKeywords: ['ümraniye web tasarım', 'imes web sitesi', 'dudullu osb web tasarım', 'modoko web sitesi'],
     sampleClients: ['İMES Makine Sanayi', 'Dudullu Plastik Kalıp', 'Modoko Tasarım Mobilya']

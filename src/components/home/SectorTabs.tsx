@@ -5,7 +5,7 @@ import {
   LayoutGrid, 
   Scale, 
   Stethoscope, 
-  ShieldCheck, 
+  Factory, 
   Calculator, 
   Home
 } from 'lucide-react';
@@ -24,7 +24,7 @@ export const SectorTabs: React.FC<SectorTabsProps> = ({
     all: LayoutGrid,
     hukuk: Scale,
     klinik: Stethoscope,
-    osgb: ShieldCheck,
+    sanayi: Factory,
     muhasebe: Calculator,
     emlak: Home,
   };

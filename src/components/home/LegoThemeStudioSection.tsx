@@ -78,8 +78,8 @@ const THEMES: ThemePreset[] = [
   },
   {
     id: 'safety',
-    name: 'Safety Amber',
-    tagline: 'OSGB, Ağır Sanayi & İş Güvenliği',
+    name: 'Industrial Amber',
+    tagline: 'Sanayi, İmalatçı & Ağır Üretim',
     bgClass: 'from-[#1A1406] to-[#0D0A03]',
     cardBg: 'bg-[#221B0B]/90',
     accentColor: '#EAB308',

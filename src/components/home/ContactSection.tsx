@@ -204,7 +204,7 @@ export const ContactSection: React.FC = () => {
                     >
                       <option value="hukuk">Hukuk & Avukatlık</option>
                       <option value="klinik">Sağlık & Klinik</option>
-                      <option value="osgb">OSGB & İş Güvenliği</option>
+                      <option value="sanayi">Sanayi & İmalatçı</option>
                       <option value="muhasebe">Mali Müşavir & YMM</option>
                       <option value="emlak">Emlak & Gayrimenkul</option>
                       <option value="diger">Diğer Kurumsal</option>

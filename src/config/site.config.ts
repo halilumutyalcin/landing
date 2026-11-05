@@ -135,7 +135,7 @@ export const siteConfig = {
       priceFormatted: '32.500 ₺',
       period: 'Tek Seferlik',
       paymentTerms: '%50 Başlangıçta + %50 Teslimde',
-      tagline: 'Avukatlık ofisleri, klinikler, OSGB\'ler, mali müşavirler ve yerleşik KOBİ\'ler.',
+      tagline: 'Avukatlık ofisleri, klinikler, sanayi ve üretim firmaları, mali müşavirler ve yerleşik KOBİ\'ler.',
       targetAudience: 'Kurumsal ciddiyet arayan avukatlar, sağlık klinikleri, danışmanlık firmaları ve KOBİ\'ler.',
       pageStructure: '10 Sayfaya Kadar (Anasayfa, Hakkımızda, Hizmetler, Ekip, Blog, SSS, İletişim + 3 Sayfa)',
       deliveryTime: '5–7 İş Günü',
@@ -420,7 +420,7 @@ export const siteConfig = {
     {
       category: 'surec',
       question: 'Sitemdeki yazıları ve fotoğrafları kim hazırlıyor? Bizim elimizde hazır metin yok.',
-      answer: 'Hiç dert etmeyin, müşterilerimizin %80\'inin elinde hazır metin veya profesyonel fotoğraf olmuyor. Hukuk, klinik, OSGB, mali müşavirlik ve emlak sektörüne uygun kurumsal içerik şablonlarını ve yüksek kaliteli telifsiz profesyonel fotoğraf arşivini biz sağlıyoruz. Siz sadece "Şu hizmetimizi öne çıkaralım" deyin, gerisini biz toparlayalım.'
+      answer: 'Hiç dert etmeyin, müşterilerimizin %80\'inin elinde hazır metin veya profesyonel fotoğraf olmuyor. Hukuk, klinik, sanayi, mali müşavirlik ve emlak sektörüne uygun kurumsal içerik şablonlarını ve yüksek kaliteli telifsiz profesyonel fotoğraf arşivini biz sağlıyoruz. Siz sadece "Şu hizmetimizi öne çıkaralım" deyin, gerisini biz toparlayalım.'
     },
     {
       category: 'revizyon',

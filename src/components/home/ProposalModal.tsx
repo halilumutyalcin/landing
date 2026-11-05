@@ -121,7 +121,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
               {[
                 'Hukuk & Avukatlık',
                 'Sağlık & Klinik',
-                'OSGB & İSG',
+                'Sanayi & İmalatçı',
                 'Mali Müşavir & YMM',
                 'Emlak & Gayrimenkul',
                 'Diğer Kurumsal',

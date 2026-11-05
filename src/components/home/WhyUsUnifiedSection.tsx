@@ -53,7 +53,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
             <span>Neden MediWeb? · Şeffaf ve Modern Standart</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-3">
-            Geleneksel Ajans Modeli İflas Etti.
+            Klasik Ajans Hantallığına Son Veriyoruz.
           </h2>
           <p className="text-base text-slate-300 leading-relaxed">
             Hantal WordPress eklentileri, ne çıkacağı belirsiz hayali tasarımlar ve sürpriz yenileme faturaları geride kaldı. Üç temel boyutta farkımızı inceleyin:

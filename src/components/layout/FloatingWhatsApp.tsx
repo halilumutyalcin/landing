@@ -60,7 +60,7 @@ export const FloatingWhatsApp: React.FC = () => {
               >
                 <option value="Hukuk / Avukatlık">Hukuk / Avukatlık</option>
                 <option value="Sağlık / Klinik">Sağlık / Diş / Klinik</option>
-                <option value="OSGB / İş Güvenliği">OSGB / İş Güvenliği</option>
+                <option value="Sanayi / İmalatçı">Sanayi / İmalatçı</option>
                 <option value="Mali Müşavir / Finans">Mali Müşavir / YMM</option>
                 <option value="Emlak / Gayrimenkul">Emlak / Gayrimenkul</option>
                 <option value="Diğer Kurumsal">Diğer Kurumsal Sektör</option>

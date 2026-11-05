@@ -2,7 +2,7 @@ export interface DemoItem {
   id: string;
   slug: string;
   name: string;
-  sectorId: 'hukuk' | 'klinik' | 'osgb' | 'muhasebe' | 'emlak';
+  sectorId: 'hukuk' | 'klinik' | 'sanayi' | 'muhasebe' | 'emlak';
   sectorName: string;
   style: string;
   themeColor: 'slate' | 'blue' | 'amber' | 'emerald' | 'red';
@@ -28,7 +28,7 @@ export const SECTORS = [
   { id: 'all', name: 'Tüm Tasarımlar', icon: 'LayoutGrid', count: 15 },
   { id: 'hukuk', name: 'Hukuk & Avukatlık', icon: 'Scale', count: 3 },
   { id: 'klinik', name: 'Sağlık & Klinik', icon: 'Stethoscope', count: 3 },
-  { id: 'osgb', name: 'OSGB & İş Güvenliği', icon: 'ShieldCheck', count: 3 },
+  { id: 'sanayi', name: 'Sanayi & İmalatçı', icon: 'Factory', count: 3 },
   { id: 'muhasebe', name: 'Mali Müşavir & YMM', icon: 'Calculator', count: 3 },
   { id: 'emlak', name: 'Emlak & Gayrimenkul', icon: 'Home', count: 3 },
 ] as const;
@@ -242,68 +242,68 @@ export const DEMO_CATALOG: DemoItem[] = [
     }
   },
 
-  // 3. OSGB & İŞ GÜVENLİĞİ TASARIMLARI
+  // 3. SANAYİ & İMALATÇI TASARIMLARI
   {
     id: 'safepoint',
     slug: 'safepoint',
-    name: 'SafePoint',
-    sectorId: 'osgb',
-    sectorName: 'OSGB & İş Güvenliği',
-    style: 'Klasik · Güvenilir · İSG Yeşili',
+    name: 'ProMetal',
+    sectorId: 'sanayi',
+    sectorName: 'Sanayi & İmalatçı',
+    style: 'Endüstriyel · Güvenilir · Metal',
     themeColor: 'emerald',
-    badge: 'OSGB Lideri ',
+    badge: 'Fabrika & İmalat',
     liveUrl: '/preview/safepoint',
     previewImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
-    shortDesc: '6331 sayılı kanuna tam uyumlu, zorunlu İSG hizmetlerini ve keşif teklif formunu listeleyen kurumsal vitrin.',
-    targetAudience: 'Bakanlık onaylı OSGB firmaları, iş sağlığı birimleri ve İSG danışmanları.',
+    shortDesc: 'Talaşlı imalat, metal ve plastik kalıp üreticileri için ihracat ve kurumsal müşteri odaklı vitrin.',
+    targetAudience: 'Endüstriyel imalatçılar, talaşlı imalat tesisleri, metal ve plastik kalıp üreticileri.',
     keyFeatures: [
-      'Mevzuat & Tehlike Sınıfı Bilgilendirme Modülü',
-      'Ücretsiz İSG Keşif ve Fiyat Teklif Formu',
-      'Bakanlık Yetki Belgeleri & Sertifika Vitrini',
-      'WhatsApp Hızlı İletişim & Acil Müdahale'
+      'Üretim Kapasitesi & Makine Parkuru Listesi',
+      'Teknik Çizim & CAD/CAM Teklif Formu',
+      'ISO 9001 ve Kalite Sertifikaları Vitrini',
+      'WhatsApp Hızlı İletişim & Fiyat Talebi'
     ],
     pageBreakdown: {
-      singlePage: ['Hero & Mevzuat', 'Hakkımızda', 'Zorunlu İSG Hizmetleri', 'Yetki Belgelerimiz', 'Teklif Al & İletişim'],
-      fivePages: ['Anasayfa', 'Kurumsal Hakkımızda', 'İSG & Hekim Hizmetleri', 'Mobil Sağlık Taraması', 'İletişim & Teklif Formu'],
-      enterprise: ['İnteraktif Tehlike Sınıfı Hesaplayıcı', 'Mevzuat Bülteni & Rehber', 'Geniş Referans Kataloğu', 'Eğitim Portalı']
+      singlePage: ['Hero & Makine Parkuru', 'Hakkımızda', 'Üretim Hizmetlerimiz', 'Kalite Belgelerimiz', 'Teklif Al & İletişim'],
+      fivePages: ['Anasayfa', 'Kurumsal Hakkımızda', 'Talaşlı İmalat & Üretim', 'Makine Parkuru', 'İletişim & Teklif Formu'],
+      enterprise: ['İnteraktif Kapasite Hesaplayıcı', 'İhracat Ürün Kataloğu & PDF İndirici', 'Geniş Referans Kataloğu', 'B2B Bayi Girişi']
     },
     highlights: {
-      headline: '6331 Sayılı Kanuna %100 Uyumlu Güvence',
-      subheadline: 'İşletmelerin yasal yükümlülüklerini çözen yetkin İSG imajı.',
+      headline: 'Talaşlı İmalat ve Endüstriyel Üretimde Güven Veren Vitrin',
+      subheadline: 'Yurt içi ve yurt dışı kurumsal alıcıların aradığı teknik yeterlilik ve disiplin.',
       stats: [
-        { label: 'Teklif Talebi', value: '+%60' },
-        { label: 'Bakanlık', value: 'Uyumlu' },
+        { label: 'Teklif Talebi', value: '+%65' },
+        { label: 'İhracat Uyumu', value: 'Eksiksiz' },
         { label: 'Hız', value: '98' }
       ]
     }
   },
   {
-    id: 'zirveosgb',
-    slug: 'zirveosgb',
-    name: 'Zirve İSG',
-    sectorId: 'osgb',
-    sectorName: 'OSGB & İş Güvenliği',
+    id: 'zirvemakine',
+    slug: 'zirvemakine',
+    name: 'Zirve Makine',
+    sectorId: 'sanayi',
+    sectorName: 'Sanayi & İmalatçı',
     style: 'Dashboard · Koyu · Veri Odaklı',
     themeColor: 'slate',
-    badge: 'Sanayi & Ağır İSG',
-    liveUrl: '/preview/zirveosgb',
+    badge: 'Ağır Sanayi & Makine',
+    liveUrl: '/preview/zirvemakine',
     previewImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
-    shortDesc: 'Kaza analiz metrikleri, risk analizi adımları ve teknik dashboard hissi veren koyu tema.',
-    targetAudience: 'Sanayi ve ağır tehlike sınıfı işletmelere hizmet veren büyük ölçekli OSGB şirketleri.',
+    shortDesc: 'Endüstriyel makine imalatı, üretim kapasitesi sayaçları ve teknik veri odaklı koyu tema.',
+    targetAudience: 'Makine üreticileri, otomasyon sistemleri ve ağır sanayi tesisleri.',
     keyFeatures: [
-      'İstatistik ve Kaza Önleme Sayaçları',
-      'Adım Adım Risk Değerlendirme Süreç Şeması',
-      'Ortam Ölçümleri ve Periyodik Kontrol Tablosu',
+      'Üretim ve Sevkiyat Kapasite Sayaçları',
+      'Teknik Şartname & Tolerans Matrisi',
+      'TSE ve CE Uygunluk Belgeleri',
       'Kurumsal Şirket Teklif Formu'
     ],
     pageBreakdown: {
-      singlePage: ['Hero & Metrikler', 'Risk Analiz Süreci', 'Hizmetlerimiz', 'Referanslar', 'Teklif Formu & İletişim'],
-      fivePages: ['Anasayfa', 'Kurumsal', 'Hizmetlerimiz', 'Eğitim & Ölçüm', 'İletişim'],
-      enterprise: ['İSG Yazılımı Tanıtımı', '20 Sayfa', 'Çok Şubeli İletişim & Bölge Temsilcilikleri']
+      singlePage: ['Hero & Metrikler', 'Üretim Süreci', 'Makine Modelleri', 'Referanslar', 'Teklif Formu & İletişim'],
+      fivePages: ['Anasayfa', 'Kurumsal', 'Makinelerimiz', 'Teknik Servis & Yedek Parça', 'İletişim'],
+      enterprise: ['Çok Dilli İhracat Altyapısı', '20 Sayfa', 'Çok Şubeli İletişim & Bölge Temsilcilikleri']
     },
     highlights: {
-      headline: 'Sıfır İş Kazası Hedefli Dijital Vitrin',
-      subheadline: 'Fabrika ve şantiyelerin aradığı teknik yetkinlik ve disiplin.',
+      headline: 'Ağır Sanayi ve Makine İmalatında İhracat Odaklı Vitrin',
+      subheadline: 'Büyük ölçekli tedarikçilerin ve fabrikaların aradığı teknik yetkinlik.',
       stats: [
         { label: 'Kurumsal Güven', value: 'En Yüksek' },
         { label: 'Lighthouse', value: '97' },
@@ -314,32 +314,32 @@ export const DEMO_CATALOG: DemoItem[] = [
   {
     id: 'proguard',
     slug: 'proguard',
-    name: 'ProGuard',
-    sectorId: 'osgb',
-    sectorName: 'OSGB & İş Güvenliği',
+    name: 'ProTeknik',
+    sectorId: 'sanayi',
+    sectorName: 'Sanayi & İmalatçı',
     style: 'Modern · Dinamik · Mavi',
     themeColor: 'blue',
-    badge: 'Mobil Sağlık',
+    badge: 'Endüstriyel Tedarik',
     liveUrl: '/preview/proguard',
     previewImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80',
-    shortDesc: 'Geniş referans portföyü, gezici mobil sağlık aracı tanıtımı ve online eğitim duyuru modülü.',
-    targetAudience: 'Mobil sağlık taraması ve kurumsal ilk yardım eğitimi veren OSGB kuruluşları.',
+    shortDesc: 'Geniş ürün kataloğu, teknik malzeme tedariği ve toptan teklif motoru.',
+    targetAudience: 'Endüstriyel hırdavat, fabrika sarf malzemeleri ve teknik hırdavat toptancıları.',
     keyFeatures: [
-      'Gezici Mobil Sağlık Aracı Teşhir Bölümü',
-      'Yangın & İlk Yardım Eğitim Takvimi',
-      'Müşteri ve Fabrika Referans Logoları',
-      'WhatsApp Hızlı Rezervasyon'
+      'Ürün Kategori Filtreleme Sistemi',
+      'PDF Katalog İndirme Modülü',
+      'Fabrika ve Sanayi Referans Logoları',
+      'WhatsApp Hızlı Fiyat & Sipariş Hattı'
     ],
     pageBreakdown: {
-      singlePage: ['Hero & Gezici Araç', 'Hakkımızda', 'Hizmetler', 'Araç Filomuz', 'İletişim'],
-      fivePages: ['Anasayfa', 'Hakkımızda', 'Mobil Sağlık', 'Eğitimlerimiz', 'İletişim'],
-      enterprise: ['Kurumsal Müşteri Portalı', 'Gelişmiş Teklif Motoru', 'Eğitim Sertifika Doğrulama']
+      singlePage: ['Hero & Ürünler', 'Hakkımızda', 'Ürün Kategorileri', 'Referanslarımız', 'İletişim'],
+      fivePages: ['Anasayfa', 'Hakkımızda', 'Ürünlerimiz', 'Markalarımız', 'İletişim'],
+      enterprise: ['B2B Bayi Portalı', 'Gelişmiş Teklif Motoru', 'Stok & Fiyat Entegrasyonu']
     },
     highlights: {
-      headline: 'Mobil Sağlık ve Eğitimde Güçlü Çözüm',
-      subheadline: 'Gezici tarama araçlarınızı ve yetkili hekim kadronuzu eksiksiz sergileyin.',
+      headline: 'Fabrika ve Atölyelere Doğrudan Tedarik Vitrini',
+      subheadline: 'Hızlı teklif alma ve toptan sipariş talebi toplayan modern katalog altyapısı.',
       stats: [
-        { label: 'Araç Tanıtımı', value: 'Özel' },
+        { label: 'Ürün Vitrini', value: 'Dinamik' },
         { label: 'Hız Skoru', value: '99' },
         { label: 'İletişim', value: 'Anında' }
       ]
