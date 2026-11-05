@@ -55,31 +55,19 @@ export const Navbar: React.FC = () => {
             href="/#tasarimlar" 
             className="hover:text-white transition-colors"
           >
-            Sektörel Mimariler
+            Şablonlar
           </Link>
           <Link 
-            href="/#nasil-calisir" 
+            href="/sektorler" 
             className="hover:text-white transition-colors"
           >
-            Nasıl Çalışır?
+            Sektörler
           </Link>
           <Link 
-            href="/#paketler" 
+            href="/bolgeler" 
             className="hover:text-white transition-colors"
           >
-            Paketler &amp; Fiyat
-          </Link>
-          <Link 
-            href="/#neden-biz" 
-            className="hover:text-white transition-colors"
-          >
-            İlkelerimiz
-          </Link>
-          <Link 
-            href="/#sss" 
-            className="hover:text-white transition-colors"
-          >
-            SSS
+            Bölgeler
           </Link>
         </nav>
 
@@ -117,35 +105,21 @@ export const Navbar: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="block p-3 rounded-lg text-blue-400 font-bold bg-blue-500/10"
             >
-              Sektörel Mimariler (Canlı Vitrinler)
+              Şablonlar
             </Link>
             <Link
-              href="/#nasil-calisir"
+              href="/sektorler"
               onClick={() => setMobileMenuOpen(false)}
-              className="block p-3 rounded-lg text-slate-200 hover:bg-white/5"
+              className="block p-3 rounded-lg text-slate-200 hover:bg-white/5 font-semibold"
             >
-              Nasıl Çalışır? (3–5 Günde Teslim)
+              Sektörler
             </Link>
             <Link
-              href="/#paketler"
+              href="/bolgeler"
               onClick={() => setMobileMenuOpen(false)}
-              className="block p-3 rounded-lg text-slate-200 hover:bg-white/5"
+              className="block p-3 rounded-lg text-slate-200 hover:bg-white/5 font-semibold"
             >
-              Paketler &amp; Fiyatlar (17.500 ₺'den başlayan)
-            </Link>
-            <Link
-              href="/#neden-biz"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block p-3 rounded-lg text-slate-200 hover:bg-white/5"
-            >
-              İlkelerimiz &amp; Şeffaf Taahhütler
-            </Link>
-            <Link
-              href="/#sss"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block p-3 rounded-lg text-slate-200 hover:bg-white/5"
-            >
-              Sıkça Sorulan Sorular
+              Bölgeler
             </Link>
           </div>
 

@@ -59,41 +59,41 @@ export const WhyUsUnifiedSection: React.FC = () => {
             Hantal WordPress eklentileri, ne çıkacağı belirsiz hayali tasarımlar ve sürpriz yenileme faturaları geride kaldı. Üç temel boyutta farkımızı inceleyin:
           </p>
 
-          {/* Interactive Unified Segmented Tabs - Pure Flex Wrap, Zero Scrollbars */}
-          <div className="mt-8 inline-flex flex-wrap items-center justify-center p-1.5 rounded-2xl bg-[#121622] gap-1.5 shadow-inner">
+          {/* Interactive Unified Segmented Tabs - Side-by-side (Grid, No Scroll) */}
+          <div className="mt-8 w-full max-w-3xl mx-auto grid grid-cols-3 p-1 sm:p-1.5 rounded-2xl bg-[#121622] gap-1 sm:gap-1.5 shadow-inner">
             <button
               onClick={() => setActiveTab('agency-vs-us')}
-              className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 ${
+              className={`w-full px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
                 activeTab === 'agency-vs-us'
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
-              <Scale className="w-4 h-4" />
+              <Scale className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
               <span>Geleneksel Ajans vs. Biz</span>
             </button>
 
             <button
               onClick={() => setActiveTab('wp-vs-next')}
-              className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 ${
+              className={`w-full px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
                 activeTab === 'wp-vs-next'
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
-              <Zap className="w-4 h-4 text-emerald-400" />
+              <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 shrink-0" />
               <span>WordPress vs. Next.js Hız Kıyası</span>
             </button>
 
             <button
               onClick={() => setActiveTab('principles')}
-              className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 ${
+              className={`w-full px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
                 activeTab === 'principles'
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
-              <ShieldCheck className="w-4 h-4 text-amber-400" />
+              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 shrink-0" />
               <span>Şeffaf İlkelerimiz & Taahhütler</span>
             </button>
           </div>

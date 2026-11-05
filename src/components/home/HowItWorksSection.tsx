@@ -52,7 +52,7 @@ export const HowItWorksSection: React.FC = () => {
             Zahmetsiz & Şeffaf Süreç
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
-            Nasıl Çalışıyoruz? 4 Adımda Canlı Yayındasınız
+            4 Adımda Siteniz Yayında!
           </h2>
           <p className="text-base text-slate-300 leading-relaxed">
             Haftalarca süren ajans toplantılarını, ucu açık revizyon kuyruklarını ve sürpriz ek faturaları geride bıraktık. 

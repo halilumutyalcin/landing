@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Check, 
   ShieldCheck, 
@@ -17,7 +18,6 @@ import {
   Palette,
   CreditCard,
   MapPin,
-  Code2,
   Calendar,
   FileCheck2
 } from 'lucide-react';
@@ -241,9 +241,11 @@ export const PricingSection: React.FC = () => {
               : `${pkg.name} Paket (${pkg.priceFormatted})`;
 
             return (
-              <div
+              <motion.div
                 key={pkg.id}
-                className={`rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-all relative ${
+                layout
+                transition={{ duration: 0.35, ease: 'easeInOut' }}
+                className={`rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-colors relative ${
                   isPro
                     ? 'bg-[#141B2D] shadow-2xl lg:-translate-y-2'
                     : 'bg-[#0E121A] hover:bg-[#121724]'
@@ -352,16 +354,27 @@ export const PricingSection: React.FC = () => {
                     ))}
 
                     {/* Expandable Extra Features */}
-                    {expandedPackages[pkg.id] && (
-                      <div className="space-y-2.5 pt-1 animate-in fade-in duration-200">
-                        {pkg.features.slice(5).map((feat, idx) => (
-                          <div key={idx + 5} className="flex items-start gap-2.5 text-xs text-slate-300">
-                            <Check className="w-4 h-4 text-emerald-400/80 shrink-0 mt-0.5" />
-                            <span>{feat}</span>
+                    <AnimatePresence initial={false}>
+                      {expandedPackages[pkg.id] && (
+                        <motion.div
+                          key={`extra-feats-${pkg.id}`}
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.35, ease: 'easeInOut' }}
+                          className="overflow-hidden"
+                        >
+                          <div className="space-y-2.5 pt-2.5">
+                            {pkg.features.slice(5).map((feat, idx) => (
+                              <div key={idx + 5} className="flex items-start gap-2.5 text-xs text-slate-300">
+                                <Check className="w-4 h-4 text-emerald-400/80 shrink-0 mt-0.5" />
+                                <span>{feat}</span>
+                              </div>
+                            ))}
                           </div>
-                        ))}
-                      </div>
-                    )}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
 
                     {pkg.features.length > 5 && (
                       <button
@@ -404,7 +417,7 @@ export const PricingSection: React.FC = () => {
                     </span>
                   </a>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
@@ -430,7 +443,7 @@ export const PricingSection: React.FC = () => {
                 Ayrı Ayrı Alındığında: ~65.000 TL
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl sm:text-4xl font-black text-white font-mono">
+                <span className="text-3xl sm:text-4xl font-black text-white">
                   39.500 ₺
                 </span>
                 <span className="text-xs text-slate-400 font-medium">+ KDV (Tek Seferlik)</span>
@@ -448,7 +461,7 @@ export const PricingSection: React.FC = () => {
               <div className="flex items-center gap-2.5">
                 <Palette className="w-5 h-5 text-blue-400 shrink-0" />
                 <strong className="text-white text-sm font-bold">
-                  1. Vektörel Logo & Renk
+                  1. Logo & Renkler
                 </strong>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed pt-1">
@@ -460,7 +473,7 @@ export const PricingSection: React.FC = () => {
               <div className="flex items-center gap-2.5">
                 <CreditCard className="w-5 h-5 text-emerald-400 shrink-0" />
                 <strong className="text-white text-sm font-bold">
-                  2. Kartvizit & Evraklar
+                  2. Marka Kimliği
                 </strong>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed pt-1">
@@ -472,7 +485,7 @@ export const PricingSection: React.FC = () => {
               <div className="flex items-center gap-2.5">
                 <MapPin className="w-5 h-5 text-purple-400 shrink-0" />
                 <strong className="text-white text-sm font-bold">
-                  3. Google Harita & Yerel SEO
+                  3. Google Haritalar & SEO
                 </strong>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed pt-1">
@@ -666,10 +679,6 @@ export const PricingSection: React.FC = () => {
         <div className="mt-12 rounded-3xl bg-gradient-to-b from-[#0F1422] to-[#0A0D15] border border-white/10 p-6 sm:p-10 max-w-5xl mx-auto shadow-2xl">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-white/10">
             <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-wider mb-3">
-                <Code2 className="w-3.5 h-3.5" />
-                <span>Kurumsal Özel Yazılım &amp; Entegrasyon</span>
-              </div>
               <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
                 Standart Sitelerin Ötesinde: İşletmenize Özel Web Yazılımı &amp; Entegrasyon
               </h3>
@@ -692,10 +701,8 @@ export const PricingSection: React.FC = () => {
           {/* 4 Concrete Real-World Scenarios */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-8">
             <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-blue-500/30 transition-colors">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0">
-                  <Building2 className="w-4 h-4" />
-                </div>
+              <div className="flex items-center gap-2.5 mb-2">
+                <Building2 className="w-5 h-5 text-blue-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Bayi &amp; Cari Hesap Portalı</h4>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
@@ -704,10 +711,8 @@ export const PricingSection: React.FC = () => {
             </div>
 
             <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-emerald-500/30 transition-colors">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
-                  <Calendar className="w-4 h-4" />
-                </div>
+              <div className="flex items-center gap-2.5 mb-2">
+                <Calendar className="w-5 h-5 text-emerald-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Online Randevu &amp; SMS Otomasyonu</h4>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
@@ -716,10 +721,8 @@ export const PricingSection: React.FC = () => {
             </div>
 
             <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-purple-500/30 transition-colors">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0">
-                  <Server className="w-4 h-4" />
-                </div>
+              <div className="flex items-center gap-2.5 mb-2">
+                <Server className="w-5 h-5 text-purple-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Ön Muhasebe &amp; ERP Entegrasyonu</h4>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
@@ -728,10 +731,8 @@ export const PricingSection: React.FC = () => {
             </div>
 
             <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 transition-colors">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
-                  <FileCheck2 className="w-4 h-4" />
-                </div>
+              <div className="flex items-center gap-2.5 mb-2">
+                <FileCheck2 className="w-5 h-5 text-amber-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Online Evrak &amp; Rapor Sorgulama</h4>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
