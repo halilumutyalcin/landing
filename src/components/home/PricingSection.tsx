@@ -148,7 +148,7 @@ export const PricingSection: React.FC = () => {
           {/* Billing Mode & B2B Tax Toggles */}
           <div className="mt-8 flex flex-col items-center gap-3">
             {/* Primary Toggle: One-Time vs Flexible Monthly Subscription */}
-            <div className="inline-flex items-center p-1 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] shadow-inner max-w-full overflow-x-auto">
+            <div className="inline-flex items-center p-1 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] shadow-inner max-w-full overflow-visible relative">
               <button
                 onClick={() => setBillingMode('onetime')}
                 className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${
@@ -159,16 +159,23 @@ export const PricingSection: React.FC = () => {
               >
                 Tek Seferlik (3 Yıl Sıfır Ek Masraf)
               </button>
-              <button
-                onClick={() => setBillingMode('waas')}
-                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all whitespace-nowrap ${
-                  billingMode === 'waas'
-                    ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20 font-extrabold ring-1 ring-amber-400'
-                    : 'text-zinc-400 hover:text-white'
-                }`}
-              >
-                <span>Sıfır Peşinatla Başlayın: Esnek Aylık Model</span>
-              </button>
+              
+              <div className="relative">
+                <button
+                  onClick={() => setBillingMode('waas')}
+                  className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${
+                    billingMode === 'waas'
+                      ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20 font-extrabold ring-1 ring-amber-400'
+                      : 'text-zinc-400 hover:text-white'
+                  }`}
+                >
+                  Sıfır Peşinatla Başlayın: Esnek Aylık Model
+                </button>
+                {/* Sabit Fiyat Damgası - Sağ Üst Çapraz Rozet */}
+                <span className="absolute -top-3 -right-2 px-2 py-0.5 rounded-md text-[9px] font-black uppercase tracking-wider bg-amber-500 text-black border border-amber-300 shadow-md rotate-6 pointer-events-none select-none">
+                  Sabit Fiyat
+                </span>
+              </div>
             </div>
 
             {/* Secondary Toggle (Only relevant for One-time) */}
@@ -178,7 +185,7 @@ export const PricingSection: React.FC = () => {
                   onClick={() => setShowTaxDeduction(false)}
                   className={`px-3 py-1.5 rounded-lg font-semibold transition-all ${
                     !showTaxDeduction
-                      ? 'bg-white text-black shadow'
+                      ? 'bg-white text-black font-bold shadow'
                       : 'text-zinc-400 hover:text-white'
                   }`}
                 >
@@ -188,22 +195,22 @@ export const PricingSection: React.FC = () => {
                   onClick={() => setShowTaxDeduction(true)}
                   className={`px-3 py-1.5 rounded-lg font-semibold flex items-center gap-1.5 transition-all ${
                     showTaxDeduction
-                      ? 'bg-amber-500 text-black shadow font-bold'
+                      ? 'bg-white text-black font-bold shadow'
                       : 'text-zinc-400 hover:text-white'
                   }`}
                 >
-                  <Building2 className="w-3.5 h-3.5" />
+                  <Building2 className={`w-3.5 h-3.5 ${showTaxDeduction ? 'text-black' : 'text-amber-400'}`} />
                   <span>Şirketler İçin Net Maliyet (Vergi İndirimi Sonrası)</span>
                 </button>
               </div>
             ) : (
-              <p className="text-xs text-amber-400 animate-in fade-in duration-200">
-                Peşin bütçe ayırmadan, düşük kurulum bedeli ve aylık sabit fiyat güvencesiyle hemen yayına girin.
+              <p className="text-xs text-amber-400 font-medium animate-in fade-in duration-200">
+                Peşin bütçe ayırmadan, düşük kurulum bedeli ve sabit fiyat garantisiyle hemen yayına girin.
               </p>
             )}
 
             {billingMode === 'onetime' && showTaxDeduction && (
-              <p className="text-xs text-amber-400 mt-1 animate-in fade-in duration-200">
+              <p className="text-xs text-amber-400 mt-1 font-medium animate-in fade-in duration-200">
                 %20 KDV mahsubu ve %25–%35 kurumlar/gelir vergisi gider indirimi düşüldükten sonra cebinizden çıkan net tutardır.
               </p>
             )}
@@ -242,27 +249,16 @@ export const PricingSection: React.FC = () => {
                 key={pkg.id}
                 layout
                 transition={{ duration: 0.35, ease: 'easeInOut' }}
-                className={`rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-all relative overflow-hidden ${
+                className={`rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-all relative ${
                   isPro
-                    ? 'bg-[#0A0A0C] border-2 border-amber-500/40 shadow-2xl lg:-translate-y-2'
+                    ? 'bg-[#0A0A0C] border-2 border-amber-500/30 shadow-2xl lg:-translate-y-2'
                     : 'bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20'
                 }`}
               >
-                {/* Popular Ribbon */}
+                {/* Popular Ribbon - Yüksek Okunabilirlik ve Kontrast */}
                 {isPro && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black text-[11px] font-bold tracking-normal shadow-lg shadow-white/10 z-10">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black text-[11px] font-black tracking-wide shadow-xl border border-white/20 select-none">
                     En Çok Tercih Edilen Paket
-                  </div>
-                )}
-
-                {/* Sağ Üst Çapraz "Sabit Fiyat" Damga / Rozeti */}
-                {billingMode === 'waas' ? (
-                  <div className="absolute top-3.5 -right-9 rotate-45 bg-amber-500 text-black text-[10px] font-black uppercase tracking-wider py-1 px-10 shadow-md pointer-events-none z-10 border-y border-black/20">
-                    Sabit Fiyat
-                  </div>
-                ) : (
-                  <div className="absolute top-3.5 -right-9 rotate-45 bg-white/[0.08] text-zinc-300 text-[10px] font-bold uppercase tracking-wider py-1 px-10 shadow-sm pointer-events-none z-10 border-y border-white/10">
-                    Sabit Fiyat
                   </div>
                 )}
 
