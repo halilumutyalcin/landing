@@ -70,29 +70,29 @@ export const DemoCard: React.FC<DemoCardProps> = ({ demo, onOpenPreview }) => {
         <div>
           {/* Style & Sector Tag */}
           <div className="flex items-center justify-between mb-1.5">
-            <span className="text-xs font-medium text-slate-400">
+            <span className="text-xs font-medium text-zinc-400">
               {demo.style}
             </span>
-            <span className="text-[11px] text-emerald-400 font-medium">
+            <span className="text-[11px] text-zinc-400 font-mono">
               Mobil Uyumlu
             </span>
           </div>
 
-          <Link href={`/tasarimlar/${demo.slug}`} className="group-hover:text-brand-400 transition-colors">
+          <Link href={`/tasarimlar/${demo.slug}`} className="group-hover:text-amber-400 transition-colors">
             <h3 className="text-xl font-bold text-white font-display mb-2">
               {demo.name}
             </h3>
           </Link>
 
-          <p className="text-xs sm:text-sm text-slate-400 line-clamp-2 mb-4 leading-relaxed">
+          <p className="text-xs sm:text-sm text-zinc-400 line-clamp-2 mb-4 leading-relaxed">
             {demo.shortDesc}
           </p>
 
           {/* Features bullet list */}
           <div className="space-y-1.5 pt-3 border-t border-white/5 mb-5">
             {demo.keyFeatures.slice(0, 3).map((feature, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-xs text-slate-300">
-                <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+              <div key={idx} className="flex items-center gap-2 text-xs text-zinc-300">
+                <Check className="w-3.5 h-3.5 text-zinc-500 shrink-0" />
                 <span className="truncate">{feature}</span>
               </div>
             ))}
@@ -101,33 +101,18 @@ export const DemoCard: React.FC<DemoCardProps> = ({ demo, onOpenPreview }) => {
 
         {/* Delivery & Pricing Cue & Actions */}
         <div>
-          <div className="flex items-center justify-between text-xs text-slate-400 mb-4 pt-2 border-t border-white/5">
+          <div className="flex items-center justify-between text-xs text-zinc-400 mb-3 pt-3 border-t border-white/5">
             <span>Anahtar Teslim Kurulum</span>
             <span className="text-white font-medium">17.500 ₺'den başlayan</span>
           </div>
 
-          <div className="grid grid-cols-2 gap-2">
-            <Link
-              href={`/tasarimlar/${demo.slug}`}
-              className="w-full text-center py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 font-semibold text-xs transition-colors flex items-center justify-center gap-1"
-            >
-              <span>İncele</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-
-            <a
-              href={generateWhatsAppUrl({
-                designName: `${demo.name} (${demo.sectorName})`,
-                packageName: 'Profesyonel Paket (32.500 ₺)',
-              })}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full text-center py-2.5 px-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs shadow-md shadow-emerald-700/20 transition-all flex items-center justify-center gap-1.5"
-            >
-              <WhatsAppIcon className="w-3.5 h-3.5 fill-current shrink-0" />
-              <span>Seç & Başla</span>
-            </a>
-          </div>
+          <Link
+            href={`/tasarimlar/${demo.slug}`}
+            className="w-full text-center py-2.5 px-4 rounded-xl bg-white/[0.04] hover:bg-white text-zinc-300 hover:text-black font-semibold text-xs border border-white/[0.08] hover:border-white transition-all flex items-center justify-center gap-2 group/btn"
+          >
+            <span>Canlı Demoyu İncele</span>
+            <ArrowRight className="w-3.5 h-3.5 text-zinc-400 group-hover/btn:text-black group-hover/btn:translate-x-0.5 transition-all" />
+          </Link>
         </div>
       </div>
     </div>

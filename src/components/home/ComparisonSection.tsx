@@ -31,7 +31,7 @@ export const ComparisonSection: React.FC = () => {
               <span>Geleneksel Ajans Modeli</span>
             </div>
             <div className="text-emerald-400 flex items-center gap-2 mt-2 md:mt-0">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              <CheckCircle2 className="w-4 h-4 text-amber-400" />
               <span>MediWeb Modeli</span>
             </div>
           </div>
@@ -49,7 +49,7 @@ export const ComparisonSection: React.FC = () => {
                   <span className="text-rose-400 font-bold mr-1 md:hidden">Eski:</span>
                   <span>{item.traditional}</span>
                 </div>
-                <div className="text-emerald-300 font-semibold">
+                <div className="text-zinc-300 font-semibold">
                   <span className="text-emerald-400 font-bold mr-1 md:hidden">MediWeb:</span>
                   <span>{item.mediweb}</span>
                 </div>

@@ -111,13 +111,13 @@ export const PricingSection: React.FC = () => {
     if (val.startsWith('Dahil') || val.includes('3 Yıl Domain + SSL')) {
       return (
         <span className={`inline-flex items-center gap-1.5 font-semibold text-xs ${isProCol ? 'text-emerald-400' : 'text-slate-200'}`}>
-          <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+          <Check className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
           <span>{val}</span>
         </span>
       );
     }
     return (
-      <span className={`text-xs ${isProCol ? 'text-emerald-300 font-medium' : 'text-slate-300'}`}>
+      <span className={`text-xs ${isProCol ? 'text-zinc-300 font-medium' : 'text-slate-300'}`}>
         {val}
       </span>
     );
@@ -168,7 +168,7 @@ export const PricingSection: React.FC = () => {
                 }`}
               >
                 <span>Sıfır Peşinatla Başlayın: Esnek Aylık Model</span>
-                <span className="px-1.5 py-0.5 rounded text-[10px] font-black uppercase bg-emerald-400/20 text-emerald-300">
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-black uppercase bg-emerald-400/20 text-zinc-300">
                   Sabit Taksit
                 </span>
               </button>
@@ -301,18 +301,18 @@ export const PricingSection: React.FC = () => {
                     </div>
 
                     {billingMode === 'waas' ? (
-                      <div className="text-xs text-emerald-400 font-medium mt-2 flex items-center gap-1.5 pt-2 border-t border-white/5">
+                      <div className="text-xs text-zinc-300 font-medium mt-2 flex items-center gap-1.5 pt-2 border-t border-white/5">
                         <ShieldCheck className="w-4 h-4 shrink-0" />
                         <span>12 Ay Taahhütlü · Barındırma, Bakım & Güncelleme Dahil</span>
                       </div>
                     ) : (
                       <>
                         {showTaxDeduction && (
-                          <div className="text-[11px] text-emerald-400 mt-1 font-semibold">
+                          <div className="text-[11px] text-amber-400 mt-1 font-semibold">
                             Gider gösterildiğinde %35-40 net tasarruf
                           </div>
                         )}
-                        <div className="text-xs text-emerald-400 font-medium mt-2 flex items-center gap-1.5 pt-2 border-t border-white/5">
+                        <div className="text-xs text-zinc-300 font-medium mt-2 flex items-center gap-1.5 pt-2 border-t border-white/5">
                           <ShieldCheck className="w-4 h-4 shrink-0" />
                           <span>3 Yıl Domain + SSL + Bulut Barındırma Dahil (0 TL Masraf)</span>
                         </div>
@@ -348,7 +348,7 @@ export const PricingSection: React.FC = () => {
                   <div className="space-y-2.5 mb-6">
                     {pkg.features.slice(0, 5).map((feat, idx) => (
                       <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-200">
-                        <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 text-zinc-400 shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -367,7 +367,7 @@ export const PricingSection: React.FC = () => {
                           <div className="space-y-2.5 pt-2.5">
                             {pkg.features.slice(5).map((feat, idx) => (
                               <div key={idx + 5} className="flex items-start gap-2.5 text-xs text-slate-300">
-                                <Check className="w-4 h-4 text-emerald-400/80 shrink-0 mt-0.5" />
+                                <Check className="w-4 h-4 text-zinc-500 shrink-0 mt-0.5" />
                                 <span>{feat}</span>
                               </div>
                             ))}
@@ -448,7 +448,7 @@ export const PricingSection: React.FC = () => {
                 </span>
                 <span className="text-xs text-slate-400 font-medium">+ KDV (Tek Seferlik)</span>
               </div>
-              <div className="text-[11px] text-emerald-400 mt-1 font-semibold flex items-center gap-1.5">
+              <div className="text-[11px] text-amber-400 mt-1 font-semibold flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
                 <span>3 Yıl Domain + Hosting Dahil (0 TL Masraf)</span>
               </div>
@@ -651,7 +651,7 @@ export const PricingSection: React.FC = () => {
           {/* Integrated Trust Guarantees Footer Strip (No awkward second card) */}
           <div className="border-t border-white/10 bg-[#0A0D15] p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300">
             <div className="flex items-start gap-3">
-              <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+              <ShieldCheck className="w-5 h-5 text-zinc-400 shrink-0 mt-0.5" />
               <div>
                 <strong className="text-white block mb-0.5">Sürpriz Ek Ücret Yok</strong>
                 <span className="text-slate-400">Anlaşılan net fiyat geçerlidir. "Sunucu açılışı" veya "SSL bedeli" adı altında gizli faturalar çıkmaz.</span>

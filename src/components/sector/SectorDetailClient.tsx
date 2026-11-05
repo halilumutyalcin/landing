@@ -219,7 +219,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
                     <div className="space-y-1.5 pt-3 border-t border-white/5">
                       {demo.keyFeatures.slice(0, 2).map((feat, fIdx) => (
                         <div key={fIdx} className="flex items-center gap-2 text-[11px] text-slate-300">
-                          <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                          <Check className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
                           <span className="truncate">{feat}</span>
                         </div>
                       ))}

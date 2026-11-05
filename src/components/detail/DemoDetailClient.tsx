@@ -217,7 +217,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
               <div className="space-y-3">
                 {demo.keyFeatures.map((feat, idx) => (
                   <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/5 text-xs sm:text-sm text-slate-200">
-                    <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-zinc-400 shrink-0 mt-0.5" />
                     <span>{feat}</span>
                   </div>
                 ))}
@@ -322,7 +322,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
             {/* Bottom CTA to WhatsApp with this exact configuration */}
             <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-xs text-slate-400 flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>3 Yıl Domain, SSL ve yüksek hızlı bulut barındırması fiyata dahildir.</span>
               </div>
               <a

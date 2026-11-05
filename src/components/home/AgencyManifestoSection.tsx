@@ -52,14 +52,14 @@ export const AgencyManifestoSection: React.FC = () => {
             </div>
             <div className="pt-6 mt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">
               <span>Core Web Vitals: 99/100</span>
-              <span className="text-emerald-400 font-bold">DOĞRULANDI</span>
+              <span className="text-amber-400 font-bold">DOĞRULANDI</span>
             </div>
           </div>
 
           {/* Pillar 2 */}
           <div className="bg-[#0A0A0C] hover:bg-[#121214] p-8 rounded-2xl flex flex-col justify-between transition-colors">
             <div>
-              <div className="font-mono text-xs text-emerald-400 font-bold mb-4 tracking-wider">
+              <div className="font-mono text-xs text-amber-400 font-bold mb-4 tracking-wider">
                 // 02. PRENSİP
               </div>
               <h3 className="text-2xl font-bold text-white mb-3 font-display">
@@ -72,7 +72,7 @@ export const AgencyManifestoSection: React.FC = () => {
             </div>
             <div className="pt-6 mt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">
               <span>Sürpriz Maliyet: 0 ₺</span>
-              <span className="text-emerald-400 font-bold">TAAHHÜT</span>
+              <span className="text-amber-400 font-bold">TAAHHÜT</span>
             </div>
           </div>
 
@@ -93,7 +93,7 @@ export const AgencyManifestoSection: React.FC = () => {
             </div>
             <div className="pt-6 mt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">
               <span>Tasarruf: ~35.000 ₺</span>
-              <span className="text-emerald-400 font-bold">DAHİL</span>
+              <span className="text-amber-400 font-bold">DAHİL</span>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ export const AgencyManifestoSection: React.FC = () => {
             <div className="px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 text-slate-300">
               ISO 27001 GÜVENLİK
             </div>
-            <div className="px-3.5 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-bold">
+            <div className="px-3.5 py-2 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 font-bold">
               99 LIGHTHOUSE
             </div>
           </div>

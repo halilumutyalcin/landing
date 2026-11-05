@@ -209,7 +209,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
                     <ul className="space-y-1.5 mb-2">
                       {demo.keyFeatures.slice(0, 2).map((feat, i) => (
                         <li key={i} className="flex items-center gap-2 text-[11px] text-slate-300">
-                          <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                          <Check className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
                           <span className="truncate">{feat}</span>
                         </li>
                       ))}
@@ -276,7 +276,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
                   <ul className="space-y-2 mb-6">
                     {pkg.features.slice(0, 4).map((f, i) => (
                       <li key={i} className="flex items-center gap-2 text-xs text-slate-300">
-                        <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                        <Check className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
                         <span>{f}</span>
                       </li>
                     ))}
