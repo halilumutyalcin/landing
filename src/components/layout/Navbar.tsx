@@ -58,18 +58,6 @@ export const Navbar: React.FC = () => {
             Sektörel Mimariler
           </Link>
           <Link 
-            href="/sektorler" 
-            className="hover:text-white transition-colors"
-          >
-            Sektörler
-          </Link>
-          <Link 
-            href="/bolgeler" 
-            className="hover:text-white transition-colors"
-          >
-            Bölgeler
-          </Link>
-          <Link 
             href="/#nasil-calisir" 
             className="hover:text-white transition-colors"
           >
@@ -79,7 +67,7 @@ export const Navbar: React.FC = () => {
             href="/#paketler" 
             className="hover:text-white transition-colors"
           >
-            Paketler & Fiyat
+            Paketler &amp; Fiyat
           </Link>
           <Link 
             href="/#neden-biz" 
@@ -132,20 +120,6 @@ export const Navbar: React.FC = () => {
               Sektörel Mimariler (Canlı Vitrinler)
             </Link>
             <Link
-              href="/sektorler"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block p-3 rounded-lg text-slate-200 hover:bg-white/5 font-semibold"
-            >
-              Sektörel Çözümler (Özel Paketler)
-            </Link>
-            <Link
-              href="/bolgeler"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block p-3 rounded-lg text-slate-200 hover:bg-white/5 font-semibold"
-            >
-              İstanbul Hizmet Bölgelerimiz (13 İlçe)
-            </Link>
-            <Link
               href="/#nasil-calisir"
               onClick={() => setMobileMenuOpen(false)}
               className="block p-3 rounded-lg text-slate-200 hover:bg-white/5"
@@ -157,14 +131,14 @@ export const Navbar: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="block p-3 rounded-lg text-slate-200 hover:bg-white/5"
             >
-              Paketler & Fiyatlar (17.500 ₺'den başlayan)
+              Paketler &amp; Fiyatlar (17.500 ₺'den başlayan)
             </Link>
             <Link
               href="/#neden-biz"
               onClick={() => setMobileMenuOpen(false)}
               className="block p-3 rounded-lg text-slate-200 hover:bg-white/5"
             >
-              İlkelerimiz & Şeffaf Taahhütler
+              İlkelerimiz &amp; Şeffaf Taahhütler
             </Link>
             <Link
               href="/#sss"
