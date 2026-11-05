@@ -168,21 +168,18 @@ export const PricingSection: React.FC = () => {
                 }`}
               >
                 <span>Sıfır Peşinatla Başlayın: Esnek Aylık Model</span>
-                <span className="px-1.5 py-0.5 rounded text-[10px] font-black uppercase bg-emerald-400/20 text-zinc-300">
-                  Sabit Taksit
-                </span>
               </button>
             </div>
 
             {/* Secondary Toggle (Only relevant for One-time) */}
             {billingMode === 'onetime' ? (
-              <div className="inline-flex items-center p-1 rounded-xl bg-[#0A0A0C] text-xs">
+              <div className="inline-flex items-center p-1 rounded-xl bg-[#0A0A0C] border border-white/[0.08] text-xs">
                 <button
                   onClick={() => setShowTaxDeduction(false)}
                   className={`px-3 py-1.5 rounded-lg font-semibold transition-all ${
                     !showTaxDeduction
-                      ? 'bg-white/10 text-white'
-                      : 'text-slate-400 hover:text-slate-200'
+                      ? 'bg-white text-black shadow'
+                      : 'text-zinc-400 hover:text-white'
                   }`}
                 >
                   Standart Fiyatlar
@@ -191,8 +188,8 @@ export const PricingSection: React.FC = () => {
                   onClick={() => setShowTaxDeduction(true)}
                   className={`px-3 py-1.5 rounded-lg font-semibold flex items-center gap-1.5 transition-all ${
                     showTaxDeduction
-                      ? 'bg-emerald-600 text-white'
-                      : 'text-slate-400 hover:text-slate-200'
+                      ? 'bg-amber-500 text-black shadow font-bold'
+                      : 'text-zinc-400 hover:text-white'
                   }`}
                 >
                   <Building2 className="w-3.5 h-3.5" />
@@ -200,13 +197,13 @@ export const PricingSection: React.FC = () => {
                 </button>
               </div>
             ) : (
-              <p className="text-xs text-emerald-400 animate-in fade-in duration-200">
-                Peşin bütçe ayırmadan, düşük kurulum bedeli ve aylık sabit taksitlerle hemen yayına girin.
+              <p className="text-xs text-amber-400 animate-in fade-in duration-200">
+                Peşin bütçe ayırmadan, düşük kurulum bedeli ve aylık sabit fiyat güvencesiyle hemen yayına girin.
               </p>
             )}
 
             {billingMode === 'onetime' && showTaxDeduction && (
-              <p className="text-xs text-emerald-400 mt-1 animate-in fade-in duration-200">
+              <p className="text-xs text-amber-400 mt-1 animate-in fade-in duration-200">
                 %20 KDV mahsubu ve %25–%35 kurumlar/gelir vergisi gider indirimi düşüldükten sonra cebinizden çıkan net tutardır.
               </p>
             )}
@@ -245,16 +242,27 @@ export const PricingSection: React.FC = () => {
                 key={pkg.id}
                 layout
                 transition={{ duration: 0.35, ease: 'easeInOut' }}
-                className={`rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-all relative ${
+                className={`rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-all relative overflow-hidden ${
                   isPro
-                    ? 'bg-[#0A0A0C] border-2 border-amber-500/30 shadow-2xl lg:-translate-y-2'
+                    ? 'bg-[#0A0A0C] border-2 border-amber-500/40 shadow-2xl lg:-translate-y-2'
                     : 'bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20'
                 }`}
               >
                 {/* Popular Ribbon */}
                 {isPro && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black text-white text-[11px] font-bold tracking-normal shadow-lg shadow-white/10">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black text-[11px] font-bold tracking-normal shadow-lg shadow-white/10 z-10">
                     En Çok Tercih Edilen Paket
+                  </div>
+                )}
+
+                {/* Sağ Üst Çapraz "Sabit Fiyat" Damga / Rozeti */}
+                {billingMode === 'waas' ? (
+                  <div className="absolute top-3.5 -right-9 rotate-45 bg-amber-500 text-black text-[10px] font-black uppercase tracking-wider py-1 px-10 shadow-md pointer-events-none z-10 border-y border-black/20">
+                    Sabit Fiyat
+                  </div>
+                ) : (
+                  <div className="absolute top-3.5 -right-9 rotate-45 bg-white/[0.08] text-zinc-300 text-[10px] font-bold uppercase tracking-wider py-1 px-10 shadow-sm pointer-events-none z-10 border-y border-white/10">
+                    Sabit Fiyat
                   </div>
                 )}
 
