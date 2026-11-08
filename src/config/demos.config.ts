@@ -2,7 +2,7 @@ export interface DemoItem {
   id: string;
   slug: string;
   name: string;
-  sectorId: 'hukuk' | 'klinik' | 'sanayi' | 'muhasebe' | 'emlak';
+  sectorId: 'hukuk' | 'klinik' | 'sanayi' | 'muhasebe' | 'emlak' | 'mimarlik';
   sectorName: string;
   style: string;
   themeColor: 'slate' | 'blue' | 'amber' | 'emerald' | 'red';
@@ -25,7 +25,8 @@ export interface DemoItem {
 }
 
 export const SECTORS = [
-  { id: 'all', name: 'Tüm Tasarımlar', icon: 'LayoutGrid', count: 15 },
+  { id: 'all', name: 'Tüm Tasarımlar', icon: 'LayoutGrid', count: 16 },
+  { id: 'mimarlik', name: 'İç Mimarlık & Tasarım', icon: 'Compass', count: 1 },
   { id: 'hukuk', name: 'Hukuk & Avukatlık', icon: 'Scale', count: 3 },
   { id: 'klinik', name: 'Sağlık & Klinik', icon: 'Stethoscope', count: 3 },
   { id: 'sanayi', name: 'Sanayi & İmalatçı', icon: 'Factory', count: 3 },
@@ -34,6 +35,41 @@ export const SECTORS = [
 ] as const;
 
 export const DEMO_CATALOG: DemoItem[] = [
+  // 0. İÇ MİMARLIK & TASARIM (ÖZEL 3D AMİRAL GEMİSİ CANLI DEMO)
+  {
+    id: 'aura-studio',
+    slug: 'aura-studio',
+    name: 'Aura Studio',
+    sectorId: 'mimarlik',
+    sectorName: 'İç Mimarlık & Tasarım',
+    style: 'Lüks Bienal · 3D Three.js · Koyu Obsidyen',
+    themeColor: 'amber',
+    badge: '3D İnteraktif Vitrin',
+    liveUrl: '/preview/aura-studio',
+    previewImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    shortDesc: 'Pendik Sahil ve Bağdat Caddesi vizyoner iç mimarları için Three.js akışkan heykel, 3D render-fotoğraf katman geçişleri ve akıllı keşif teklif modülü.',
+    targetAudience: 'İç mimarlar, villa ve rezidans tadilat ofisleri, lüks mekan tasarım stüdyoları.',
+    keyFeatures: [
+      'Three.js Akışkan Mekan Heykeli & Işık-Gölge Etkileşimi',
+      'Scrolltide Tarzı 3D Eskiz → Render → Teslimat Katman Dönüşümü',
+      'İnteraktif Öncesi / Sonrası (Before & After) Mekan Karşılaştırma',
+      'CTA.gallery Tarzı M² & Bütçe Seçimli Akıllı WhatsApp Keşif Modülü'
+    ],
+    pageBreakdown: {
+      singlePage: ['Hero & 3D Heykel', '140+ Proje Metrikleri', 'Villa Dragos & Sahil Loft Portfolyosu', '4 Aşamalı Pafta Süreci', 'Öncesi / Sonrası Slider', 'Akıllı Keşif Formu', 'Footer.design Monokrom İmza'],
+      fivePages: ['Anasayfa & 3D Galeri', 'Stüdyo Felsefesi & Ödüller', 'Konut & Villa Portfolyosu', 'Ticari & Restoran Projeleri', 'İletişim & Keşif Randevusu'],
+      enterprise: ['Sınırsız 3D Katmanlı Portfolyo', 'İngilizce / İtalyanca Dil Desteği', 'Malzeme & Tedarikçi Veritabanı', 'Müşteri Proje Takip Portalı', 'Maksimum SEO']
+    },
+    highlights: {
+      headline: 'Mekanın Ruhunu, Malzemenin Zarafetiyle Şekillendiriyoruz',
+      subheadline: 'Sıradan fotoğraf galerisi değil; mimarlık bienali ve lüks tasarım dergisi standardında 3D dijital vitrin.',
+      stats: [
+        { label: 'Teslim Edilen Proje', value: '140+' },
+        { label: 'Tasarım Ödülü', value: '15' },
+        { label: 'Şantiye Gecikmesi', value: '0 Gün' }
+      ]
+    }
+  },
   // 1. HUKUK TASARIMLARI
   {
     id: 'lexora',

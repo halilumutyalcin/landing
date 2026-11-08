@@ -3,6 +3,7 @@
 import React from 'react';
 import { 
   LayoutGrid, 
+  Compass,
   Scale, 
   Stethoscope, 
   Factory, 
@@ -22,6 +23,7 @@ export const SectorTabs: React.FC<SectorTabsProps> = ({
 }) => {
   const iconMap: Record<string, React.FC<{ className?: string }>> = {
     all: LayoutGrid,
+    mimarlik: Compass,
     hukuk: Scale,
     klinik: Stethoscope,
     sanayi: Factory,

@@ -7,6 +7,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { DEMO_CATALOG } from '@/config/demos.config';
+import { AuraStudioPage } from '@/components/demos/aura/AuraStudioPage';
 
 interface PageProps {
   params: {
@@ -35,6 +36,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default function MockPreviewPage({ params }: PageProps) {
+  if (params.slug === 'aura-studio') {
+    return <AuraStudioPage />;
+  }
+
   const demo = DEMO_CATALOG.find((d) => d.slug === params.slug) || DEMO_CATALOG[0];
 
   // Theme styling helpers based on demo
