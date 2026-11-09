@@ -23,7 +23,7 @@ export default function HomePage() {
 
   return (
     <div className="relative">
-      {/* 1. HERO: Sektörünüze Özel Mimari, 3-5 Günde Canlıda, 3 Yıl Hosting Dahil */}
+      {/* 1. HERO: Sektörünüze Özel Mimari, 3-10 İş Gününde Lansman, İlk 3 Yıl Hosting Dahil */}
       <HeroSection />
 
       {/* 2. CANLI SEKTÖREL VİTRİN MİMARİLERİ */}

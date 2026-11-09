@@ -30,10 +30,10 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     slug: 'dis-klinigi-web-sitesi',
     shortSlug: 'dis-klinigi',
     name: 'Diş Kliniği & Diş Hekimi',
-    title: 'Diş Kliniği Web Sitesi Tasarımı & Fiyatları | 3-5 Günde Teslim',
+    title: 'Diş Kliniği Web Sitesi Tasarımı & Fiyatları | 3–7 Günde Lansman',
     metaDescription: 'Diş hekimleri ve poliklinikler için hasta randevulu, Google Harita uyumlu, 3 yıl domain ve hosting dahil ultra hızlı diş kliniği web sitesi tasarımı.',
     heroHeadline: 'Yeni Hasta Kazandıran Prestijli Diş Kliniği Web Sitesi',
-    heroSubheadline: 'Kliniğinizin steril, modern ve güvenilir atmosferini yansıtan; Google Haritalar entegrasyonlu ve 0.3 saniyede anında açılan özel klinik web sitesi.',
+    heroSubheadline: 'Kliniğinizin steril, modern ve güvenilir atmosferini yansıtan; Google Haritalar entegrasyonlu ve Lighthouse 95+ performans optimizasyonuyla açılan özel klinik web sitesi.',
     targetAudience: 'Diş hekimleri, ağız ve diş sağlığı poliklinikleri, ortodonti ve implant merkezleri.',
     badge: 'Sağlık Sektörü Çözümü',
     relatedDemoSlugs: ['dentart', 'medilife', 'vitacare'],
@@ -61,12 +61,12 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       'Google Haritalar (İşletme Profili) Kayıt ve Doğrulama Desteği',
       'Hekim Özgeçmişleri ve Sertifika Vitrini',
       'Tedavi Süreçleri ve Sık Sorulan Sorular Modülü',
-      '0.3 Saniye Açılış Hızıyla Google Lighthouse 95+ Performansı'
+      'Global Edge CDN ile Google Lighthouse 95+ Performansı'
     ],
     faqs: [
       {
         question: 'Diş kliniği web sitesi kaç günde teslim edilir?',
-        answer: 'Tüm tasarım ve içerikler 3 ila 5 iş günü içerisinde anahtar teslim olarak tamamlanır ve 3 yıllık alan adı/hosting altyapısıyla canlıya alınır.'
+        answer: 'İçerik onayınızdan itibaren seçtiğiniz paketin süresinde (Başlangıç: 3–5, Profesyonel: 5–7 iş günü) anahtar teslim olarak tamamlanır ve ilk 3 yıllık alan adı/hosting altyapısıyla canlıya alınır.'
       },
       {
         question: 'Sağlık Bakanlığı reklam mevzuatına uygun mu?',
@@ -101,8 +101,8 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     relatedDemoSlugs: ['lexora', 'justice', 'legalist'],
     sectorSpecificNeeds: [
       {
-        title: 'TBB Reklam Yasağına Tam Uyum',
-        description: 'Avukatlık Meslek Kuralları ve TBB Reklam Yasağı Yönetmeliği ilkelerine harfiyen riayet eden kurumsal tanıtım dili.'
+        title: 'TBB Reklam Yasağına Duyarlı Mimari',
+        description: 'Avukatlık Meslek Kuralları ve TBB Reklam Yasağı Yönetmeliği ilkelerine duyarlı, ağırbaşlı kurumsal tanıtım dili.'
       },
       {
         title: 'Uzmanlık Alanları & Makale Yayını',
@@ -147,7 +147,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     stats: [
       { label: 'TBB Uyumluluğu', value: '%100' },
       { label: 'Google Hız Puanı', value: '98+' },
-      { label: 'Teslim Süresi', value: '3-5 Gün' }
+      { label: 'Teslim Süresi', value: '3–7 Gün' }
     ]
   },
   {
@@ -167,7 +167,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
         description: 'Konut, ticari, kamusal ve iç mekan projelerini kategorilere göre filtreleyen akıcı galeri.'
       },
       {
-        title: '0.3 Saniye Yüklenen Yüksek Kalite Görseller',
+        title: 'Yüksek Hızlı ve Optimize Mimari Görseller',
         description: 'Büyük render ve fotoğraf dosyalarını yeni nesil WebP/AVIF formatlarıyla anında yükleyen yüksek hızlı bulut dağıtım ağı.'
       },
       {
@@ -190,7 +190,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     faqs: [
       {
         question: 'Yüksek kaliteli render ve fotoğraflar siteyi yavaşlatır mı?',
-        answer: 'Hayır. Yeni nesil otomatik görsel optimizasyonu sayesinde devasa mimari görseller dahi 0.3 saniyede açılır.'
+        answer: 'Hayır. Yeni nesil otomatik görsel optimizasyonu sayesinde devasa mimari görseller dahi yüksek hızda ve akıcı şekilde açılır.'
       },
       {
         question: 'İleride yeni projelerimizi nasıl ekleyeceğiz?',
@@ -248,7 +248,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     faqs: [
       {
         question: 'Yabancı ülkelerden sitemize girenler de hızlı açılış yaşar mı?',
-        answer: 'Kesinlikle. Bulut altyapımız dünya genelinde 300+ veri merkezine dağıtıldığı için siteniz Frankfurt, Dubai veya Şanghay\'dan da 0.3 saniyede açılır.'
+        answer: 'Kesinlikle. Bulut altyapımız dünya genelinde 300+ veri merkezine dağıtıldığı için siteniz Frankfurt, Dubai veya Şanghay\'dan da yüksek hızda ve beklemesiz açılır.'
       },
       {
         question: 'Navlun teklif formları kime iletilir?',

@@ -103,7 +103,7 @@ export const BeforeAfterSection: React.FC = () => {
             <div className="flex flex-wrap items-center justify-end gap-3 sm:gap-6 text-xs sm:text-sm text-slate-300 font-medium">
               <span className="flex items-center gap-1.5 text-zinc-300">
                 <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
-                3–5 Günde Canlıda
+                3–10 İş Gününde Canlıda
               </span>
               <span className="flex items-center gap-1.5 text-zinc-300">
                 <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />

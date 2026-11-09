@@ -71,7 +71,7 @@ export const ContactSection: React.FC = () => {
                 Doğrudan İletişim & Kurulum
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight leading-tight">
-                Sitenizi 3–5 Günde Yayına Alalım.
+                Sitenizi Paketinize Göre 3–10 İş Gününde Yayına Alalım.
               </h2>
             </div>
 

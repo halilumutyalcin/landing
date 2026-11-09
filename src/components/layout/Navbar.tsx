@@ -61,7 +61,7 @@ export const Navbar: React.FC = () => {
             href="/#nasil-calisir" 
             className="hover:text-white transition-colors"
           >
-            3 Günde Teslim
+            Nasıl Çalışır?
           </Link>
           <Link 
             href="/#paketler" 
@@ -112,7 +112,7 @@ export const Navbar: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="block p-3 rounded-lg text-slate-200 hover:bg-white/5 font-semibold"
             >
-              3 Günde Teslim
+              Nasıl Çalışır?
             </Link>
             <Link
               href="/#paketler"

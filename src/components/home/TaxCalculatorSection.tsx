@@ -22,7 +22,7 @@ export const TaxCalculatorSection: React.FC = () => {
             Şirketler İçin Gerçek Net Maliyet Hesabı
           </h2>
           <p className="text-base text-slate-300 leading-relaxed">
-            Tüm hizmetlerimiz %20 KDV dahil resmi faturalandırılır. Faturanızı şirket gideri olarak gösterdiğinizde KDV mahsubu ve vergi indirimi sayesinde cebinizden çıkan net tutar <strong>%37.5 ila %50 oranında</strong> azalır.
+            Tüm paket fiyatlarımız KDV hariçtir; resmî faturada %20 KDV eklenir (17.500 ₺ + KDV = 21.000 ₺). Faturayı şirket gideri olarak muhasebeleştirdiğinizde KDV mahsubu ve gelir/kurumlar vergisi matrahı indirimiyle net maliyet hafifler. <em>(Bilgilendirme simülasyonudur; nihai vergi etkisi için mali müşavirinize danışınız.)</em>
           </p>
         </div>
 

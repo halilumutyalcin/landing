@@ -152,9 +152,9 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
               <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-4">
                 <Clock className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-white mb-2">3–5 Günde Dakik Teslimat</h3>
+              <h3 className="text-base font-bold text-white mb-2">3–10 İş Gününde Dakik Teslimat</h3>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                Süreç sözleşmeyle belirlenir. İçerikleriniz alındıktan sonra 3–5 iş günü içinde siteniz eksiksiz şekilde yayına alınır.
+                Süreç sözleşmeyle belirlenir. İçerik ve tasarım onayınız alındıktan sonra paketinize göre 3–10 iş günü içinde siteniz eksiksiz şekilde yayına alınır.
               </p>
             </div>
           </div>

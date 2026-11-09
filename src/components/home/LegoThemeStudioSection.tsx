@@ -109,7 +109,7 @@ export const LegoThemeStudioSection: React.FC = () => {
           <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
             Biz hantal WordPress temalarını indirip metinleri değiştirmiyoruz. 
             13 kategoride 195 adet test edilmiş ve optimize edilmiş bağımsız React varyantını, 
-            sektörünüze özel renk matematiğiyle <strong>3–5 iş gününde</strong> yayına alıyoruz.
+            sektörünüze özel renk matematiğiyle <strong>3–10 iş gününde</strong> yayına alıyoruz.
           </p>
         </div>
 
@@ -305,7 +305,7 @@ export const LegoThemeStudioSection: React.FC = () => {
                     </span>
                     <h4 className="text-xl sm:text-2xl font-black text-white">4 Adımda Canlıya Geçiş</h4>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">
-                      {['1. Tasarımı Seç', '2. Paketi Belirle', '3. İçeriği Yolla', '4. 3 Günde Yayında'].map((step, idx) => (
+                      {['1. Tasarımı Seç', '2. Paketi Belirle', '3. İçeriği Yolla', '4. Planlı Lansman'].map((step, idx) => (
                         <div key={idx} className="p-3 rounded-xl bg-white/5 border border-white/5">
                           <div className="text-base font-black mb-1" style={{ color: activeTheme.accentColor }}>0{idx + 1}</div>
                           <div className="font-bold text-white text-[11px]">{step}</div>

@@ -87,13 +87,13 @@ export const DEMO_CATALOG: DemoItem[] = [
     keyFeatures: [
       'Uzmanlık Alanları Listesi (Ceza, Ticaret, Aile vb.)',
       'Müvekkil Ön Görüşme ve Danışma Formu',
-      'Makale & Yargıtay Kararları Blog Modülü',
-      'Doğrudan WhatsApp & Acil Müdafi İletişim Hattı'
+      'Makale & Hukuki Bilgilendirme Bülteni',
+      'Doğrudan İletişim & Randevu Hattı'
     ],
     pageBreakdown: {
       singlePage: ['Hero & Manifesto', 'Hakkımızda & Ortaklık', 'Çalışma Alanları', 'Ekibimiz', 'SSS', 'İletişim & Konum'],
       fivePages: ['Anasayfa', 'Hakkımızda', 'Çalışma Alanları Detayları', 'Avukatlarımız & Kadro', 'İletişim & Randevu'],
-      enterprise: ['15+ Sayfa Kapsamlı Mimari', 'İngilizce / Almanca 2 Dil', 'Dava Vaka Analizleri', 'Mevzuat Bülteni', 'Gelişmiş SEO']
+      enterprise: ['15+ Sayfa Kapsamlı Mimari', 'İngilizce / Almanca 2 Dil', 'Mevzuat Bülteni & Makaleler', 'Kurumsal İletişim', 'Gelişmiş SEO']
     },
     highlights: {
       headline: 'Hukuki Güvenin Dijital Temsili',
@@ -120,14 +120,14 @@ export const DEMO_CATALOG: DemoItem[] = [
     targetAudience: 'Ceza, ticaret, icra ve şirketler hukuku alanında çalışan deneyimli bürolar.',
     keyFeatures: [
       'Prestijli Koyu Tasarım & Glassmorphism',
-      'Kıdemli Avukat Profilleri & Başarı Hikayeleri',
+      'Kıdemli Avukat Profilleri & Akademik Çalışma Alanları',
       'Hukuki Rehber Dosyaları & PDF İndirme',
       'Google Harita & Lokasyon Entegrasyonu'
     ],
     pageBreakdown: {
-      singlePage: ['Hero', 'Büromuzun Felsefesi', 'Uzmanlıklar', 'Neden Biz', 'Sık Sorulanlar', 'İletişim'],
+      singlePage: ['Hero', 'Büromuzun Felsefesi', 'Uzmanlıklar', 'Çalışma İlkeleri', 'Sık Sorulanlar', 'İletişim'],
       fivePages: ['Anasayfa', 'Kurumsal Büro', 'Uzmanlık Alanları', 'Yönetici Avukatlar', 'İletişim & Harita'],
-      enterprise: ['20 Sayfa', 'Uluslararası Tahkim Bölümü', 'Çok Dilli Altyapı', 'Basın Odası & Medya']
+      enterprise: ['20 Sayfa', 'Uluslararası Tahkim Bölümü', 'Çok Dilli Altyapı', 'Mevzuat Bülteni & Makaleler']
     },
     highlights: {
       headline: 'Ağırbaşlı ve Kararlı Hukuki Duruş',
@@ -186,22 +186,22 @@ export const DEMO_CATALOG: DemoItem[] = [
     badge: 'Klinik Favorisi ',
     liveUrl: '/preview/dentart',
     previewImage: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80',
-    shortDesc: 'Diş hekimleri ve estetik klinikler için yumuşak formlar, vaka öncesi/sonrası ve online randevu.',
+    shortDesc: 'Diş poliklinikleri ve hekimler için ağırbaşlı renkler, sterilizasyon protokolleri ve bilgilendirici klinik akışı.',
     targetAudience: 'Diş hekimleri, poliklinikler, estetik ve dermatoloji merkezleri.',
     keyFeatures: [
-      'İnteraktif Önce / Sonra Vaka Karşılaştırma Kaydırıcısı',
+      'Klinik Cihaz & Hijyen Standartları Bilgilendirme Modülü',
       'Online Hızlı Randevu Talep Formu',
       'Uzman Hekim Özgeçmişleri & Sertifikaları',
-      'Tedavi Süreçleri Görsel Rehberi'
+      'Tedavi Süreçleri Görsel Bilgilendirme Rehberi'
     ],
     pageBreakdown: {
-      singlePage: ['Hero & Karşılama', 'Klinik Hakkında', 'Tedavilerimiz', 'Önce/Sonra Galerisi', 'Hekimlerimiz', 'İletişim & Randevu'],
+      singlePage: ['Hero & Karşılama', 'Klinik Hakkında', 'Tedavi Bilgilendirmeleri', 'Klinik Donanımı', 'Hekim Kadromuz', 'İletişim & Randevu'],
       fivePages: ['Anasayfa', 'Hakkımızda', 'Tedavilerimiz', 'Hekim Kadromuz', 'İletişim & Online Randevu'],
-      enterprise: ['Çok Dilli Sağlık Turizmi Altyapısı (EN/DE/AR)', 'Tedavi Fiyat Hesaplayıcı', 'Genişletilmiş Vaka Arşivi', 'Blog']
+      enterprise: ['Çok Dilli Sağlık Turizmi Altyapısı (EN/DE/AR)', 'Tedavi Süreç Rehberi', 'Akademik Makale & Blog Arşivi', 'Klinik Donanımı']
     },
     highlights: {
-      headline: 'Gülüşleri Değiştiren Dijital Deneyim',
-      subheadline: 'Kliniğinizin steril, modern ve güvenilir ortamını hastalarınıza anında hissettirin.',
+      headline: 'Güven Veren Dijital Klinik Temsili',
+      subheadline: 'Kliniğinizin steril, modern ve güvenilir ortamını hastalarınıza mevzuata uygun şekilde hissettirin.',
       stats: [
         { label: 'Randevu Dönüşümü', value: '+%55' },
         { label: 'Lighthouse', value: '99' },
@@ -223,21 +223,21 @@ export const DEMO_CATALOG: DemoItem[] = [
     shortDesc: 'Çok branşlı tıp merkezleri, laboratuvarlar ve fizik tedavi klinikleri için kurumsal site.',
     targetAudience: 'Tıp merkezleri, görüntüleme merkezleri, diyetisyenler ve psikologlar.',
     keyFeatures: [
-      'Branş / Bölüm Listesi ve Arama',
-      'Hızlı Tıkla-Ara Acil Hattı & WhatsApp',
-      'Gerçek Hasta Yorumları & Değerlendirmeler',
+      'Branş / Tıbbi Bölüm Listesi ve Arama',
+      'Hızlı Tıkla-Ara Danışma Hattı & WhatsApp',
+      'Tıbbi Cihaz Parkuru & Kalite Akreditasyonları',
       'Google Maps Tek Tıkla Yol Tarifi'
     ],
     pageBreakdown: {
-      singlePage: ['Hero & Acil Hat', 'Tıbbi Bölümler', 'Doktorlarımız', 'Hasta Yorumları', 'SSS', 'İletişim & Ulaşım'],
+      singlePage: ['Hero & İletişim', 'Tıbbi Bölümler', 'Doktorlarımız', 'Kalite Standartları', 'SSS', 'İletişim & Ulaşım'],
       fivePages: ['Anasayfa', 'Hakkımızda', 'Tıbbi Bölümler', 'Doktorlarımız', 'İletişim'],
-      enterprise: ['Laboratuvar Sonuç Portalı Bağlantısı', 'Sağlık Rehberi Blogu', '2 Dil', 'Geniş Cihaz Parkuru Tanıtımı']
+      enterprise: ['Laboratuvar Sonuç Portalı Bağlantısı', 'Sağlık Bilgilendirme Kütüphanesi', '2 Dil', 'Geniş Cihaz Parkuru Tanıtımı']
     },
     highlights: {
       headline: 'Kapsamlı Sağlık Hizmetleri Portalı',
-      subheadline: 'Hastalarınızın aradığı branş ve doktora 3 saniyede ulaşmasını sağlayın.',
+      subheadline: 'Hastalarınızın aradığı branş ve hekime saniyeler içinde ulaşmasını sağlayın.',
       stats: [
-        { label: 'Acil Arama', value: 'Tek Tık' },
+        { label: 'Doğrudan İletişim', value: 'Tek Tık' },
         { label: 'Mobil Hız', value: '96' },
         { label: 'Ulaşılabilirlik', value: '%100' }
       ]
@@ -258,14 +258,14 @@ export const DEMO_CATALOG: DemoItem[] = [
     targetAudience: 'Tek hekimli özel muayenehaneler, fizyoterapistler ve beslenme uzmanları.',
     keyFeatures: [
       'Kompakt Hızlı Randevu Formu',
-      'Çalışma Saatleri & Nöbetçi İletişim',
+      'Çalışma Saatleri & Klinik İletişim',
       'WhatsApp Doğrudan Danışma Hattı',
-      'Hasta Memnuniyet Oranları'
+      'Eğitim & Tıbbi Akreditasyonlar'
     ],
     pageBreakdown: {
-      singlePage: ['Hero & Tanıtım', 'Hakkımda & Eğitim', 'Uzmanlıklar', 'Yorumlar', 'İletişim'],
-      fivePages: ['Anasayfa', 'Özgeçmiş & Başarılar', 'Hizmetler', 'Sık Sorulanlar', 'İletişim'],
-      enterprise: ['Gelişmiş Vaka Galerisi', 'Akademik Yayınlar & TV Çıkışları', 'Online Danışmanlık Modülü']
+      singlePage: ['Hero & Tanıtım', 'Hakkımda & Eğitim', 'Uzmanlıklar', 'Sık Sorulan Sorular', 'İletişim'],
+      fivePages: ['Anasayfa', 'Özgeçmiş & Uzmanlık Belgeleri', 'Hizmetler', 'Sık Sorulanlar', 'İletişim'],
+      enterprise: ['Akademik Yayınlar & Tıbbi Makaleler', 'Tıbbi Konferans Sunumları', 'Online Danışmanlık Bilgilendirmesi']
     },
     highlights: {
       headline: 'Kişiselleştirilmiş Hekim Vitrini',

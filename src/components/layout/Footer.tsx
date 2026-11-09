@@ -61,7 +61,7 @@ export const Footer: React.FC = () => {
               </span>
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              Sektörünüze özel tasarlanmış, 3–5 günde anahtar teslim yayına alınan yeni nesil ürünleştirilmiş web ajansı vitrin platformu.
+              Sektörünüze özel tasarlanmış, 3–10 iş gününde anahtar teslim yayına alınan yeni nesil ürünleştirilmiş web ajansı vitrin platformu.
             </p>
             <div className="flex flex-col gap-2 pt-2 text-xs text-slate-300">
               <div className="flex items-center gap-2">

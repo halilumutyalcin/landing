@@ -83,7 +83,7 @@ export default async function Image() {
               letterSpacing: '-0.01em',
             }}
           >
-            3–5 Günde Canlıda • 3 Yıl Sıfır Ek Masraf Garantisi
+            3–10 İş Gününde Lansman • İlk 3 Yıl Hosting Dahil
           </div>
           <div
             style={{

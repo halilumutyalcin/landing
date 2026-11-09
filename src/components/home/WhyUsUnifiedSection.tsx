@@ -189,11 +189,11 @@ export const WhyUsUnifiedSection: React.FC = () => {
                 <div className="flex flex-wrap items-center justify-end gap-3 sm:gap-6 text-xs sm:text-sm text-slate-300 font-medium">
                   <span className="flex items-center gap-1.5 text-zinc-300">
                     <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
-                    3–5 Günde Canlıda
+                    3–10 İş Gününde Canlıda
                   </span>
                   <span className="flex items-center gap-1.5 text-zinc-300">
                     <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
-                    Doğrudan WhatsApp İletişimi
+                    Doğrudan İletişim Kanalları
                   </span>
                 </div>
               </div>
@@ -283,24 +283,23 @@ export const WhyUsUnifiedSection: React.FC = () => {
                     </h3>
                   </div>
                   <span className="text-[11px] text-slate-400 font-medium">
-                    Kurucu Ortaklar Notu
+                    Şengüller & MediWeb Ekibi · Mühendislik Notu
                   </span>
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  Türkiye'de web sitesi yaptırmak isteyen bir avukatın, kliniğin, mali müşavirin veya KOBİ'nin yaşadığı çileyi çok iyi biliyoruz:
-                  Haftalarca süren oyalayıcı toplantılar, 2–3 ay sonra ne çıkacağı belirsiz hayali Photoshop tasarımları ve her yıl kapıya dayanan fahiş "sunucu yenileme" faturaları.
+                  Web sitesi yaptırmak isteyen kurumsal işletmelerin, avukatların, kliniklerin ve sanayicilerin yaşadığı en büyük sorun; haftalarca süren ucu açık süreçler, ne çıkacağı belirsiz tasarımlar ve sonradan çıkan beklenmedik yenileme faturalarıdır.
                 </p>
 
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  Biz bu ezberi kökten bozmak için yola çıktık: <strong>Canlı demoyu önceden test edin</strong>, ne alacağınızı ve ne ödeyeceğinizi ilk saniyede bilin, <strong>3–5 iş gününde anahtar teslim</strong> yayına geçin. Üstelik 3 yıl boyunca da alan adı ve sunucu takibini tamamen kafanızdan çıkarın.
+                  Biz bu belirsizlikleri ortadan kaldırmak için ürünleştirilmiş ajans modelini benimsedik: <strong>Canlı demoyu önceden test edin</strong>, kurumsal kimliğinize uyarlayalım; içerik onayınızdan itibaren <strong>3–10 iş gününde anahtar teslim</strong> yayına alın. İlk 3 yıl alan adı ve bulut barındırma dahil sabit fiyat güvencesiyle.
                 </p>
 
                 <div className="pt-4 border-t border-white/5 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
-                  <span className="text-white font-semibold">MediWeb Ekibi</span>
+                  <span className="text-white font-semibold">Şengüller Otomotiv & Bilişim / MediWeb Ekibi</span>
                   <span className="text-emerald-400 font-medium flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5" />
-                    <span>İstanbul & Ankara</span>
+                    <span>Pendik / İstanbul</span>
                   </span>
                 </div>
               </div>
@@ -324,7 +323,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                       <div>
                         <strong className="text-white block text-xs sm:text-sm">Kurumsal Ciddiyete Uygun Vitrin</strong>
-                        <span className="text-slate-300 text-xs">Hukuk, sağlık, danışmanlık, muhasebe ve emlak sektörünün beklentilerine uygun, güven uyandıran tasarımlar hazırlıyoruz.</span>
+                        <span className="text-slate-300 text-xs">Hukuk, sağlık, danışmanlık, muhasebe ve emlak sektörünün etik ve kurumsal beklentilerine uygun, güven uyandıran tasarımlar hazırlıyoruz.</span>
                       </div>
                     </div>
 
@@ -332,31 +331,31 @@ export const WhyUsUnifiedSection: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                       <div>
                         <strong className="text-white block text-xs sm:text-sm">Ziyaretçiyi Bekletmeyen Açılış</strong>
-                        <span className="text-slate-300 text-xs">Mobilde ve masaüstünde 0.3 saniyede açılan, müşteriyi doğrudan WhatsApp veya telefon aramasına yönlendiren temiz mimari.</span>
+                        <span className="text-slate-300 text-xs">Mobilde ve masaüstünde Lighthouse 95+ performansıyla çalışan, doğrudan doğru iletişim kanalına yönlendiren temiz mimari.</span>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2.5">
                       <CheckCircle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-white block text-xs sm:text-sm">3 Yıl Boyunca Sıfır Sunucu Masrafı</strong>
-                        <span className="text-slate-300 text-xs">Alan adı, SSL sertifikası ve bulut barındırmayı ilk 3 yıl karşılıyoruz; ek bakım masrafı çıkmaz.</span>
+                        <strong className="text-white block text-xs sm:text-sm">İlk 3 Yıl Barındırma & Alan Adı Dahil</strong>
+                        <span className="text-slate-300 text-xs">Alan adı, SSL sertifikası ve küresel bulut barındırmayı ilk 3 yıl karşılıyoruz; zorunlu ek barındırma masrafı çıkmaz.</span>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2.5">
                       <CheckCircle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-white block text-xs sm:text-sm">Resmi Fatura ve Vergi Avantajı</strong>
-                        <span className="text-slate-300 text-xs">Tüm paketlerimiz kurumsal faturalandırılır; kurumlar veya gelir vergisinden düşülerek net tasarruf sağlar.</span>
+                        <strong className="text-white block text-xs sm:text-sm">Resmi e-Fatura ve Belgelendirme</strong>
+                        <span className="text-slate-300 text-xs">Tüm paketlerimiz KDV hariç kurumsal faturalandırılır; faturanız şirket gideri olarak muhasebeleştirilebilir.</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-6 pt-3 border-t border-emerald-500/20 flex items-center justify-between text-xs font-semibold text-emerald-400">
-                  <span>Sözleşmeli ve Garantili Teslimat</span>
-                  <span>%100 Taahhüt</span>
+                  <span>Sözleşmeli ve Taahhütlü Teslimat</span>
+                  <span>Şeffaf Süreç</span>
                 </div>
               </div>
 
@@ -366,7 +365,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                   <div className="flex items-center gap-3 mb-6">
                     <XCircle className="w-7 h-7 text-rose-400 shrink-0" />
                     <div>
-                      <span className="text-xs font-semibold text-rose-400 block">Sektördeki Kötü Deneyimler</span>
+                      <span className="text-xs font-semibold text-rose-400 block">Prensiplerimiz</span>
                       <h4 className="text-xl font-bold text-white">Neleri Yapmıyoruz?</h4>
                     </div>
                   </div>
@@ -375,39 +374,39 @@ export const WhyUsUnifiedSection: React.FC = () => {
                     <div className="flex items-start gap-2.5">
                       <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-white block text-xs sm:text-sm">Ucu Açık Süreçler & Oyalama Yok</strong>
-                        <span className="text-slate-300 text-xs">"Haftaya teslim ediyoruz" deyip aylarca süren ucu açık süreçler yaşatmayız. Gün ve saat sözleşmede bellidir.</span>
+                        <strong className="text-white block text-xs sm:text-sm">Belirsiz Takvim ve Gecikmeler Yok</strong>
+                        <span className="text-slate-300 text-xs">İçerik onayından itibaren takvimimiz sözleşmeyle belirlenir; ucu açık bekleme süreleri yaşatmayız.</span>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2.5">
                       <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-white block text-xs sm:text-sm">Güvensiz WordPress Eklentileri Yok</strong>
-                        <span className="text-slate-300 text-xs">Sürekli bozulan, virüs kapabilen ve sitenizi yavaşlatan 40 tane WordPress eklentisi kullanmayız.</span>
+                        <strong className="text-white block text-xs sm:text-sm">Ağır ve Güvensiz Eklenti Yükü Yok</strong>
+                        <span className="text-slate-300 text-xs">Sürekli bakım gerektiren ve güvenlik açığı riski taşıyan eski CMS yapıları yerine yalın ve statik React mimarisi kurarız.</span>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2.5">
                       <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-white block text-xs sm:text-sm">Her Yıl Fahiş Yenileme Faturası Yok</strong>
-                        <span className="text-slate-300 text-xs">1 yıl sonra "hosting süreniz doldu, siteniz kapanır" diyerek fahiş paralar talep etmeyiz; ilk 3 yıl fiyata dahildir.</span>
+                        <strong className="text-white block text-xs sm:text-sm">Sürpriz Yenileme ve Lisans Masrafları Yok</strong>
+                        <span className="text-slate-300 text-xs">İlk 3 yıl alan adı ve bulut barındırma fiyata dahildir; 4. yıldan itibaren sadece maliyetine devam eder.</span>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2.5">
                       <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-white block text-xs sm:text-sm">Ulaşılamayan Destek Yok</strong>
-                        <span className="text-slate-300 text-xs">Siteyi teslim ettikten sonra telefonlara çıkmayan ajanslar gibi değiliz; doğrudan WhatsApp hattımızdan anında yanıt veririz.</span>
+                        <strong className="text-white block text-xs sm:text-sm">Kopuk Destek Süreci Yok</strong>
+                        <span className="text-slate-300 text-xs">Teslimattan sonra süreci terk etmeyiz; sözleşmeli hata garantisi ve WhatsApp kanalıyla doğrudan teknik muhatap sağlarız.</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-6 pt-3 border-t border-rose-500/20 flex items-center justify-between text-xs font-semibold text-rose-400">
-                  <span>Sürpriz Yok, Hayal Satmak Yok</span>
+                  <span>Net Şartlar, Sıfır Belirsizlik</span>
                   <span>Şeffaf Standart</span>
                 </div>
               </div>

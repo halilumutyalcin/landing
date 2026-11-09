@@ -409,43 +409,43 @@ export const siteConfig = {
   faqs: [
     {
       category: 'surec',
-      question: 'Belirtilen teslim süresi gerçekten tutturuluyor mu, gecikme yaşanır mı?',
-      answer: 'Teslimat süremiz (Başlangıç: 3–5 iş günü, Profesyonel: 5–7 iş günü, Kurumsal: 7–10 iş günü), logonuzu ve kurumsal içerik onayınızı teslim ettiğiniz andan itibaren başlar. Mimari ve teknik altyapı önceden test edilip hazırlandığı için ajans içi gecikme yaşanmaz; içerik tesliminden itibaren takvim dakik şekilde işler.'
+      question: 'Belirtilen teslim süresi nasıl işler, süreçte gecikme yaşanır mı?',
+      answer: 'Teslimat süremiz (Başlangıç: 3–5 iş günü, Profesyonel: 5–7 iş günü, Kurumsal: 7–10 iş günü), logonuzu ve kurumsal içerik onayınızı teslim ettiğiniz andan itibaren başlar. Mimari ve teknik altyapı önceden test edilip hazırlandığı için ajans içi gecikme yaşanmaz; revizyon ve içerik onayları zamanında verildiği sürece takvim dakik şekilde işler.'
     },
     {
       category: 'hosting',
-      question: '3 yıl sonra ne olacak? Domain kimin adına ve 4. yıl masrafı nedir?',
-      answer: 'Alan adınız (domain) doğrudan sizin veya şirketinizin adına tescil edilir; tam mülkiyet ve DNS kontrolü sizdedir. İlk 3 yıl boyunca barındırma (hosting) ve SSL için 1 kuruş dahi ödemezsiniz. 4. yıldan itibaren ise hiçbir gizli ajans kârı olmadan, yalnızca o günün standart resmi alan adı ve bulut barındırma maliyetini (tahmini yıllık ~2.000–3.000 ₺) ödersiniz. Siteniz asla kapatılmaz, kilitlenmez veya rehin tutulmaz.'
+      question: '3 yıl sonra ne olacak? Domain kimin adına ve 4. yıl maliyeti nedir?',
+      answer: 'Alan adınız (domain) doğrudan sizin veya şirketinizin adına tescil edilir; tam mülkiyet ve DNS kontrolü sizdedir. İlk 3 yıl boyunca barındırma (hosting) ve SSL için ek ücret ödemezsiniz. 4. yıldan itibaren ise barındırma ve alan adı sağlayıcısının resmi güncel tarifesi üzerinden (tahmini yıllık ~2.500–3.500 ₺ bandında) devam eder. Siteniz asla kapatılmaz veya kilitlenmez; 3. yılın bitiminde şeffaf bir yenileme hatırlatması sunulur.'
     },
     {
       category: 'paketler',
       question: 'Kaynak kodlar bana veriliyor mu? Size bağımlı kalır mıyım?',
-      answer: 'Asla bağımlı kalmazsınız. Profesyonel ve Kurumsal paketlerimizde talep etmeniz durumunda projenizin GitHub kaynak kodları eksiksiz devredilir. Dilediğiniz takdirde sitenizi kendi sunucunuza taşıyabilir veya bağımsız bir yazılımcıyla geliştirmeye devam edebilirsiniz.'
+      answer: 'Başlangıç ve Profesyonel pakette site, size ait alan adı üzerinde yayınlanır; tam kaynak kod devri isteğe bağlı bir eklentidir (+%50). Kurumsal pakette kaynak kod devri (sözleşmede belirtilen kullanım lisansı kapsamında) fiyata dahildir. Dilediğiniz takdirde sitenizi kendi sunucunuza taşıyabilir veya bağımsız bir yazılımcıyla geliştirmeye devam edebilirsiniz.'
     },
     {
       category: 'surec',
       question: 'Avukatlık, klinik ve mali müşavirlik gibi mesleklerde reklam yasağı var; siteleriniz bu mevzuata uygun mu?',
-      answer: 'Evet, özellikle bu regüle sektörlerde en hassas olduğumuz konu mevzuat uyumudur. Avukatlık Kanunu ve TBB Reklam Yasağı Yönetmeliği, Sağlık Bakanlığı Sağlık Hizmetlerinde Tanıtım ve Bilgilendirme Faaliyetleri Kılavuzu ile TÜRMOB meslek kurallarına harfiyen uyuyoruz. "Garantili tedavi", "en iyi avukat" gibi haksız ve hukuka aykırı iddialar barındırmayan, salt bilgilendirici ve ağırbaşlı kurumsal sayfalar hazırlıyoruz.'
+      answer: 'Sitelerimizi avukatlık, sağlık ve mali müşavirlik meslek kurallarına duyarlı, bilgilendirici ve ağırbaşlı bir dille tasarlıyoruz. Reklam sayılabilecek öğeleri (hasta yorumu, önce/sonra görseli, garanti veya başarı vaatleri) sağlık ve hukuk şablonlarında varsayılan olarak kullanmıyoruz. Nihai içerik onayı ve mevzuata uyum sorumluluğu meslek mensubuna aittir; gerekirse meslek odanıza danışmanızı öneririz.'
     },
     {
       category: 'surec',
       question: 'Sitemdeki yazıları ve fotoğrafları kim hazırlıyor? Bizim elimizde hazır metin yok.',
-      answer: 'Müşterilerimizin çoğunda hazır metin veya fotoğraf bulunmuyor. Seçtiğiniz sektöre (İç mimarlık, hukuk, klinik, sanayi, mali müşavir, emlak) uygun kurumsal taslak içerikleri ve yüksek çözünürlüklü lisanslı görsel havuzunu biz sağlıyoruz. Siz yalnızca faaliyet alanlarınızı ve iletişim detaylarınızı onaylıyorsunuz.'
+      answer: 'Müşterilerimizin çoğunda hazır metin veya fotoğraf bulunmuyor. Seçtiğiniz sektöre uygun kurumsal taslak içerikleri ve yüksek çözünürlüklü lisanslı görsel havuzunu biz sağlıyoruz. Siz yalnızca faaliyet alanlarınızı ve iletişim detaylarınızı inceleyip onaylıyorsunuz.'
     },
     {
       category: 'revizyon',
       question: 'İleride telefon, adres veya hizmet listemizde değişiklik gerekirse ne yapıyoruz?',
-      answer: 'Küçük metin ve iletişim güncellemeleri için WhatsApp hattımızdan yazmanız yeterlidir; ekibimiz aynı iş günü içinde güncellemeyi gerçekleştirir. Kendi ekibinizin içerik girmesini isterseniz, opsiyonel olarak modern ve kullanımı kolay bir içerik yönetim paneli (CMS) de entegre edebiliyoruz.'
+      answer: 'Teslimattan sonraki ilk 30 gün boyunca metin ve iletişim güncellemeleri ücretsizdir. Sonrasında acil küçük değişiklikler (yılda 4 sefere kadar) ücretsiz sağlanır. Düzenli içerik, blog veya görsel girişleri içinse isteğe bağlı aylık bakım planımız mevcuttur.'
     },
     {
       category: 'surec',
-      question: 'Site yayına girince Google aramalarında görünür mü?',
-      answer: 'Evet. Siteniz Google arama motorunun doğrudan indeksleyebileceği temiz semantik kod yapısı, JSON-LD Schema işaretlemeleri, sitemap.xml ve Google İşletme Profili (Haritalar) entegrasyonuyla teslim edilir. Firmanızın adı veya yerel hizmet aramalarında hızlıca indeks alırsınız.'
+      question: 'Site yayına girince Google aramalarında hemen birinci sırada çıkar mıyız?',
+      answer: 'Siteniz seçtiğiniz paketin kapsamına göre teslim edilir. Başlangıç paketimizde temel SEO altyapısı (sitemap, meta etiketler); Profesyonel ve Kurumsal paketlerimizde ise detaylı JSON-LD Schema ve Google İşletme Profili (Harita) entegrasyonu dahildir. Google sıralamaları arama motorunun kendi algoritmasına bağlıdır; hiçbir dürüst ajans 1. sıra garantisi veremez, biz de vermiyoruz.'
     },
     {
       category: 'paketler',
       question: 'Fatura kesiyor musunuz? Şirketime gider olarak gösterebilir miyim?',
-      answer: 'Elbette. Tüm hizmetlerimiz %20 KDV dahil kurumsal faturalandırılır. Faturanızı şirket gideri olarak işleyebilir, KDV mahsubu ve kurumlar/gelir vergisi avantajından tam olarak yararlanabilirsiniz.'
+      answer: 'Tüm fiyatlarımız KDV hariçtir; faturalandırmada %20 KDV eklenerek resmî e-Arşiv / e-Fatura düzenlenir (Örn: 17.500 ₺ + KDV = 21.000 ₺). Faturanızı şirket gideri olarak kullanabilir; vergi avantajı ve KDV mahsubu detayları için mali müşavirinize danışabilirsiniz.'
     }
   ] as FaqItem[]
 };

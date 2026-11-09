@@ -78,7 +78,7 @@ export default function SectorsIndexPage() {
                     {sector.badge}
                   </span>
                   <span className="text-xs text-slate-400 font-medium">
-                    3-5 Günde Teslim
+                    3–10 İş Gününde Lansman
                   </span>
                 </div>
 

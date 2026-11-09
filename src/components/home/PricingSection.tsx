@@ -142,7 +142,7 @@ export const PricingSection: React.FC = () => {
           </h2>
           <p className="text-base text-slate-300 leading-relaxed">
             Beğendiğiniz tasarım için ekstra bir ücret ödemezsiniz. 
-            İhtiyacınıza uygun paketi seçin; <strong>3 Yıl Boyunca Sıfır Ek Masraf (0 ₺ Yenileme Güvencesi)</strong> ile yayına alalım.
+            İhtiyacınıza uygun paketi seçin; ilk 3 yıl alan adı ve bulut barındırma dahil sabit fiyatla yayına alalım.
           </p>
 
           {/* Billing Mode & B2B Tax Toggles */}
@@ -157,7 +157,7 @@ export const PricingSection: React.FC = () => {
                     : 'text-zinc-400 hover:text-white'
                 }`}
               >
-                Tek Seferlik (3 Yıl Sıfır Ek Masraf)
+                Tek Seferlik (Sabit Fiyat)
               </button>
               
               <div className="relative">
@@ -288,6 +288,12 @@ export const PricingSection: React.FC = () => {
                       </span>
                     </div>
 
+                    {billingMode === 'onetime' && !showTaxDeduction && (
+                      <div className="text-[11px] text-zinc-400 font-mono mt-0.5">
+                        {(pkg.price * 1.2).toLocaleString('tr-TR')} ₺ KDV Dahil Toplam
+                      </div>
+                    )}
+
                     {/* Payment Terms / Setup Fee Tag */}
                     <div className="mt-2 flex items-center justify-between text-[11px] pt-2 border-t border-white/5">
                       <span className="text-slate-400">
@@ -314,7 +320,7 @@ export const PricingSection: React.FC = () => {
                         )}
                         <div className="text-xs text-zinc-300 font-medium mt-2 flex items-center gap-1.5 pt-2 border-t border-white/5">
                           <ShieldCheck className="w-4 h-4 shrink-0" />
-                          <span>3 Yıl Domain + SSL + Bulut Barındırma Dahil (0 TL Masraf)</span>
+                          <span>İlk 3 Yıl Domain + SSL + Bulut Barındırma Dahil</span>
                         </div>
                       </>
                     )}
@@ -439,9 +445,6 @@ export const PricingSection: React.FC = () => {
             </div>
 
             <div className="p-5 rounded-2xl bg-black/40 lg:min-w-[280px] shrink-0">
-              <div className="text-[11px] text-slate-400 line-through mb-1">
-                Ayrı Ayrı Alındığında: ~65.000 TL
-              </div>
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl sm:text-4xl font-black text-white">
                   39.500 ₺
@@ -450,7 +453,7 @@ export const PricingSection: React.FC = () => {
               </div>
               <div className="text-[11px] text-amber-400 mt-1 font-semibold flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
-                <span>3 Yıl Domain + Hosting Dahil (0 TL Masraf)</span>
+                <span>İlk 3 Yıl Domain + Hosting Dahil</span>
               </div>
             </div>
           </div>
@@ -619,7 +622,7 @@ export const PricingSection: React.FC = () => {
               <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
                 <div className="flex items-center gap-2.5">
                   <Server className="w-5 h-5 text-amber-400 shrink-0" />
-                  <strong className="text-white text-sm font-bold">3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi</strong>
+                  <strong className="text-white text-sm font-bold">İlk 3 Yıl Domain &amp; Bulut Barındırma Dahil</strong>
                 </div>
                 <p className="text-slate-300 leading-relaxed pt-1">
                   Alan adı, SSL güvenlik sertifikası ve yüksek hızlı global bulut barındırma için ilk 36 ay boyunca 1 TL dahi sunucu faturası ödemezsiniz.
@@ -632,7 +635,7 @@ export const PricingSection: React.FC = () => {
                   <strong className="text-white text-sm font-bold">Özel Yazılım Altyapısı</strong>
                 </div>
                 <p className="text-slate-300 leading-relaxed pt-1">
-                  WordPress veritabanı yavaşlığı ve eklenti açıkları yok. Google'ın en sevdiği temiz Next.js mimarisiyle 0.3 saniyede anında yüklenir.
+                  Gereksiz eklenti çöplüğü ve bakım yükü yok. Next.js 14 mimarisi ve Global Edge CDN ile yüksek performans optimizasyonu sağlanır.
                 </p>
               </div>
 
@@ -642,7 +645,7 @@ export const PricingSection: React.FC = () => {
                   <strong className="text-white text-sm font-bold">Dönüşüm & WhatsApp Köprüsü</strong>
                 </div>
                 <p className="text-slate-300 leading-relaxed pt-1">
-                  Sadece şık görünmekle kalmaz; ziyaretçiyi WhatsApp'tan mesaj atmaya ve telefonla aramaya yönlendiren kanıtlanmış kurumsal satış psikolojisiyle kurgulanır.
+                  Sadece şık görünmekle kalmaz; ziyaretçiyi doğru kanaldan (WhatsApp, arama veya randevu formu) iletişime geçmeye teşvik eden net arayüz hiyerarşisiyle kurgulanır.
                 </p>
               </div>
             </div>
@@ -754,7 +757,7 @@ export const PricingSection: React.FC = () => {
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
                 <Clock className="w-3.5 h-3.5 text-amber-400" />
-                %99.9 Kesintisiz Yayın Garantisi
+                Global Edge CDN Altyapısı
               </span>
             </div>
 

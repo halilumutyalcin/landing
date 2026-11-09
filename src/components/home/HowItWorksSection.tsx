@@ -15,7 +15,7 @@ export const HowItWorksSection: React.FC = () => {
     {
       step: '01',
       title: 'Mimarınızı Canlıda Test Edin',
-      desc: 'Katalogdaki 15 çalışan vitrinden firmanızın kurumsal ağırlığına en uygun olanı seçin. Ne alacağınızı baştan canlı görün.',
+      desc: 'Katalogdaki 16 çalışan canlı vitrinden firmanızın kurumsal ağırlığına en uygun olanı seçin. Ne alacağınızı baştan canlı görün.',
       milestone: 'Görerek Karar Verme',
       icon: Eye,
     },
@@ -29,14 +29,14 @@ export const HowItWorksSection: React.FC = () => {
     {
       step: '03',
       title: 'Bilgilerinizi WhatsApp\'tan İletin',
-      desc: 'Logonuzu, hizmetlerinizi ve fotoğraflarınızı tek bir mesajla gönderin. Metniniz yoksa sektör şablonlarımızla biz tamamlarız.',
+      desc: 'Logonuzu, hizmetlerinizi ve fotoğraflarınızı tek bir mesajla gönderin. Metniniz yoksa sektör şablonlarımızla biz toparlarız.',
       milestone: 'Zahmetsiz Aktarım',
       icon: Send,
     },
     {
       step: '04',
-      title: '3–5 Günde Canlıdasınız',
-      desc: 'Google Haritalar kaydınız, kurumsal e-postalarınız ve 3 yıl kesintisiz barındırmanızla birlikte siteniz eksiksiz yayına alınır.',
+      title: '3–10 İş Gününde Canlıdasınız',
+      desc: 'İçerik onayınızdan itibaren paketinize göre belirlenen net sürede Google uyumu ve ilk 3 yıl barındırmanızla siteniz eksiksiz yayına alınır.',
       milestone: '3 Yıl Barındırma Dahil',
       icon: Rocket,
     },

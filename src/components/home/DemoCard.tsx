@@ -47,20 +47,20 @@ export const DemoCard: React.FC<DemoCardProps> = ({ demo, onOpenPreview }) => {
         </div>
 
         {/* Hover Quick View Button */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 backdrop-blur-xs transition-opacity duration-300 gap-2 p-4">
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/50 backdrop-blur-xs transition-opacity duration-300 gap-2 p-4">
           <button
             onClick={() => onOpenPreview(demo)}
-            className="px-4 py-2.5 rounded-xl bg-white text-slate-950 font-bold text-xs shadow-xl flex items-center gap-1.5 hover:bg-brand-50 hover:scale-105 transition-all"
+            className="px-4 py-2.5 rounded-xl bg-white text-black font-bold text-xs shadow-xl flex items-center gap-1.5 hover:bg-zinc-200 hover:scale-105 transition-all"
           >
-            <Eye className="w-4 h-4 text-brand-600" />
+            <Eye className="w-4 h-4 text-black" />
             <span>Canlı Önizle</span>
           </button>
           <Link
             href={`/tasarimlar/${demo.slug}`}
-            className="px-4 py-2.5 rounded-xl bg-brand-600 text-white font-bold text-xs shadow-xl flex items-center gap-1.5 hover:bg-brand-500 hover:scale-105 transition-all"
+            className="px-4 py-2.5 rounded-xl bg-amber-400 text-black font-bold text-xs shadow-xl flex items-center gap-1.5 hover:bg-amber-300 hover:scale-105 transition-all"
           >
             <span>Detaylar</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-black" />
           </Link>
         </div>
       </div>

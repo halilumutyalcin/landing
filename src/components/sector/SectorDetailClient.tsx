@@ -69,7 +69,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
             {/* Top Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider mb-5">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>{sector.badge} · 3–5 Günde Canlıda</span>
+              <span>{sector.badge} · 3–10 İş Gününde Lansman</span>
             </div>
 
             {/* Main Headline */}
@@ -355,7 +355,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
         <div className="rounded-3xl bg-gradient-to-r from-blue-950/60 to-emerald-950/40 p-8 sm:p-10 text-center flex flex-col items-center justify-center gap-6 shadow-2xl">
           <div className="max-w-2xl">
             <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              {sector.name} Sitenizi 3 Günde Yayına Alalım
+              {sector.name} Sitenizi 3–10 İş Gününde Yayına Alalım
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 mt-2">
               3 yıl boyunca sıfır sunucu masrafı, hazır sektörel şablonlar ve WhatsApp entegrasyonuyla hemen yeni danışan ve müşterilere ulaşın.

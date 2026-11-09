@@ -45,9 +45,9 @@ export const AgencyManifestoSection: React.FC = () => {
                 WordPress Yerine Saf Next.js ve React Mimarisi
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                40 tane güvensiz eklentiyle şişirilmiş, her ay çöken WordPress sitelerine son. 
-                Next.js 14 SSG ve Vercel Edge ile <strong>0.3 saniyede anında açılan</strong>, 
-                eklenti açığı ve veritabanı riski barındırmayan statik kod üretiyoruz.
+                Ağır ve sürekli bakım gerektiren eklenti çöplükleri yerine, 
+                Next.js 14 SSG ve Global Edge CDN ile <strong>Lighthouse 95+ performans optimizasyonuyla</strong>, 
+                eklenti açığı ve veritabanı riski barındırmayan saf kod üretiyoruz.
               </p>
             </div>
             <div className="pt-6 mt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">

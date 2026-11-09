@@ -31,14 +31,14 @@ export const PrinciplesSection: React.FC = () => {
               </p>
 
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Biz bu ezberi kökten bozmak için yola çıktık: <strong>Canlı demoyu önceden test edin</strong>, ne alacağınızı ve ne ödeyeceğinizi ilk saniyede bilin, <strong>3–5 iş gününde anahtar teslim</strong> yayına geçin. Üstelik 3 yıl boyunca da alan adı ve sunucu takibini tamamen kafanızdan çıkarın.
+                Biz bu ezberi kökten bozmak için yola çıktık: <strong>Canlı demoyu önceden test edin</strong>, ne alacağınızı ve ne ödeyeceğinizi ilk saniyede bilin, <strong>3–10 iş gününde anahtar teslim</strong> yayına geçin. Üstelik 3 yıl boyunca da alan adı ve sunucu takibini tamamen kafanızdan çıkarın.
               </p>
 
               <div className="pt-4 border-t border-white/5 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
-                <span className="text-white font-semibold">MediWeb Ekibi</span>
+                <span className="text-white font-semibold">Şengüller Otomotiv & Bilişim / MediWeb Ekibi</span>
                 <span className="text-emerald-400 font-medium flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5" />
-                  <span>İstanbul & Ankara</span>
+                  <span>Pendik / İstanbul</span>
                 </span>
               </div>
             </div>
@@ -89,7 +89,7 @@ export const PrinciplesSection: React.FC = () => {
                   <div>
                     <h4 className="text-white font-semibold text-sm mb-0.5">Ziyaretçiyi Bekletmeyen Açılış</h4>
                     <p className="text-slate-300 text-xs sm:text-sm">
-                      Mobilde ve masaüstünde 0.3 saniyede açılan, müşteriyi doğrudan WhatsApp veya telefon aramasına yönlendiren temiz mimari.
+                      Mobilde ve masaüstünde Lighthouse 95+ performansıyla açılan, müşteriyi doğrudan doğru iletişim kanalına yönlendiren temiz mimari.
                     </p>
                   </div>
                 </div>
@@ -97,9 +97,9 @@ export const PrinciplesSection: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
                   <div>
-                    <h4 className="text-white font-semibold text-sm mb-0.5">3 Yıl Boyunca Sıfır Sunucu Masrafı</h4>
+                    <h4 className="text-white font-semibold text-sm mb-0.5">İlk 3 Yıl Barındırma & Alan Adı Dahil</h4>
                     <p className="text-slate-300 text-xs sm:text-sm">
-                      Alan adı, SSL güvenlik sertifikası ve bulut barındırmayı ilk 3 yıl boyunca karşılıyoruz; ek bakım masrafı çıkmaz.
+                      Alan adı, SSL güvenlik sertifikası ve bulut barındırmayı ilk 3 yıl boyunca karşılıyoruz; zorunlu ek barındırma masrafı çıkmaz.
                     </p>
                   </div>
                 </div>
@@ -159,9 +159,9 @@ export const PrinciplesSection: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-1" />
                   <div>
-                    <h4 className="text-white font-semibold text-sm mb-0.5">Haftalarca Süren Oyalayıcı Süreçler</h4>
+                    <h4 className="text-white font-semibold text-sm mb-0.5">Belirsiz ve Ucu Açık Süreçler Yok</h4>
                     <p className="text-slate-300 text-xs sm:text-sm">
-                      Aylarca süren ucu açık tasarım revizyonlarıyla işinizi aksatmıyoruz; 3–5 iş gününde eksiksiz teslim ediyoruz.
+                      Aylarca süren ucu açık tasarım revizyonlarıyla işinizi aksatmıyoruz; içerik onayından itibaren 3–10 iş gününde eksiksiz teslim ediyoruz.
                     </p>
                   </div>
                 </div>
