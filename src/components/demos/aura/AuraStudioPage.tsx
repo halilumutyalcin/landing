@@ -22,6 +22,7 @@ import { AuraProjectLayerViewer } from './AuraProjectLayerViewer';
 import { AuraProcess } from './AuraProcess';
 import { AuraBeforeAfter } from './AuraBeforeAfter';
 import { AuraDiscoveryForm } from './AuraDiscoveryForm';
+import { generateWhatsAppUrl } from '@/lib/utils';
 
 export const AuraStudioPage: React.FC = () => {
   // Live GMT+3 Istanbul Time for Footer.design signature
@@ -66,7 +67,9 @@ export const AuraStudioPage: React.FC = () => {
             ← Vitrin Kataloğuna Dön
           </Link>
           <a
-            href="https://wa.me/905438515086?text=Merhaba,%20Aura%20Studio%20iç%20mimarlık%20canlı%20demosunu%20inceledim.%20Kendi%20ofisimiz%20için%20bu%20tasarımı%20uyarlatmak%20istiyoruz."
+            href={generateWhatsAppUrl({
+              customMessage: 'Merhaba, Aura Studio iç mimarlık canlı demosunu inceledim. Kendi ofisimiz için bu tasarımı uyarlatmak istiyoruz.',
+            })}
             target="_blank"
             rel="noopener noreferrer"
             className="px-2.5 py-1 rounded bg-amber-500 text-black font-bold hover:bg-amber-400 transition-colors"

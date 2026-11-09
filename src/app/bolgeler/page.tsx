@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'İstanbul Hizmet Bölgelerimiz — İlçe Bazlı Kurumsal Web Mimarisi | MediWeb',
-    description: 'İstanbul genelinde 13 ana ticaret merkezine özel hızlı, garantili ve 3 yıl sıfır ek masraflı kurumsal web altyapısı.',
+    description: 'İstanbul genelinde 13 ana ticaret merkezine özel hızlı, sözleşmeli hata korumalı ve 3 yıl sıfır ek masraflı kurumsal web altyapısı.',
     url: `https://${siteConfig.domain}/bolgeler`,
     siteName: siteConfig.name,
     images: ['/opengraph-image'],

@@ -116,9 +116,9 @@ export const PrinciplesSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-emerald-500/20 flex items-center justify-between text-xs font-semibold text-emerald-400">
+            <div className="mt-8 pt-4 border-t border-amber-500/20 flex items-center justify-between text-xs font-semibold text-amber-400">
               <span>Sözleşmeli ve Garantili Teslimat</span>
-              <span>%100 Taahhüt</span>
+              <span>Sözleşmeli Taahhüt</span>
             </div>
           </div>
 
@@ -180,7 +180,7 @@ export const PrinciplesSection: React.FC = () => {
 
             <div className="mt-8 pt-4 border-t border-rose-500/20 flex items-center justify-between text-xs font-semibold text-rose-400">
               <span>Sıfır Sürpriz Maliyet</span>
-              <span>%100 Şeffaflık</span>
+              <span>Tam Şeffaflık</span>
             </div>
           </div>
 

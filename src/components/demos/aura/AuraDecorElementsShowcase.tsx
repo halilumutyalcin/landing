@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Sparkles, Layers, Box, Check, ArrowUpRight, Maximize2 } from 'lucide-react';
+import { siteConfig } from '@/config/site.config';
 
 interface DecorItem {
   id: string;
@@ -191,7 +192,7 @@ export const AuraDecorElementsShowcase: React.FC = () => {
 
             {/* Direct WhatsApp Action for this element */}
             <a
-              href={`https://wa.me/905438515086?text=${encodeURIComponent(
+              href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
                 `Merhaba Aura Studio, sitenizdeki 3D "${selectedItem.name}" parçasını çok beğendim. Mekanımız için bu tasarım ve özel imalat detayları hakkında görüşmek istiyorum.`
               )}`}
               target="_blank"

@@ -149,7 +149,7 @@ export const DEMO_CATALOG: DemoItem[] = [
     themeColor: 'amber',
     badge: 'Akademik',
     liveUrl: '/preview/legalist',
-    previewImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80',
+    previewImage: 'https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1200&q=80',
     shortDesc: 'Büyük başlıklar, asimetrik sütunlar ve akademik hukuki bülten yayını için tasarlanmış dergi estetiği.',
     targetAudience: 'Akademisyen avukatlar, arabuluculuk merkezleri ve patent/fikri mülkiyet ofisleri.',
     keyFeatures: [
@@ -531,7 +531,7 @@ export const DEMO_CATALOG: DemoItem[] = [
     themeColor: 'amber',
     badge: 'Lüks Konut',
     liveUrl: '/preview/primeresidence',
-    previewImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    previewImage: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
     shortDesc: 'Lüks konut, villa projeleri ve rezidans satışları için tam ekran video/görsel sunumu ve kat planları.',
     targetAudience: 'Lüks konut projeleri, müteahhitler ve kentsel dönüşüm proje ofisleri.',
     keyFeatures: [

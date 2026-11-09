@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Sparkles, MessageSquare, Send, CheckCircle2, ShieldCheck, MapPin } from 'lucide-react';
+import { siteConfig } from '@/config/site.config';
 
 export const AuraDiscoveryForm: React.FC = () => {
   const [projectType, setProjectType] = useState<string>('Villa & Müstakil Konut');
@@ -47,7 +48,7 @@ export const AuraDiscoveryForm: React.FC = () => {
 
     const encoded = encodeURIComponent(text);
     // WhatsApp direct link with target phone (agency hotline)
-    const url = `https://wa.me/905438515086?text=${encoded}`;
+    const url = `https://wa.me/${siteConfig.whatsappNumber}?text=${encoded}`;
     
     setIsSubmitted(true);
     window.open(url, '_blank', 'noopener,noreferrer');

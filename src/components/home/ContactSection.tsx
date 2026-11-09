@@ -264,6 +264,18 @@ export const ContactSection: React.FC = () => {
                   />
                 </div>
 
+                <div className="flex items-start gap-2.5 pt-1">
+                  <input
+                    type="checkbox"
+                    id="kvkk-consent"
+                    required
+                    className="mt-0.5 rounded bg-zinc-900 border-white/20 text-amber-500 focus:ring-amber-400"
+                  />
+                  <label htmlFor="kvkk-consent" className="text-[11px] text-slate-400 leading-snug">
+                    <span className="text-amber-400 font-medium">KVKK Aydınlatma Metni</span>'ni okudum; kişisel verilerimin teklif hazırlama ve iletişim amacıyla işlenmesini kabul ediyorum.
+                  </label>
+                </div>
+
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -275,10 +287,6 @@ export const ContactSection: React.FC = () => {
 
                 <p className="text-center text-[11px] text-slate-400">
                   Bilgileriniz 256-bit SSL ile korunur. Asla spam arama yapılmaz; yalnızca teklifiniz için WhatsApp üzerinden irtibata geçilir.
-                </p>
-
-                <p className="text-center text-[10px] text-slate-500">
-                  Formu göndererek KVKK aydınlatma metnini okuduğunuzu ve kabul ettiğinizi beyan edersiniz.
                 </p>
               </form>
             )}

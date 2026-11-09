@@ -53,7 +53,7 @@ export const PricingSection: React.FC = () => {
         { feature: 'Kime uygun?', starter: 'Yeni başlayan işletmeler, tek kişilik ofisler', pro: 'Kurumsal görünüm isteyen işletmeler & KOBİ\'ler', enterprise: 'Profesyonel dijital varlık ve ihracat odaklı firmalar' },
         { feature: 'Tasarım mimarisi', starter: 'Hazır yapı üzerinde özelleştirilmiş tasarım', pro: 'Markaya özel UI/UX tasarım ve kurumsal renkler', enterprise: 'Tamamen özel UI/UX + gelişmiş etkileşimler' },
         { feature: 'Sayfa yapısı', starter: 'Tek sayfalık landing page veya 5 sayfaya kadar', pro: '10 sayfaya kadar kurumsal yapı', enterprise: '20 sayfaya kadar / ihtiyaca göre' },
-        { feature: 'Mobil & tablet uyumluluk', starter: 'Dahil (%100 Responsive)', pro: 'Dahil (%100 Responsive)', enterprise: 'Dahil (%100 Responsive)' },
+        { feature: 'Mobil & tablet uyumluluk', starter: 'Dahil (Responsive Tasarım)', pro: 'Dahil (Responsive Tasarım)', enterprise: 'Dahil (Responsive Tasarım)' },
       ]
     },
     {
