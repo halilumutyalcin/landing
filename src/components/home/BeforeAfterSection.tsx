@@ -69,15 +69,15 @@ export const BeforeAfterSection: React.FC = () => {
                 MediWeb Mimarisi
               </span>
               <h3 className="text-xl sm:text-2xl font-bold text-white">Yüksek Prestij & Hızlı Dönüşüm</h3>
-              <p className="text-xs sm:text-sm text-slate-300">0.3 saniyede anında açılan, müşteriyi telefona yönlendiren yapı</p>
+              <p className="text-xs sm:text-sm text-slate-300">Global Edge CDN ile anında açılan, müşteriyi doğrudan iletişime yönlendiren modern yapı</p>
             </div>
 
             {/* Metrics Showcase Right - Business Outcomes */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto pl-12 sm:pl-24">
               <div className="p-4 rounded-xl bg-black/40">
-                <div className="text-xs font-bold text-white mb-1">Açılış Hızı</div>
-                <div className="text-3xl font-black text-white">0.3 sn</div>
-                <div className="text-[11px] text-zinc-400 mt-1">Sıfır Ziyaretçi Kaybı</div>
+                <div className="text-xs font-bold text-white mb-1">Lighthouse Skoru</div>
+                <div className="text-3xl font-black text-white">95+</div>
+                <div className="text-[11px] text-zinc-400 mt-1">Mobil & Masaüstü Hız</div>
               </div>
 
               <div className="p-4 rounded-xl bg-black/40">
@@ -89,12 +89,12 @@ export const BeforeAfterSection: React.FC = () => {
               <div className="p-4 rounded-xl bg-black/40">
                 <div className="text-xs font-bold text-amber-400 mb-1">Sunucu Faturası</div>
                 <div className="text-3xl font-black text-white">3 Yıl 0 ₺</div>
-                <div className="text-[11px] text-cyan-300 mt-1">Sürpriz Ek Masraf Yok</div>
+                <div className="text-[11px] text-zinc-300 mt-1">Sürpriz Ek Masraf Yok</div>
               </div>
 
               <div className="p-4 rounded-xl bg-black/40">
-                <div className="text-xs font-bold text-amber-400 mb-1">Çökme & Virüs</div>
-                <div className="text-3xl font-black text-white">%0 Risk</div>
+                <div className="text-xs font-bold text-amber-400 mb-1">Statik Güvenlik</div>
+                <div className="text-3xl font-black text-white">Yüksek</div>
                 <div className="text-[11px] text-zinc-300 mt-1">Eklenti Açıkları Yok</div>
               </div>
             </div>

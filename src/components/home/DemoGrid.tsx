@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import { DEMO_CATALOG, DemoItem } from '@/config/demos.config';
 import { SectorTabs } from './SectorTabs';
 import { DemoCard } from './DemoCard';
@@ -18,12 +19,18 @@ interface DemoGridProps {
 
 export const DemoGrid: React.FC<DemoGridProps> = ({ initialSector = 'all' }) => {
   const [activeSector, setActiveSector] = useState<string>(initialSector);
+  const [showAllDemos, setShowAllDemos] = useState(false);
   const [previewDemo, setPreviewDemo] = useState<DemoItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filteredDemos = activeSector === 'all'
     ? DEMO_CATALOG
     : DEMO_CATALOG.filter((item) => item.sectorId === activeSector);
+
+  // If "all" and not expanded, show top 6 flagship demos (representing each of the 6 sectors)
+  const displayedDemos = (activeSector === 'all' && !showAllDemos)
+    ? filteredDemos.slice(0, 6)
+    : filteredDemos;
 
   const handleOpenPreview = (demo: DemoItem) => {
     setPreviewDemo(demo);
@@ -37,13 +44,13 @@ export const DemoGrid: React.FC<DemoGridProps> = ({ initialSector = 'all' }) => 
         {/* Section Header - Clean & Direct */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="text-sm font-semibold text-amber-400 mb-2">
-            Kanıtlanmış Sektörel Çözümler
+            Görerek Karar Verin
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
-            Sektörel Vitrin Mimarileri
+            Sektörel Canlı Vitrin Mimarileri
           </h2>
           <p className="text-base text-slate-300 leading-relaxed">
-            Firmanız için sıfırdan hayal kurup haftalarca beklemek yerine, sektörünüzde güven ve saygı uyandırdığı kanıtlanmış canlı mimarileri deneyimleyin. Beğendiğiniz mimariyi kurumsal kimliğinize uyarlayarak 3–5 günde anahtar teslim yayına alıyoruz.
+            Firmanız için ne çıkacağını bilmeden haftalarca beklemek yerine, sektörünüze özel geliştirilmiş çalışan canlı mimarileri inceleyin. Beğendiğiniz mimariyi kurumsal kimliğinize uyarlayarak 3–7 iş gününde anahtar teslim yayına alıyoruz.
           </p>
         </div>
 
@@ -51,13 +58,16 @@ export const DemoGrid: React.FC<DemoGridProps> = ({ initialSector = 'all' }) => 
         <div className="mb-10">
           <SectorTabs
             activeSector={activeSector}
-            onSelectSector={setActiveSector}
+            onSelectSector={(sector) => {
+              setActiveSector(sector);
+              setShowAllDemos(false);
+            }}
           />
         </div>
 
         {/* Grid of Demos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {filteredDemos.map((demo) => (
+          {displayedDemos.map((demo) => (
             <DemoCard
               key={demo.id}
               demo={demo}
@@ -65,6 +75,27 @@ export const DemoGrid: React.FC<DemoGridProps> = ({ initialSector = 'all' }) => 
             />
           ))}
         </div>
+
+        {/* Expand / Show More Demos Button for 'all' */}
+        {activeSector === 'all' && filteredDemos.length > 6 && (
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => setShowAllDemos(!showAllDemos)}
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#111114] hover:bg-zinc-800 border border-white/10 text-white font-semibold text-sm transition-all shadow-md"
+            >
+              <span>
+                {showAllDemos
+                  ? 'Daha Az Tasarım Göster'
+                  : `Kalan 10 Mimarimizi İnceleyin (Toplam ${filteredDemos.length} Tasarım)`}
+              </span>
+              {showAllDemos ? (
+                <ChevronUp className="w-4 h-4 text-amber-400" />
+              ) : (
+                <ChevronDown className="w-4 h-4 text-amber-400" />
+              )}
+            </button>
+          </div>
+        )}
 
       </div>
 

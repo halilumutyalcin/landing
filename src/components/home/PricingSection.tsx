@@ -82,7 +82,7 @@ export const PricingSection: React.FC = () => {
         { feature: 'Temel SEO altyapısı', starter: 'Meta, sitemap, robots.txt', pro: 'Dahil', enterprise: 'Dahil' },
         { feature: 'Gelişmiş SEO & Schema', starter: '—', pro: 'JSON-LD Schema & Search Console', enterprise: 'Sayfa bazlı derin SEO & iç bağlantı mimarisi' },
         { feature: 'Google Analytics & Search Console', starter: 'Temel Analytics', pro: 'Analytics + Search Console kurulumu', enterprise: 'İleri seviye hedef & dönüşüm takibi' },
-        { feature: 'Site hız optimizasyonu', starter: 'Temel (Yüksek Hızlı Bulut Ağı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri seviye (0.3 sn anında yükleme)' },
+        { feature: 'Site hız optimizasyonu', starter: 'Temel (Global Edge CDN Ağı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri Seviye (Lighthouse 95+ & Edge CDN)' },
         { feature: 'Güvenlik / SSL sertifikası', starter: '3 Yıl Ücretsiz SSL', pro: '3 Yıl Ücretsiz SSL', enterprise: '3 Yıl Kurumsal SSL & DDoS koruması' },
       ]
     },
@@ -279,10 +279,6 @@ export const PricingSection: React.FC = () => {
 
                   {/* Price Box */}
                   <div className="mb-6 p-4 rounded-xl bg-black/40">
-                    <div className="text-[11px] text-slate-400 line-through mb-1">
-                      {pkg.id === 'starter' ? 'Ajans Değeri: ~35.000 TL' : pkg.id === 'pro' ? 'Ajans Değeri: ~70.000 TL' : 'Ajans Değeri: ~125.000 TL'}
-                    </div>
-
                     <div className="flex items-baseline gap-2">
                       <span className="text-3xl sm:text-4xl font-black text-white">
                         {displayPrice}
@@ -505,7 +501,7 @@ export const PricingSection: React.FC = () => {
                 </strong>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed pt-1">
-                10 sayfaya kadar Profesyonel paket web sitesi, 0.3 sn açılış hızı ve 36 ay boyunca sıfır sunucu/domain masrafı.
+                10 sayfaya kadar Profesyonel paket web sitesi, Lighthouse 95+ performans optimizasyonu ve ilk 3 yıl hosting ve alan adı dahil.
               </p>
             </div>
           </div>

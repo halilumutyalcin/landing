@@ -155,16 +155,16 @@ export const WhyUsUnifiedSection: React.FC = () => {
                   <span className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-1 block">
                     Yeni Nesil MediWeb Mimarisi
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">Yüksek Prestij & 0.3 Sn Açılış</h3>
-                  <p className="text-xs sm:text-sm text-slate-300">0.3 saniyede anında açılan, müşteriyi doğrudan WhatsApp ve aramaya bağlayan yapı</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white">Yüksek Prestij & Edge CDN Hızı</h3>
+                  <p className="text-xs sm:text-sm text-slate-300">Global Edge CDN ile anında açılan, müşteriyi doğrudan WhatsApp ve aramaya bağlayan modern yapı</p>
                 </div>
 
                 {/* Metrics Showcase Right */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto">
                   <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-white mb-1">Açılış Hızı</div>
-                    <div className="text-3xl font-black text-white font-mono">0.3 sn</div>
-                    <div className="text-[11px] text-zinc-400 mt-1">Sıfır Müşteri Kaybı</div>
+                    <div className="text-xs font-bold text-white mb-1">Lighthouse Skoru</div>
+                    <div className="text-3xl font-black text-white font-mono">95+</div>
+                    <div className="text-[11px] text-zinc-400 mt-1">Mobil & Masaüstü Hız</div>
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">

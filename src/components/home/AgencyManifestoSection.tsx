@@ -92,7 +92,7 @@ export const AgencyManifestoSection: React.FC = () => {
               </p>
             </div>
             <div className="pt-6 mt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">
-              <span>Tasarruf: ~35.000 ₺</span>
+              <span>İlk 3 Yıl Yenileme Maliyeti: 0 ₺</span>
               <span className="text-amber-400 font-bold">DAHİL</span>
             </div>
           </div>

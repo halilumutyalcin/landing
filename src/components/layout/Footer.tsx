@@ -101,8 +101,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/sektorler/lojistik-web-sitesi" className="hover:text-white transition-colors">
-                  Lojistik Firması Web Sitesi
+                <Link href="/sektorler/sanayi-ve-uretim-web-sitesi" className="hover:text-white transition-colors">
+                  Sanayi & İmalatçı Web Sitesi
                 </Link>
               </li>
               <li>
@@ -127,12 +127,12 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-sm text-slate-400">
               <li>
                 <Link href="/#paketler" className="hover:text-white transition-colors">
-                  Başlangıç (₺16.900)
+                  Başlangıç (₺17.500)
                 </Link>
               </li>
               <li>
-                <Link href="/#paketler" className="hover:text-white transition-colors font-semibold text-brand-300">
-                  Profesyonel (₺29.900)
+                <Link href="/#paketler" className="hover:text-white transition-colors font-semibold text-amber-400">
+                  Profesyonel (₺32.500)
                 </Link>
               </li>
               <li>

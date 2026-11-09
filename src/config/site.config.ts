@@ -68,19 +68,19 @@ export interface PrincipleItem {
 export const siteConfig = {
   name: 'MediWeb',
   domain: 'mediweb.com.tr',
-  tagline: 'Sektörünüze Özel Kurumsal Web Mimarisi. 3–5 Günde Canlıda, 3 Yıl Boyunca Sıfır Ek Masraf (0 ₺ Yenileme Güvencesi).',
-  description: 'Web sitesi için haftalarca beklemenize ve sürpriz faturalarla uğraşmanıza gerek yok. Sektörünüze göre optimize edilmiş kurumsal web mimarisiyle, 3 yıl boyunca sıfır ek masraf güvencesiyle anahtar teslim dijital prestij.',
+  tagline: 'Sektörünüze Özel Kurumsal Web Mimarisi. Canlı demoyu görün, onaylayın; anahtar teslim yayına alalım.',
+  description: 'Web sitesi için haftalarca beklemenize ve sürpriz yenileme faturalarıyla karşılaşmanıza gerek yok. Sektörünüze özel geliştirilmiş kurumsal mimariler, ilk 3 yıl hosting ve alan adı dahil sabit fiyat güvencesiyle.',
   whatsappNumber: '905550000000',
   whatsappDisplay: '+90 555 000 00 00',
-  phoneDisplay: '0850 300 00 00',
+  phoneDisplay: '+90 (216) 700 00 00',
   email: 'info@mediweb.com.tr',
-  address: 'Levent Mah. Büyükdere Cad. No:199, Şişli / İstanbul',
+  address: 'Doğu Mah. Erol Kaya Cad. No:94, Pendik / İstanbul',
   
   metrics: [
-    { value: '3 Yıl', label: 'Sıfır Ek Masraf Güvencesi', icon: 'ShieldCheck', sub: '0 ₺ Yenileme Maliyeti' },
-    { value: '< 0.5 sn', label: 'Anında Açılış Hızı', icon: 'Zap', sub: 'Mobilde sıfır bekleme' },
-    { value: '3–5 Gün', label: 'Ortalama Teslim Süresi', icon: 'Clock', sub: 'Hızlı & eksiksiz lansman' },
-    { value: '15 Mimari', label: '5 Sektöre Özel Vitrin', icon: 'Sparkles', sub: 'Canlı test edilmiş altyapı' },
+    { value: '3 Yıl', label: 'Hosting & Alan Adı Dahil', icon: 'ShieldCheck', sub: 'İlk 3 yıl sıfır yenileme maliyeti' },
+    { value: '95+', label: 'Lighthouse Performans Skoru', icon: 'Zap', sub: 'Global Edge CDN altyapısı' },
+    { value: '3–7 Gün', label: 'Pakete Göre Teslim Süresi', icon: 'Clock', sub: 'İçerik onayından itibaren' },
+    { value: '16 Mimari', label: '6 Sektöre Özel Canlı Vitrin', icon: 'Sparkles', sub: 'Görerek seçebileceğiniz altyapı' },
   ],
 
   packages: [
@@ -95,15 +95,15 @@ export const siteConfig = {
       tagline: 'Yeni başlayan işletmeler, tek kişilik ofisler ve doğrudan dönüşüm hedefleyenler.',
       targetAudience: 'Yeni açılan işletmeler, tek kişilik ofisler, esnaf ve bütçesi kısıtlı KOBİ\'ler.',
       pageStructure: 'Tek Sayfa (One-Page) veya 5 Sayfaya Kadar Temel Yapı',
-      deliveryTime: '3–5 İş Günü',
-      domainHosting: '3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi (.com/.com.tr + Yüksek Hızlı Bulut Barındırma Dahil)',
+      deliveryTime: '3–5 İş Günü (İçerik onayından itibaren)',
+      domainHosting: '3 Yıl Domain (.com / .com.tr) + Bulut Barındırma Dahil',
       revisions: '1 Tur Tasarım Revizyonu',
       warranty: '15 Gün Hata Garantisi',
       support: 'E-posta & WhatsApp Destek',
       animations: 'Temel fade-in ve scroll geçişleri',
       features: [
         'Tek sayfa (One Page) veya 5 sayfaya kadar kurumsal mimari',
-        '3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi (Domain + Bulut Barındırma Dahil)',
+        '3 Yıl Domain (.com / .com.tr) + Yüksek Hızlı Bulut Barındırma Dahil',
         'Mobil ve Tablet %100 Kusursuz Uyum',
         'Temel SEO Altyapısı (Sitemap, Meta, Robots.txt)',
         'Sabit WhatsApp İletişim Butonu & Hızlı Mesaj',
@@ -111,7 +111,7 @@ export const siteConfig = {
         'Google Analytics Kurulumu & Entegrasyonu',
         '2 Adet Kurumsal E-posta DNS Kurulumu',
         'KVKK ve Yasal Sayfa Şablonları Dahil',
-        'Işık Hızında Bulut Altyapısı (0.3 sn)',
+        'Global Edge CDN ile Yüksek Açılış Performansı (Lighthouse 90+)',
       ],
       notIncluded: [
         'Gelişmiş SEO & Search Console Yönetimi',
@@ -125,7 +125,7 @@ export const siteConfig = {
       waasSetupFormatted: '2.500 ₺',
       waasMonthlyPrice: 1450,
       waasMonthlyFormatted: '1.450 ₺',
-      waasCommitment: 'Sabit Taksitli Model',
+      waasCommitment: 'Sabit Fiyatlı Model',
     },
     {
       id: 'pro',
@@ -135,28 +135,28 @@ export const siteConfig = {
       priceFormatted: '32.500 ₺',
       period: 'Tek Seferlik',
       paymentTerms: '%50 Başlangıçta + %50 Teslimde',
-      tagline: 'Avukatlık ofisleri, klinikler, sanayi ve üretim firmaları, mali müşavirler ve yerleşik KOBİ\'ler.',
+      tagline: 'Avukatlık ofisleri, klinikler, sanayi firmaları, mali müşavirler ve yerleşik KOBİ\'ler.',
       targetAudience: 'Kurumsal ciddiyet arayan avukatlar, sağlık klinikleri, danışmanlık firmaları ve KOBİ\'ler.',
       pageStructure: '10 Sayfaya Kadar (Anasayfa, Hakkımızda, Hizmetler, Ekip, Blog, SSS, İletişim + 3 Sayfa)',
-      deliveryTime: '5–7 İş Günü',
-      domainHosting: '3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi (.com/.com.tr + Yüksek Hızlı Bulut Barındırma Dahil)',
+      deliveryTime: '5–7 İş Günü (İçerik onayından itibaren)',
+      domainHosting: '3 Yıl Domain (.com / .com.tr) + Bulut Barındırma Dahil',
       revisions: '2 Tur Tasarım Revizyonu',
       warranty: '30 Gün Hata Garantisi',
       support: 'Öncelikli WhatsApp Destek + 1 Ay Rutin Bakım Dahil',
       animations: 'Gelişmiş — parallax, mikro hover efektleri, pürüzsüz geçişler',
       features: [
         '10 Sayfaya Kadar Kurumsal Site Mimarisi',
-        '3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi (Domain + Bulut Barındırma Dahil)',
-        'Google Haritalar (İşletme Profili) Kaydı & Optimizasyonu',
-        'İlk 5–10 Gerçek Müşteri Yorum Stratejisi Desteği',
+        '3 Yıl Domain (.com / .com.tr) + Yüksek Hızlı Bulut Barındırma Dahil',
+        'Sektörel Mevzuat Uyumu (TBB, Sağlık Bakanlığı, TÜRMOB kurallarına duyarlı dil)',
+        'Google Haritalar (İşletme Profili) Kaydı & Doğrulaması',
         'Google Search Console Bağlantısı & JSON-LD Schema',
         'Blog / Duyuru Altyapısı (Kategori & Yazar Desteği)',
         'Accordion Yapısında Sık Sorulan Sorular Bölümü',
         'Gelişmiş Form (Konu Seçimi, Dosya Eki, Bildirim)',
-        'Canlı Destek Kurulumu (Tawk.to vb.)',
+        'Canlı Destek veya Akıllı WhatsApp Yönlendirme Kurulumu',
         '5 Adet Kurumsal E-posta DNS Kurulumu',
         'Sosyal Paylaşım Kartları (Open Graph)',
-        'Hızlı Mobil ve Masaüstü Açılış (Lighthouse 95+)',
+        'Lighthouse 95+ Performans Optimizasyonu',
         'İlk 1 Ay İçerik Güncelleme & Bakım Desteği Dahil',
       ],
       notIncluded: [
@@ -169,7 +169,7 @@ export const siteConfig = {
       waasSetupFormatted: '4.500 ₺',
       waasMonthlyPrice: 2450,
       waasMonthlyFormatted: '2.450 ₺',
-      waasCommitment: 'Sabit Taksitli Model',
+      waasCommitment: 'Sabit Fiyatlı Model',
     },
     {
       id: 'enterprise',
@@ -182,8 +182,8 @@ export const siteConfig = {
       tagline: 'Prestijli markalar, çok şubeli firmalar ve ihracat yapan kurumsal yapılar.',
       targetAudience: 'Çok şubeli, ihracat yapan veya güçlü pazar lideri imajı hedefleyen şirketler.',
       pageStructure: '20 Sayfaya Kadar Geniş Mimari + Türkçe & İngilizce 2 Dil Dahil',
-      deliveryTime: '7–10 İş Günü',
-      domainHosting: '3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi (.com/.com.tr + Yüksek Hızlı Bulut Barındırma Dahil)',
+      deliveryTime: '7–10 İş Günü (İçerik onayından itibaren)',
+      domainHosting: '3 Yıl Domain (.com / .com.tr) + Bulut Barındırma Dahil',
       revisions: '3 Tur Tasarım Revizyonu',
       warranty: '60 Gün Hata Garantisi',
       support: 'Atanmış Müşteri Temsilcisi + 3 Ay Rutin Bakım Dahil',
@@ -207,7 +207,7 @@ export const siteConfig = {
       waasSetupFormatted: '8.500 ₺',
       waasMonthlyPrice: 4250,
       waasMonthlyFormatted: '4.250 ₺',
-      waasCommitment: 'Sabit Taksitli Model',
+      waasCommitment: 'Sabit Fiyatlı Model',
     }
   ] as PackageItem[],
 
@@ -348,7 +348,7 @@ export const siteConfig = {
     { feature: 'Temel SEO altyapısı', starter: '✓ Meta, sitemap, robots.txt', pro: '✓ Dahil', enterprise: '✓ Dahil' },
     { feature: 'Gelişmiş SEO & Schema', starter: '—', pro: '✓ JSON-LD Schema & Search Console', enterprise: '✓ Sayfa bazlı derin SEO & iç bağlantı mimarisi' },
     { feature: 'Google Analytics & Search Console', starter: 'Temel Analytics', pro: '✓ Analytics + Search Console kurulumu', enterprise: '✓ İleri seviye hedef & dönüşüm takibi' },
-    { feature: 'Site hız optimizasyonu', starter: 'Temel (Yüksek Hızlı Bulut Ağı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri seviye (0.3 sn anında yükleme)' },
+    { feature: 'Site hız optimizasyonu', starter: 'Temel (Global Edge CDN Ağı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri Seviye (Lighthouse 95+ & Edge CDN)' },
     { feature: 'Güvenlik / SSL sertifikası', starter: '✓ 3 Yıl Ücretsiz SSL', pro: '✓ 3 Yıl Ücretsiz SSL', enterprise: '✓ 3 Yıl Kurumsal SSL & DDoS koruması' },
     { feature: 'Form e-posta bildirimi', starter: 'Temel bildirim', pro: '✓ Anlık e-posta bildirimi', enterprise: '✓ Çoklu yetkili bildirimi & SMS opsiyonu' },
     { feature: 'Özel animasyonlar', starter: 'Temel fade-in ve scroll', pro: 'Gelişmiş hover ve mikro efektler', enterprise: 'Premium aurora glow & zengin etkileşimler' },
@@ -363,33 +363,33 @@ export const siteConfig = {
   comparisonPoints: [
     {
       feature: 'Teslim Süresi',
-      traditional: '4 – 12 Hafta (Ucu açık süreçler)',
-      mediweb: '3 – 5 İş Günü (Standartlaştırılmış süreç)',
+      traditional: '4 – 12 Hafta (Ucu açık belirsiz takvim)',
+      mediweb: '3 – 7 İş Günü (İçerik onayından itibaren net süre)',
     },
     {
       feature: 'Fiyatlandırma',
-      traditional: 'Değişken & Sürpriz ek maliyetler',
-      mediweb: 'Net Sabit Tek Fiyat (17.500 ₺ / 32.500 ₺ / 59.900 ₺)',
+      traditional: 'Değişken & Sürpriz ek revizyon maliyetleri',
+      mediweb: 'Net Sabit Fiyat (17.500 ₺ / 32.500 ₺ / 59.900 ₺)',
     },
     {
       feature: 'Barındırma & Domain',
-      traditional: 'Her yıl yüksek yenileme & SSL maliyeti',
-      mediweb: '3 Yıl Domain + SSL + Yüksek Hızlı Bulut Barındırma Dahil',
+      traditional: 'Her yıl katlanarak artan yenileme faturaları',
+      mediweb: 'İlk 3 Yıl Domain + SSL + Bulut Barındırma Fiyata Dahil',
     },
     {
-      feature: 'Altyapı & Hız',
-      traditional: 'Ağır eklentili, 6–8 saniyede açılan hantal yapı',
-      mediweb: '0.3 saniyede anında yüklenen modern bulut altyapı',
+      feature: 'Altyapı & Performans',
+      traditional: 'Ağır eklentili, güvenlik açığı riski taşıyan eski CMS',
+      mediweb: 'Next.js 14 tabanlı modern statik mimari, Lighthouse 95+',
     },
     {
       feature: 'Tasarım Süreci',
-      traditional: 'Ne çıkacağını bilmeden para ödeme',
-      mediweb: 'Canlı Çalışan Demoyu Önceden Görüp Seçme',
+      traditional: 'Ne çıkacağını bilmeden ödeme yapma',
+      mediweb: 'Canlı Çalışan Demoyu Önceden Deneyimleme',
     },
     {
-      feature: 'Google & Harita Desteği',
-      traditional: 'Ekstra yüksek ajans danışmanlık ücreti',
-      mediweb: 'Profesyonel & Kurumsal Pakette Dahil',
+      feature: 'Mevzuat & Etik Uyum',
+      traditional: 'Yasal kısıtlardan habersiz standart pazarlama dili',
+      mediweb: 'TBB, Sağlık Bakanlığı ve TÜRMOB mevzuatına tam uyumlu dil',
     },
   ],
 
@@ -402,50 +402,50 @@ export const siteConfig = {
     {
       type: 'dont',
       title: 'Ne Yapmıyoruz?',
-      desc: 'Ağır, hantal ve güvensiz eski altyapıları süsleyip sunmuyoruz. Anlaşılan net fiyat dışında sürpriz ek faturalar çıkartmıyoruz. Süreci haftalarca uzatarak işinizi aksatmıyoruz.'
+      desc: 'Güvensiz ve bakım yükü yüksek eski eklenti çöplüklerini kurmuyoruz. Anlaşılan net fiyat dışında sürpriz ek faturalar çıkartmıyoruz. Süreci haftalarca uzatarak işinizi aksatmıyoruz.'
     }
   ] as PrincipleItem[],
 
   faqs: [
     {
       category: 'surec',
-      question: 'Gerçekten 3–5 günde bitebilir mi, yoksa siz de diğer ajanslar gibi haftalarca oyalar mısınız?',
-      answer: 'Haftalarca süren oyalama ve toplantı trafiği yok, çünkü ne yapacağımızı en baştan biliyoruz. Tasarım mimariniz hazır, altyapınız hazır. Sizden logonuzu, temel iletişim bilgilerinizi ve fotoğraflarınızı aldıktan sonra ekibimiz doğrudan içerik yerleşimine ve Google kayıtlarına başlıyor. Süreci uzatıp sizi yormadan, 3–5 iş gününde eksiksiz çalışan sitenizi yayına alıyoruz.'
+      question: 'Belirtilen teslim süresi gerçekten tutturuluyor mu, gecikme yaşanır mı?',
+      answer: 'Teslimat süremiz (Başlangıç: 3–5 iş günü, Profesyonel: 5–7 iş günü, Kurumsal: 7–10 iş günü), logonuzu ve kurumsal içerik onayınızı teslim ettiğiniz andan itibaren başlar. Mimari ve teknik altyapı önceden test edilip hazırlandığı için ajans içi gecikme yaşanmaz; içerik tesliminden itibaren takvim dakik şekilde işler.'
     },
     {
       category: 'hosting',
-      question: '3 yıl sonra ne olacak? Karşımıza fahiş bir yenileme faturası çıkaracak mısınız?',
-      answer: 'Kesinlikle hayır; sektörde en çok can yakan ajans tuzağının bu olduğunu çok iyi biliyoruz. İlk 3 yıl boyunca alan adı ve küresel bulut barındırma için sizden 1 kuruş bile talep etmiyoruz. 3 yıl dolduğunda ise sadece o günün standart resmi sunucu ve alan adı maliyetini (sembolik yıllık bakım ücreti) ödersiniz. Sürpriz lisans bedeli veya ajans harcı asla çıkmaz. Dilerseniz sitenizin tüm kaynak kodlarını alıp kendi bağımsız sunucunuza da ücretsiz taşıyabilirsiniz.'
+      question: '3 yıl sonra ne olacak? Domain kimin adına ve 4. yıl masrafı nedir?',
+      answer: 'Alan adınız (domain) doğrudan sizin veya şirketinizin adına tescil edilir; tam mülkiyet ve DNS kontrolü sizdedir. İlk 3 yıl boyunca barındırma (hosting) ve SSL için 1 kuruş dahi ödemezsiniz. 4. yıldan itibaren ise hiçbir gizli ajans kârı olmadan, yalnızca o günün standart resmi alan adı ve bulut barındırma maliyetini (tahmini yıllık ~2.000–3.000 ₺) ödersiniz. Siteniz asla kapatılmaz, kilitlenmez veya rehin tutulmaz.'
+    },
+    {
+      category: 'paketler',
+      question: 'Kaynak kodlar bana veriliyor mu? Size bağımlı kalır mıyım?',
+      answer: 'Asla bağımlı kalmazsınız. Profesyonel ve Kurumsal paketlerimizde talep etmeniz durumunda projenizin GitHub kaynak kodları eksiksiz devredilir. Dilediğiniz takdirde sitenizi kendi sunucunuza taşıyabilir veya bağımsız bir yazılımcıyla geliştirmeye devam edebilirsiniz.'
+    },
+    {
+      category: 'surec',
+      question: 'Avukatlık, klinik ve mali müşavirlik gibi mesleklerde reklam yasağı var; siteleriniz bu mevzuata uygun mu?',
+      answer: 'Evet, özellikle bu regüle sektörlerde en hassas olduğumuz konu mevzuat uyumudur. Avukatlık Kanunu ve TBB Reklam Yasağı Yönetmeliği, Sağlık Bakanlığı Sağlık Hizmetlerinde Tanıtım ve Bilgilendirme Faaliyetleri Kılavuzu ile TÜRMOB meslek kurallarına harfiyen uyuyoruz. "Garantili tedavi", "en iyi avukat" gibi haksız ve hukuka aykırı iddialar barındırmayan, salt bilgilendirici ve ağırbaşlı kurumsal sayfalar hazırlıyoruz.'
     },
     {
       category: 'surec',
       question: 'Sitemdeki yazıları ve fotoğrafları kim hazırlıyor? Bizim elimizde hazır metin yok.',
-      answer: 'Hiç dert etmeyin, müşterilerimizin %80\'inin elinde hazır metin veya profesyonel fotoğraf olmuyor. Hukuk, klinik, sanayi, mali müşavirlik ve emlak sektörüne uygun kurumsal içerik şablonlarını ve yüksek kaliteli telifsiz profesyonel fotoğraf arşivini biz sağlıyoruz. Siz sadece "Şu hizmetimizi öne çıkaralım" deyin, gerisini biz toparlayalım.'
+      answer: 'Müşterilerimizin çoğunda hazır metin veya fotoğraf bulunmuyor. Seçtiğiniz sektöre (İç mimarlık, hukuk, klinik, sanayi, mali müşavir, emlak) uygun kurumsal taslak içerikleri ve yüksek çözünürlüklü lisanslı görsel havuzunu biz sağlıyoruz. Siz yalnızca faaliyet alanlarınızı ve iletişim detaylarınızı onaylıyorsunuz.'
     },
     {
       category: 'revizyon',
-      question: 'Yarın bir gün telefon numaramız veya adresimiz değişirse ne yapacağız? Size muhtaç mı kalırız?',
-      answer: 'Asla muhtaç kalmazsınız. Ufak tefek metin, adres veya telefon değişiklikleri için WhatsApp\'tan yazmanız yeterlidir; ekibimiz aynı gün içinde ücretsiz günceller. Eğer "Ben kendim panelden blog yazısı veya resim eklemek istiyorum" derseniz, sitenize tek tıkla modern ve kullanımı çok kolay bir yönetim paneli (Headless CMS) entegre edebiliyoruz.'
+      question: 'İleride telefon, adres veya hizmet listemizde değişiklik gerekirse ne yapıyoruz?',
+      answer: 'Küçük metin ve iletişim güncellemeleri için WhatsApp hattımızdan yazmanız yeterlidir; ekibimiz aynı iş günü içinde güncellemeyi gerçekleştirir. Kendi ekibinizin içerik girmesini isterseniz, opsiyonel olarak modern ve kullanımı kolay bir içerik yönetim paneli (CMS) de entegre edebiliyoruz.'
     },
     {
       category: 'surec',
-      question: 'Site yayına girince Google\'da hemen birinci sırada çıkar mıyız?',
-      answer: 'Size "1 haftada Google\'da 1. sıraya çıkarırız" diyenlere lütfen inanmayın. Ancak biz sitenizi Google\'ın en çok sevdiği temiz kod yapısıyla, ışık hızında açılan altyapıyla ve Google Haritalar (İşletme Profili) kaydıyla teslim ediyoruz. Çevrenizdeki müşteriler işletme adınızı veya sunduğunuz hizmeti aradığında doğru, saygın ve güvenilir şekilde doğrudan karşısına çıkarsınız.'
-    },
-    {
-      category: 'paketler',
-      question: 'Beğendiğim tasarım ile paket fiyatı arasında nasıl bir ilişki var? Tasarıma ayrı para ödüyor muyum?',
-      answer: 'Hayır, tasarım için tek kuruş ekstra ödemezsiniz. Bizde "Tasarım ≠ Paket" kuralı geçerlidir. Beğendiğiniz herhangi bir mimariyi Başlangıç (Tek Sayfa), Profesyonel (5 Sayfa) veya Kurumsal (10-15 Sayfa) paketlerimizden birine giydiriyoruz. Ne ödeyeceğiniz en baştan bellidir; sürpriz ek masraf çıkmaz.'
+      question: 'Site yayına girince Google aramalarında görünür mü?',
+      answer: 'Evet. Siteniz Google arama motorunun doğrudan indeksleyebileceği temiz semantik kod yapısı, JSON-LD Schema işaretlemeleri, sitemap.xml ve Google İşletme Profili (Haritalar) entegrasyonuyla teslim edilir. Firmanızın adı veya yerel hizmet aramalarında hızlıca indeks alırsınız.'
     },
     {
       category: 'paketler',
       question: 'Fatura kesiyor musunuz? Şirketime gider olarak gösterebilir miyim?',
-      answer: 'Elbette. Tüm hizmetlerimiz %20 KDV dahil kurumsal faturalandırılır. Faturanızı muhasebecinize ilettiğinizde, KDV\'yi doğrudan mahsup edebilir; kalan tutarı da kurumlar veya gelir verginizden düşerek net maliyetinizi %37.5 ila %50 oranında hafifletebilirsiniz.'
-    },
-    {
-      category: 'surec',
-      question: 'Mevcut bir alan adım (domain) ve kurumsal e-postalarım var, onlar bozulur mu?',
-      answer: 'Mevcut e-postalarınız ve alan adınız kesinlikle kesintiye uğramaz. DNS yönlendirmelerini e-posta (MX) kayıtlarınıza hiç dokunmadan profesyonelce yaparız; e-posta akışınız bir saniye bile durmadan yeni web siteniz yayına girer.'
+      answer: 'Elbette. Tüm hizmetlerimiz %20 KDV dahil kurumsal faturalandırılır. Faturanızı şirket gideri olarak işleyebilir, KDV mahsubu ve kurumlar/gelir vergisi avantajından tam olarak yararlanabilirsiniz.'
     }
   ] as FaqItem[]
 };

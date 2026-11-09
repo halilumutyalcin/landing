@@ -113,10 +113,10 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     title: 'Pendik Web Tasarım & Kurtköy Lojistik Web Siteleri | MediWeb',
     metaDescription: 'Pendik Çarşı, Kurtköy Teknopark ve Sabiha Gökçen lojistik aksı firmalarına özel kurumsal web siteleri. 3 yıl hosting dahil.',
     heroHeadline: 'Pendik & Kurtköy İşletmelerine Özel Web Mimarisi',
-    heroSubheadline: 'Lojistik şirketleri, denizcilik firmaları, klinikler ve teknoloji işletmeleri için 0.4 saniyede açılan modern web platformları.',
+    heroSubheadline: 'İç mimarlık ofisleri, denizcilik ve sanayi firmaları, klinikler ve teknoloji işletmeleri için Lighthouse 95+ performans optimizasyonuyla modern web platformları.',
     commercialHubs: ['Kurtköy Teknopark & Havalimanı Aksı', 'Pendik Marina & Sahil', 'Şeyhli Sanayi Bölgesi', 'Kaynarca & Çamçeşme Ticaret'],
-    focusSectors: ['Lojistik & Taşımacılık', 'Denizcilik & Gemi Tedarik', 'Özel Klinik & Sağlık', 'Otomotiv'],
-    localGuarantee: 'Pendik ve Kurtköy firmaları için sözleşmeli ve taahhütlü 3-5 günde teslim garantisi.',
+    focusSectors: ['İç Mimarlık & Tasarım', 'Sanayi & İmalat', 'Özel Klinik & Sağlık', 'Hukuk & Danışmanlık'],
+    localGuarantee: 'Pendik ve Kurtköy firmaları için sözleşmeli ve taahhütlü 3-7 iş gününde teslimat.',
     targetKeywords: ['pendik web tasarım', 'kurtköy web yazılım', 'pendik web sitesi yapanlar', 'pendik kurumsal ajans'],
     sampleClients: ['Kurtköy Lojistik A.Ş.', 'Pendik Marina Yat Servis', 'Kaynarca Tıp Merkezi']
   },

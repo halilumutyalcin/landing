@@ -83,7 +83,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     ],
     statHeadline: 'Klinikler İçin Kanıtlanmış Sonuçlar',
     stats: [
-      { label: 'Açılış Hızı', value: '0.3 sn' },
+      { label: 'Lighthouse Skoru', value: '95+' },
       { label: 'Mobil Randevu Dönüşümü', value: '+%65' },
       { label: '3 Yıllık Masraf', value: '0 TL' }
     ]
@@ -95,7 +95,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     title: 'Hukuk Bürosu Web Sitesi Tasarımı | Baro Uyumlu & 3 Yıl Barındırma',
     metaDescription: 'Avukatlar ve hukuk büroları için TBB reklam yasağına %100 uyumlu, saygın, müvekkil odaklı ve 3 yıl domain/hosting dahil kurumsal web sitesi.',
     heroHeadline: 'Müvekkil Kazandıran Saygın Hukuk Bürosu Web Sitesi',
-    heroSubheadline: 'Türkiye Barolar Birliği reklam yasağı kurallarına %100 uyumlu, ağırbaşlı tipografi ve 0.3 sn açılış hızıyla tasarlanmış kurumsal avukatlık sitesi.',
+    heroSubheadline: 'Türkiye Barolar Birliği reklam yasağı kurallarına %100 uyumlu, ağırbaşlı tipografi ve Lighthouse 95+ performans optimizasyonuyla tasarlanmış kurumsal avukatlık sitesi.',
     targetAudience: 'Bağımsız avukatlar, ortaklık büroları, arabuluculuk merkezleri ve kurumsal hukuk müşavirlikleri.',
     badge: 'Hukuk Sektörü Çözümü',
     relatedDemoSlugs: ['lexora', 'justice', 'legalist'],
@@ -261,7 +261,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     ],
     statHeadline: 'Global Taşımacılıkta Dijital Güç',
     stats: [
-      { label: 'Küresel Açılış', value: '0.3 sn' },
+      { label: 'Lighthouse Skoru', value: '95+' },
       { label: 'Teklif Dönüşümü', value: '+%70' },
       { label: 'Sunucu Masrafı', value: '3 Yıl 0 TL' }
     ]
@@ -378,7 +378,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     statHeadline: 'Sanayi Sektörel Etki',
     stats: [
       { label: 'B2B Teklif Artışı', value: '+%75' },
-      { label: 'Açılış Hızı', value: '0.3 sn' },
+      { label: 'Lighthouse Skoru', value: '95+' },
       { label: 'Sıfır Masraf', value: '3 Yıl' }
     ]
   },
@@ -475,7 +475,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       'Terapist Özgeçmişi, Akreditasyonları ve Ekol Tanıtımları',
       'Mobil WhatsApp Doğrudan Randevu Hattı',
       'Etik ve Yasal Mevzuata Tam Uyumlu İçerik Mimarisi',
-      '0.3 Sn Açılış Hızıyla Huzurlu ve Hızlı Kullanıcı Deneyimi'
+      'Lighthouse 95+ Performans ile Akıcı ve Hızlı Kullanıcı Deneyimi'
     ],
     faqs: [
       {
@@ -494,7 +494,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     statHeadline: 'Terapist Vitrininde Etki',
     stats: [
       { label: 'Danışan Güveni', value: 'Yüksek' },
-      { label: 'Mobil Hız', value: '0.3 sn' },
+      { label: 'Lighthouse Skoru', value: '95+' },
       { label: 'Sunucu Maliyeti', value: '3 Yıl 0 TL' }
     ]
   }

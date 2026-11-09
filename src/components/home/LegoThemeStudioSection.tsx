@@ -268,8 +268,8 @@ export const LegoThemeStudioSection: React.FC = () => {
                       </div>
                       <div className="p-4 rounded-xl border border-white/20" style={{ backgroundColor: `${activeTheme.accentColor}15` }}>
                         <div className="text-xs font-bold mb-1" style={{ color: activeTheme.accentColor }}>MediWeb Yeni Mimari</div>
-                        <div className="text-2xl font-mono font-black text-white">0.3 sn</div>
-                        <div className="text-[11px]" style={{ color: activeTheme.accentColor }}>Google 99 Lighthouse</div>
+                        <div className="text-2xl font-mono font-black text-white">&lt; 0.8 sn</div>
+                        <div className="text-[11px]" style={{ color: activeTheme.accentColor }}>Lighthouse 95+ Performans</div>
                       </div>
                     </div>
                   </div>

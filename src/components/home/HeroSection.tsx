@@ -21,24 +21,24 @@ export const HeroSection: React.FC = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08]">
               Markanıza yakışan ilk izlenim.{' '}
               <span className="text-zinc-400 font-normal block mt-2">
-                Firmanıza özel web mimarisi, 3–5 günde yayında.
+                Firmanıza özel web mimarisi, 3–7 iş gününde yayında.
               </span>
             </h1>
 
             <p className="text-base sm:text-lg text-zinc-300 max-w-2xl leading-relaxed">
-              Aylarca süren ajans toplantılarına ve sürpriz yenileme faturalarına son. 
-              Hukuk, klinik, sanayi, muhasebe ve emlak sektörüne özel geliştirilmiş 15 prestijli mimariyi inceleyin; 
-              firmanızın kurumsal kimliğiyle 3–5 günde anahtar teslim yayına alalım. <strong>3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi.</strong>
+              Aylarca süren belirsiz ajans süreçlerine ve sürpriz yenileme faturalarına son. 
+              İç mimarlık, hukuk, klinik, sanayi, mali müşavirlik ve emlak sektörüne özel geliştirilmiş 16 prestijli mimariyi inceleyin; 
+              içerik onayınızdan itibaren 3–7 iş gününde anahtar teslim yayına alalım. <strong>İlk 3 yıl hosting ve alan adı dahil sabit fiyat güvencesi.</strong>
             </p>
 
-            {/* Direct Action Button - Electric Indigo / Linear Style */}
+            {/* Direct Action Button */}
             <div className="pt-2">
               <a
                 href="#tasarimlar"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold font-bold text-sm shadow-xl shadow-white/10 transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold text-sm shadow-xl shadow-white/10 transition-all hover:-translate-y-0.5"
               >
-                <span>15 Canlı Mimarimizi İnceleyin</span>
-                <ArrowRight className="w-4 h-4 text-white" />
+                <span>16 Canlı Mimarimizi İnceleyin</span>
+                <ArrowRight className="w-4 h-4 text-black" />
               </a>
             </div>
 
@@ -47,23 +47,23 @@ export const HeroSection: React.FC = () => {
               <div className="flex items-start gap-2.5">
                 <ShieldCheck className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block mb-0.5">3 Yıl Sıfır Ek Masraf</strong>
-                  <span className="text-slate-400">0 ₺ Yenileme Güvencesi</span>
+                  <strong className="text-white block mb-0.5">3 Yıl Hosting Dahil</strong>
+                  <span className="text-slate-400">İlk 3 yıl sıfır yenileme masrafı</span>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block mb-0.5">3–5 Günde Hızlı Lansman</strong>
-                  <span className="text-slate-400">Gecikmeyen dakik teslimat</span>
+                  <strong className="text-white block mb-0.5">3–7 Günde Lansman</strong>
+                  <span className="text-slate-400">İçerik onayından itibaren</span>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
                 <Zap className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block mb-0.5">Görerek Satın Alma</strong>
+                  <strong className="text-white block mb-0.5">Görerek Karar Verin</strong>
                   <span className="text-slate-400">Canlı demoyu önceden test edin</span>
                 </div>
               </div>

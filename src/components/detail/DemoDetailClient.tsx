@@ -247,12 +247,12 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
               onClick={() => setSelectedPackageTier('starter')}
               className={`p-4 rounded-2xl text-left border transition-all ${
                 selectedPackageTier === 'starter'
-                  ? 'bg-brand-600 border-brand-400 text-white shadow-lg'
+                  ? 'bg-[#18181B] border-amber-400 text-white shadow-lg'
                   : 'bg-black border-white/10 text-slate-400 hover:text-white'
               }`}
             >
               <div className="text-xs font-bold uppercase tracking-wider text-slate-300">Başlangıç</div>
-              <div className="text-lg font-black text-white mt-1">16.900 ₺</div>
+              <div className="text-lg font-black text-white mt-1">17.500 ₺</div>
               <div className="text-[11px] opacity-80 mt-0.5">Tek Sayfa (One-Page)</div>
             </button>
 
@@ -260,29 +260,29 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
               onClick={() => setSelectedPackageTier('pro')}
               className={`p-4 rounded-2xl text-left border transition-all ${
                 selectedPackageTier === 'pro'
-                  ? 'bg-brand-600 border-brand-400 text-white shadow-lg ring-2 ring-brand-400/50'
+                  ? 'bg-[#18181B] border-amber-400 text-white shadow-lg ring-2 ring-amber-400/40'
                   : 'bg-black border-white/10 text-slate-400 hover:text-white'
               }`}
             >
               <div className="text-xs font-bold uppercase tracking-wider flex items-center justify-between text-white">
                 <span>Profesyonel</span>
-                <span className="text-[9px] px-1.5 py-0.5 rounded bg-white/20 font-bold">Popüler</span>
+                <span className="text-[9px] px-1.5 py-0.5 rounded bg-amber-400 text-black font-bold">Popüler</span>
               </div>
-              <div className="text-lg font-black text-white mt-1">29.900 ₺</div>
-              <div className="text-[11px] opacity-80 mt-0.5">5 Sayfalı Kurumsal</div>
+              <div className="text-lg font-black text-white mt-1">32.500 ₺</div>
+              <div className="text-[11px] opacity-80 mt-0.5">10 Sayfaya Kadar Kurumsal</div>
             </button>
 
             <button
               onClick={() => setSelectedPackageTier('enterprise')}
               className={`p-4 rounded-2xl text-left border transition-all ${
                 selectedPackageTier === 'enterprise'
-                  ? 'bg-brand-600 border-brand-400 text-white shadow-lg'
+                  ? 'bg-[#18181B] border-amber-400 text-white shadow-lg'
                   : 'bg-black border-white/10 text-slate-400 hover:text-white'
               }`}
             >
               <div className="text-xs font-bold uppercase tracking-wider text-slate-300">Kurumsal</div>
               <div className="text-lg font-black text-white mt-1">59.900 ₺</div>
-              <div className="text-[11px] opacity-80 mt-0.5">10–15+ Sayfa & 2 Dil</div>
+              <div className="text-[11px] opacity-80 mt-0.5">20 Sayfaya Kadar & 2 Dil</div>
             </button>
           </div>
 
