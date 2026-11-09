@@ -10,7 +10,7 @@ import {
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-black border-b border-white/[0.08] relative overflow-hidden">
+    <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Asymmetrical Layout with Clean, Empty Right Side as requested */}

@@ -44,7 +44,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
   };
 
   return (
-    <section id="neden-biz" className="py-20 bg-black border-b border-white/[0.08] relative overflow-hidden">
+    <section id="neden-biz" className="py-20 bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

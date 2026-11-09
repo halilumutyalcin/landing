@@ -38,7 +38,7 @@ export const DemoGrid: React.FC<DemoGridProps> = ({ initialSector = 'all' }) => 
   };
 
   return (
-    <section id="tasarimlar" className="py-20 bg-black border-b border-white/[0.08]">
+    <section id="tasarimlar" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header - Clean & Direct */}

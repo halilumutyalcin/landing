@@ -150,7 +150,7 @@ export const ExtraServicesSection: React.FC = () => {
     : [SERVICE_GROUPS[parseInt(selectedCategory, 10)]];
 
   return (
-    <section id="ek-hizmetler" className="py-20 bg-black border-b border-white/[0.08]">
+    <section id="ek-hizmetler" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

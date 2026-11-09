@@ -43,7 +43,7 @@ export const HowItWorksSection: React.FC = () => {
   ];
 
   return (
-    <section id="nasil-calisir" className="py-24 bg-black border-b border-white/[0.08] relative overflow-hidden">
+    <section id="nasil-calisir" className="py-24 bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header - Human & Direct */}
