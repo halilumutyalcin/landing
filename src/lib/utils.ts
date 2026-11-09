@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { siteConfig } from '@/config/site.config';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -19,7 +20,7 @@ export function generateWhatsAppUrl(options: {
   packageName?: string;
   customMessage?: string;
 }): string {
-  const phone = options.phone || '905550000000';
+  const phone = options.phone || siteConfig.whatsappNumber;
   let text = '';
 
   if (options.customMessage) {

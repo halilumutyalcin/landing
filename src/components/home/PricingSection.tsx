@@ -211,7 +211,10 @@ export const PricingSection: React.FC = () => {
 
             {billingMode === 'onetime' && showTaxDeduction && (
               <p className="text-xs text-amber-400 mt-1 font-medium animate-in fade-in duration-200">
-                %20 KDV mahsubu ve kurumlar/gelir vergisi matrah indirimi sonrası tahmini net maliyet simülasyonudur. Kesin vergi etkisi için mali müşavirinize danışınız.
+                %20 KDV mahsubu ve kurumlar/gelir vergisi matrah indirimi sonrası tahmini net maliyet simülasyonudur. Kesin vergi etkisi için mali müşavirinize danışınız.{' '}
+                <a href="#vergi-avantaji" className="underline font-bold text-white hover:text-amber-300 ml-1">
+                  Detaylı Tabloyu İnceleyin ↓
+                </a>
               </p>
             )}
           </div>

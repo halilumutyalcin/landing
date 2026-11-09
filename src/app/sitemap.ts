@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // 2. Dynamic sector showcase detail routes (15 Designs)
+  // 2. Dynamic sector showcase detail routes (16 Designs)
   const demoRoutes: MetadataRoute.Sitemap = DEMO_CATALOG.map((demo) => ({
     url: `${baseUrl}/tasarimlar/${demo.slug}`,
     lastModified: new Date(),

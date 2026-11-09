@@ -33,7 +33,7 @@ export const TaxCalculatorSection: React.FC = () => {
               onClick={() => setCompanyType('ltd')}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
                 companyType === 'ltd'
-                  ? 'bg-white text-black font-bold shadow-md'
+                  ? 'bg-white text-black font-semibold shadow-md'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -44,7 +44,7 @@ export const TaxCalculatorSection: React.FC = () => {
               onClick={() => setCompanyType('individual')}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
                 companyType === 'individual'
-                  ? 'bg-white text-black font-bold shadow-md'
+                  ? 'bg-white text-black font-semibold shadow-md'
                   : 'text-slate-400 hover:text-white'
               }`}
             >

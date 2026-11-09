@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import { HeroSection } from '@/components/home/HeroSection';
 import { DemoGrid } from '@/components/home/DemoGrid';
 import { PricingSection } from '@/components/home/PricingSection';
+import { TaxCalculatorSection } from '@/components/home/TaxCalculatorSection';
 import { HowItWorksSection } from '@/components/home/HowItWorksSection';
 import { WhyUsUnifiedSection } from '@/components/home/WhyUsUnifiedSection';
 import { ExtraServicesSection } from '@/components/home/ExtraServicesSection';
@@ -34,6 +35,9 @@ export default function HomePage() {
 
       {/* 4. ŞEFFAF PAKETLER & 3 NET FİYAT (Pazarlama Stratejisi & Vergi İndirimi Entegre) */}
       <PricingSection />
+
+      {/* 4.1. ŞİRKETLER İÇİN GERÇEK NET MALİYET & VERGİ HESABI (LTD/A.Ş. & ŞAHIS) */}
+      <TaxCalculatorSection />
 
       {/* 5. NEDEN BİZ? - 3'LÜ İNTERAKTİF BİRLEŞİK SEKME (Geleneksel Ajans vs. Biz / WP vs. Next.js / İlkeler) */}
       <WhyUsUnifiedSection />

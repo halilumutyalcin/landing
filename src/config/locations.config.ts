@@ -11,7 +11,6 @@ export interface LocationSeoItem {
   focusSectors: string[];
   localGuarantee: string;
   targetKeywords: string[];
-  sampleClients: string[];
 }
 
 export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
@@ -28,7 +27,6 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     focusSectors: ['Özel Sağlık & Diş Klinikleri', 'Hukuk & Avukatlık Ofisleri', 'Otomotiv Servis & Ekspertiz', 'Mali Müşavirlik'],
     localGuarantee: 'Kartal merkezli işletmeler için aynı gün içinde ofisinizde keşif ve demo sunumu imkanı.',
     targetKeywords: ['kartal web tasarım', 'kartal web sitesi yapan yerler', 'kartal kurumsal web tasarım', 'soğanlık web yazılım'],
-    sampleClients: ['Kartal Hukuk Ortaklığı', 'Soğanlık Diş Polikliniği', 'Kartal Sanayi Araç Bakım']
   },
   {
     id: 'maltepe',
@@ -36,14 +34,13 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     name: 'Maltepe',
     side: 'anadolu',
     title: 'Maltepe Web Tasarım & Dijital Prestij Ajansı | MediWeb',
-    metaDescription: 'Maltepe, Küçükyalı ve Bağdat Caddesi aksındaki kurumsal işletmelere özel 0.4 saniyede açılan modern web siteleri. 3 yıl 0 ₺ yenileme güvencesi.',
+    metaDescription: 'Maltepe, Küçükyalı ve Bağdat Caddesi aksındaki kurumsal işletmelere özel Lighthouse 95+ performans optimizasyonlu modern web siteleri. 3 yıl 0 ₺ yenileme güvencesi.',
     heroHeadline: 'Maltepe & Küçükyalı İçin Yeni Nesil Web Mimarisi',
     heroSubheadline: 'Bölgedeki prestijli avukatlar, sağlık poliklinikleri ve danışmanlık şirketleri için haftalarca sürmeyen dakik web çözümleri.',
     commercialHubs: ['Küçükyalı İş Merkezleri', 'Maltepe Sahil & Çarşı', 'Bağdat Caddesi Giriş Aksı', 'Altayçeşme & Zümrütevler'],
     focusSectors: ['Estetik & Diş Klinikleri', 'Hukuk & Arabuluculuk', 'İnşaat & Mimarlık', 'Danışmanlık'],
     localGuarantee: 'Maltepe ve Küçükyalı firmalarına yerinde analiz ve hızlı içerik toplama desteği.',
     targetKeywords: ['maltepe web tasarım', 'küçükyalı web sitesi', 'maltepe web ajansı', 'maltepe kurumsal site'],
-    sampleClients: ['Maltepe Ortodonti Merkezi', 'Küçükyalı Hukuk Bürosu', 'Maltepe İç Mimarlık']
   },
   {
     id: 'tuzla',
@@ -58,7 +55,6 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     focusSectors: ['Sanayi, İmalatçı & Fabrikalar', 'Lojistik & Depolama', 'Metal & Makine İmalatı', 'Dış Ticaret'],
     localGuarantee: 'Tuzla OSB bölgelerindeki üretim tesislerinize doğrudan yerinde ziyaret ve proje planlama.',
     targetKeywords: ['tuzla web tasarım', 'tuzla osb web sitesi', 'tuzla sanayi web yazılım', 'tuzla tersane web tasarım'],
-    sampleClients: ['Tuzla Dış Ticaret A.Ş.', 'İDOSB Kimya İmalat', 'Tuzla Tersane Tedarik']
   },
   {
     id: 'kadikoy',
@@ -73,7 +69,6 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     focusSectors: ['Sağlık & Psikiyatri / Klinik', 'Hukuk & Patent Ofisleri', 'İç Mimarlık & Portfolyo', 'Kreatif Ajanslar'],
     localGuarantee: 'Kadıköy ve Bağdat Caddesi işletmelerine aynı gün yerinde kahve eşliğinde demo sunumu.',
     targetKeywords: ['kadıköy web tasarım', 'kozyatağı web yazılım', 'bağdat caddesi web ajansı', 'kadıköy hazır web sitesi'],
-    sampleClients: ['Kozyatağı Psikoterapi', 'Caddebostan Gülüş Tasarımı', 'Kadıköy Mimarlık Atölyesi']
   },
   {
     id: 'atasehir',
@@ -88,7 +83,6 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     focusSectors: ['Mali Müşavir & YMM', 'Kurumsal Hukuk & M&A', 'Yatırım & Gayrimenkul', 'Yazılım & Teknoloji'],
     localGuarantee: 'Ataşehir plazalarındaki ofisinizde 30 dakikalık canlı mimari demosu.',
     targetKeywords: ['ataşehir web tasarım', 'finans merkezi web sitesi', 'batı ataşehir web ajansı', 'ataşehir kurumsal web yazılım'],
-    sampleClients: ['Ataşehir Denetim & YMM', 'Finans Merkezi Danışmanlık', 'Ataşehir Yatırım Gayrimenkul']
   },
   {
     id: 'umraniye',
@@ -103,7 +97,6 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     focusSectors: ['Sanayi & Yedek Parça', 'Mobilya & İç Mekan', 'Kalıp & Talaşlı İmalat', 'Toptan Ticaret'],
     localGuarantee: 'İMES ve Dudullu sanayi bölgelerine yerinde teknik keşif hizmeti.',
     targetKeywords: ['ümraniye web tasarım', 'imes web sitesi', 'dudullu osb web tasarım', 'modoko web sitesi'],
-    sampleClients: ['İMES Makine Sanayi', 'Dudullu Plastik Kalıp', 'Modoko Tasarım Mobilya']
   },
   {
     id: 'pendik',
@@ -118,7 +111,6 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     focusSectors: ['İç Mimarlık & Tasarım', 'Sanayi & İmalat', 'Özel Klinik & Sağlık', 'Hukuk & Danışmanlık'],
     localGuarantee: 'Pendik ve Kurtköy firmaları için sözleşmeli ve taahhütlü 3-7 iş gününde teslimat.',
     targetKeywords: ['pendik web tasarım', 'kurtköy web yazılım', 'pendik web sitesi yapanlar', 'pendik kurumsal ajans'],
-    sampleClients: ['Kurtköy Lojistik A.Ş.', 'Pendik Marina Yat Servis', 'Kaynarca Tıp Merkezi']
   },
   {
     id: 'sisli',
@@ -133,7 +125,6 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     focusSectors: ['Sağlık Turizmi & Estetik', 'Ceza & Ticaret Hukuku', 'Yeminli Mali Müşavirlik', 'Moda & Tasarım'],
     localGuarantee: 'Şişli merkezli ofisler için aynı gün yerinde yüz yüze proje değerlendirme.',
     targetKeywords: ['şişli web tasarım', 'mecidiyeköy web sitesi', 'bomonti web ajansı', 'şişli klinik web tasarım'],
-    sampleClients: ['Nişantaşı Estetik Cerrahi', 'Mecidiyeköy Hukuk Ortaklığı', 'Bomonti Danışmanlık']
   },
   {
     id: 'levent',
@@ -148,7 +139,6 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     focusSectors: ['Kurumsal Şirketler & Holdingler', 'M&A & Şirketler Hukuku', 'Yönetim Danışmanlığı', 'Yatırım'],
     localGuarantee: 'Levent bölgesindeki kurumsal şirket merkezlerine yerinde sunum ve gizlilik sözleşmeli çalışma.',
     targetKeywords: ['levent web tasarım', '4 levent web sitesi', 'büyükdere caddesi web yazılım', 'levent kurumsal ajans'],
-    sampleClients: ['Levent Kurumsal Danışmanlık', '4. Levent Hukuk Bürosu', 'Sapphire Varlık Yönetimi']
   },
   {
     id: 'besiktas',
@@ -163,7 +153,6 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     focusSectors: ['Estetik & Diş Klinikleri', 'Çağdaş Mimarlık', 'Hukuk & Arabuluculuk', 'Gastronomi & Butik Markalar'],
     localGuarantee: 'Beşiktaş merkezli işletmelere özel birebir mimari tasarım oturumu.',
     targetKeywords: ['beşiktaş web tasarım', 'etiler web sitesi', 'akatlar kurumsal web', 'beşiktaş web ajansı'],
-    sampleClients: ['Etiler Diş Kliniği', 'Akaretler Mimarlık', 'Barbaros Hukuk']
   },
   {
     id: 'bakirkoy',
@@ -178,7 +167,6 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     focusSectors: ['Medikal Poliklinik & Diş', 'Avukatlık Büroları', 'Dış Ticaret & Gümrük', 'Gayrimenkul'],
     localGuarantee: 'Bakırköy ve Florya işletmelerine yerinde analiz ve hızlı içerik onboarding desteği.',
     targetKeywords: ['bakırköy web tasarım', 'florya web sitesi', 'yeşilköy web ajansı', 'incirli klinik web sitesi'],
-    sampleClients: ['Florya Sağlık Merkezi', 'İncirli Hukuk Ortaklığı', 'Yeşilköy Dış Ticaret']
   },
   {
     id: 'basaksehir',
@@ -193,7 +181,6 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     focusSectors: ['Sanayi & İmalatçı', 'Mobilya & Dekorasyon', 'Toptan & İhracat', 'İnşaat Taahhüt'],
     localGuarantee: 'İkitelli OSB ve Masko firmalarına üretim tesisinizde yerinde proje başlatma.',
     targetKeywords: ['başakşehir web tasarım', 'ikitelli osb web sitesi', 'masko web tasarım', 'ikitelli sanayi web yazılım'],
-    sampleClients: ['İkitelli Metal Sanayi', 'Masko Tasarım Mobilya', 'Başakşehir İnşaat']
   },
   {
     id: 'maslak',
@@ -208,7 +195,6 @@ export const LOCATIONS_SEO_DATA: LocationSeoItem[] = [
     focusSectors: ['Teknoloji & SaaS', 'Büyük Ölçekli Hukuk Ortaklıkları', 'Varlık Yönetimi & Fonlar', 'İhracat & İmalat'],
     localGuarantee: 'Maslak bölgesindeki plazalara doğrudan kurumsal sunum ve NDA (gizlilik) güvencesi.',
     targetKeywords: ['maslak web tasarım', 'maslak web ajansı', 'maslak plaza kurumsal site', 'vadi istanbul web tasarım'],
-    sampleClients: ['Maslak Finans Danışmanlık', 'Spine Tower Hukuk', 'Vadi İstanbul Yazılım']
   }
 ];
 

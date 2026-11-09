@@ -133,7 +133,7 @@ export const DEMO_CATALOG: DemoItem[] = [
       headline: 'Ağırbaşlı ve Kararlı Hukuki Duruş',
       subheadline: 'Büyük ölçekli ticari davalar ve uluslararası müvekkiller için özel tasarlandı.',
       stats: [
-        { label: 'Dönüşüm Oranı', value: '+%40' },
+        { label: 'Müvekkil İletişimi', value: 'Doğrudan Hat' },
         { label: 'Lighthouse', value: '98' },
         { label: 'Özelleştirme', value: 'Sınırsız' }
       ]
@@ -203,7 +203,7 @@ export const DEMO_CATALOG: DemoItem[] = [
       headline: 'Güven Veren Dijital Klinik Temsili',
       subheadline: 'Kliniğinizin steril, modern ve güvenilir ortamını hastalarınıza mevzuata uygun şekilde hissettirin.',
       stats: [
-        { label: 'Randevu Dönüşümü', value: '+%55' },
+        { label: 'Randevu Akışı', value: 'Online Form' },
         { label: 'Lighthouse', value: '99' },
         { label: 'Sağlık Turizmi', value: 'Uyumlu' }
       ]
@@ -271,7 +271,7 @@ export const DEMO_CATALOG: DemoItem[] = [
       headline: 'Kişiselleştirilmiş Hekim Vitrini',
       subheadline: 'Hastalarınıza sıcak, profesyonel ve güven dolu bir ilk izlenim sunun.',
       stats: [
-        { label: 'Yükleme', value: '0.5s' },
+        { label: 'Sayfa Açılışı', value: 'Global CDN' },
         { label: 'WhatsApp', value: 'Anlık' },
         { label: 'Lighthouse', value: '100' }
       ]
@@ -307,7 +307,7 @@ export const DEMO_CATALOG: DemoItem[] = [
       headline: 'Talaşlı İmalat ve Endüstriyel Üretimde Güven Veren Vitrin',
       subheadline: 'Yurt içi ve yurt dışı kurumsal alıcıların aradığı teknik yeterlilik ve disiplin.',
       stats: [
-        { label: 'Teklif Talebi', value: '+%65' },
+        { label: 'Teklif Talebi', value: 'CAD / Form' },
         { label: 'İhracat Uyumu', value: 'Eksiksiz' },
         { label: 'Hız', value: '98' }
       ]
@@ -445,7 +445,7 @@ export const DEMO_CATALOG: DemoItem[] = [
       headline: 'Veri ve Hesaplama Odaklı Kurumsal Güç',
       subheadline: 'Ziyaretçilerinizi sitenizde tutan faydalı hesaplama modülleriyle öne çıkın.',
       stats: [
-        { label: 'Kullanım Süresi', value: '+%70' },
+        { label: 'Vergi Takvimi', value: 'Entegre' },
         { label: 'Lighthouse', value: '98' },
         { label: 'Hesaplayıcı', value: 'Dahili' }
       ]
@@ -480,7 +480,7 @@ export const DEMO_CATALOG: DemoItem[] = [
       subheadline: 'Tam tasdik ve KDV iadesi süreçlerinde kurumsal liderlik.',
       stats: [
         { label: 'Prestij', value: 'Kusursuz' },
-        { label: 'Hız', value: '0.7s' },
+        { label: 'Mimari', value: 'Next.js 14' },
         { label: 'Tipografi', value: 'Altın Oran' }
       ]
     }
