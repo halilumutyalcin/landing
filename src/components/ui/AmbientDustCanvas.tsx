@@ -10,15 +10,29 @@ interface Particle {
   vy: number;
   baseVx: number;
   baseVy: number;
-  alpha: number;
+  baseAlpha: number;
   color: string;
+  glowColor: string;
+  hasGlow: boolean;
   wobbleSpeed: number;
   wobbleRadius: number;
   wobbleAngle: number;
 }
 
+interface SmokeTrail {
+  x: number;
+  y: number;
+  radius: number;
+  maxRadius: number;
+  alpha: number;
+  decay: number;
+  vx: number;
+  vy: number;
+}
+
 export const AmbientDustCanvas: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const glowRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -35,18 +49,44 @@ export const AmbientDustCanvas: React.FC = () => {
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
 
-    // Mouse coordinates with smooth lerp
-    let mouse = { x: -1000, y: -1000, targetX: -1000, targetY: -1000, isMoving: false };
+    // Mouse coordinates with smooth lerping
+    let mouse = {
+      x: width / 2,
+      y: height / 2,
+      targetX: width / 2,
+      targetY: height / 2,
+      prevX: width / 2,
+      prevY: height / 2,
+      isMoving: false,
+    };
     let mouseTimeout: NodeJS.Timeout;
 
     const handleMouseMove = (e: MouseEvent) => {
       mouse.targetX = e.clientX;
       mouse.targetY = e.clientY;
       mouse.isMoving = true;
+
+      // Spawn smoke puffs when cursor moves
+      const distMoved = Math.hypot(e.clientX - mouse.prevX, e.clientY - mouse.prevY);
+      if (distMoved > 20 && smokeTrails.length < 24) {
+        smokeTrails.push({
+          x: e.clientX,
+          y: e.clientY,
+          radius: Math.random() * 8 + 6,
+          maxRadius: Math.random() * 28 + 24,
+          alpha: Math.random() * 0.08 + 0.05,
+          decay: Math.random() * 0.003 + 0.002,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: -Math.random() * 0.5 - 0.2, // Gentle upward smoke rise
+        });
+        mouse.prevX = e.clientX;
+        mouse.prevY = e.clientY;
+      }
+
       clearTimeout(mouseTimeout);
       mouseTimeout = setTimeout(() => {
         mouse.isMoving = false;
-      }, 2000);
+      }, 1500);
     };
 
     const handleResize = () => {
@@ -59,23 +99,28 @@ export const AmbientDustCanvas: React.FC = () => {
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
     window.addEventListener('resize', handleResize);
 
-    // Color palette: Elegant warm gold, amber & subtle champagne dust
-    const colors = [
-      'rgba(245, 158, 11, ', // Amber-500
-      'rgba(251, 191, 36, ', // Amber-400
-      'rgba(252, 211, 77, ', // Amber-300
-      'rgba(217, 119, 6, ',  // Amber-600
+    // Warm luxury palette: Amber, Gold, and glowing Champagne
+    const palette = [
+      { color: 'rgba(245, 158, 11, ', glow: 'rgba(245, 158, 11, 0.45)' }, // Amber-500
+      { color: 'rgba(251, 191, 36, ', glow: 'rgba(251, 191, 36, 0.5)' },  // Amber-400
+      { color: 'rgba(252, 211, 77, ', glow: 'rgba(252, 211, 77, 0.4)' },  // Amber-300
+      { color: 'rgba(254, 240, 138, ', glow: 'rgba(254, 240, 138, 0.5)' }, // Gold-200
     ];
 
     let particles: Particle[] = [];
-    const particleCount = Math.min(Math.floor((width * height) / 28000), 45);
+    let smokeTrails: SmokeTrail[] = [];
+
+    // Densified particle count (90 - 130 particles based on viewport)
+    const particleCount = Math.min(Math.max(Math.floor((width * height) / 13000), 85), 130);
 
     const initParticles = () => {
       particles = [];
       for (let i = 0; i < particleCount; i++) {
-        const radius = Math.random() * 1.5 + 0.6;
-        const baseVx = (Math.random() - 0.5) * 0.25;
-        const baseVy = -Math.random() * 0.3 - 0.08; // Gentle upward drift like smoke/embers
+        const item = palette[Math.floor(Math.random() * palette.length)];
+        const radius = Math.random() * 2.2 + 0.8;
+        const baseVx = (Math.random() - 0.5) * 0.35;
+        const baseVy = -Math.random() * 0.4 - 0.12; // Natural upward thermal float
+        const hasGlow = Math.random() > 0.45; // ~55% of particles have soft halo glow
 
         particles.push({
           x: Math.random() * width,
@@ -85,10 +130,12 @@ export const AmbientDustCanvas: React.FC = () => {
           vy: baseVy,
           baseVx,
           baseVy,
-          alpha: Math.random() * 0.25 + 0.08, // Very subtle, non-distracting
-          color: colors[Math.floor(Math.random() * colors.length)],
-          wobbleSpeed: Math.random() * 0.015 + 0.005,
-          wobbleRadius: Math.random() * 0.8 + 0.2,
+          baseAlpha: Math.random() * 0.32 + 0.22, // Noticeably more visible & dense
+          color: item.color,
+          glowColor: item.glow,
+          hasGlow,
+          wobbleSpeed: Math.random() * 0.02 + 0.008,
+          wobbleRadius: Math.random() * 1.2 + 0.3,
           wobbleAngle: Math.random() * Math.PI * 2,
         });
       }
@@ -110,59 +157,90 @@ export const AmbientDustCanvas: React.FC = () => {
       ctx.clearRect(0, 0, width, height);
 
       // Smooth mouse lerping
-      mouse.x += (mouse.targetX - mouse.x) * 0.08;
-      mouse.y += (mouse.targetY - mouse.y) * 0.08;
+      mouse.x += (mouse.targetX - mouse.x) * 0.09;
+      mouse.y += (mouse.targetY - mouse.y) * 0.09;
 
-      // Soft ambient flashlight glow following the mouse behind surfaces
-      if (mouse.x > -500 && mouse.y > -500) {
-        const glow = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 380);
-        glow.addColorStop(0, 'rgba(245, 158, 11, 0.038)');
-        glow.addColorStop(0.5, 'rgba(245, 158, 11, 0.012)');
-        glow.addColorStop(1, 'rgba(0, 0, 0, 0)');
-        ctx.fillStyle = glow;
-        ctx.fillRect(0, 0, width, height);
+      // Update GPU-accelerated CSS ambient glow position (ZERO Mach banding)
+      if (glowRef.current) {
+        glowRef.current.style.transform = `translate3d(${mouse.x - 240}px, ${mouse.y - 240}px, 0)`;
+        glowRef.current.style.opacity = mouse.isMoving ? '1' : '0.45';
       }
 
-      // Update & draw particles
+      // 1. Draw subtle smoke trail wisps (smooth dispersion)
+      for (let i = smokeTrails.length - 1; i >= 0; i--) {
+        const s = smokeTrails[i];
+        s.radius += (s.maxRadius - s.radius) * 0.04;
+        s.alpha -= s.decay;
+        s.x += s.vx;
+        s.y += s.vy;
+
+        if (s.alpha <= 0.004) {
+          smokeTrails.splice(i, 1);
+          continue;
+        }
+
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(245, 158, 11, ${s.alpha.toFixed(3)})`;
+        ctx.fill();
+      }
+
+      // 2. Draw dense amber dust particles
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
 
-        // Gentle sinusoidal wobble
+        // Sinusoidal ambient wobble
         p.wobbleAngle += p.wobbleSpeed;
         const wobbleX = Math.cos(p.wobbleAngle) * p.wobbleRadius;
         const wobbleY = Math.sin(p.wobbleAngle) * p.wobbleRadius;
 
-        // Mouse disturbance (Smoke / Dust dispersion effect)
+        // Mouse disturbance force (Natural smoke/dust dispersion)
         const dx = p.x - mouse.x;
         const dy = p.y - mouse.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        const maxDist = 140;
+        const dist = Math.hypot(dx, dy);
+        const maxDist = 160;
 
+        let proximityBoost = 0;
         if (dist < maxDist && dist > 0) {
-          const force = (1 - dist / maxDist) * 1.2;
-          p.vx += (dx / dist) * force * 0.6;
-          p.vy += (dy / dist) * force * 0.6;
+          const force = (1 - dist / maxDist) * 1.5;
+          p.vx += (dx / dist) * force * 0.7;
+          p.vy += (dy / dist) * force * 0.7;
+          proximityBoost = (1 - dist / maxDist) * 0.45; // Brighter near cursor
         }
 
-        // Apply velocity with air resistance damping
-        p.vx += (p.baseVx - p.vx) * 0.03;
-        p.vy += (p.baseVy - p.vy) * 0.03;
+        // Velocity damping back to base upward float
+        p.vx += (p.baseVx - p.vx) * 0.035;
+        p.vy += (p.baseVy - p.vy) * 0.035;
 
-        p.x += (p.vx + wobbleX * 0.15) * (delta * 60);
-        p.y += (p.vy + wobbleY * 0.15) * (delta * 60);
+        p.x += (p.vx + wobbleX * 0.2) * (delta * 60);
+        p.y += (p.vy + wobbleY * 0.2) * (delta * 60);
 
         // Screen wrap-around
-        if (p.x < -10) p.x = width + 10;
-        if (p.x > width + 10) p.x = -10;
-        if (p.y < -10) p.y = height + 10;
-        if (p.y > height + 10) p.y = -10;
+        if (p.x < -15) p.x = width + 15;
+        if (p.x > width + 15) p.x = -15;
+        if (p.y < -15) p.y = height + 15;
+        if (p.y > height + 15) p.y = -15;
 
-        // Draw particle with soft atmospheric halo
+        // Current alpha with proximity illumination
+        const currentAlpha = Math.min(p.baseAlpha + proximityBoost, 0.85);
+
+        // Draw particle
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `${p.color}${p.alpha})`;
+
+        if (p.hasGlow) {
+          ctx.shadowBlur = p.radius * 3.5;
+          ctx.shadowColor = p.glowColor;
+        } else {
+          ctx.shadowBlur = 0;
+        }
+
+        ctx.fillStyle = `${p.color}${currentAlpha.toFixed(2)})`;
         ctx.fill();
       }
+
+      // Reset shadow blur
+      ctx.shadowBlur = 0;
     };
 
     animationFrameId = requestAnimationFrame(render);
@@ -176,11 +254,29 @@ export const AmbientDustCanvas: React.FC = () => {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      aria-hidden="true"
-      className="fixed inset-0 pointer-events-none z-20 w-full h-full"
-      style={{ mixBlendMode: 'screen', opacity: 0.85 }}
-    />
+    <>
+      {/* 1. GPU-Interpolated Smooth Ambient Spotlight (Zero Color Banding) */}
+      <div
+        ref={glowRef}
+        aria-hidden="true"
+        className="fixed top-0 left-0 pointer-events-none z-10 w-[480px] h-[480px] rounded-full will-change-transform"
+        style={{
+          background:
+            'radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, rgba(245, 158, 11, 0.05) 30%, rgba(245, 158, 11, 0.015) 55%, transparent 75%)',
+          filter: 'blur(55px)',
+          mixBlendMode: 'screen',
+          opacity: 0,
+          transition: 'opacity 0.5s ease',
+        }}
+      />
+
+      {/* 2. Denser Amber Dust & Smoke Particle Canvas */}
+      <canvas
+        ref={canvasRef}
+        aria-hidden="true"
+        className="fixed inset-0 pointer-events-none z-20 w-full h-full"
+        style={{ mixBlendMode: 'screen', opacity: 0.95 }}
+      />
+    </>
   );
 };
