@@ -28,12 +28,12 @@ export const TaxCalculatorSection: React.FC = () => {
 
         {/* Company Type Switcher */}
         <div className="flex justify-center mb-8">
-          <div className="bg-[#0A0A0C] p-1.5 rounded-xl flex items-center gap-1">
+          <div className="bg-[#0A0A0C] p-1.5 rounded-xl flex items-center gap-1 border border-white/[0.08]">
             <button
               onClick={() => setCompanyType('ltd')}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
                 companyType === 'ltd'
-                  ? 'bg-white text-black font-bold text-white shadow'
+                  ? 'bg-white text-black font-bold shadow-md'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -44,30 +44,30 @@ export const TaxCalculatorSection: React.FC = () => {
               onClick={() => setCompanyType('individual')}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
                 companyType === 'individual'
-                  ? 'bg-emerald-600 text-white shadow'
+                  ? 'bg-white text-black font-bold shadow-md'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
               <UserCheck className="w-4 h-4" />
-              <span>Şahıs Şirketi (Gelir Vergisi ~%35-40)</span>
+              <span>Şahıs Şirketi (Gelir Vergisi Dilimleri %15–%40)</span>
             </button>
           </div>
         </div>
 
         {/* Tax Table */}
-        <div className="bg-[#0A0A0C] rounded-2xl overflow-hidden shadow-xl mb-8">
+        <div className="bg-[#0A0A0C] rounded-2xl overflow-hidden shadow-xl mb-8 border border-white/[0.08]">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-[#0C0F17] text-slate-400 uppercase text-[11px] font-bold">
+              <thead className="bg-[#0C0F17] text-slate-400 uppercase text-[11px] font-bold border-b border-white/5">
                 <tr>
                   <th className="py-4 px-6">Paket Adı</th>
                   <th className="py-4 px-6">Paket Bedeli</th>
                   <th className="py-4 px-6">+ %20 KDV</th>
                   <th className="py-4 px-6">Ödenen Toplam</th>
-                  <th className="py-4 px-6 text-emerald-400">KDV Mahsubu</th>
-                  <th className="py-4 px-6 text-amber-400">Vergi Tasarrufu</th>
+                  <th className="py-4 px-6 text-zinc-300">KDV Mahsubu</th>
+                  <th className="py-4 px-6 text-amber-400">Vergi Matrahı Tasarrufu</th>
                   <th className="py-4 px-6 text-right font-bold text-white bg-black/40">
-                    Net Efektif Maliyetiniz
+                    Tahmini Net Maliyetiniz
                   </th>
                 </tr>
               </thead>
@@ -79,7 +79,7 @@ export const TaxCalculatorSection: React.FC = () => {
 
                   const taxSaving = companyType === 'ltd'
                     ? row.corporateTaxSaving
-                    : Math.round(row.price * 0.40);
+                    : Math.round(row.price * 0.35);
 
                   return (
                     <tr key={idx} className="hover:bg-white/[0.02] transition-colors">
@@ -89,14 +89,14 @@ export const TaxCalculatorSection: React.FC = () => {
                       <td className="py-5 px-6">{formatCurrency(row.price)}</td>
                       <td className="py-5 px-6 text-slate-400">{formatCurrency(row.kdv)}</td>
                       <td className="py-5 px-6">{formatCurrency(row.totalPaid)}</td>
-                      <td className="py-5 px-6 text-emerald-400">-{formatCurrency(row.kdvDeduction)}</td>
+                      <td className="py-5 px-6 text-zinc-300">-{formatCurrency(row.kdvDeduction)}</td>
                       <td className="py-5 px-6 text-amber-400">-{formatCurrency(taxSaving)}</td>
                       <td className="py-5 px-6 text-right bg-black/40">
-                        <div className="text-base sm:text-lg font-bold text-emerald-400">
+                        <div className="text-base sm:text-lg font-bold text-white">
                           {formatCurrency(effectiveCost)}
                         </div>
-                        <div className="text-[11px] text-slate-400">
-                          %{(100 - (effectiveCost / row.totalPaid) * 100).toFixed(0)} maliyet avantajı
+                        <div className="text-[11px] text-zinc-400">
+                          %{(100 - (effectiveCost / row.totalPaid) * 100).toFixed(0)} tahmini maliyet avantajı
                         </div>
                       </td>
                     </tr>
@@ -108,7 +108,7 @@ export const TaxCalculatorSection: React.FC = () => {
         </div>
 
         {/* Explainers Footer */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-slate-400">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-slate-400 mb-6">
           <div className="p-4 rounded-xl bg-[#0A0A0C] border border-white/[0.08] flex items-start gap-2.5">
             <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
             <div>
@@ -127,6 +127,11 @@ export const TaxCalculatorSection: React.FC = () => {
               <strong className="text-white">Anında E-Fatura:</strong> Siparişiniz onaylandığında kurumsal e-faturanız muhasebe e-postanıza aynı gün iletilir.
             </div>
           </div>
+        </div>
+
+        {/* Mandatory Legal & Tax Disclaimer */}
+        <div className="p-4 rounded-xl bg-zinc-950/60 border border-white/5 text-[11px] text-zinc-400 leading-relaxed text-center">
+          <strong>Yasal Uyarı:</strong> Bu simülasyon, KDV mükellefi olan ve dönem matrahı kârda olan işletmelerin genel Türk vergi mevzuatı çerçevesindeki tahmini nakit akışı avantajını gösterir. Zarar beyan eden işletmelerde, sonraki döneme devreden KDV durumunda veya vergiden muaf meslek mensuplarında fiili nakit etkisi farklılık gösterebilir. Kesin vergi hesaplaması için lütfen mali müşavirinize danışınız.
         </div>
 
       </div>

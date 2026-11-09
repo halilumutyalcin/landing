@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: `Kurumsal Web Tasarım Ajansı & Sektörel Vitrinler | ${siteConfig.name}`,
     template: `%s | ${siteConfig.name}`,
   },
-  description: 'WordPress hantallığına son. Hukuk, klinik, sanayi/imalat ve mali müşavirlere özel 15 canlı web mimarisi. 3–5 günde anahtar teslim kurulum, 3 yıl boyunca sıfır ek masraf güvencesi.',
+  description: 'WordPress hantallığına son. Hukuk, klinik, sanayi/imalat ve mali müşavirlere özel 16 canlı web mimarisi. 3–10 iş gününde anahtar teslim kurulum, 3 yıl boyunca sıfır ek masraf güvencesi.',
   alternates: {
     canonical: `https://${siteConfig.domain}`,
   },
@@ -35,10 +35,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'MediWeb Mimarlık & Geliştirme Ekibi' }],
   creator: 'MediWeb',
-  publisher: 'MediWeb Dijital Çözümler A.Ş.',
+  publisher: 'MediWeb · Şengüller Otomotiv & Bilişim Danışmanlığı',
   openGraph: {
     title: `Kurumsal Web Tasarım Ajansı & Sektörel Vitrinler | ${siteConfig.name}`,
-    description: 'WordPress hantallığına son. Sektörünüze özel geliştirilmiş kurumsal web mimarisi. 3–5 günde anahtar teslim, 3 yıl domain + hosting dahil.',
+    description: 'WordPress hantallığına son. Sektörünüze özel geliştirilmiş kurumsal web mimarisi. 3–10 iş gününde anahtar teslim, 3 yıl domain + hosting dahil.',
     url: `https://${siteConfig.domain}`,
     siteName: siteConfig.name,
     locale: 'tr_TR',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `Kurumsal Web Tasarım Ajansı & Sektörel Vitrinler | ${siteConfig.name}`,
-    description: 'WordPress hantallığına son. 3–5 günde anahtar teslim web mimarisi, 3 yıl domain + hosting fiyata dahil.',
+    description: 'WordPress hantallığına son. 3–10 iş gününde anahtar teslim web mimarisi, 3 yıl domain + hosting fiyata dahil.',
     images: ['/opengraph-image'],
   },
   robots: {

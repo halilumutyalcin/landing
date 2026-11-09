@@ -109,12 +109,12 @@ export default async function Image() {
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <span style={{ fontSize: '12px', color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Açılış Hızı</span>
-              <span style={{ fontSize: '18px', fontWeight: 700, color: '#F8FAFC' }}>&lt; 0.5 Saniye</span>
+              <span style={{ fontSize: '12px', color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Performans</span>
+              <span style={{ fontSize: '18px', fontWeight: 700, color: '#F8FAFC' }}>Lighthouse 95+</span>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <span style={{ fontSize: '12px', color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Teslim Süresi</span>
-              <span style={{ fontSize: '18px', fontWeight: 700, color: '#F8FAFC' }}>3–5 İş Günü</span>
+              <span style={{ fontSize: '18px', fontWeight: 700, color: '#F8FAFC' }}>3–10 İş Günü</span>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <span style={{ fontSize: '12px', color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Altyapı Güvencesi</span>

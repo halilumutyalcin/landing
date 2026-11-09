@@ -169,11 +169,11 @@ export const PricingSection: React.FC = () => {
                       : 'text-zinc-400 hover:text-white'
                   }`}
                 >
-                  Sıfır Peşinatla Başlayın: Esnek Aylık Model
+                  Düşük Kurulum + 12 Ay Taksitli Model
                 </button>
-                {/* Sabit Fiyat Damgası - Sağ Üst Çapraz Rozet */}
+                {/* 12 Ay Taksit Rozeti */}
                 <span className="absolute -top-3 -right-2 px-2 py-0.5 rounded-md text-[9px] font-black uppercase tracking-wider bg-amber-500 text-black border border-amber-300 shadow-md rotate-6 pointer-events-none select-none">
-                  Sabit Fiyat
+                  12 Ay Sonra Mülkiyet Sizin
                 </span>
               </div>
             </div>
@@ -205,17 +205,32 @@ export const PricingSection: React.FC = () => {
               </div>
             ) : (
               <p className="text-xs text-amber-400 font-medium animate-in fade-in duration-200">
-                Peşin bütçe ayırmadan, düşük kurulum bedeli ve sabit fiyat garantisiyle hemen yayına girin.
+                Peşin bütçe ayırmadan, düşük kurulum bedeli ve 12 ay sabit taksitle başlayın. 12 ay sonunda sitenin mülkiyeti ve 3 yıllık hosting tamamen size geçer.
               </p>
             )}
 
             {billingMode === 'onetime' && showTaxDeduction && (
               <p className="text-xs text-amber-400 mt-1 font-medium animate-in fade-in duration-200">
-                %20 KDV mahsubu ve %25–%35 kurumlar/gelir vergisi gider indirimi düşüldükten sonra cebinizden çıkan net tutardır.
+                %20 KDV mahsubu ve kurumlar/gelir vergisi matrah indirimi sonrası tahmini net maliyet simülasyonudur. Kesin vergi etkisi için mali müşavirinize danışınız.
               </p>
             )}
           </div>
         </div>
+
+        {/* 13th-Month Ownership Guarantee Callout for WaaS */}
+        {billingMode === 'waas' && (
+          <div className="max-w-4xl mx-auto mb-10 p-5 rounded-2xl bg-[#0A0A0C] border border-amber-500/30 flex items-start gap-4 text-xs text-zinc-300 shadow-2xl">
+            <ShieldCheck className="w-6 h-6 text-amber-400 shrink-0 mt-0.5" />
+            <div className="space-y-1.5">
+              <strong className="text-white block font-bold text-sm">
+                13. Ay Güvencesi: Asla Rehin, Kilit veya Zorunlu Abonelik Yok
+              </strong>
+              <p className="text-zinc-300 leading-relaxed">
+                12 aylık taahhüt tamamlandığında sitenin tüm mülkiyeti ve 3 yıllık barındırma hakkı size aittir. 13. aydan itibaren zorunlu aylık ödeme durur; dilerseniz aylık teknik bakım hizmetini sonlandırabilir veya isteğe bağlı sürdürebilirsiniz. Siteniz asla kapatılmaz veya rehin tutulmaz.
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* 3 Packages Cards - Pure Background Separation, Zero Borders */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-14">
@@ -257,7 +272,7 @@ export const PricingSection: React.FC = () => {
               >
                 {/* Popular Ribbon - Yüksek Okunabilirlik ve Kontrast */}
                 {isPro && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black text-[11px] font-black tracking-wide shadow-xl border border-white/20 select-none">
+                  <div className="absolute text-center -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black text-[11px] font-black tracking-wide shadow-xl border border-white/20 select-none">
                     En Çok Tercih Edilen Paket
                   </div>
                 )}
@@ -307,15 +322,20 @@ export const PricingSection: React.FC = () => {
                     </div>
 
                     {billingMode === 'waas' ? (
-                      <div className="text-xs text-zinc-300 font-medium mt-2 flex items-center gap-1.5 pt-2 border-t border-white/5">
-                        <ShieldCheck className="w-4 h-4 shrink-0" />
-                        <span>12 Ay Taahhütlü · Barındırma, Bakım & Güncelleme Dahil</span>
+                      <div className="text-xs text-zinc-300 font-medium mt-2 flex flex-col gap-1 pt-2 border-t border-white/5">
+                        <div className="flex items-center gap-1.5 text-amber-400 font-semibold">
+                          <ShieldCheck className="w-4 h-4 shrink-0" />
+                          <span>12 Ay Taahhütlü · Sonrasında Aylık Ödeme Yok</span>
+                        </div>
+                        <p className="text-[11px] text-zinc-400 leading-normal">
+                          12 ay sonunda sitenin tüm mülkiyeti ve 3 yıllık hosting hakkı size devredilir.
+                        </p>
                       </div>
                     ) : (
                       <>
                         {showTaxDeduction && (
                           <div className="text-[11px] text-amber-400 mt-1 font-semibold">
-                            Gider gösterildiğinde %35-40 net tasarruf
+                            Tahmini net maliyet simülasyonu (Mali müşavirinize danışınız)
                           </div>
                         )}
                         <div className="text-xs text-zinc-300 font-medium mt-2 flex items-center gap-1.5 pt-2 border-t border-white/5">
@@ -691,7 +711,9 @@ export const PricingSection: React.FC = () => {
             </div>
 
             <a
-              href="https://wa.me/905550000000?text=Merhaba%20MediWeb!%20Özel%20yazılım%20ve%20kurumsal%20entegrasyon%20projemiz%20için%20mimari%20değerlendirme%20ve%20teklif%20almak%20istiyoruz."
+              href={generateWhatsAppUrl({
+                packageName: 'Özel Yazılım & Kurumsal Entegrasyon Mimarisi',
+              })}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold text-xs sm:text-sm whitespace-nowrap transition-all flex items-center justify-center gap-2.5 shrink-0 shadow-lg shadow-white/10"

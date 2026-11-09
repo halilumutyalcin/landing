@@ -21,14 +21,14 @@ export const HeroSection: React.FC = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08]">
               Markanıza yakışan ilk izlenim.{' '}
               <span className="text-zinc-400 font-normal block mt-2">
-                Firmanıza özel web mimarisi, 3–7 iş gününde yayında.
+                Firmanıza özel web mimarisi, paketinize göre 3–10 iş gününde yayında.
               </span>
             </h1>
 
             <p className="text-base sm:text-lg text-zinc-300 max-w-2xl leading-relaxed">
               Aylarca süren belirsiz ajans süreçlerine ve sürpriz yenileme faturalarına son. 
               İç mimarlık, hukuk, klinik, sanayi, mali müşavirlik ve emlak sektörüne özel geliştirilmiş 16 prestijli mimariyi inceleyin; 
-              içerik onayınızdan itibaren 3–7 iş gününde anahtar teslim yayına alalım. <strong>İlk 3 yıl hosting ve alan adı dahil sabit fiyat güvencesi.</strong>
+              içerik onayınızdan itibaren paketinize göre 3–10 iş gününde anahtar teslim yayına alalım. <strong>İlk 3 yıl hosting ve alan adı dahil sabit fiyat güvencesi.</strong>
             </p>
 
             {/* Direct Action Button */}
@@ -55,7 +55,7 @@ export const HeroSection: React.FC = () => {
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block mb-0.5">3–7 Günde Lansman</strong>
+                  <strong className="text-white block mb-0.5">3–10 İş Gününde Lansman</strong>
                   <span className="text-slate-400">İçerik onayından itibaren</span>
                 </div>
               </div>
@@ -71,42 +71,42 @@ export const HeroSection: React.FC = () => {
 
           </div>
 
-          {/* Right Column: Live Engineering Metric Badge */}
+          {/* Right Column: Corporate Engineering Standards Card */}
           <div className="hidden lg:block lg:col-span-4">
             <div className="bg-[#0A0A0C] border border-white/[0.08] rounded-2xl p-6 space-y-5 shadow-2xl relative">
               <div className="flex items-center justify-between pb-4 border-b border-white/5">
                 <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
                   <span className="text-xs font-mono font-bold text-white uppercase tracking-wider">
-                    Sistem Durumu: Canlı
+                    Mühendislik Standartları
                   </span>
                 </div>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-slate-400">
-                  v3.1 Production
+                  Pendik / İstanbul
                 </span>
               </div>
 
               <div className="space-y-3 font-mono text-xs">
                 <div className="flex items-center justify-between p-3 rounded-xl bg-black/50 border border-white/5">
                   <span className="text-slate-400">Lighthouse Skoru</span>
-                  <span className="text-emerald-400 font-bold">98 / 100</span>
+                  <span className="text-white font-bold">95+ (Demo Ortalaması)</span>
                 </div>
                 <div className="flex items-center justify-between p-3 rounded-xl bg-black/50 border border-white/5">
-                  <span className="text-slate-400">Barındırma &amp; Alan Adı</span>
-                  <span className="text-amber-400 font-bold">İlk 3 Yıl 0 ₺</span>
+                  <span className="text-slate-400">Mevzuat Uyumu</span>
+                  <span className="text-amber-400 font-bold">TBB, Sağlık &amp; TÜRMOB</span>
                 </div>
                 <div className="flex items-center justify-between p-3 rounded-xl bg-black/50 border border-white/5">
-                  <span className="text-slate-400">Canlı Mimari Havuzu</span>
-                  <span className="text-white font-bold">16 Çözüm</span>
+                  <span className="text-slate-400">Barındırma &amp; SSL</span>
+                  <span className="text-white font-bold">İlk 3 Yıl 0 ₺ (Dahil)</span>
                 </div>
                 <div className="flex items-center justify-between p-3 rounded-xl bg-black/50 border border-white/5">
-                  <span className="text-slate-400">Operasyon Merkezi</span>
-                  <span className="text-white font-bold">Pendik / İstanbul</span>
+                  <span className="text-slate-400">Teslimat Güvencesi</span>
+                  <span className="text-white font-bold">Sözleşmeli 3–10 İş Günü</span>
                 </div>
               </div>
 
               <div className="pt-2 text-[11px] text-slate-400 leading-relaxed">
-                Şengüller Otomotiv &amp; Bilişim altyapısıyla geliştirilmiş, regülasyonlara duyarlı kurumsal web platformu.
+                Şengüller Otomotiv &amp; Bilişim Danışmanlığı altyapısıyla geliştirilmiş, regülasyonlara duyarlı kurumsal web platformu.
               </div>
             </div>
           </div>

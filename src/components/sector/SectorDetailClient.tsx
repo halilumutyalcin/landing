@@ -168,7 +168,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
                 {sector.name} İçin Canlı Demolar
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 mt-1">
-                Hayal satmıyoruz; beğendiğiniz tasarımı seçtiğinizde 3–5 gün içinde logonuz ve içeriklerinizle canlıya alıyoruz.
+                Hayal satmıyoruz; beğendiğiniz tasarımı seçtiğinizde 3–10 iş gününde logonuz ve içeriklerinizle canlıya alıyoruz.
               </p>
             </div>
 
@@ -176,7 +176,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
               href="/tasarimlar"
               className="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:text-zinc-300 font-bold self-start md:self-auto"
             >
-              <span>Tüm 15 Tasarımı Gör</span>
+              <span>Tüm 16 Mimarimizi Gör</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

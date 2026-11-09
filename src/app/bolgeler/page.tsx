@@ -7,7 +7,7 @@ import { MapPin, ArrowRight, ShieldCheck, Zap, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'İstanbul Hizmet Bölgelerimiz — İlçe Bazlı Kurumsal Web Mimarisi | MediWeb',
-  description: 'Kartal, Maltepe, Tuzla, Kadıköy, Ataşehir, Şişli, Levent ve Maslak başta olmak üzere İstanbul’un tüm ana ticaret merkezlerine özel 3–5 günde teslim kurumsal web siteleri.',
+  description: 'Kartal, Maltepe, Tuzla, Kadıköy, Ataşehir, Şişli, Levent ve Maslak başta olmak üzere İstanbul’un tüm ana ticaret merkezlerine özel 3–10 iş gününde teslim kurumsal web siteleri.',
   alternates: {
     canonical: `https://${siteConfig.domain}/bolgeler`,
   },
@@ -39,7 +39,7 @@ export default function BolgelerIndexPage() {
           </h1>
 
           <p className="text-base text-slate-300 leading-relaxed">
-            Haftalarca süren ajans toplantılarını unutun. İstanbul’un ana ticaret akslarındaki işletmeler için 3–5 günde canlıda, <strong>3 yıl boyunca sıfır ek masraf güvencesiyle</strong> çalışan modern web vitrinleri inşa ediyoruz.
+            Haftalarca süren ajans toplantılarını unutun. İstanbul’un ana ticaret akslarındaki işletmeler için 3–10 iş gününde canlıda, <strong>3 yıl boyunca sıfır ek masraf güvencesiyle</strong> çalışan modern web vitrinleri inşa ediyoruz.
           </p>
         </div>
 

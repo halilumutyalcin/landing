@@ -69,11 +69,11 @@ export const ProposalModal: React.FC<ProposalModalProps> = ({
   const handleWhatsAppSubmit = () => {
     const text = `Merhaba MediWeb! Landing page üzerinden teklif konfigürasyonu oluşturdum:
 - Sektörüm: ${selectedSector}
-- Seçtiğim Paket: ${pkg.name} (${billingModel === 'waas' ? `Esnek Aylık Model: ${pkg.waasSetupFormatted} Kurulum + ${pkg.waasMonthlyFormatted}/ay` : `${pkg.priceFormatted} + KDV`})
-- Ödeme Modeli: ${billingModel === 'waas' ? 'Sıfır Peşinatla Başlayın: Esnek Aylık Model (Sabit Taksit)' : 'Tek Seferlik (3 Yıl Boyunca Sıfır Ek Masraf: 0 ₺ Yenileme Güvencesi)'}
+- Seçtiğim Paket: ${pkg.name} (${billingModel === 'waas' ? `12 Ay Taksitli Model: ${pkg.waasSetupFormatted} Kurulum + ${pkg.waasMonthlyFormatted}/ay` : `${pkg.priceFormatted} + KDV`})
+- Ödeme Modeli: ${billingModel === 'waas' ? 'Düşük Kurulum + 12 Ay Taksitli Model' : 'Tek Seferlik (3 Yıl Hosting & Domain Dahil)'}
 - Ek Hizmetler: ${selectedExtras.length > 0 ? selectedExtras.join(', ') : 'Seçilmedi'}
 - Şirket Türü: ${companyType === 'ltd' ? 'LTD./A.Ş.' : 'Şahıs İşletmesi'}
-- Tahmini Net Başlangıç Maliyeti: ${formatCurrency(netEffectiveCost)} (KDV Mahsubu Dahil)${billingModel === 'waas' ? ` + ${pkg.waasMonthlyFormatted}/ay` : ''}
+- Tahmini Net Başlangıç Maliyeti: ${formatCurrency(netEffectiveCost)} (Tahmini Vergi İndirimi Sonrası)${billingModel === 'waas' ? ` + ${pkg.waasMonthlyFormatted}/ay` : ''}
 
 Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
 
@@ -245,7 +245,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
                 <button
                   onClick={() => setCompanyType('ltd')}
                   className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-all ${
-                    companyType === 'ltd' ? 'bg-cyan-600 text-white' : 'text-slate-400'
+                    companyType === 'ltd' ? 'bg-white text-black font-bold shadow' : 'text-slate-400 hover:text-white'
                   }`}
                 >
                   LTD. / A.Ş. (%25)
@@ -253,10 +253,10 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
                 <button
                   onClick={() => setCompanyType('individual')}
                   className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-all ${
-                    companyType === 'individual' ? 'bg-emerald-600 text-white' : 'text-slate-400'
+                    companyType === 'individual' ? 'bg-white text-black font-bold shadow' : 'text-slate-400 hover:text-white'
                   }`}
                 >
-                  Şahıs (%40)
+                  Şahıs (~%35)
                 </button>
               </div>
             </div>

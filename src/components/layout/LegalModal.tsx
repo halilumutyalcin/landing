@@ -16,7 +16,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
     kvkk: {
       title: 'KVKK Aydınlatma Metni',
       icon: Shield,
-      text: `6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, MediWeb Dijital Çözümler ("Şirket") olarak, veri sorumlusu sıfatıyla tarafımıza iletilen kişisel verilerinizi (ad, soyad, telefon numarası, e-posta adresi, şirket bilgisi) yalnızca teklif hazırlama, iletişim sağlama, sözleşme süreçlerinin yürütülmesi ve yasal yükümlülüklerin yerine getirilmesi amacıyla işlemekteyiz. Verileriniz üçüncü taraflarla ticari amaçla paylaşılmaz ve yasal süreler boyunca güvenli sunucularda saklanır.`
+      text: `6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, MediWeb (Şengüller Otomotiv & Bilişim Danışmanlığı - "Firma") olarak, veri sorumlusu sıfatıyla tarafımıza iletilen kişisel verilerinizi (ad, soyad, telefon numarası, e-posta adresi, şirket bilgisi) yalnızca teklif hazırlama, iletişim sağlama, sözleşme süreçlerinin yürütülmesi ve yasal yükümlülüklerin yerine getirilmesi amacıyla işlemekteyiz. Verileriniz üçüncü taraflarla ticari amaçla paylaşılmaz ve yasal süreler boyunca güvenli sunucularda saklanır.`
     },
     terms: {
       title: 'Hizmet ve Teslimat Sözleşmesi',
@@ -25,7 +25,8 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
 2. 3 Yıl Domain ve Hosting: Paket bedeline ilk 3 yıl boyunca .com/.com.tr alan adı, SSL sertifikası ve bulut barındırma dahildir. Alan adı doğrudan müşterinin adına tahsis edilir. 3 yıl sonunda müşteri dilerse yıllık standart maliyetle yeniler veya kaynak kodunu devralabilir.
 3. Revizyon Hakları: Başlangıç paketinde 1 tur, Profesyonel pakette 2 tur, Kurumsal pakette 3 tur revizyon hakkı sağlanır.
 4. Fatura ve İade: Tüm fiyatlar KDV hariçtir; faturalandırmada %20 KDV eklenerek resmî e-Fatura/e-Arşiv düzenlenir. Dijital hizmet ve özel alan adı tahsisi başladıktan sonra cayma hakkı kapsam dışıdır; ancak hata garantisi süresince teknik düzeltmeler koşulsuz sağlanır.
-5. Ajans İmzası ve White-Label: Varsayılan olarak hazırlanan sitelerin alt bilgi (footer) alanında 'Mimari: MediWeb' ibaresi yer alır. Müşteri dilerse tek seferlik White-Label bedeli karşılığında bu ibareyi tamamen kaldırtma hakkına sahiptir.`
+5. Ajans İmzası ve White-Label: Varsayılan olarak hazırlanan sitelerin alt bilgi (footer) alanında 'Mimari: MediWeb' ibaresi yer alır. Müşteri dilerse tek seferlik White-Label bedeli karşılığında bu ibareyi tamamen kaldırtma hakkına sahiptir.
+6. Taksitli / Aylık Model (WaaS): 12 aylık taahhüt süresi dolduğunda sitenin tüm mülkiyeti ve 3 yıllık barındırma hakkı müşteriye devredilir. 13. aydan itibaren zorunlu aylık ödeme kesilir; müşteri teknik bakım hizmetini sonlandırabilir veya isteğe bağlı sürdürebilir. Müşterinin web sitesi asla rehin tutulmaz veya kapatılmaz.`
     },
     privacy: {
       title: 'Gizlilik ve Çerez Politikası',

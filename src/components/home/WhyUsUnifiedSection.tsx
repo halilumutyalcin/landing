@@ -180,9 +180,9 @@ export const WhyUsUnifiedSection: React.FC = () => {
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-amber-400 mb-1">Çökme &amp; Virüs</div>
-                    <div className="text-3xl font-black text-white font-mono">%0 Risk</div>
-                    <div className="text-[11px] text-zinc-300 mt-1">Eklenti Açıkları Yok</div>
+                    <div className="text-xs font-bold text-amber-400 mb-1">Çökme &amp; Güvenlik</div>
+                    <div className="text-3xl font-black text-white font-mono">Düşük Risk</div>
+                    <div className="text-[11px] text-zinc-300 mt-1">Statik Mimari Güvenliği</div>
                   </div>
                 </div>
 
@@ -208,21 +208,21 @@ export const WhyUsUnifiedSection: React.FC = () => {
                     Geleneksel WordPress Siteleri
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold text-white">Yavaş, Hantal &amp; Güvensiz</h3>
-                  <p className="text-xs sm:text-sm text-slate-300">4.8 saniyede açılan, her yıl sunucu faturası çıkaran eski sistemler</p>
+                  <p className="text-xs sm:text-sm text-slate-300">Ağır eklenti yüküyle yavaşlayan ve her yıl sunucu faturası çıkaran eski sistemler</p>
                 </div>
 
                 {/* Metrics Showcase Left */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto">
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-rose-400 mb-1">Açılış Hızı</div>
-                    <div className="text-3xl font-black text-white font-mono">4.8 sn</div>
-                    <div className="text-[11px] text-rose-300 mt-1">%53 Ziyaretçi Terk Ediyor</div>
+                    <div className="text-3xl font-black text-white font-mono">Yavaş</div>
+                    <div className="text-[11px] text-rose-300 mt-1">Ağır Veritabanı Yükü</div>
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-amber-400 mb-1">Google Uyumu</div>
-                    <div className="text-3xl font-black text-white font-mono">Kötü</div>
-                    <div className="text-[11px] text-amber-300 mt-1">Düşük Mobil Performans</div>
+                    <div className="text-3xl font-black text-white font-mono">Hantal</div>
+                    <div className="text-[11px] text-amber-300 mt-1">Optimizasyon Gerektiren CMS</div>
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">

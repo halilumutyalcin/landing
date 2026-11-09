@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: pageTitle,
-    description: `${demo.shortDesc} 3–5 günde anahtar teslim kurulum, 3 yıl domain + hosting dahil. Canlı demoyu hemen test edin.`,
+    description: `${demo.shortDesc} 3–10 iş gününde anahtar teslim kurulum, 3 yıl domain + hosting dahil. Canlı demoyu hemen test edin.`,
     alternates: {
       canonical: canonicalUrl,
     },

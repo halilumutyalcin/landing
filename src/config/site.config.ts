@@ -79,7 +79,7 @@ export const siteConfig = {
   metrics: [
     { value: '3 Yıl', label: 'Hosting & Alan Adı Dahil', icon: 'ShieldCheck', sub: 'İlk 3 yıl sıfır yenileme maliyeti' },
     { value: '95+', label: 'Lighthouse Performans Skoru', icon: 'Zap', sub: 'Global Edge CDN altyapısı' },
-    { value: '3–7 Gün', label: 'Pakete Göre Teslim Süresi', icon: 'Clock', sub: 'İçerik onayından itibaren' },
+    { value: '3–10 Gün', label: 'Pakete Göre Teslim Süresi', icon: 'Clock', sub: 'İçerik onayından itibaren' },
     { value: '16 Mimari', label: '6 Sektöre Özel Canlı Vitrin', icon: 'Sparkles', sub: 'Görerek seçebileceğiniz altyapı' },
   ],
 
@@ -193,7 +193,7 @@ export const siteConfig = {
         '2 Dil Dahil (Türkçe + İngilizce Tam Altyapısı)',
         'Tarafımızca Yazılmış 5 Adet SEO Uyumlu Blog Makalesi',
         'Anahtar Teslim İçerik Üretimi & Profesyonel Görsel Yerleşimi',
-        'Google Haritalar Tam Optimizasyon + QR Kodlu Yorum Standı',
+        'Google Haritalar Tam Optimizasyon + QR Kodlu Lokasyon & İletişim Kartı',
         'Departman Yönlendirmeli Gelişmiş WhatsApp Sistemi',
         '10 Adet Kurumsal E-posta DNS Kurulumu',
         'Sayfa Bazlı Birebir SEO ve İç Bağlantı Mimarisi',
@@ -304,8 +304,8 @@ export const siteConfig = {
     {
       id: 'google-review',
       icon: 'Star',
-      title: 'Google Yorum & İtibar Kurgusu',
-      description: 'Masaüstü QR stant tasarımı, memnun müşteri yönlendirme linki ve ilk 10 inceleme stratejisi.',
+      title: 'Google İşletme Profili (Haritalar) Kurulumu',
+      description: 'Google Harita kaydı, temel profil doğrulaması ve yol tarifi entegrasyonu.',
       pricing: 'Kurulum paketi ~3.500 ₺',
     },
     {
@@ -343,7 +343,7 @@ export const siteConfig = {
     { feature: 'İletişim sayfası', starter: 'Temel bölüm', pro: '✓ Ayrı sayfa & Google Harita', enterprise: '✓ Gelişmiş sayfa, departman seçimi & harita' },
     { feature: 'İletişim formu', starter: 'Temel form', pro: '✓ E-posta bildirimli gelişmiş form', enterprise: '✓ Dosya ekli, çoklu e-posta & SMS bildirimli' },
     { feature: 'WhatsApp entegrasyonu', starter: '✓ Sabit WhatsApp butonu', pro: '✓ Hazır mesajlı buton', enterprise: '✓ Departman yönlendirmeli akıllı buton' },
-    { feature: 'Google Haritalar (İşletme)', starter: 'Harita iframe yerleşimi', pro: '✓ Profil kaydı, optimizasyon & yorum desteği', enterprise: '✓ Tam optimizasyon + QR stant tasarımı' },
+    { feature: 'Google Haritalar (İşletme)', starter: 'Harita iframe yerleşimi', pro: '✓ Profil kaydı, optimizasyon & yol tarifi desteği', enterprise: '✓ Tam optimizasyon + QR lokasyon kartı' },
     { feature: 'Sosyal medya bağlantıları', starter: '✓ Bağlantı ikonları', pro: '✓ Bağlantılar + Open Graph paylaşım kartı', enterprise: '✓ Open Graph zengin önizleme kartları' },
     { feature: 'Temel SEO altyapısı', starter: '✓ Meta, sitemap, robots.txt', pro: '✓ Dahil', enterprise: '✓ Dahil' },
     { feature: 'Gelişmiş SEO & Schema', starter: '—', pro: '✓ JSON-LD Schema & Search Console', enterprise: '✓ Sayfa bazlı derin SEO & iç bağlantı mimarisi' },
@@ -364,7 +364,7 @@ export const siteConfig = {
     {
       feature: 'Teslim Süresi',
       traditional: '4 – 12 Hafta (Ucu açık belirsiz takvim)',
-      mediweb: '3 – 7 İş Günü (İçerik onayından itibaren net süre)',
+      mediweb: '3 – 10 İş Günü (Pakete ve içerik onayına göre net süre)',
     },
     {
       feature: 'Fiyatlandırma',

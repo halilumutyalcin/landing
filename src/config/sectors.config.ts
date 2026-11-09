@@ -30,7 +30,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     slug: 'dis-klinigi-web-sitesi',
     shortSlug: 'dis-klinigi',
     name: 'Diş Kliniği & Diş Hekimi',
-    title: 'Diş Kliniği Web Sitesi Tasarımı & Fiyatları | 3–7 Günde Lansman',
+    title: 'Diş Kliniği Web Sitesi Tasarımı & Fiyatları | 3–10 İş Gününde Lansman',
     metaDescription: 'Diş hekimleri ve poliklinikler için hasta randevulu, Google Harita uyumlu, 3 yıl domain ve hosting dahil ultra hızlı diş kliniği web sitesi tasarımı.',
     heroHeadline: 'Yeni Hasta Kazandıran Prestijli Diş Kliniği Web Sitesi',
     heroSubheadline: 'Kliniğinizin steril, modern ve güvenilir atmosferini yansıtan; Google Haritalar entegrasyonlu ve Lighthouse 95+ performans optimizasyonuyla açılan özel klinik web sitesi.',
@@ -147,7 +147,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     stats: [
       { label: 'TBB Uyumluluğu', value: '%100' },
       { label: 'Google Hız Puanı', value: '98+' },
-      { label: 'Teslim Süresi', value: '3–7 Gün' }
+      { label: 'Teslim Süresi', value: '3–10 İş Günü' }
     ]
   },
   {
@@ -436,7 +436,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     statHeadline: 'Gayrimenkul Dönüşüm Verisi',
     stats: [
       { label: 'Komisyon Koruması', value: '%100' },
-      { label: 'Mobil İnceleme', value: '< 0.5s' },
+      { label: 'Lighthouse Skoru', value: '95+' },
       { label: 'Yıllık Masraf', value: '0 TL' }
     ]
   },

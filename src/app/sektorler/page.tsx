@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Sektörel Web Sitesi Tasarımı Çözümleri | MediWeb',
-    description: 'Diş kliniği, hukuk bürosu, mimarlık, lojistik ve mali müşavirlere özel 3–5 günde teslim kurumsal web siteleri. 3 yıl domain + hosting fiyata dahil.',
+    description: 'Diş kliniği, hukuk bürosu, mimarlık, lojistik ve mali müşavirlere özel 3–10 iş gününde teslim kurumsal web siteleri. 3 yıl domain + hosting fiyata dahil.',
     url: `https://${siteConfig.domain}/sektorler`,
     siteName: siteConfig.name,
     locale: 'tr_TR',
@@ -60,7 +60,7 @@ export default function SectorsIndexPage() {
           Sektörünüze Özel Kurumsal Web Sitesi Çözümleri
         </h1>
         <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          Her sektörün müşteri kazanma psikolojisi, regülasyon kuralları ve Google Harita dinamikleri farklıdır. Sektörünüzü seçin, 3–5 günde anahtar teslim yayına alalım.
+          Her sektörün müşteri kazanma psikolojisi, regülasyon kuralları ve Google Harita dinamikleri farklıdır. Sektörünüzü seçin, paketinize göre 3–10 iş gününde anahtar teslim yayına alalım.
         </p>
       </section>
 
@@ -127,7 +127,7 @@ export default function SectorsIndexPage() {
               Sektörünüz Listede Yok mu?
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
-              İster üretim tesisi ister danışmanlık firması olun; iş modelinize özel modern Next.js mimarisini 3–5 gün içinde kurabiliriz.
+              İster üretim tesisi ister danışmanlık firması olun; iş modelinize özel modern Next.js mimarisini 3–10 iş günü içinde kurabiliriz.
             </p>
           </div>
 

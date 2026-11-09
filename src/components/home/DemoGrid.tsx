@@ -50,7 +50,7 @@ export const DemoGrid: React.FC<DemoGridProps> = ({ initialSector = 'all' }) => 
             Sektörel Canlı Vitrin Mimarileri
           </h2>
           <p className="text-base text-slate-300 leading-relaxed">
-            Firmanız için ne çıkacağını bilmeden haftalarca beklemek yerine, sektörünüze özel geliştirilmiş çalışan canlı mimarileri inceleyin. Beğendiğiniz mimariyi kurumsal kimliğinize uyarlayarak 3–7 iş gününde anahtar teslim yayına alıyoruz.
+            Firmanız için ne çıkacağını bilmeden haftalarca beklemek yerine, sektörünüze özel geliştirilmiş çalışan canlı mimarileri inceleyin. Beğendiğiniz mimariyi kurumsal kimliğinize uyarlayarak paketinize göre 3–10 iş gününde anahtar teslim yayına alıyoruz.
           </p>
         </div>
 
