@@ -209,64 +209,6 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     ]
   },
   {
-    slug: 'lojistik-web-sitesi',
-    shortSlug: 'lojistik',
-    name: 'Lojistik & Taşımacılık',
-    title: 'Lojistik Firması Web Sitesi Tasarımı | Uluslararası Taşımacılık',
-    metaDescription: 'Lojistik, navlun ve taşımacılık şirketleri için online navlun talep formlu, filo tanıtımlı, 3 yıl hosting dahil kurumsal lojistik web sitesi.',
-    heroHeadline: 'Navlun Talebi Toplayan Kurumsal Lojistik Web Sitesi',
-    heroSubheadline: 'Karayolu, denizyolu, havayolu ve depolama hizmetlerinizi küresel standartlarda sergileyen; anında navlun teklifi toplayan dinamik altyapı.',
-    targetAudience: 'Uluslararası nakliyat, forwarder firmaları, antrepo işletmeleri ve filo sahipleri.',
-    badge: 'Lojistik & Dış Ticaret',
-    relatedDemoSlugs: ['santiyeyapi', 'proguard', 'mizan'],
-    sectorSpecificNeeds: [
-      {
-        title: 'Hızlı Navlun Teklif Talep Modülü',
-        description: 'Çıkış-varış noktası, yük cinsi ve hacim bilgilerini alarak ihracatçı firmalardan anlık navlun talebi toplama.'
-      },
-      {
-        title: 'Hizmet & Hat Haritası Görselleştirmesi',
-        description: 'Avrupa, BDT, Orta Doğu hatlarınızı ve düzenli sefer güzergahlarınızı gösteren interaktif harita.'
-      },
-      {
-        title: 'Filo & Depolama Kapasitesi Vitrini',
-        description: 'Özmal araç filosu, yeşil lojistik belgeleri (Euro 6 vb.) ve antrepo metrekare kapasitelerinin şeffaf sunumu.'
-      },
-      {
-        title: 'Çok Dilli İhracat Altyapısı',
-        description: 'Yabancı acente ve ithalatçılar için Türkçe, İngilizce ve opsiyonel Rusça/Almanca dil hazırlığı.'
-      }
-    ],
-    keyFeatures: [
-      '3 Yıl Küresel Bulut Barındırma + Kurumsal E-posta Altyapısı Dahil',
-      'Kapsamlı Navlun ve Fiyat Teklif Formu',
-      'Karayolu, Denizyolu, Havayolu ve İntermodal Hizmet Sayfaları',
-      'Yetki Belgeleri (TİO, C2 vb.) ve ISO Kalite Sertifikaları Vitrini',
-      'İhracatçılar İçin WhatsApp Hızlı Destek Butonu',
-      'Dünya Çapında Hızlı Yüklenen Global Bulut Ağı'
-    ],
-    faqs: [
-      {
-        question: 'Yabancı ülkelerden sitemize girenler de hızlı açılış yaşar mı?',
-        answer: 'Kesinlikle. Bulut altyapımız dünya genelinde 300+ veri merkezine dağıtıldığı için siteniz Frankfurt, Dubai veya Şanghay\'dan da yüksek hızda ve beklemesiz açılır.'
-      },
-      {
-        question: 'Navlun teklif formları kime iletilir?',
-        answer: 'Belirlediğiniz kurumsal operasyon e-posta adreslerine anında ve eşzamanlı olarak WhatsApp bildirimli olarak iletilir.'
-      },
-      {
-        question: 'Sektörel yetki belgelerimizi yükleyebilir miyiz?',
-        answer: 'Evet, TİO, ISO ve gümrük sertifikalarınız müvekkil ve müşterilerin güvenle inceleyebileceği yüksek çözünürlüklü alanda sergilenir.'
-      }
-    ],
-    statHeadline: 'Global Taşımacılıkta Dijital Güç',
-    stats: [
-      { label: 'Lighthouse Skoru', value: '95+' },
-      { label: 'Navlun Talebi', value: 'Anlık Form' },
-      { label: 'Sunucu Masrafı', value: '3 Yıl 0 TL' }
-    ]
-  },
-  {
     slug: 'mali-musavir-web-sitesi',
     shortSlug: 'mali-musavir',
     name: 'Mali Müşavir & YMM',

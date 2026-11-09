@@ -128,7 +128,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg shadow-emerald-600/30 transition-all"
             >
-              <MessageSquare className="w-4 h-4 fill-white" />
+              <WhatsAppIcon className="w-4 h-4 fill-current shrink-0" />
               <span>Bu Tasarımı Seç & Başla</span>
             </a>
           </div>
@@ -203,7 +203,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
           <div className="lg:col-span-6 space-y-6">
             <div className="bg-[#111827] border border-card-border rounded-3xl p-7 shadow-xl">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
                   <FileCheck className="w-5 h-5" />
                 </div>
                 <div>

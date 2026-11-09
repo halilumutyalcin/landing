@@ -51,7 +51,7 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
         <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 bg-black border-b border-white/10">
           {/* Demo Details */}
           <div className="flex items-center gap-3">
-            <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 hidden sm:block" />
+            <div className="w-2.5 h-2.5 rounded-full bg-amber-400 hidden sm:block" />
             <div>
               <div className="flex items-center gap-2">
                 <h3 id="preview-modal-title" className="text-sm sm:text-base font-bold text-white font-display">

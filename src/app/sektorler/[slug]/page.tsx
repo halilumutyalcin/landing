@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'article',
       images: [
         {
-          url: `https://${siteConfig.domain}/og-image.png`,
+          url: `https://${siteConfig.domain}/opengraph-image`,
           width: 1200,
           height: 630,
           alt: `${sector.name} Web Sitesi Tasarımı`,
@@ -144,7 +144,9 @@ export default function SectorDetailPage({ params }: PageProps) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
+        }}
       />
       <SectorDetailClient sector={sector} />
     </>

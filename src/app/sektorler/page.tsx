@@ -18,13 +18,13 @@ import { generateWhatsAppUrl } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Sektörel Web Sitesi Tasarımı Çözümleri | MediWeb',
-  description: 'Diş kliniği, hukuk bürosu, mimarlık ofisi, lojistik ve mali müşavirlik sektörlerine özel geliştirilmiş ultra hızlı kurumsal web sitesi paketleri. 3 yıl hosting dahil.',
+  description: 'Diş kliniği, hukuk bürosu, mimarlık, sanayi imalat, mali müşavirlik ve gayrimenkul sektörlerine özel geliştirilmiş ultra hızlı kurumsal web sitesi paketleri. 3 yıl hosting dahil.',
   alternates: {
     canonical: `https://${siteConfig.domain}/sektorler`,
   },
   openGraph: {
     title: 'Sektörel Web Sitesi Tasarımı Çözümleri | MediWeb',
-    description: 'Diş kliniği, hukuk bürosu, mimarlık, lojistik ve mali müşavirlere özel 3–10 iş gününde teslim kurumsal web siteleri. 3 yıl domain + hosting fiyata dahil.',
+    description: 'Diş kliniği, hukuk bürosu, mimarlık, sanayi imalat ve mali müşavirlere özel 3–10 iş gününde teslim kurumsal web siteleri. 3 yıl domain + hosting fiyata dahil.',
     url: `https://${siteConfig.domain}/sektorler`,
     siteName: siteConfig.name,
     locale: 'tr_TR',

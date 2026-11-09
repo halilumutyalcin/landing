@@ -19,11 +19,11 @@ export default async function Image() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          backgroundColor: '#0B0F19',
+          backgroundColor: '#000000',
           padding: '64px 72px',
           fontFamily: 'sans-serif',
           color: '#F8FAFC',
-          border: '2px solid #1F293D',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
         }}
       >
         {/* Top Header Badge */}
@@ -35,9 +35,9 @@ export default async function Image() {
               gap: '10px',
               padding: '8px 18px',
               borderRadius: '9999px',
-              backgroundColor: 'rgba(99, 102, 241, 0.15)',
-              border: '1px solid rgba(99, 102, 241, 0.35)',
-              color: '#818CF8',
+              backgroundColor: 'rgba(245, 158, 11, 0.15)',
+              border: '1px solid rgba(245, 158, 11, 0.35)',
+              color: '#FBBF24',
               fontSize: '15px',
               fontWeight: 600,
               textTransform: 'uppercase',
@@ -58,7 +58,7 @@ export default async function Image() {
           >
             <span>İstanbul, TR</span>
             <span>•</span>
-            <span style={{ color: '#10B981' }}>Canlı Vitrinler</span>
+            <span style={{ color: '#F59E0B' }}>Canlı Vitrinler</span>
           </div>
         </div>
 
@@ -79,7 +79,7 @@ export default async function Image() {
             style={{
               fontSize: '26px',
               fontWeight: 500,
-              color: '#818CF8',
+              color: '#FBBF24',
               letterSpacing: '-0.01em',
             }}
           >
@@ -104,7 +104,7 @@ export default async function Image() {
             alignItems: 'center',
             justifyContent: 'space-between',
             paddingTop: '28px',
-            borderTop: '1px solid #1F293D',
+            borderTop: '1px solid rgba(255, 255, 255, 0.1)',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>

@@ -11,8 +11,8 @@ export const JsonLd: React.FC = () => {
     '@id': `${baseUrl}/#organization`,
     name: siteConfig.name,
     url: baseUrl,
-    logo: `${baseUrl}/logo.png`,
-    image: `${baseUrl}/og-image.jpg`,
+    logo: `${baseUrl}/icon.svg`,
+    image: `${baseUrl}/opengraph-image`,
     description: siteConfig.description,
     telephone: siteConfig.phoneDisplay.replace(/\s+/g, ''),
     email: siteConfig.email,
@@ -21,15 +21,15 @@ export const JsonLd: React.FC = () => {
     paymentAccepted: 'Banka Havalesi, Kredi Kartı',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Büyükdere Cad. No:199',
-      addressLocality: 'Şişli',
+      streetAddress: 'Batı Mah. E-5 Yan Yol No:14',
+      addressLocality: 'Pendik',
       addressRegion: 'İstanbul',
       addressCountry: 'TR',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '41.0776',
-      longitude: '29.0118',
+      latitude: '40.8756',
+      longitude: '29.2331',
     },
     openingHoursSpecification: [
       {
@@ -101,25 +101,27 @@ export const JsonLd: React.FC = () => {
     },
   }));
 
+  const safeJson = (data: unknown) => JSON.stringify(data).replace(/</g, '\\u003c');
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJson(businessSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJson(faqSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJson(websiteSchema) }}
       />
       {packageSchemas.map((schema, idx) => (
         <script
           key={idx}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          dangerouslySetInnerHTML={{ __html: safeJson(schema) }}
         />
       ))}
     </>
