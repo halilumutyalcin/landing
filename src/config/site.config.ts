@@ -85,7 +85,7 @@ export const siteConfig = {
   
   metrics: [
     { value: '3 Yıl', label: 'Hosting & Alan Adı Dahil', icon: 'ShieldCheck', sub: 'İlk 3 yıl sıfır yenileme maliyeti' },
-    { value: '95+', label: 'Lighthouse Performans Skoru', icon: 'Zap', sub: 'Global Edge CDN altyapısı' },
+    { value: '95+', label: 'Lighthouse Performans Skoru', icon: 'Zap', sub: 'Yüksek hızlı bulut altyapısı' },
     { value: '3–10 Gün', label: 'Pakete Göre Teslim Süresi', icon: 'Clock', sub: 'İçerik onayından itibaren' },
     { value: '16 Mimari', label: '6 Sektöre Özel Canlı Vitrin', icon: 'Sparkles', sub: 'Görerek seçebileceğiniz altyapı' },
   ],
@@ -118,7 +118,7 @@ export const siteConfig = {
         'Google Analytics Kurulumu & Entegrasyonu',
         '2 Adet Kurumsal E-posta DNS Kurulumu',
         'KVKK ve Yasal Sayfa Şablonları Dahil',
-        'Global Edge CDN ile Yüksek Açılış Performansı (Lighthouse 90+)',
+        'Yüksek Hızlı Bulut Altyapısıyla Hızlı Açılış (Lighthouse 90+)',
       ],
       notIncluded: [
         'Gelişmiş SEO & Search Console Yönetimi',
@@ -355,7 +355,7 @@ export const siteConfig = {
     { feature: 'Temel SEO altyapısı', starter: '✓ Meta, sitemap, robots.txt', pro: '✓ Dahil', enterprise: '✓ Dahil' },
     { feature: 'Gelişmiş SEO & Schema', starter: '—', pro: '✓ JSON-LD Schema & Search Console', enterprise: '✓ Sayfa bazlı derin SEO & iç bağlantı mimarisi' },
     { feature: 'Google Analytics & Search Console', starter: 'Temel Analytics', pro: '✓ Analytics + Search Console kurulumu', enterprise: '✓ İleri seviye hedef & dönüşüm takibi' },
-    { feature: 'Site hız optimizasyonu', starter: 'Temel (Global Edge CDN Ağı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri Seviye (Lighthouse 95+ & Edge CDN)' },
+    { feature: 'Site hız optimizasyonu', starter: 'Temel (Yüksek Hızlı Bulut Ağı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri Seviye (Lighthouse 95+)' },
     { feature: 'Güvenlik / SSL sertifikası', starter: '✓ 3 Yıl Ücretsiz SSL', pro: '✓ 3 Yıl Ücretsiz SSL', enterprise: '✓ 3 Yıl Kurumsal SSL & DDoS koruması' },
     { feature: 'Form e-posta bildirimi', starter: 'Temel bildirim', pro: '✓ Anlık e-posta bildirimi', enterprise: '✓ Çoklu yetkili bildirimi & SMS opsiyonu' },
     { feature: 'Özel animasyonlar', starter: 'Temel fade-in ve scroll', pro: 'Gelişmiş hover ve mikro efektler', enterprise: 'Premium aurora glow & zengin etkileşimler' },

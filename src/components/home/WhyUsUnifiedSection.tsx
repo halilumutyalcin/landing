@@ -48,7 +48,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <div className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">
             Neden MediWeb? · Şeffaf ve Modern Standart
           </div>
@@ -58,45 +58,45 @@ export const WhyUsUnifiedSection: React.FC = () => {
           <p className="text-base text-slate-300 leading-relaxed">
             Karmaşık WordPress eklentileri, ne çıkacağı belirsiz hayali tasarımlar ve sürpriz yenileme faturaları geride kaldı. Üç temel boyutta farkımızı inceleyin:
           </p>
+        </div>
 
-          {/* Interactive Unified Segmented Tabs - Side-by-side (Grid, No Scroll) */}
-          <div className="mt-8 w-full max-w-4xl lg:max-w-5xl mx-auto grid grid-cols-3 p-1 sm:p-1.5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] gap-1 sm:gap-2 shadow-inner print:hidden">
-            <button
-              onClick={() => setActiveTab('agency-vs-us')}
-              className={`w-full px-2 sm:px-4 py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
-                activeTab === 'agency-vs-us'
-                  ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
-                  : 'text-zinc-400 hover:text-white'
-              }`}
-            >
-              <Scale className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'agency-vs-us' ? 'text-black' : 'text-amber-400'}`} />
-              <span className="whitespace-nowrap">Geleneksel Ajans vs. Biz</span>
-            </button>
+        {/* Interactive Unified Segmented Tabs - Unconstrained Full Width */}
+        <div className="mb-10 w-full max-w-4xl lg:max-w-5xl mx-auto grid grid-cols-3 p-1.5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] gap-1.5 sm:gap-2 shadow-inner print:hidden">
+          <button
+            onClick={() => setActiveTab('agency-vs-us')}
+            className={`w-full px-2 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
+              activeTab === 'agency-vs-us'
+                ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
+                : 'text-zinc-400 hover:text-white'
+            }`}
+          >
+            <Scale className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'agency-vs-us' ? 'text-black' : 'text-amber-400'}`} />
+            <span className="whitespace-nowrap">Geleneksel Ajans vs. Biz</span>
+          </button>
 
-            <button
-              onClick={() => setActiveTab('wp-vs-next')}
-              className={`w-full px-2 sm:px-4 py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
-                activeTab === 'wp-vs-next'
-                  ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
-                  : 'text-zinc-400 hover:text-white'
-              }`}
-            >
-              <Zap className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'wp-vs-next' ? 'text-black' : 'text-amber-400'}`} />
-              <span className="whitespace-nowrap">WordPress vs. Hızlı Mimari</span>
-            </button>
+          <button
+            onClick={() => setActiveTab('wp-vs-next')}
+            className={`w-full px-2 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
+              activeTab === 'wp-vs-next'
+                ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
+                : 'text-zinc-400 hover:text-white'
+            }`}
+          >
+            <Zap className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'wp-vs-next' ? 'text-black' : 'text-amber-400'}`} />
+            <span className="whitespace-nowrap">WordPress vs. Hızlı Mimari</span>
+          </button>
 
-            <button
-              onClick={() => setActiveTab('principles')}
-              className={`w-full px-2 sm:px-4 py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
-                activeTab === 'principles'
-                  ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
-                  : 'text-zinc-400 hover:text-white'
-              }`}
-            >
-              <ShieldCheck className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'principles' ? 'text-black' : 'text-amber-400'}`} />
-              <span className="whitespace-nowrap">Şeffaf İlkelerimiz &amp; Taahhütler</span>
-            </button>
-          </div>
+          <button
+            onClick={() => setActiveTab('principles')}
+            className={`w-full px-2 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
+              activeTab === 'principles'
+                ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
+                : 'text-zinc-400 hover:text-white'
+            }`}
+          >
+            <ShieldCheck className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'principles' ? 'text-black' : 'text-amber-400'}`} />
+            <span className="whitespace-nowrap">Şeffaf İlkelerimiz &amp; Taahhütler</span>
+          </button>
         </div>
 
         {/* TAB 1: Geleneksel Ajans vs. MediWeb (Comparison Table) */}
@@ -152,8 +152,8 @@ export const WhyUsUnifiedSection: React.FC = () => {
                   <span className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-1 block">
                     Yeni Nesil MediWeb Mimarisi
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">Yüksek Prestij & Edge CDN Hızı</h3>
-                  <p className="text-xs sm:text-sm text-slate-300">Global Edge CDN ile anında açılan, müşteriyi doğrudan WhatsApp ve aramaya bağlayan modern yapı</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white">Yüksek Prestij &amp; Anında Açılış Hızı</h3>
+                  <p className="text-xs sm:text-sm text-slate-300">Yüksek hızlı bulut altyapısıyla anında açılan, müşteriyi doğrudan WhatsApp ve aramaya bağlayan modern yapı</p>
                 </div>
 
                 {/* Metrics Showcase Right */}

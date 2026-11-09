@@ -82,7 +82,7 @@ export const PricingSection: React.FC = () => {
         { feature: 'Temel SEO altyapısı', starter: 'Meta, sitemap, robots.txt', pro: 'Dahil', enterprise: 'Dahil' },
         { feature: 'Gelişmiş SEO & Schema', starter: '—', pro: 'JSON-LD Schema & Search Console', enterprise: 'Sayfa bazlı derin SEO & iç bağlantı mimarisi' },
         { feature: 'Google Analytics & Search Console', starter: 'Temel Analytics', pro: 'Analytics + Search Console kurulumu', enterprise: 'İleri seviye hedef & dönüşüm takibi' },
-        { feature: 'Site hız optimizasyonu', starter: 'Temel (Global Edge CDN Ağı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri Seviye (Lighthouse 95+ & Edge CDN)' },
+        { feature: 'Site hız optimizasyonu', starter: 'Temel (Yüksek Hızlı Bulut Ağı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri Seviye (Lighthouse 95+)' },
         { feature: 'Güvenlik / SSL sertifikası', starter: '3 Yıl Ücretsiz SSL', pro: '3 Yıl Ücretsiz SSL', enterprise: '3 Yıl Kurumsal SSL & DDoS koruması' },
       ]
     },
@@ -301,7 +301,7 @@ export const PricingSection: React.FC = () => {
                     </div>
 
                     {billingMode === 'onetime' && !showTaxDeduction && (
-                      <div className="text-[11px] text-zinc-400 font-mono mt-0.5">
+                      <div className="text-xs text-zinc-400 font-medium mt-1">
                         {(pkg.price * 1.2).toLocaleString('tr-TR')} ₺ KDV Dahil Toplam
                       </div>
                     )}
@@ -650,7 +650,7 @@ export const PricingSection: React.FC = () => {
                   <strong className="text-white text-sm font-bold">Özel Yazılım Altyapısı</strong>
                 </div>
                 <p className="text-slate-300 leading-relaxed pt-1">
-                  Gereksiz eklenti çöplüğü ve bakım yükü yok. Yeni nesil bulut mimarisi ve Global Edge CDN ile yüksek performans ve anında açılış hızı sağlanır.
+                  Gereksiz eklenti çöplüğü ve bakım yükü yok. Yeni nesil bulut mimarisiyle anında açılan sayfalar ve kesintisiz yüksek performans sağlanır.
                 </p>
               </div>
 
