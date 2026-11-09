@@ -171,10 +171,6 @@ export const PricingSection: React.FC = () => {
                 >
                   Düşük Kurulum + 12 Ay Taksitli Model
                 </button>
-                {/* 12 Ay Taksit Rozeti */}
-                <span className="absolute -top-3 -right-2 px-2 py-0.5 rounded-md text-[9px] font-black uppercase tracking-wider bg-amber-500 text-black border border-amber-300 shadow-md rotate-6 pointer-events-none select-none">
-                  12 Ay Sonra Aylık Ödeme Biter
-                </span>
               </div>
             </div>
 
@@ -279,17 +275,17 @@ export const PricingSection: React.FC = () => {
                 )}
 
                 <div>
-                  {/* Top Header */}
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold text-amber-400 tracking-normal">
+                  {/* Top Header - Ortalı & Tek Satır İsim, Süre Altta */}
+                  <div className="text-center mb-3">
+                    <h3 className="text-base sm:text-lg font-bold text-amber-400 tracking-tight whitespace-nowrap">
                       {pkg.name} Paketi
-                    </span>
-                    <span className="text-xs text-zinc-400 font-medium">
+                    </h3>
+                    <div className="text-xs text-zinc-400 font-medium mt-1">
                       {pkg.deliveryTime}
-                    </span>
+                    </div>
                   </div>
 
-                  <p className="text-xs text-zinc-300 mb-6 leading-relaxed">
+                  <p className="text-xs text-zinc-300 mb-6 leading-relaxed text-center">
                     {pkg.tagline}
                   </p>
 
@@ -489,7 +485,7 @@ export const PricingSection: React.FC = () => {
                 </strong>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed pt-1">
-                AI destekli ve vektörel (SVG, AI, PDF, PNG) olarak teslim edilen, her mecraya uyumlu özgün logo ve kurumsal renk rehberi.
+                Tüm mecralara ve matbaa baskısına uyumlu, vektörel formatlarda (SVG, PDF, PNG) teslim edilen özgün logo tasarımı ve kurumsal renk rehberi.
               </p>
             </div>
 
@@ -654,7 +650,7 @@ export const PricingSection: React.FC = () => {
                   <strong className="text-white text-sm font-bold">Özel Yazılım Altyapısı</strong>
                 </div>
                 <p className="text-slate-300 leading-relaxed pt-1">
-                  Gereksiz eklenti çöplüğü ve bakım yükü yok. Next.js 14 mimarisi ve Global Edge CDN ile yüksek performans optimizasyonu sağlanır.
+                  Gereksiz eklenti çöplüğü ve bakım yükü yok. Yeni nesil bulut mimarisi ve Global Edge CDN ile yüksek performans ve anında açılış hızı sağlanır.
                 </p>
               </div>
 
@@ -698,7 +694,7 @@ export const PricingSection: React.FC = () => {
         </div>
 
         {/* Custom Software & Enterprise Integration Architecture Section */}
-        <div className="mt-12 rounded-3xl bg-gradient-to-b from-[#0F1422] to-[#0A0D15] border border-white/10 p-6 sm:p-10 max-w-5xl mx-auto shadow-2xl">
+        <div className="mt-12 rounded-3xl bg-[#0A0A0C] border border-white/[0.08] p-6 sm:p-10 max-w-5xl mx-auto shadow-2xl">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-white/10">
             <div className="max-w-2xl">
               <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -734,7 +730,7 @@ export const PricingSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-emerald-500/30 transition-colors">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 transition-colors">
               <div className="flex items-center gap-2.5 mb-2">
                 <Calendar className="w-5 h-5 text-amber-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Online Randevu &amp; SMS Otomasyonu</h4>
@@ -765,24 +761,13 @@ export const PricingSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Technical Architecture Badges Strip */}
-          <div className="mt-8 pt-6 border-t border-white/[0.08] flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
-                <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
-                KVKK İlkelerine Duyarlı Altyapı
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
-                <Zap className="w-3.5 h-3.5 text-amber-400" />
-                Canlı Sistem &amp; Muhasebe Entegrasyonu
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
-                <Clock className="w-3.5 h-3.5 text-amber-400" />
-                Global Edge CDN Altyapısı
-              </span>
-            </div>
+          {/* Technical Architecture Prose Strip */}
+          <div className="mt-8 pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs">
+            <p className="text-slate-300 leading-relaxed max-w-2xl">
+              Tüm özel yazılım projelerimiz; KVKK ilkelerine duyarlı veri güvenliği, canlı muhasebe entegrasyonu ve yüksek hızlı küresel bulut altyapısıyla teslim edilir.
+            </p>
 
-            <span className="text-[11px] font-medium text-slate-400">
+            <span className="text-[11px] font-medium text-slate-400 shrink-0">
               Ortalama teslim süresi proje kapsamına göre 2–4 haftadır.
             </span>
           </div>

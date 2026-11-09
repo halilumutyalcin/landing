@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { 
-  ShieldCheck, 
   CheckCircle2, 
   Phone, 
   Mail, 
@@ -81,14 +80,6 @@ export const ContactSection: React.FC = () => {
 
             {/* Clean Editorial Contact Details - Pure naked icons, no boxed cards */}
             <div className="space-y-6 pt-2">
-              <div className="flex items-start gap-4">
-                <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-                <div>
-                  <div className="text-sm font-bold text-white">3 Yıl Domain & Barındırma Fiyata Dahil</div>
-                  <div className="text-xs text-slate-400 mt-0.5">Gizli veya sürpriz yıllık yenileme faturası çıkmaz.</div>
-                </div>
-              </div>
-
               <div className="flex items-start gap-4">
                 <Mail className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <div>

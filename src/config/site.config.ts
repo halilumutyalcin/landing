@@ -298,7 +298,7 @@ export const siteConfig = {
       id: 'source-code',
       icon: 'Code2',
       title: 'Tam Kaynak Kod Teslimi',
-      description: 'Sitenin tüm Next.js 14 kaynak kodunun teslim edilmesi. Kendi sunucunuzda bağımsız barındırma imkanı.',
+      description: 'Sitenin tüm kaynak kodlarının ve varlıklarının teslim edilmesi. Kendi sunucunuzda bağımsız barındırma imkanı.',
       pricing: 'Paket bedeline ek +%75',
     },
     {
@@ -386,7 +386,7 @@ export const siteConfig = {
     {
       feature: 'Altyapı & Performans',
       traditional: 'Ağır eklentili, güvenlik açığı riski taşıyan eski CMS',
-      mediweb: 'Next.js 14 tabanlı modern statik mimari, Lighthouse 90–95+',
+      mediweb: 'Yeni nesil yüksek hızlı bulut mimarisi, anında açılan sayfalar (Lighthouse 90–95+)',
     },
     {
       feature: 'Tasarım Süreci',
@@ -427,7 +427,7 @@ export const siteConfig = {
     {
       category: 'paketler',
       question: 'Kaynak kodlar bana veriliyor mu? Size bağımlı kalır mıyım?',
-      answer: 'Başlangıç, Profesyonel ve Kurumsal paketlerimizde site, size ait alan adı üzerinde yüksek hızlı bulut altyapısında anahtar teslim yayınlanır. Kendi bağımsız sunucunuzda barındırmak ve geliştirmek için gerekli olan tam Next.js 14 kaynak kod devri isteğe bağlı bir eklentidir (+%75 lisans devir bedeli). Siteniz bizim barındırmamızda kaldığı sürece ilk 3 yıl hiçbir ek sunucu veya SSL faturası ödemezsiniz; 3. yılın bitiminde de kendi sunucunuza taşıyabilir veya standart alan adı yenilemesiyle devam edebilirsiniz.'
+      answer: 'Başlangıç, Profesyonel ve Kurumsal paketlerimizde site, size ait alan adı üzerinde yüksek hızlı bulut altyapısında anahtar teslim yayınlanır. Kendi bağımsız sunucunuzda barındırmak ve geliştirmek için gerekli olan tam kaynak kod devri isteğe bağlı bir eklentidir (+%75 lisans devir bedeli). Siteniz bizim barındırmamızda kaldığı sürece ilk 3 yıl hiçbir ek sunucu veya SSL faturası ödemezsiniz; 3. yılın bitiminde de kendi sunucunuza taşıyabilir veya standart alan adı yenilemesiyle devam edebilirsiniz.'
     },
     {
       category: 'surec',
@@ -452,7 +452,7 @@ export const siteConfig = {
     {
       category: 'paketler',
       question: 'Fatura kesiyor musunuz? Şirketime gider olarak gösterebilir miyim?',
-      answer: 'Tüm fiyatlarımız KDV hariçtir; faturalandırmada %20 KDV eklenerek resmî e-Arşiv / e-Fatura düzenlenir (Örn: 17.500 ₺ + KDV = 21.000 ₺). Faturanızı şirket gideri olarak kullanabilir; vergi avantajı ve KDV mahsubu detayları için mali müşavirinize danışabilirsiniz.'
+      answer: 'Tüm fiyatlarımız KDV hariçtir; faturalandırmada %20 KDV eklenerek resmî e-Arşiv / e-Fatura düzenlenir. Faturanızı şirket gideri olarak kullanabilir; vergi avantajı ve KDV mahsubu detayları için mali müşavirinize danışabilirsiniz.'
     }
   ] as FaqItem[]
 };

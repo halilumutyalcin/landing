@@ -79,7 +79,7 @@ const SERVICE_GROUPS: ServiceGroup[] = [
       {
         id: 'source-code',
         title: 'Tam Kaynak Kod & Bağımsız Lisans Teslimi',
-        description: 'Sitenin tüm Next.js 14 kaynak kodlarının teslim edilmesi. Kendi bağımsız sunucunuzda barındırma imkanı.',
+        description: 'Sitenin tüm modern kaynak kodlarının ve varlıklarının teslim edilmesi. Kendi bağımsız sunucunuzda barındırma imkanı.',
         pricing: 'Paket bedeline ek +%75',
         icon: Code2,
       },
@@ -167,19 +167,19 @@ export const ExtraServicesSection: React.FC = () => {
           </p>
 
           {/* Interactive Category Filter Tabs - Side-by-side (Grid, No Scroll) */}
-          <div className="mt-8 w-full max-w-4xl mx-auto grid grid-cols-4 p-1 sm:p-1.5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] gap-1 sm:gap-2 shadow-inner">
+          <div className="mt-8 w-full max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 p-1 sm:p-1.5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] gap-1 sm:gap-2 shadow-inner">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`w-full px-1.5 sm:px-3 md:px-5 py-2 sm:py-2.5 rounded-xl text-[10px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1 sm:gap-1.5 text-center ${
+                className={`w-full px-2 sm:px-3 md:px-5 py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
                   selectedCategory === cat.id
                     ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
                     : 'text-zinc-400 hover:text-white hover:bg-white/[0.04]'
                 }`}
               >
-                <span>{cat.label}</span>
-                <span className={`hidden sm:inline-flex px-1.5 py-0.5 rounded text-[10px] font-mono font-bold shrink-0 ${
+                <span className="whitespace-nowrap">{cat.label}</span>
+                <span className={`hidden sm:inline-flex px-1.5 py-0.5 rounded text-[10px] font-bold shrink-0 ${
                   selectedCategory === cat.id ? 'bg-amber-400/20 text-amber-900 ring-1 ring-amber-500/30' : 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
                 }`}>
                   {cat.count}

@@ -56,45 +56,45 @@ export const WhyUsUnifiedSection: React.FC = () => {
             Klasik Ajans Hantallığına Son Veriyoruz.
           </h2>
           <p className="text-base text-slate-300 leading-relaxed">
-            Hantal WordPress eklentileri, ne çıkacağı belirsiz hayali tasarımlar ve sürpriz yenileme faturaları geride kaldı. Üç temel boyutta farkımızı inceleyin:
+            Karmaşık WordPress eklentileri, ne çıkacağı belirsiz hayali tasarımlar ve sürpriz yenileme faturaları geride kaldı. Üç temel boyutta farkımızı inceleyin:
           </p>
 
           {/* Interactive Unified Segmented Tabs - Side-by-side (Grid, No Scroll) */}
-          <div className="mt-8 w-full max-w-3xl mx-auto grid grid-cols-3 p-1 sm:p-1.5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] gap-1 sm:gap-1.5 shadow-inner print:hidden">
+          <div className="mt-8 w-full max-w-4xl lg:max-w-5xl mx-auto grid grid-cols-3 p-1 sm:p-1.5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] gap-1 sm:gap-2 shadow-inner print:hidden">
             <button
               onClick={() => setActiveTab('agency-vs-us')}
-              className={`w-full px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
+              className={`w-full px-2 sm:px-4 py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
                 activeTab === 'agency-vs-us'
                   ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
                   : 'text-zinc-400 hover:text-white'
               }`}
             >
               <Scale className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'agency-vs-us' ? 'text-black' : 'text-amber-400'}`} />
-              <span>Geleneksel Ajans vs. Biz</span>
+              <span className="whitespace-nowrap">Geleneksel Ajans vs. Biz</span>
             </button>
 
             <button
               onClick={() => setActiveTab('wp-vs-next')}
-              className={`w-full px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
+              className={`w-full px-2 sm:px-4 py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
                 activeTab === 'wp-vs-next'
                   ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
                   : 'text-zinc-400 hover:text-white'
               }`}
             >
               <Zap className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'wp-vs-next' ? 'text-black' : 'text-amber-400'}`} />
-              <span>WordPress vs. Next.js Hız Kıyası</span>
+              <span className="whitespace-nowrap">WordPress vs. Hızlı Mimari</span>
             </button>
 
             <button
               onClick={() => setActiveTab('principles')}
-              className={`w-full px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
+              className={`w-full px-2 sm:px-4 py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
                 activeTab === 'principles'
                   ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
                   : 'text-zinc-400 hover:text-white'
               }`}
             >
               <ShieldCheck className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'principles' ? 'text-black' : 'text-amber-400'}`} />
-              <span>Şeffaf İlkelerimiz & Taahhütler</span>
+              <span className="whitespace-nowrap">Şeffaf İlkelerimiz &amp; Taahhütler</span>
             </button>
           </div>
         </div>
@@ -160,25 +160,25 @@ export const WhyUsUnifiedSection: React.FC = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto">
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-white mb-1">Lighthouse Skoru</div>
-                    <div className="text-3xl font-black text-white font-mono">95+</div>
+                    <div className="text-3xl font-black text-white">95+</div>
                     <div className="text-[11px] text-zinc-400 mt-1">Mobil & Masaüstü Hız</div>
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-amber-400 mb-1">Google Uyumu</div>
-                    <div className="text-3xl font-black text-white font-mono">Hazır</div>
+                    <div className="text-3xl font-black text-white">Hazır</div>
                     <div className="text-[11px] text-zinc-300 mt-1">Harita &amp; SEO Kayıtlı</div>
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-amber-400 mb-1">Sunucu Faturası</div>
-                    <div className="text-3xl font-black text-white font-mono">3 Yıl 0 ₺</div>
+                    <div className="text-3xl font-black text-white">3 Yıl 0 ₺</div>
                     <div className="text-[11px] text-cyan-300 mt-1">Sürpriz Ek Masraf Yok</div>
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-amber-400 mb-1">Çökme &amp; Güvenlik</div>
-                    <div className="text-3xl font-black text-white font-mono">Düşük Risk</div>
+                    <div className="text-3xl font-black text-white">Düşük Risk</div>
                     <div className="text-[11px] text-zinc-300 mt-1">Statik Mimari Güvenliği</div>
                   </div>
                 </div>
@@ -204,7 +204,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                   <span className="text-xs font-bold uppercase tracking-wider text-rose-400 mb-1 block">
                     Geleneksel WordPress Siteleri
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">Yavaş, Hantal &amp; Güvensiz</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white">Yavaş, Karmaşık &amp; Bakım İsteyen</h3>
                   <p className="text-xs sm:text-sm text-slate-300">Ağır eklenti yüküyle yavaşlayan ve her yıl sunucu faturası çıkaran eski sistemler</p>
                 </div>
 
@@ -212,25 +212,25 @@ export const WhyUsUnifiedSection: React.FC = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto">
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-rose-400 mb-1">Açılış Hızı</div>
-                    <div className="text-3xl font-black text-white font-mono">Yavaş</div>
+                    <div className="text-3xl font-black text-white">Yavaş</div>
                     <div className="text-[11px] text-rose-300 mt-1">Ağır Veritabanı Yükü</div>
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-amber-400 mb-1">Google Uyumu</div>
-                    <div className="text-3xl font-black text-white font-mono">Hantal</div>
+                    <div className="text-3xl font-black text-white">Sınırlı</div>
                     <div className="text-[11px] text-amber-300 mt-1">Optimizasyon Gerektiren CMS</div>
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-red-400 mb-1">Yıllık Masraf</div>
-                    <div className="text-3xl font-black text-white font-mono">Sürekli</div>
+                    <div className="text-3xl font-black text-white">Sürekli</div>
                     <div className="text-[11px] text-red-300 mt-1">Hosting, SSL, Eklenti Faturası</div>
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-orange-400 mb-1">Çökme Riski</div>
-                    <div className="text-3xl font-black text-white font-mono">Yüksek</div>
+                    <div className="text-3xl font-black text-white">Yüksek</div>
                     <div className="text-[11px] text-orange-300 mt-1">Sürekli Güncelleme ve Hata</div>
                   </div>
                 </div>
@@ -259,7 +259,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
             </div>
 
             <p className="text-center text-xs text-slate-400">
-              Kaydırıcıyı sağa ve sola sürükleyerek eski hantal siteler ile Next.js altyapımız arasındaki performans farkını doğrudan karşılaştırın.
+              Kaydırıcıyı sağa ve sola sürükleyerek geleneksel eklenti bağımlı siteler ile modern bulut mimarimiz arasındaki performans farkını doğrudan karşılaştırın.
             </p>
           </div>
 

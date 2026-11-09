@@ -93,7 +93,7 @@ export default async function Image() {
               lineHeight: 1.5,
             }}
           >
-            WordPress hantallığına son. Sektörünüze özel geliştirilmiş kurumsal web mimarisi, 3 yıl domain + global barındırma dahil anahtar teslim dijital prestij.
+            WordPress karmaşasına ve ağır eklenti yüküne son. Sektörünüze özel geliştirilmiş kurumsal web mimarisi, 3 yıl domain + global barındırma dahil anahtar teslim dijital prestij.
           </div>
         </div>
 
