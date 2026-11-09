@@ -84,7 +84,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     statHeadline: 'Klinikler İçin Kanıtlanmış Sonuçlar',
     stats: [
       { label: 'Lighthouse Skoru', value: '95+' },
-      { label: 'Mobil Randevu Dönüşümü', value: '+%65' },
+      { label: 'Randevu Erişimi', value: 'Mobil & WhatsApp' },
       { label: '3 Yıllık Masraf', value: '0 TL' }
     ]
   },
@@ -106,7 +106,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       },
       {
         title: 'Uzmanlık Alanları & Makale Yayını',
-        description: 'Ceza, Ticaret, İcra, Gayrimenkul, Aile hukuku gibi alanlarda zengin içerik ve Yargıtay kararları yayın modülü.'
+        description: 'Ceza, Ticaret, İcra, Gayrimenkul, Aile hukuku gibi alanlarda zengin içerik ve hukuki makale & mevzuat bülteni yayın modülü.'
       },
       {
         title: 'Müvekkil İletişim & Gizlilik Mimarisi',
@@ -136,7 +136,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       },
       {
         question: 'Web sitesi kaç günde yayına girer?',
-        answer: 'İçeriklerinizle birlikte 3 ila 5 iş günü içerisinde tüm sayfalar anahtar teslim tamamlanır.'
+        answer: 'İçerik onayınızdan itibaren seçtiğiniz paketin teslim takvimine göre (Başlangıç: 3–5, Profesyonel: 5–7 iş günü) anahtar teslim tamamlanır.'
       },
       {
         question: 'Müvekkiller cepten hızlı ulaşabilir mi?',
@@ -160,7 +160,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     heroSubheadline: 'Estetik projelerinizi en yüksek çözünürlükte, sıfır bekleme süresi ve ödül standartlarında tipografiyle sergileyen özel mimari web vitrini.',
     targetAudience: 'Mimarlık ofisleri, iç mimarlar, restorasyon stüdyoları ve peyzaj mimarları.',
     badge: 'Tasarım & Mimarlık',
-    relatedDemoSlugs: ['primeresidence', 'santiyeyapi', 'portfoy'],
+    relatedDemoSlugs: ['aura-studio', 'primeresidence', 'santiyeyapi'],
     sectorSpecificNeeds: [
       {
         title: 'Geniş Ekran Proje Vitrini & Filtreleme',
@@ -203,7 +203,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     ],
     statHeadline: 'Mimari Vitrin Performansı',
     stats: [
-      { label: 'Görsel Yükleme', value: '< 0.4s' },
+      { label: 'Görsel Optimizasyonu', value: 'WebP / CDN' },
       { label: 'Portfolyo Etkisi', value: 'Yüksek' },
       { label: 'Yıllık Sunucu Gideri', value: '0 TL' }
     ]
@@ -262,7 +262,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     statHeadline: 'Global Taşımacılıkta Dijital Güç',
     stats: [
       { label: 'Lighthouse Skoru', value: '95+' },
-      { label: 'Teklif Dönüşümü', value: '+%70' },
+      { label: 'Navlun Talebi', value: 'Anlık Form' },
       { label: 'Sunucu Masrafı', value: '3 Yıl 0 TL' }
     ]
   },
@@ -314,7 +314,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       },
       {
         question: 'Site kurulumu ne kadar sürer?',
-        answer: 'SMMM/YMM ofisleri için siteniz 3 ila 5 iş günü içerisinde tüm kurumsal sayfalarıyla hazır hale getirilir.'
+        answer: 'Seçilen pakete bağlı olarak içerik onayının ardından 3–7 iş günü içerisinde anahtar teslim yayına alınır.'
       }
     ],
     statHeadline: 'Finansal Güven Göstergeleri',
@@ -377,7 +377,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     ],
     statHeadline: 'Sanayi Sektörel Etki',
     stats: [
-      { label: 'B2B Teklif Artışı', value: '+%75' },
+      { label: 'CAD / Teknik Teklif', value: 'Entegre Modül' },
       { label: 'Lighthouse Skoru', value: '95+' },
       { label: 'Sıfır Masraf', value: '3 Yıl' }
     ]
@@ -488,7 +488,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       },
       {
         question: 'Ne kadar sürede yayına girer?',
-        answer: '3 ila 5 iş günü içerisinde tüm sayfalarınız, uzmanlıklarınız ve randevu sisteminiz anahtar teslim hazır hale getirilir.'
+        answer: 'Seçtiğiniz pakete bağlı olarak içerik onayınızın ardından 3–7 iş günü içerisinde tüm sayfalarınız ve randevu sisteminiz anahtar teslim hazır hale getirilir.'
       }
     ],
     statHeadline: 'Terapist Vitrininde Etki',

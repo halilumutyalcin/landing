@@ -427,7 +427,7 @@ export const siteConfig = {
     {
       category: 'paketler',
       question: 'Kaynak kodlar bana veriliyor mu? Size bağımlı kalır mıyım?',
-      answer: 'Başlangıç ve Profesyonel pakette site, size ait alan adı üzerinde yayınlanır; tam kaynak kod devri isteğe bağlı bir eklentidir (+%50). Kurumsal pakette kaynak kod devri (sözleşmede belirtilen kullanım lisansı kapsamında) fiyata dahildir. Dilediğiniz takdirde sitenizi kendi sunucunuza taşıyabilir veya bağımsız bir yazılımcıyla geliştirmeye devam edebilirsiniz.'
+      answer: 'Başlangıç, Profesyonel ve Kurumsal paketlerimizde site, size ait alan adı üzerinde yüksek hızlı bulut altyapısında anahtar teslim yayınlanır. Kendi bağımsız sunucunuzda barındırmak ve geliştirmek için gerekli olan tam Next.js 14 kaynak kod devri isteğe bağlı bir eklentidir (+%75 lisans devir bedeli). Siteniz bizim barındırmamızda kaldığı sürece ilk 3 yıl hiçbir ek sunucu veya SSL faturası ödemezsiniz; 3. yılın bitiminde de kendi sunucunuza taşıyabilir veya standart alan adı yenilemesiyle devam edebilirsiniz.'
     },
     {
       category: 'surec',

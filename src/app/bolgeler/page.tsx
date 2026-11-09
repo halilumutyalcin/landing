@@ -100,7 +100,7 @@ export default function BolgelerIndexPage() {
         <div>
           <div className="flex items-center gap-3 pb-4 border-b border-white/[0.08] mb-8">
             <h2 className="text-xl font-bold text-white tracking-tight">Avrupa Yakası Bölgelerimiz</h2>
-            <span className="text-xs px-2.5 py-0.5 rounded-full bg-emerald-950/60 text-amber-400 font-semibold border border-emerald-500/20">
+            <span className="text-xs px-2.5 py-0.5 rounded-full bg-zinc-900/60 text-amber-400 font-semibold border border-amber-500/30">
               {avrupa.length} Plaza &amp; Ticaret Aksı
             </span>
           </div>
@@ -110,14 +110,14 @@ export default function BolgelerIndexPage() {
               <Link
                 key={loc.id}
                 href={`/bolgeler/${loc.slug}`}
-                className="group p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-emerald-500/40 hover:bg-white/[0.04] transition-all flex flex-col justify-between"
+                className="group p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 hover:bg-white/[0.04] transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
                       {loc.name}
                     </span>
-                    <span className="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300">
+                    <span className="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-amber-500/10 text-zinc-300">
                       Plaza &amp; Merkez
                     </span>
                   </div>

@@ -86,7 +86,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
             <div className="grid grid-cols-3 gap-3 sm:gap-6 p-4 rounded-2xl bg-black/40 mb-8 max-w-xl">
               {sector.stats.map((stat, idx) => (
                 <div key={idx} className="text-center sm:text-left">
-                  <div className="text-xl sm:text-2xl font-black text-emerald-400 font-mono">
+                  <div className="text-xl sm:text-2xl font-black text-amber-400 font-mono">
                     {stat.value}
                   </div>
                   <div className="text-[11px] text-slate-400 font-medium mt-0.5">
@@ -141,7 +141,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
               className="p-6 sm:p-7 rounded-2xl bg-[#0A0A0C] hover:bg-[#121214] transition-all space-y-2"
             >
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-white text-black font-bold/20 text-amber-400 flex items-center justify-center font-bold text-xs shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs shrink-0">
                   0{idx + 1}
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-white">
@@ -161,7 +161,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
             <div>
-              <div className="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">
+              <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">
                 Hazır & Çalışır Durumda
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -196,7 +196,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     {demo.badge && (
-                      <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white text-black font-bold/90 backdrop-blur-md text-white text-[10px] font-bold shadow">
+                      <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-white text-[10px] font-bold shadow">
                         {demo.badge}
                       </span>
                     )}
@@ -272,7 +272,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
                 key={idx}
                 className="p-4 rounded-xl bg-black/40 flex items-start gap-3"
               >
-                <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="w-3.5 h-3.5" />
                 </div>
                 <span className="text-xs text-slate-200 font-medium leading-relaxed">

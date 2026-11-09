@@ -158,7 +158,7 @@ export const ContactSection: React.FC = () => {
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}
-                  className="px-6 py-2.5 rounded-xl bg-white text-black font-bold text-white font-semibold text-xs hover:bg-zinc-200 transition-colors"
+                  className="px-6 py-2.5 rounded-xl bg-white text-black font-semibold text-xs hover:bg-zinc-200 transition-colors"
                 >
                   Yeni Form Doldur
                 </button>

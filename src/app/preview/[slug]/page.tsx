@@ -88,7 +88,7 @@ export default function MockPreviewPage({ params }: PageProps) {
     bg: 'bg-slate-950 text-slate-100',
     heroBg: 'bg-slate-900',
     accent: 'text-amber-400',
-    button: 'bg-white text-black text-white',
+    button: 'bg-white text-black font-semibold hover:bg-zinc-200',
     card: 'bg-slate-900 border-slate-800',
     badge: 'bg-amber-500/10 text-zinc-300',
   };

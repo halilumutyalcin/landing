@@ -78,7 +78,7 @@ const SERVICE_GROUPS: ServiceGroup[] = [
       },
       {
         id: 'source-code',
-        title: 'Tam Kaynak Kod Mülkiyeti',
+        title: 'Tam Kaynak Kod & Bağımsız Lisans Teslimi',
         description: 'Sitenin tüm Next.js 14 kaynak kodlarının teslim edilmesi. Kendi bağımsız sunucunuzda barındırma imkanı.',
         pricing: 'Paket bedeline ek +%75',
         icon: Code2,

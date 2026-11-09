@@ -326,7 +326,7 @@ export const PricingSection: React.FC = () => {
                           <span>12 Ay Taahhütlü · Sonrasında Aylık Ödeme Yok</span>
                         </div>
                         <p className="text-[11px] text-zinc-400 leading-normal">
-                          12 ay sonunda sitenin tüm mülkiyeti ve 3 yıllık hosting hakkı size devredilir.
+                          12 ay sonunda sitenin yayın hakkı, alan adı ve 3 yıllık hosting hakkı size devredilir; aylık ödeme biter.
                         </p>
                       </div>
                     ) : (
@@ -531,7 +531,7 @@ export const PricingSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/10">
             <div className="text-xs text-slate-300 flex items-center gap-2">
               <Clock className="w-4 h-4 text-amber-400 shrink-0" />
-              <span>Teslimat Süresi: <strong>7 İş Günü</strong> · Ödeme: %50 Başlangıçta + %50 Yayında</span>
+              <span>Teslimat Süresi: <strong>7–10 İş Günü (İçerik ve logo onayından itibaren)</strong> · Ödeme: %50 Başlangıçta + %50 Canlıya Alınırken</span>
             </div>
 
             <a
