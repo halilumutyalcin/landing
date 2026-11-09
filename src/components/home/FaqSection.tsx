@@ -54,11 +54,13 @@ export const FaqSection: React.FC = () => {
                   </div>
                 </button>
 
-                {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 animate-in fade-in duration-200">
-                    {faq.answer}
-                  </div>
-                )}
+                <div
+                  className={`px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 ${
+                    isOpen ? 'block animate-in fade-in duration-200' : 'hidden print:block'
+                  }`}
+                >
+                  {faq.answer}
+                </div>
               </div>
             );
           })}

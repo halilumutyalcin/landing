@@ -89,11 +89,11 @@ export const HeroSection: React.FC = () => {
               <div className="space-y-3 font-mono text-xs">
                 <div className="flex items-center justify-between p-3 rounded-xl bg-black/50 border border-white/5">
                   <span className="text-slate-400">Lighthouse Skoru</span>
-                  <span className="text-white font-bold">95+ (Demo Ortalaması)</span>
+                  <span className="text-white font-bold">90–95+ (Statik Sayfalar)</span>
                 </div>
                 <div className="flex items-center justify-between p-3 rounded-xl bg-black/50 border border-white/5">
-                  <span className="text-slate-400">Mevzuat Uyumu</span>
-                  <span className="text-amber-400 font-bold">TBB, Sağlık &amp; TÜRMOB</span>
+                  <span className="text-slate-400">İçerik Yaklaşımı</span>
+                  <span className="text-amber-400 font-bold">Meslek Kurallarına Duyarlı</span>
                 </div>
                 <div className="flex items-center justify-between p-3 rounded-xl bg-black/50 border border-white/5">
                   <span className="text-slate-400">Barındırma &amp; SSL</span>

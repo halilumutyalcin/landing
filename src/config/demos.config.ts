@@ -99,9 +99,9 @@ export const DEMO_CATALOG: DemoItem[] = [
       headline: 'Hukuki Güvenin Dijital Temsili',
       subheadline: 'Müvekkillerinizle ilk andan itibaren saygın ve kurumsal bir bağ kurun.',
       stats: [
-        { label: 'Sayfa Yükleme', value: '< 0.8s' },
-        { label: 'Mobil Uyum', value: '%100' },
-        { label: 'SEO Puanı', value: '100' }
+        { label: 'Sayfa Yükleme', value: 'Edge CDN' },
+        { label: 'Mobil Uyum', value: 'Tam Uyum' },
+        { label: 'SEO Altyapısı', value: 'Schema' }
       ]
     }
   },
@@ -149,7 +149,7 @@ export const DEMO_CATALOG: DemoItem[] = [
     themeColor: 'amber',
     badge: 'Akademik',
     liveUrl: '/preview/legalist',
-    previewImage: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80',
+    previewImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80',
     shortDesc: 'Büyük başlıklar, asimetrik sütunlar ve akademik hukuki bülten yayını için tasarlanmış dergi estetiği.',
     targetAudience: 'Akademisyen avukatlar, arabuluculuk merkezleri ve patent/fikri mülkiyet ofisleri.',
     keyFeatures: [
@@ -167,9 +167,9 @@ export const DEMO_CATALOG: DemoItem[] = [
       headline: 'Fikri Derinlik ve Modern Tipografi',
       subheadline: 'Görüş ve makalelerinizi doğrudan okunabilir kılan editoryal akış.',
       stats: [
-        { label: 'Okunabilirlik', value: '100' },
-        { label: 'Hız Endeksi', value: '0.6s' },
-        { label: 'Responsive', value: '%100' }
+        { label: 'Okunabilirlik', value: 'Yüksek' },
+        { label: 'Performans', value: 'Lighthouse 90+' },
+        { label: 'Responsive', value: 'Tam Uyum' }
       ]
     }
   },
@@ -238,8 +238,8 @@ export const DEMO_CATALOG: DemoItem[] = [
       subheadline: 'Hastalarınızın aradığı branş ve hekime saniyeler içinde ulaşmasını sağlayın.',
       stats: [
         { label: 'Doğrudan İletişim', value: 'Tek Tık' },
-        { label: 'Mobil Hız', value: '96' },
-        { label: 'Ulaşılabilirlik', value: '%100' }
+        { label: 'Mobil Hız', value: 'Lighthouse 90+' },
+        { label: 'Ulaşılabilirlik', value: 'Yüksek' }
       ]
     }
   },
@@ -412,8 +412,8 @@ export const DEMO_CATALOG: DemoItem[] = [
       subheadline: 'Mükellefleriniz için her ay güncel takvim ve güvenilir danışmanlık yüzü.',
       stats: [
         { label: 'Takvim', value: 'Otomatik' },
-        { label: 'Lighthouse', value: '100' },
-        { label: 'Güven Endeksi', value: '%100' }
+        { label: 'Lighthouse', value: '95+' },
+        { label: 'Mevzuat Dili', value: 'Duyarlı' }
       ]
     }
   },
@@ -515,9 +515,9 @@ export const DEMO_CATALOG: DemoItem[] = [
       headline: 'İlanları Doğrudan Satışa Dönüştürün',
       subheadline: 'Ziyaretçiyi karmaşık formlarla yormadan tek tıkla WhatsApp üzerinden bağlayın.',
       stats: [
-        { label: 'WhatsApp Talep', value: '+%75' },
-        { label: 'Görsel Hızı', value: 'WebP 98' },
-        { label: 'Mobil İlan', value: '%100' }
+        { label: 'WhatsApp Talep', value: 'Tek Tık' },
+        { label: 'Görsel Hızı', value: 'WebP CDN' },
+        { label: 'Mobil İlan', value: 'Tam Uyum' }
       ]
     }
   },

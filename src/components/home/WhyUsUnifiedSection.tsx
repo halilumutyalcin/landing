@@ -60,7 +60,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
           </p>
 
           {/* Interactive Unified Segmented Tabs - Side-by-side (Grid, No Scroll) */}
-          <div className="mt-8 w-full max-w-3xl mx-auto grid grid-cols-3 p-1 sm:p-1.5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] gap-1 sm:gap-1.5 shadow-inner">
+          <div className="mt-8 w-full max-w-3xl mx-auto grid grid-cols-3 p-1 sm:p-1.5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] gap-1 sm:gap-1.5 shadow-inner print:hidden">
             <button
               onClick={() => setActiveTab('agency-vs-us')}
               className={`w-full px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
@@ -100,49 +100,46 @@ export const WhyUsUnifiedSection: React.FC = () => {
         </div>
 
         {/* TAB 1: Geleneksel Ajans vs. MediWeb (Comparison Table) */}
-        {activeTab === 'agency-vs-us' && (
-          <div className="bg-[#0A0A0C] border border-white/[0.08] rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto animate-in fade-in duration-300">
-            <div className="grid grid-cols-1 md:grid-cols-3 bg-[#121214] text-xs sm:text-sm font-semibold text-zinc-400 p-4 sm:p-5 border-b border-white/5">
-              <div className="hidden md:block">Karşılaştırma Kriteri</div>
-              <div className="text-rose-400 flex items-center gap-2">
-                <XCircle className="w-4 h-4 text-rose-400 shrink-0" />
-                <span>Geleneksel Ajans Modeli</span>
-              </div>
-              <div className="text-emerald-400 flex items-center gap-2 mt-2 md:mt-0">
-                <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>MediWeb Modeli</span>
-              </div>
+        <div className={`bg-[#0A0A0C] border border-white/[0.08] rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto ${activeTab === 'agency-vs-us' ? 'block animate-in fade-in duration-300' : 'hidden print:block'}`}>
+          <div className="grid grid-cols-1 md:grid-cols-3 bg-[#121214] text-xs sm:text-sm font-semibold text-zinc-400 p-4 sm:p-5 border-b border-white/5">
+            <div className="hidden md:block">Karşılaştırma Kriteri</div>
+            <div className="text-rose-400 flex items-center gap-2">
+              <XCircle className="w-4 h-4 text-rose-400 shrink-0" />
+              <span>Geleneksel Ajans Modeli</span>
             </div>
-
-            <div className="divide-y divide-white/5">
-              {siteConfig.comparisonPoints.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="grid grid-cols-1 md:grid-cols-3 p-4 sm:p-5 gap-2 md:gap-4 hover:bg-white/[0.02] transition-colors items-center text-xs sm:text-sm"
-                >
-                  <div className="font-bold text-white mb-1 md:mb-0">
-                    {item.feature}
-                  </div>
-                  <div className="text-slate-400">
-                    <span className="text-rose-400 font-bold mr-1 md:hidden">Eski:</span>
-                    <span>{item.traditional}</span>
-                  </div>
-                  <div className="text-zinc-300 font-semibold">
-                    <span className="text-amber-400 font-bold mr-1 md:hidden">MediWeb:</span>
-                    <span>{item.mediweb}</span>
-                  </div>
-                </div>
-              ))}
+            <div className="text-emerald-400 flex items-center gap-2 mt-2 md:mt-0">
+              <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+              <span>MediWeb Modeli</span>
             </div>
           </div>
-        )}
+
+          <div className="divide-y divide-white/5">
+            {siteConfig.comparisonPoints.map((item, idx) => (
+              <div
+                key={idx}
+                className="grid grid-cols-1 md:grid-cols-3 p-4 sm:p-5 gap-2 md:gap-4 hover:bg-white/[0.02] transition-colors items-center text-xs sm:text-sm"
+              >
+                <div className="font-bold text-white mb-1 md:mb-0">
+                  {item.feature}
+                </div>
+                <div className="text-slate-400">
+                  <span className="text-rose-400 font-bold mr-1 md:hidden">Eski:</span>
+                  <span>{item.traditional}</span>
+                </div>
+                <div className="text-zinc-300 font-semibold">
+                  <span className="text-amber-400 font-bold mr-1 md:hidden">MediWeb:</span>
+                  <span>{item.mediweb}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* TAB 2: WordPress vs. Next.js Hız Kıyası (Interactive Slider & Metrics) */}
-        {activeTab === 'wp-vs-next' && (
-          <div className="max-w-5xl mx-auto space-y-6 animate-in fade-in duration-300">
-            <div 
-              ref={containerRef}
-              onMouseDown={() => setIsDragging(true)}
+        <div className={`max-w-5xl mx-auto space-y-6 ${activeTab === 'wp-vs-next' ? 'block animate-in fade-in duration-300' : 'hidden print:block print:mt-10'}`}>
+          <div 
+            ref={containerRef}
+            onMouseDown={() => setIsDragging(true)}
               onMouseUp={() => setIsDragging(false)}
               onMouseLeave={() => setIsDragging(false)}
               onMouseMove={handleMouseMove}
@@ -265,12 +262,10 @@ export const WhyUsUnifiedSection: React.FC = () => {
               Kaydırıcıyı sağa ve sola sürükleyerek eski hantal siteler ile Next.js altyapımız arasındaki performans farkını doğrudan karşılaştırın.
             </p>
           </div>
-        )}
 
         {/* TAB 3: Şeffaf İlkelerimiz & Kurucu Notu */}
-        {activeTab === 'principles' && (
-          <div className="max-w-5xl mx-auto space-y-8 animate-in fade-in duration-300">
-            {/* Founder's Authentic Note */}
+        <div className={`max-w-5xl mx-auto space-y-8 ${activeTab === 'principles' ? 'block animate-in fade-in duration-300' : 'hidden print:block print:mt-10'}`}>
+          {/* Founder's Authentic Note */}
             <div className="p-7 sm:p-9 rounded-3xl bg-[#0A0A0C] border border-white/[0.08] shadow-2xl relative overflow-hidden">
               <div className="space-y-3.5 text-left">
                 <div className="flex flex-wrap items-center justify-between gap-2">
@@ -412,9 +407,8 @@ export const WhyUsUnifiedSection: React.FC = () => {
               </div>
             </div>
           </div>
-        )}
+        </div>
 
-      </div>
-    </section>
+      </section>
   );
 };

@@ -53,8 +53,8 @@ export const Footer: React.FC = () => {
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-white text-black font-bold flex items-center justify-center text-white font-black text-base shadow-md">
-                M
+              <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center shadow-md shrink-0 select-none">
+                <span className="text-black font-black text-lg leading-none tracking-tight">M</span>
               </div>
               <span className="text-2xl font-black text-white font-display">
                 Medi<span className="text-amber-400">Web</span>
@@ -75,6 +75,10 @@ export const Footer: React.FC = () => {
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-brand-400 shrink-0" />
                 <span>{siteConfig.phoneDisplay}</span>
+              </div>
+              <div className="pt-2 border-t border-white/5 text-[11px] text-slate-400 space-y-0.5">
+                <div><span className="text-slate-300 font-semibold">Tüzel Kişilik:</span> {siteConfig.legalEntity.title} ({siteConfig.legalEntity.type})</div>
+                <div><span className="text-slate-300 font-semibold">Kayıt:</span> {siteConfig.legalEntity.taxOffice} · {siteConfig.legalEntity.city}</div>
               </div>
             </div>
           </div>
@@ -208,7 +212,7 @@ export const Footer: React.FC = () => {
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5 text-slate-400">
               <span className="w-2 h-2 rounded-full bg-amber-400"></span>
-              3 Yıl Kesintisiz Barındırma &amp; Hız Garantisi
+              3 Yıl Kesintisiz Barındırma &amp; Yüksek Hızlı CDN Altyapısı
             </span>
           </div>
         </div>

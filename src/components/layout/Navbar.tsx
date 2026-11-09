@@ -36,8 +36,8 @@ export const Navbar: React.FC = () => {
         
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-white text-black text-white flex items-center justify-center font-black text-base shadow-lg shadow-white/10">
-            M
+          <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center shadow-lg shadow-white/10 shrink-0 select-none">
+            <span className="text-black font-black text-lg leading-none tracking-tight">M</span>
           </div>
           <div>
             <div className="text-lg font-black text-white tracking-tight leading-none">

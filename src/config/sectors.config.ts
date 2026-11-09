@@ -93,9 +93,9 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     shortSlug: 'hukuk-burosu',
     name: 'Hukuk Bürosu & Avukat',
     title: 'Hukuk Bürosu Web Sitesi Tasarımı | Baro Uyumlu & 3 Yıl Barındırma',
-    metaDescription: 'Avukatlar ve hukuk büroları için TBB reklam yasağına %100 uyumlu, saygın, müvekkil odaklı ve 3 yıl domain/hosting dahil kurumsal web sitesi.',
+    metaDescription: 'Avukatlar ve hukuk büroları için TBB reklam yasağı kurallarına duyarlı, saygın, müvekkil odaklı ve 3 yıl domain/hosting dahil kurumsal web sitesi.',
     heroHeadline: 'Müvekkil Kazandıran Saygın Hukuk Bürosu Web Sitesi',
-    heroSubheadline: 'Türkiye Barolar Birliği reklam yasağı kurallarına %100 uyumlu, ağırbaşlı tipografi ve Lighthouse 95+ performans optimizasyonuyla tasarlanmış kurumsal avukatlık sitesi.',
+    heroSubheadline: 'Türkiye Barolar Birliği reklam yasağı kurallarına duyarlı, ağırbaşlı tipografi ve Lighthouse 90–95+ performans optimizasyonuyla tasarlanmış kurumsal avukatlık sitesi.',
     targetAudience: 'Bağımsız avukatlar, ortaklık büroları, arabuluculuk merkezleri ve kurumsal hukuk müşavirlikleri.',
     badge: 'Hukuk Sektörü Çözümü',
     relatedDemoSlugs: ['lexora', 'justice', 'legalist'],
@@ -145,7 +145,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     ],
     statHeadline: 'Hukuk Bürolarında Güven Endeksi',
     stats: [
-      { label: 'TBB Uyumluluğu', value: '%100' },
+      { label: 'TBB İlkeleri', value: 'Duyarlı' },
       { label: 'Google Hız Puanı', value: '98+' },
       { label: 'Teslim Süresi', value: '3–10 İş Günü' }
     ]
@@ -319,7 +319,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     ],
     statHeadline: 'Finansal Güven Göstergeleri',
     stats: [
-      { label: 'TÜRMOB Uyumu', value: '%100' },
+      { label: 'TÜRMOB İlkeleri', value: 'Duyarlı' },
       { label: 'Lighthouse Puanı', value: '99' },
       { label: 'İlk 3 Yıl Masraf', value: '0 TL' }
     ]
@@ -368,7 +368,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       },
       {
         question: 'Sitemiz yurt dışı alıcılar için İngilizceye uyarlanabilir mi?',
-        answer: 'Evet, tüm sanayi şablonlarımız çoklu dil (İngilizce/Almanca) altyapısına %100 hazırdır; ihracat müşterilerinizi kolayca karşılarsınız.'
+        answer: 'Evet, tüm sanayi şablonlarımız çoklu dil (İngilizce/Almanca) altyapısına tam hazırdır; ihracat müşterilerinizi kolayca karşılarsınız.'
       },
       {
         question: 'Referans fabrika logolarımızı ekleyebilir miyiz?',
@@ -435,7 +435,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     ],
     statHeadline: 'Gayrimenkul Dönüşüm Verisi',
     stats: [
-      { label: 'Komisyon Koruması', value: '%100' },
+      { label: 'Doğrudan İletişim', value: 'WhatsApp' },
       { label: 'Lighthouse Skoru', value: '95+' },
       { label: 'Yıllık Masraf', value: '0 TL' }
     ]

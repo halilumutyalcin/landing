@@ -75,6 +75,13 @@ export const siteConfig = {
   phoneDisplay: '+90 (216) 700 00 00',
   email: 'info@mediweb.com.tr',
   address: 'Doğu Mah. Erol Kaya Cad. No:94, Pendik / İstanbul',
+  legalEntity: {
+    title: 'Şengüller Otomotiv & Bilişim Danışmanlığı',
+    type: 'Ticari İşletme',
+    taxOffice: 'Pendik Vergi Dairesi',
+    taxNumber: 'Teklif ve sözleşme aşamasında paylaşılır',
+    city: 'İstanbul / Pendik',
+  },
   
   metrics: [
     { value: '3 Yıl', label: 'Hosting & Alan Adı Dahil', icon: 'ShieldCheck', sub: 'İlk 3 yıl sıfır yenileme maliyeti' },
@@ -104,7 +111,7 @@ export const siteConfig = {
       features: [
         'Tek sayfa (One Page) veya 5 sayfaya kadar kurumsal mimari',
         '3 Yıl Domain (.com / .com.tr) + Yüksek Hızlı Bulut Barındırma Dahil',
-        'Mobil ve Tablet %100 Kusursuz Uyum',
+        'Mobil ve Tablet Tam Uyumlu Responsive Tasarım',
         'Temel SEO Altyapısı (Sitemap, Meta, Robots.txt)',
         'Sabit WhatsApp İletişim Butonu & Hızlı Mesaj',
         'E-posta Bildirimli İletişim Formu',
@@ -312,7 +319,7 @@ export const siteConfig = {
       id: 'white-label',
       icon: 'ShieldOff',
       title: 'White-Label / Ajans İmzası Kaldırma',
-      description: 'Sitenin altındaki "Mimari: MediWeb" ibaresinin tamamen kaldırılması ve sitenin %100 kendi bağımsız kurumsal markanız altında sunulması.',
+      description: 'Sitenin altındaki "Mimari: MediWeb" ibaresinin tamamen kaldırılması ve sitenin bağımsız kurumsal markanız altında sunulması.',
       pricing: '+3.500 ₺ (Tek Seferlik)',
     },
     {
@@ -327,7 +334,7 @@ export const siteConfig = {
       icon: 'ShieldCheck',
       title: 'Aylık Teknik Güvence & Rutin Bakım',
       description: 'Aylık içerik güncellemeleri, güvenlik kontrolleri, DNS izleme ve kesintisiz teknik destek.',
-      pricing: 'Aylık 2.500 ₺ (Paketlerde ilk aylar ücretsiz)',
+      pricing: 'Profesyonel pakette 1 ay, Kurumsal pakette 3 ay dahil; sonrasında isteğe bağlı 2.500 ₺/ay',
     }
   ] as ExtraServiceItem[],
 
@@ -335,7 +342,7 @@ export const siteConfig = {
     { feature: 'Kime uygun?', starter: 'Yeni başlayan işletmeler, tek kişilik ofisler', pro: 'Kurumsal görünüm isteyen işletmeler & KOBİ\'ler', enterprise: 'Profesyonel dijital varlık ve ihracat odaklı firmalar' },
     { feature: 'Tasarım mimarisi', starter: 'Hazır yapı üzerinde özelleştirilmiş tasarım', pro: 'Markaya özel UI/UX tasarım ve kurumsal renkler', enterprise: 'Tamamen özel UI/UX + gelişmiş etkileşimler' },
     { feature: 'Sayfa yapısı', starter: 'Tek sayfalık landing page veya 5 sayfaya kadar', pro: '10 sayfaya kadar kurumsal yapı', enterprise: '20 sayfaya kadar / ihtiyaca göre' },
-    { feature: 'Mobil & tablet uyumluluk', starter: '✓ Dahil (%100 Responsive)', pro: '✓ Dahil (%100 Responsive)', enterprise: '✓ Dahil (%100 Responsive)' },
+    { feature: 'Mobil & tablet uyumluluk', starter: '✓ Dahil (Mobil & Tablet Uyumlu)', pro: '✓ Dahil (Mobil & Tablet Uyumlu)', enterprise: '✓ Dahil (Mobil & Tablet Uyumlu)' },
     { feature: 'Ana Sayfa (Hero & Vitrin)', starter: '✓ Dahil', pro: '✓ Dahil', enterprise: '✓ Dahil' },
     { feature: 'Hakkımızda sayfası', starter: 'Bölüm olarak (One-Page)', pro: '✓ Ayrı özel sayfa', enterprise: '✓ Zengin hikaye & zaman tüneli sayfası' },
     { feature: 'Hizmetler / Ürünler', starter: 'Bölüm olarak (3-6 hizmet)', pro: '✓ Ayrı detay sayfaları', enterprise: '✓ Gelişmiş mimari & filtreli detay sayfaları' },
@@ -363,23 +370,23 @@ export const siteConfig = {
   comparisonPoints: [
     {
       feature: 'Teslim Süresi',
-      traditional: '4 – 12 Hafta (Ucu açık belirsiz takvim)',
+      traditional: 'Geleneksel ajans süreçlerinde tipik olarak 4 – 12 hafta',
       mediweb: '3 – 10 İş Günü (Pakete ve içerik onayına göre net süre)',
     },
     {
       feature: 'Fiyatlandırma',
-      traditional: 'Değişken & Sürpriz ek revizyon maliyetleri',
+      traditional: 'Kapsam dışı revizyonlarda değişkenlik gösterebilen bütçeler',
       mediweb: 'Net Sabit Fiyat (17.500 ₺ / 32.500 ₺ / 59.900 ₺)',
     },
     {
       feature: 'Barındırma & Domain',
-      traditional: 'Her yıl katlanarak artan yenileme faturaları',
+      traditional: 'Geleneksel barındırmada sıkça karşılaşılan yıllık ek yenileme faturaları',
       mediweb: 'İlk 3 Yıl Domain + SSL + Bulut Barındırma Fiyata Dahil',
     },
     {
       feature: 'Altyapı & Performans',
       traditional: 'Ağır eklentili, güvenlik açığı riski taşıyan eski CMS',
-      mediweb: 'Next.js 14 tabanlı modern statik mimari, Lighthouse 95+',
+      mediweb: 'Next.js 14 tabanlı modern statik mimari, Lighthouse 90–95+',
     },
     {
       feature: 'Tasarım Süreci',
@@ -388,8 +395,8 @@ export const siteConfig = {
     },
     {
       feature: 'Mevzuat & Etik Uyum',
-      traditional: 'Yasal kısıtlardan habersiz standart pazarlama dili',
-      mediweb: 'TBB, Sağlık Bakanlığı ve TÜRMOB mevzuatına tam uyumlu dil',
+      traditional: 'Sektörel reklam yasaklarını göz ardı edebilen kontrolsüz pazarlama dili',
+      mediweb: 'Meslek kurallarına duyarlı içerik yaklaşımı (Nihai içerik sorumluluğu müşteridedir)',
     },
   ],
 

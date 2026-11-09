@@ -26,7 +26,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
 3. Revizyon Hakları: Başlangıç paketinde 1 tur, Profesyonel pakette 2 tur, Kurumsal pakette 3 tur revizyon hakkı sağlanır.
 4. Fatura ve İade: Tüm fiyatlar KDV hariçtir; faturalandırmada %20 KDV eklenerek resmî e-Fatura/e-Arşiv düzenlenir. Dijital hizmet ve özel alan adı tahsisi başladıktan sonra cayma hakkı kapsam dışıdır; ancak hata garantisi süresince teknik düzeltmeler koşulsuz sağlanır.
 5. Ajans İmzası ve White-Label: Varsayılan olarak hazırlanan sitelerin alt bilgi (footer) alanında 'Mimari: MediWeb' ibaresi yer alır. Müşteri dilerse tek seferlik White-Label bedeli karşılığında bu ibareyi tamamen kaldırtma hakkına sahiptir.
-6. Taksitli / Aylık Model (WaaS): 12 aylık taahhüt süresi dolduğunda sitenin tüm mülkiyeti ve 3 yıllık barındırma hakkı müşteriye devredilir. 13. aydan itibaren zorunlu aylık ödeme kesilir; müşteri teknik bakım hizmetini sonlandırabilir veya isteğe bağlı sürdürebilir. Müşterinin web sitesi asla rehin tutulmaz veya kapatılmaz.`
+6. Taksitli / Aylık Model (WaaS): 12 aylık taahhüt süresi dolduğunda sitenin yayın hakkı, alan adı (.com/.com.tr) tescili ve 3 yıllık bulut barındırma hakkı müşteriye devredilir. 13. aydan itibaren zorunlu aylık ödeme kesilir; site asla kapatılmaz veya rehin tutulmaz. Bağımsız sunucuya taşıma ve yazılım geliştirme için gerekli tam kaynak kod devri ise lisans protokolü kapsamında ek bir opsiyondur.`
     },
     privacy: {
       title: 'Gizlilik ve Çerez Politikası',

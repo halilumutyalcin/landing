@@ -173,7 +173,7 @@ export const PricingSection: React.FC = () => {
                 </button>
                 {/* 12 Ay Taksit Rozeti */}
                 <span className="absolute -top-3 -right-2 px-2 py-0.5 rounded-md text-[9px] font-black uppercase tracking-wider bg-amber-500 text-black border border-amber-300 shadow-md rotate-6 pointer-events-none select-none">
-                  12 Ay Sonra Mülkiyet Sizin
+                  12 Ay Sonra Aylık Ödeme Biter
                 </span>
               </div>
             </div>
@@ -205,7 +205,7 @@ export const PricingSection: React.FC = () => {
               </div>
             ) : (
               <p className="text-xs text-amber-400 font-medium animate-in fade-in duration-200">
-                Peşin bütçe ayırmadan, düşük kurulum bedeli ve 12 ay sabit taksitle başlayın. 12 ay sonunda sitenin mülkiyeti ve 3 yıllık hosting tamamen size geçer.
+                Peşin bütçe ayırmadan, düşük kurulum bedeli ve 12 ay sabit taksitle başlayın. 12 ay sonunda sitenin yayın hakkı, alan adı ve 3 yıllık hosting tamamen size devredilir; aylık ödeme biter.
               </p>
             )}
 
@@ -218,19 +218,17 @@ export const PricingSection: React.FC = () => {
         </div>
 
         {/* 13th-Month Ownership Guarantee Callout for WaaS */}
-        {billingMode === 'waas' && (
-          <div className="max-w-4xl mx-auto mb-10 p-5 rounded-2xl bg-[#0A0A0C] border border-amber-500/30 flex items-start gap-4 text-xs text-zinc-300 shadow-2xl">
-            <ShieldCheck className="w-6 h-6 text-amber-400 shrink-0 mt-0.5" />
-            <div className="space-y-1.5">
-              <strong className="text-white block font-bold text-sm">
-                13. Ay Güvencesi: Asla Rehin, Kilit veya Zorunlu Abonelik Yok
-              </strong>
-              <p className="text-zinc-300 leading-relaxed">
-                12 aylık taahhüt tamamlandığında sitenin tüm mülkiyeti ve 3 yıllık barındırma hakkı size aittir. 13. aydan itibaren zorunlu aylık ödeme durur; dilerseniz aylık teknik bakım hizmetini sonlandırabilir veya isteğe bağlı sürdürebilirsiniz. Siteniz asla kapatılmaz veya rehin tutulmaz.
-              </p>
-            </div>
+        <div className={`max-w-4xl mx-auto mb-10 p-5 rounded-2xl bg-[#0A0A0C] border border-amber-500/30 flex items-start gap-4 text-xs text-zinc-300 shadow-2xl ${billingMode === 'waas' ? 'block' : 'hidden print:block'}`}>
+          <ShieldCheck className="w-6 h-6 text-amber-400 shrink-0 mt-0.5" />
+          <div className="space-y-1.5">
+            <strong className="text-white block font-bold text-sm">
+              13. Ay Güvencesi: Asla Rehin, Kilit veya Zorunlu Abonelik Yok
+            </strong>
+            <p className="text-zinc-300 leading-relaxed">
+              12 aylık taahhüt tamamlandığında sitenin yayın hakkı, alan adı (.com / .com.tr) tescili ve 3 yıllık bulut barındırma hakkı müşteriye devredilir. 13. aydan itibaren zorunlu aylık ödeme durur; dilerseniz aylık teknik bakım hizmetini sonlandırabilir veya isteğe bağlı sürdürebilirsiniz. Siteniz asla kapatılmaz veya rehin tutulmaz. (Kendi sunucunuzda bağımsız geliştirme için gerekli olan tam kaynak kod devri ise lisans protokolü kapsamında ek bir opsiyondur.)
+            </p>
           </div>
-        )}
+        </div>
 
         {/* 3 Packages Cards - Pure Background Separation, Zero Borders */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-14">
@@ -552,7 +550,7 @@ export const PricingSection: React.FC = () => {
 
         {/* 25-Row Comparison Matrix Toggle & Grouped Table */}
         <div className="mb-14 max-w-5xl mx-auto">
-          <div className="text-center mb-6">
+          <div className="text-center mb-6 print:hidden">
             <button
               onClick={() => setShowFullMatrix(!showFullMatrix)}
               className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-[#0A0A0C] hover:bg-[#182030] text-white text-xs sm:text-sm font-bold transition-all shadow-lg"
@@ -566,9 +564,8 @@ export const PricingSection: React.FC = () => {
             </button>
           </div>
 
-          {showFullMatrix && (
-            <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-in fade-in duration-300">
-              <div className="overflow-x-auto">
+          <div className={`bg-[#0A0A0C] border border-white/10 rounded-2xl overflow-hidden shadow-2xl ${showFullMatrix ? 'block animate-in fade-in duration-300' : 'hidden print:block'}`}>
+            <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs sm:text-sm border-collapse">
                   <thead>
                     <tr className="bg-[#0A0D14] border-b border-white/10 text-slate-300">
@@ -618,7 +615,6 @@ export const PricingSection: React.FC = () => {
                 </table>
               </div>
             </div>
-          )}
         </div>
 
         {/* UNIFIED Master Value & Guarantee Block: "Ne İçin Ödeme Yapıyorsunuz?" */}
@@ -771,7 +767,7 @@ export const PricingSection: React.FC = () => {
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
                 <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
-                KVKK Uyumlu Veritabanı
+                KVKK İlkelerine Duyarlı Altyapı
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/5 font-mono text-[11px] text-slate-300">
                 <Zap className="w-3.5 h-3.5 text-amber-400" />

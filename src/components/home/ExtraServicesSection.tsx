@@ -113,7 +113,7 @@ const SERVICE_GROUPS: ServiceGroup[] = [
       {
         id: 'white-label',
         title: 'White-Label / Ajans İmzası Kaldırma',
-        description: 'Sitenin altındaki "Mimari: MediWeb" ibaresinin tamamen kaldırılması; sitenin %100 kendi bağımsız kurumsal markanız olarak sunulması.',
+        description: 'Sitenin altındaki "Mimari: MediWeb" ibaresinin tamamen kaldırılması; sitenin bağımsız kurumsal markanız olarak sunulması.',
         pricing: '+3.500 ₺ (Tek Seferlik)',
         icon: ShieldOff,
       },
@@ -128,7 +128,7 @@ const SERVICE_GROUPS: ServiceGroup[] = [
         id: 'maintenance',
         title: 'Aylık Teknik Bakım & Güvence',
         description: 'Aylık içerik güncellemeleri, güvenlik kontrolleri, DNS izleme ve kesintisiz öncelikli teknik destek.',
-        pricing: 'Aylık 2.500 ₺ (Paketlerde ilk aylar ücretsiz)',
+        pricing: 'Pro\'da 1 ay, Kurumsal\'da 3 ay dahil; sonra 2.500 ₺/ay',
         icon: ShieldCheck,
       },
     ],
