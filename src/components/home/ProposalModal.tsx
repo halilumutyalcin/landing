@@ -88,23 +88,23 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
         role="dialog"
         aria-modal="true"
         aria-labelledby="proposal-modal-title"
-        className="bg-[#0D121F] rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl relative"
+        className="bg-[#0A0A0C] border border-white/[0.08] rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl relative"
       >
         {/* Header */}
-        <div className="p-6 border-b border-white/5 flex items-center justify-between sticky top-0 bg-[#0D121F]/90 backdrop-blur-md z-10">
+        <div className="p-6 border-b border-white/[0.08] flex items-center justify-between sticky top-0 bg-[#0A0A0C]/95 backdrop-blur-md z-10">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center">
               <Calculator className="w-5 h-5" />
             </div>
             <div>
-              <h3 id="proposal-modal-title" className="text-lg font-bold text-white">Akıllı Teklif & Maliyet Hesaplayıcı</h3>
+              <h3 id="proposal-modal-title" className="text-lg font-bold text-white">Akıllı Teklif &amp; Maliyet Hesaplayıcı</h3>
               <p className="text-xs text-slate-400">İhtiyacınızı seçin, anında net maliyeti ve vergi avantajını görün</p>
             </div>
           </div>
           <button 
             onClick={onClose}
             aria-label="Hesaplayıcıyı Kapat"
-            className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+            className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
           >
             <X className="w-4 h-4" />
           </button>
@@ -114,7 +114,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
         <div className="p-6 space-y-6">
           {/* 1. Sector Choice */}
           <div>
-            <label className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 block">
+            <label className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2.5 block">
               1. Sektörünüzü Seçin
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -131,8 +131,8 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
                   onClick={() => setSelectedSector(sec)}
                   className={`p-2.5 rounded-xl text-left text-xs transition-all ${
                     selectedSector === sec
-                      ? 'bg-white text-black font-semibold shadow-md'
-                      : 'bg-white/5 text-slate-300 hover:bg-white/10'
+                      ? 'bg-white text-black font-bold shadow-md'
+                      : 'bg-white/[0.03] border border-white/[0.06] text-slate-300 hover:bg-white/[0.08] hover:text-white font-medium'
                   }`}
                 >
                   {sec}
@@ -143,26 +143,26 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
 
           {/* 2. Package Choice & Billing Model */}
           <div>
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                2. Paketinizi & Ödeme Modelini Belirleyin
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2.5">
+              <label className="text-xs font-bold uppercase tracking-wider text-amber-400">
+                2. Paketinizi &amp; Ödeme Modelini Belirleyin
               </label>
-              <div className="inline-flex items-center p-0.5 rounded-lg bg-black/40 text-[11px]">
+              <div className="inline-flex items-center p-1 rounded-xl bg-black/50 border border-white/[0.08] text-xs">
                 <button
                   onClick={() => setBillingModel('onetime')}
-                  className={`px-2.5 py-1 rounded-md font-bold transition-all ${
-                    billingModel === 'onetime' ? 'bg-white text-black font-semibold' : 'text-slate-400'
+                  className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+                    billingModel === 'onetime' ? 'bg-white text-black font-bold shadow-sm' : 'text-slate-400 hover:text-white font-medium'
                   }`}
                 >
-                  Tek Seferlik (3 Yıl 0 ₺ Masraf)
+                  Tek Seferlik (Sabit Fiyat)
                 </button>
                 <button
                   onClick={() => setBillingModel('waas')}
-                  className={`px-2.5 py-1 rounded-md font-bold transition-all ${
-                    billingModel === 'waas' ? 'bg-amber-500 text-black font-bold' : 'text-slate-400'
+                  className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+                    billingModel === 'waas' ? 'bg-amber-500 text-black font-bold shadow-sm' : 'text-slate-400 hover:text-white font-medium'
                   }`}
                 >
-                  Sıfır Peşinat: Esnek Aylık Model
+                  12 Ay Taksitli Model
                 </button>
               </div>
             </div>
@@ -181,20 +181,20 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
                   <button
                     key={p.id}
                     onClick={() => setSelectedPackage(p.id)}
-                    className={`p-3.5 rounded-2xl text-left transition-all relative ${
+                    className={`p-4 rounded-2xl text-left transition-all relative ${
                       isSelected
-                        ? 'bg-white text-black font-semibold shadow-lg'
-                        : 'bg-white/5 text-slate-300 hover:bg-white/10'
+                        ? 'bg-[#121214] border-2 border-amber-500/50 shadow-xl text-white'
+                        : 'bg-white/[0.02] border border-white/[0.06] text-slate-300 hover:border-white/20 hover:bg-white/[0.04]'
                     }`}
                   >
                     {p.isPopular && (
-                      <span className="absolute -top-2 right-2 px-2 py-0.5 rounded-full bg-amber-400 text-[9px] font-black uppercase text-black shadow">
+                      <span className="absolute -top-2.5 right-3 px-2 py-0.5 rounded-full bg-amber-500 text-[9px] font-black uppercase text-black shadow">
                         Önerilen
                       </span>
                     )}
-                    <div className="text-xs font-bold text-slate-200">{p.name}</div>
-                    <div className="text-base font-black text-white font-mono mt-1">{priceLabel}</div>
-                    <div className="text-[10px] text-slate-400 mt-1">{subLabel}</div>
+                    <div className="text-xs font-bold text-amber-400">{p.name} Paketi</div>
+                    <div className="text-lg font-black text-white mt-1.5">{priceLabel}</div>
+                    <div className="text-[11px] text-slate-400 mt-1">{subLabel}</div>
                   </button>
                 );
               })}
@@ -203,8 +203,8 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
 
           {/* 3. Extras */}
           <div>
-            <label className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 block">
-              3. İsteğe Bağlı Ek Modüller & Kurumsal Çözümler
+            <label className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2.5 block">
+              3. İsteğe Bağlı Ek Modüller &amp; Kurumsal Çözümler
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {[
@@ -220,14 +220,14 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
                   <button
                     key={extra.id}
                     onClick={() => toggleExtra(extra.id)}
-                    className={`p-3 rounded-xl flex items-center justify-between text-xs transition-all ${
+                    className={`p-3 rounded-xl border flex items-center justify-between text-xs transition-all ${
                       isChecked
-                        ? 'bg-emerald-600/30 text-white font-semibold'
-                        : 'bg-white/5 text-slate-400 hover:bg-white/10'
+                        ? 'bg-amber-500/10 border-amber-500/40 text-white font-semibold shadow-sm'
+                        : 'bg-white/[0.02] border-white/[0.06] text-slate-300 hover:bg-white/[0.05] hover:text-white'
                     }`}
                   >
                     <span>{extra.label}</span>
-                    <span className="font-mono text-emerald-400 text-[11px] font-bold">{extra.price}</span>
+                    <span className="text-amber-400 text-xs font-bold">{extra.price}</span>
                   </button>
                 );
               })}
@@ -235,25 +235,25 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
           </div>
 
           {/* 4. Company Tax Saving Simulator - Zero Outer Border */}
-          <div className="p-4 rounded-2xl bg-black">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-bold text-slate-300 flex items-center gap-2">
+          <div className="p-4 sm:p-5 rounded-2xl bg-black/50 border border-white/[0.06]">
+            <div className="flex items-center justify-between mb-3.5">
+              <span className="text-xs font-bold text-white flex items-center gap-2">
                 <Building2 className="w-4 h-4 text-amber-400" />
-                Şirket Türü & Vergi İndirimi
+                Şirket Türü &amp; Vergi İndirimi
               </span>
-              <div className="flex items-center gap-1 bg-black/40 p-1 rounded-xl">
+              <div className="flex items-center gap-1 bg-black/80 border border-white/[0.08] p-1 rounded-xl">
                 <button
                   onClick={() => setCompanyType('ltd')}
-                  className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-all ${
-                    companyType === 'ltd' ? 'bg-white text-black font-semibold shadow' : 'text-slate-400 hover:text-white'
+                  className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+                    companyType === 'ltd' ? 'bg-white text-black font-bold shadow' : 'text-slate-400 hover:text-white'
                   }`}
                 >
                   LTD. / A.Ş. (%25)
                 </button>
                 <button
                   onClick={() => setCompanyType('individual')}
-                  className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-all ${
-                    companyType === 'individual' ? 'bg-white text-black font-semibold shadow' : 'text-slate-400 hover:text-white'
+                  className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+                    companyType === 'individual' ? 'bg-white text-black font-bold shadow' : 'text-slate-400 hover:text-white'
                   }`}
                 >
                   Şahıs (~%35)
@@ -262,49 +262,49 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
             </div>
 
             {/* Calculations Breakdown */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center pt-2 border-t border-white/5">
-              <div className="p-2 rounded-lg bg-black/30">
-                <div className="text-[10px] text-slate-400 uppercase">Hizmet Toplamı</div>
-                <div className="text-xs font-mono font-bold text-slate-200 mt-0.5">{formatCurrency(subTotal)}</div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center pt-3 border-t border-white/5">
+              <div className="p-2.5 rounded-xl bg-[#0A0A0C] border border-white/5">
+                <div className="text-[10px] text-slate-400 uppercase font-semibold">Hizmet Toplamı</div>
+                <div className="text-xs font-bold text-white mt-1">{formatCurrency(subTotal)}</div>
               </div>
-              <div className="p-2 rounded-lg bg-black/30">
-                <div className="text-[10px] text-slate-400 uppercase">+%20 KDV</div>
-                <div className="text-xs font-mono font-bold text-slate-300 mt-0.5">{formatCurrency(kdvAmount)}</div>
+              <div className="p-2.5 rounded-xl bg-[#0A0A0C] border border-white/5">
+                <div className="text-[10px] text-slate-400 uppercase font-semibold">+%20 KDV</div>
+                <div className="text-xs font-bold text-slate-300 mt-1">{formatCurrency(kdvAmount)}</div>
               </div>
-              <div className="p-2 rounded-lg bg-black/30">
-                <div className="text-[10px] text-amber-400 uppercase">Vergi Tasarrufu</div>
-                <div className="text-xs font-mono font-bold text-amber-400 mt-0.5">-{formatCurrency(corporateTaxSaving)}</div>
+              <div className="p-2.5 rounded-xl bg-[#0A0A0C] border border-white/5">
+                <div className="text-[10px] text-amber-400 uppercase font-semibold">Vergi Tasarrufu</div>
+                <div className="text-xs font-bold text-amber-400 mt-1">-{formatCurrency(corporateTaxSaving)}</div>
               </div>
-              <div className="p-2 rounded-lg bg-emerald-500/10">
-                <div className="text-[10px] text-emerald-300 font-bold uppercase">Net Maliyet</div>
-                <div className="text-sm font-mono font-black text-emerald-400 mt-0.5">{formatCurrency(netEffectiveCost)}</div>
+              <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30">
+                <div className="text-[10px] text-amber-300 font-bold uppercase">Net Maliyet</div>
+                <div className="text-sm font-black text-amber-400 mt-0.5">{formatCurrency(netEffectiveCost)}</div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Footer Actions */}
-        <div className="p-6 bg-black border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="p-6 bg-black border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <div className="text-xs text-slate-400">
+            <div className="text-xs text-slate-400 font-medium">
               {billingModel === 'waas' ? 'Efektif Başlangıç & Aylık Taahhüt:' : 'Efektif Net Maliyetiniz:'}
             </div>
-            <div className="text-xl sm:text-2xl font-black text-emerald-400 font-mono">
+            <div className="text-xl sm:text-2xl font-black text-amber-400 mt-0.5">
               {formatCurrency(netEffectiveCost)}
               {billingModel === 'waas' && (
-                <span className="text-base sm:text-lg text-white font-mono font-bold ml-1.5">
+                <span className="text-base sm:text-lg text-white font-bold ml-1.5">
                   + {pkg.waasMonthlyFormatted}/ay
                 </span>
               )}
-              <span className="text-xs text-slate-400 font-sans font-normal ml-2 block sm:inline">
-                (KDV & Vergi İndirimi Sonrası)
+              <span className="text-xs text-slate-400 font-normal ml-2 block sm:inline">
+                (KDV &amp; Vergi İndirimi Sonrası)
               </span>
             </div>
           </div>
 
           <button
             onClick={handleWhatsAppSubmit}
-            className="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs sm:text-sm shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"
+            className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-xl shadow-emerald-600/25 flex items-center justify-center gap-2.5 transition-all hover:scale-[1.02]"
           >
             <WhatsAppIcon className="w-4 h-4 fill-current shrink-0" />
             <span>Bu Teklifi WhatsApp'tan Al</span>

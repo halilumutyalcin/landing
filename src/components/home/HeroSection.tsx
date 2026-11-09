@@ -74,33 +74,33 @@ export const HeroSection: React.FC = () => {
           {/* Right Column: Corporate Engineering Standards Card */}
           <div className="hidden lg:block lg:col-span-4">
             <div className="bg-[#0A0A0C] border border-white/[0.08] rounded-2xl p-6 space-y-5 shadow-2xl relative">
-              <div className="flex items-center justify-between pb-4 border-b border-white/5">
+              <div className="flex items-center justify-between pb-4 border-b border-white/[0.08]">
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-                  <span className="text-xs font-mono font-bold text-white uppercase tracking-wider">
+                  <span className="text-xs font-bold text-white uppercase tracking-wider">
                     Mühendislik Standartları
                   </span>
                 </div>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-slate-400">
+                <span className="text-[11px] font-medium px-2.5 py-0.5 rounded-md bg-white/[0.04] border border-white/5 text-slate-400">
                   Pendik / İstanbul
                 </span>
               </div>
 
-              <div className="space-y-3 font-mono text-xs">
+              <div className="space-y-3 text-xs">
                 <div className="flex items-center justify-between p-3 rounded-xl bg-black/50 border border-white/5">
-                  <span className="text-slate-400">Lighthouse Skoru</span>
+                  <span className="text-slate-400 font-medium">Lighthouse Skoru</span>
                   <span className="text-white font-bold">90–95+ (Statik Sayfalar)</span>
                 </div>
                 <div className="flex items-center justify-between p-3 rounded-xl bg-black/50 border border-white/5">
-                  <span className="text-slate-400">İçerik Yaklaşımı</span>
+                  <span className="text-slate-400 font-medium">İçerik Yaklaşımı</span>
                   <span className="text-amber-400 font-bold">Meslek Kurallarına Duyarlı</span>
                 </div>
                 <div className="flex items-center justify-between p-3 rounded-xl bg-black/50 border border-white/5">
-                  <span className="text-slate-400">Barındırma &amp; SSL</span>
+                  <span className="text-slate-400 font-medium">Barındırma &amp; SSL</span>
                   <span className="text-white font-bold">İlk 3 Yıl 0 ₺ (Dahil)</span>
                 </div>
                 <div className="flex items-center justify-between p-3 rounded-xl bg-black/50 border border-white/5">
-                  <span className="text-slate-400">Teslimat Güvencesi</span>
+                  <span className="text-slate-400 font-medium">Teslimat Güvencesi</span>
                   <span className="text-white font-bold">Sözleşmeli 3–10 İş Günü</span>
                 </div>
               </div>
