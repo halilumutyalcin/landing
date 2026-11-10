@@ -33,7 +33,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     title: 'Diş Kliniği Web Sitesi Tasarımı & Fiyatları | 3–10 İş Gününde Lansman',
     metaDescription: 'Diş hekimleri ve poliklinikler için hasta randevulu, Google Harita uyumlu, 3 yıl domain ve hosting dahil ultra hızlı diş kliniği web sitesi tasarımı.',
     heroHeadline: 'Yeni Hasta Kazandıran Prestijli Diş Kliniği Web Sitesi',
-    heroSubheadline: 'Kliniğinizin steril, modern ve güvenilir atmosferini yansıtan; Google Haritalar entegrasyonlu ve Lighthouse 95+ performans optimizasyonuyla açılan özel klinik web sitesi.',
+    heroSubheadline: 'Kliniğinizin steril, modern ve güvenilir atmosferini yansıtan; Google Haritalar entegrasyonlu ve Lighthouse 90–95+ performans optimizasyonuyla açılan özel klinik web sitesi.',
     targetAudience: 'Diş hekimleri, ağız ve diş sağlığı poliklinikleri, ortodonti ve implant merkezleri.',
     badge: 'Sağlık Sektörü Çözümü',
     relatedDemoSlugs: ['dentart', 'medilife', 'vitacare'],
@@ -61,7 +61,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       'Google Haritalar (İşletme Profili) Kayıt ve Doğrulama Desteği',
       'Hekim Özgeçmişleri ve Sertifika Vitrini',
       'Tedavi Süreçleri ve Sık Sorulan Sorular Modülü',
-      'Global Edge CDN ile Google Lighthouse 95+ Performansı'
+      'Yüksek Hızlı Altyapı ile Google Lighthouse 90–95+ Performansı'
     ],
     faqs: [
       {
@@ -83,7 +83,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     ],
     statHeadline: 'Klinikler İçin Kanıtlanmış Sonuçlar',
     stats: [
-      { label: 'Lighthouse Skoru', value: '95+' },
+      { label: 'Lighthouse Skoru', value: '90–95+' },
       { label: 'Randevu Erişimi', value: 'Mobil & WhatsApp' },
       { label: '3 Yıllık Masraf', value: '0 TL' }
     ]
@@ -185,7 +185,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       'Tam Ekran Görsel Önizleme ve Proje Hikayesi Sayfaları',
       'Mimari Yaklaşım & Ekip Tanıtım Alanı',
       'Mobil Cihazlarda Kusursuz Tam Ekran Galeri Gezintisi',
-      'Google Lighthouse 95+ Görsel Performans Skoru'
+      'Google Lighthouse 90–95+ Görsel Performans Skoru'
     ],
     faqs: [
       {
@@ -320,7 +320,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     statHeadline: 'Sanayi Sektörel Etki',
     stats: [
       { label: 'CAD / Teknik Teklif', value: 'Entegre Modül' },
-      { label: 'Lighthouse Skoru', value: '95+' },
+      { label: 'Lighthouse Skoru', value: '90–95+' },
       { label: 'Sıfır Masraf', value: '3 Yıl' }
     ]
   },
@@ -378,7 +378,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     statHeadline: 'Gayrimenkul Dönüşüm Verisi',
     stats: [
       { label: 'Doğrudan İletişim', value: 'WhatsApp' },
-      { label: 'Lighthouse Skoru', value: '95+' },
+      { label: 'Lighthouse Skoru', value: '90–95+' },
       { label: 'Yıllık Masraf', value: '0 TL' }
     ]
   },
@@ -417,7 +417,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
       'Terapist Özgeçmişi, Akreditasyonları ve Ekol Tanıtımları',
       'Mobil WhatsApp Doğrudan Randevu Hattı',
       'Etik ve Yasal Mevzuata Tam Uyumlu İçerik Mimarisi',
-      'Lighthouse 95+ Performans ile Akıcı ve Hızlı Kullanıcı Deneyimi'
+      'Lighthouse 90–95+ Performans ile Akıcı ve Hızlı Kullanıcı Deneyimi'
     ],
     faqs: [
       {
@@ -436,7 +436,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     statHeadline: 'Terapist Vitrininde Etki',
     stats: [
       { label: 'Danışan Güveni', value: 'Yüksek' },
-      { label: 'Lighthouse Skoru', value: '95+' },
+      { label: 'Lighthouse Skoru', value: '90–95+' },
       { label: 'Sunucu Maliyeti', value: '3 Yıl 0 TL' }
     ]
   }

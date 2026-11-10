@@ -79,7 +79,7 @@ const SERVICE_GROUPS: ServiceGroup[] = [
       {
         id: 'source-code',
         title: 'Tam Kaynak Kod & Bağımsız Lisans Teslimi',
-        description: 'Sitenin tüm modern kaynak kodlarının ve varlıklarının teslim edilmesi. Kendi bağımsız sunucunuzda barındırma imkanı.',
+        description: 'Tüm paketlerimiz bulut barındırma dahil anahtar teslim yayınlanır. Kendi bağımsız sunucunuzda çalıştırmak veya teknik ekibinize devretmek isterseniz; proje kaynak kodları ve bağımsız kullanım lisansı bu modül kapsamında tam teslim edilir.',
         pricing: 'Paket bedeline ek +%75',
         icon: Code2,
       },
@@ -120,14 +120,14 @@ const SERVICE_GROUPS: ServiceGroup[] = [
       {
         id: '360-launch',
         title: '360° Logo & Kurumsal Kimlik Paketi',
-        description: 'Vektörel logo tasarımı, renk kılavuzu, kartvizit ve kurumsal e-posta imza şablonu ile Google Harita resmi doğrulaması.',
+        description: 'Vektörel logo tasarımı, renk kılavuzu, kartvizit, kurumsal e-posta imza şablonu ve Google İşletme Profili teknik kurulumu (doğrulama başvurusu dahil).',
         pricing: 'Pakete Ek ~9.500 ₺ (Pro+ Pakette Dahil)',
         icon: Sparkles,
       },
       {
         id: 'maintenance',
-        title: 'Aylık Teknik Bakım & Güvence',
-        description: 'Aylık içerik güncellemeleri, güvenlik kontrolleri, DNS izleme ve kesintisiz öncelikli teknik destek.',
+        title: 'Aylık Teknik Bakım & İçerik Güvencesi',
+        description: 'Paket hata garantisi süresi sonrasında; aylık düzenli içerik girişleri, güvenlik kontrolleri, DNS takibi ve öncelikli teknik destek (isteğe bağlı).',
         pricing: 'Pro\'da 1 ay, Kurumsal\'da 3 ay dahil; sonra 2.500 ₺/ay',
         icon: ShieldCheck,
       },

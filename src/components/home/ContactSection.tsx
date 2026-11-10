@@ -14,6 +14,7 @@ import { DEMO_CATALOG } from '@/config/demos.config';
 import { siteConfig } from '@/config/site.config';
 import { generateWhatsAppUrl } from '@/lib/utils';
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
+import { LegalModal } from '@/components/layout/LegalModal';
 
 const contactSchema = z.object({
   fullName: z.string().min(2, 'Lütfen adınızı ve soyadınızı giriniz.'),
@@ -29,6 +30,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 export const ContactSection: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isKvkkModalOpen, setIsKvkkModalOpen] = useState(false);
 
   const {
     register,
@@ -263,7 +265,14 @@ export const ContactSection: React.FC = () => {
                     className="mt-0.5 rounded bg-zinc-900 border-white/20 text-amber-500 focus:ring-amber-400"
                   />
                   <label htmlFor="kvkk-consent" className="text-[11px] text-slate-400 leading-snug">
-                    <span className="text-amber-400 font-medium">KVKK Aydınlatma Metni</span>'ni okudum; kişisel verilerimin teklif hazırlama ve iletişim amacıyla işlenmesini kabul ediyorum.
+                    <button
+                      type="button"
+                      onClick={() => setIsKvkkModalOpen(true)}
+                      className="text-amber-400 hover:text-amber-300 underline font-medium inline"
+                    >
+                      KVKK Aydınlatma Metni
+                    </button>
+                    'ni okudum; kişisel verilerimin teklif hazırlama ve iletişim amacıyla işlenmesini kabul ediyorum.
                   </label>
                 </div>
 
@@ -284,6 +293,12 @@ export const ContactSection: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <LegalModal
+        isOpen={isKvkkModalOpen}
+        onClose={() => setIsKvkkModalOpen(false)}
+        type="kvkk"
+      />
     </section>
   );
 };

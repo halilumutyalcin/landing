@@ -160,8 +160,8 @@ export const WhyUsUnifiedSection: React.FC = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto">
                   <div className="p-4 rounded-xl bg-black/40">
                     <div className="text-xs font-bold text-white mb-1">Lighthouse Skoru</div>
-                    <div className="text-3xl font-black text-white">95+</div>
-                    <div className="text-[11px] text-zinc-400 mt-1">Mobil & Masaüstü Hız</div>
+                    <div className="text-3xl font-black text-white">90–95+</div>
+                    <div className="text-[11px] text-zinc-400 mt-1">Statik Sayfalarda</div>
                   </div>
 
                   <div className="p-4 rounded-xl bg-black/40">
@@ -326,7 +326,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                       <div>
                         <strong className="text-white block text-xs sm:text-sm">Ziyaretçiyi Bekletmeyen Açılış</strong>
-                        <span className="text-slate-300 text-xs">Mobilde ve masaüstünde Lighthouse 95+ performansıyla çalışan, doğrudan doğru iletişim kanalına yönlendiren temiz mimari.</span>
+                        <span className="text-slate-300 text-xs">Mobilde ve masaüstünde statik demo sayfalarımızda 90–95+ Lighthouse skoru hedefleyen, doğrudan doğru iletişim kanalına yönlendiren temiz mimari.</span>
                       </div>
                     </div>
 
@@ -378,7 +378,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                       <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
                       <div>
                         <strong className="text-white block text-xs sm:text-sm">Ağır ve Güvensiz Eklenti Yükü Yok</strong>
-                        <span className="text-slate-300 text-xs">Sürekli bakım gerektiren ve güvenlik açığı riski taşıyan eski CMS yapıları yerine yalın ve statik React mimarisi kurarız.</span>
+                        <span className="text-slate-300 text-xs">Tipik olarak sürekli eklenti güncellemesi ve güvenlik açığı takibi gerektiren yapılar yerine hafif, güvenli ve modern web mimarisi kurarız.</span>
                       </div>
                     </div>
 
@@ -394,7 +394,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                       <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
                       <div>
                         <strong className="text-white block text-xs sm:text-sm">Kopuk Destek Süreci Yok</strong>
-                        <span className="text-slate-300 text-xs">Teslimattan sonra süreci terk etmeyiz; sözleşmeli hata garantisi ve WhatsApp kanalıyla doğrudan teknik muhatap sağlarız.</span>
+                        <span className="text-slate-300 text-xs">Teslimat sonrasında yalnız bırakmayız; sözleşmeli hata garantisi (15/30/60 gün) süresince teknik aksaklıkları koşulsuz giderir, sonrasında ise isteğe bağlı aylık bakım paketleriyle doğrudan teknik muhatap sunarız.</span>
                       </div>
                     </div>
                   </div>

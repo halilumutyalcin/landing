@@ -142,9 +142,9 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
               <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-4">
                 <Zap className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-white mb-2">Lighthouse 95+ ile Hızlı Açılış</h3>
+              <h3 className="text-base font-bold text-white mb-2">Lighthouse 90–95+ ile Hızlı Açılış</h3>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                WordPress hantallığı ve eklenti yükü yok. Next.js mimarisiyle mobilde yüksek hızla açılır, kullanıcı deneyimini üst seviyeye taşır.
+                Ağır eklenti yükü ve bakım zorluğu yok. Hafif ve optimize edilmiş modern altyapısıyla mobilde yüksek hızla açılır, ziyaretçiyi bekletmez.
               </p>
             </div>
 

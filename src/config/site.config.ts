@@ -76,16 +76,16 @@ export const siteConfig = {
   email: 'info@mediweb.com.tr',
   address: 'Doğu Mah. Erol Kaya Cad. No:94, Pendik / İstanbul',
   legalEntity: {
-    title: 'Şengüller Otomotiv & Bilişim Danışmanlığı',
-    type: 'Ticari İşletme',
+    providerTitle: 'Şengüller Otomotiv & Bilişim Danışmanlığı',
+    type: 'Şahıs İşletmesi (Gerçek Kişi Ticari İşletme)',
     taxOffice: 'Pendik Vergi Dairesi',
-    taxNumber: 'Teklif ve sözleşme aşamasında paylaşılır',
+    taxNumber: 'Teklif ve sözleşme faturasında yer alır',
     city: 'İstanbul / Pendik',
   },
   
   metrics: [
     { value: '3 Yıl', label: 'Hosting & Alan Adı Dahil', icon: 'ShieldCheck', sub: 'İlk 3 yıl sıfır yenileme maliyeti' },
-    { value: '95+', label: 'Lighthouse Performans Skoru', icon: 'Zap', sub: 'Yüksek hızlı bulut altyapısı' },
+    { value: '90–95+', label: 'Lighthouse Performans Skoru', icon: 'Zap', sub: 'Statik ve temel sayfalarda' },
     { value: '3–10 Gün', label: 'Pakete Göre Teslim Süresi', icon: 'Clock', sub: 'İçerik onayından itibaren' },
     { value: '16 Mimari', label: '6 Sektöre Özel Canlı Vitrin', icon: 'Sparkles', sub: 'Görerek seçebileceğiniz altyapı' },
   ],
@@ -149,7 +149,7 @@ export const siteConfig = {
       domainHosting: '3 Yıl Domain (.com / .com.tr) + Bulut Barındırma Dahil',
       revisions: '2 Tur Tasarım Revizyonu',
       warranty: '30 Gün Hata Garantisi',
-      support: 'Öncelikli WhatsApp Destek + 1 Ay Rutin Bakım Dahil',
+      support: 'Öncelikli WhatsApp Destek + 1 Ay Rutin Bakım Dahil (Sonrasında İsteğe Bağlı: 2.500 ₺/ay)',
       animations: 'Gelişmiş — parallax, mikro hover efektleri, pürüzsüz geçişler',
       features: [
         '10 Sayfaya Kadar Kurumsal Site Mimarisi',
@@ -163,8 +163,8 @@ export const siteConfig = {
         'Canlı Destek veya Akıllı WhatsApp Yönlendirme Kurulumu',
         '5 Adet Kurumsal E-posta DNS Kurulumu',
         'Sosyal Paylaşım Kartları (Open Graph)',
-        'Lighthouse 95+ Performans Optimizasyonu',
-        'İlk 1 Ay İçerik Güncelleme & Bakım Desteği Dahil',
+        'Lighthouse 90–95+ Performans Optimizasyonu (Statik Sayfalar)',
+        'İlk 1 Ay İçerik Güncelleme & Bakım Desteği Dahil (Sonrasında İsteğe Bağlı: 2.500 ₺/ay)',
       ],
       notIncluded: [
         'Çoklu Yabancı Dil (Ek Hizmet)',
@@ -193,7 +193,7 @@ export const siteConfig = {
       domainHosting: '3 Yıl Domain (.com / .com.tr) + Bulut Barındırma Dahil',
       revisions: '3 Tur Tasarım Revizyonu',
       warranty: '60 Gün Hata Garantisi',
-      support: 'Atanmış Müşteri Temsilcisi + 3 Ay Rutin Bakım Dahil',
+      support: 'Atanmış Müşteri Temsilcisi + 3 Ay Rutin Bakım Dahil (Sonrasında İsteğe Bağlı: 2.500 ₺/ay)',
       animations: 'Premium — aurora glow, interaktif vitrin, glassmorphism',
       features: [
         '20 Sayfaya Kadar Geniş Kurumsal İçerik Mimarisi',
@@ -355,7 +355,7 @@ export const siteConfig = {
     { feature: 'Temel SEO altyapısı', starter: '✓ Meta, sitemap, robots.txt', pro: '✓ Dahil', enterprise: '✓ Dahil' },
     { feature: 'Gelişmiş SEO & Schema', starter: '—', pro: '✓ JSON-LD Schema & Search Console', enterprise: '✓ Sayfa bazlı derin SEO & iç bağlantı mimarisi' },
     { feature: 'Google Analytics & Search Console', starter: 'Temel Analytics', pro: '✓ Analytics + Search Console kurulumu', enterprise: '✓ İleri seviye hedef & dönüşüm takibi' },
-    { feature: 'Site hız optimizasyonu', starter: 'Temel (Yüksek Hızlı Bulut Ağı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri Seviye (Lighthouse 95+)' },
+    { feature: 'Site hız optimizasyonu', starter: 'Temel (Yüksek Hızlı Altyapı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri Seviye (Statik Sayfalarda 90–95+)' },
     { feature: 'Güvenlik / SSL sertifikası', starter: '✓ 3 Yıl Ücretsiz SSL', pro: '✓ 3 Yıl Ücretsiz SSL', enterprise: '✓ 3 Yıl Kurumsal SSL & DDoS koruması' },
     { feature: 'Form e-posta bildirimi', starter: 'Temel bildirim', pro: '✓ Anlık e-posta bildirimi', enterprise: '✓ Çoklu yetkili bildirimi & SMS opsiyonu' },
     { feature: 'Özel animasyonlar', starter: 'Temel fade-in ve scroll', pro: 'Gelişmiş hover ve mikro efektler', enterprise: 'Premium aurora glow & zengin etkileşimler' },
@@ -385,8 +385,8 @@ export const siteConfig = {
     },
     {
       feature: 'Altyapı & Performans',
-      traditional: 'Ağır eklentili, güvenlik açığı riski taşıyan eski CMS',
-      mediweb: 'Yeni nesil yüksek hızlı bulut mimarisi, anında açılan sayfalar (Lighthouse 90–95+)',
+      traditional: 'Tipik olarak ağır eklentili, güvenlik açığı ve bakım riski taşıyabilen geleneksel yapılar',
+      mediweb: 'Hafif, optimize ve yüksek hızlı modern altyapı, anında açılan sayfalar (Statik sayfalarda 90–95+)',
     },
     {
       feature: 'Tasarım Süreci',

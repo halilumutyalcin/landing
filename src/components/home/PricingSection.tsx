@@ -457,7 +457,7 @@ export const PricingSection: React.FC = () => {
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
                 Yeni kurulan veya kurumsal kabuk değiştiren şirketlerin en büyük problemi; logoyu birine, web sitesini birine, haritayı birine yaptırıp zaman ve para kaybetmektir. 
-                Tüm kurumsal dijital varlığınızı tek elden, tek muhatapla ve 7 iş gününde anahtar teslim kuruyoruz.
+                Tüm kurumsal dijital varlığınızı tek elden, tek muhatapla ve 7–10 iş gününde anahtar teslim kuruyoruz.
               </p>
             </div>
 
@@ -509,7 +509,7 @@ export const PricingSection: React.FC = () => {
                 </strong>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed pt-1">
-                Google İşletme Profili doğrulaması, yerel arama anahtar kelimeleri optimizasyonu ve ilk müşteri yorum stratejisi.
+                Google İşletme Profili teknik kurulumu, yerel arama optimizasyonu ve resmî doğrulama başvurusunun başlatılması (onay süreci Google prosedürlerine bağlıdır).
               </p>
             </div>
 
@@ -521,7 +521,7 @@ export const PricingSection: React.FC = () => {
                 </strong>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed pt-1">
-                10 sayfaya kadar Profesyonel paket web sitesi, Lighthouse 95+ performans optimizasyonu ve ilk 3 yıl hosting ve alan adı dahil.
+                10 sayfaya kadar Profesyonel paket web sitesi, statik sayfalarda Lighthouse 90–95+ performans optimizasyonu ve ilk 3 yıl hosting ve alan adı dahil.
               </p>
             </div>
           </div>
@@ -650,7 +650,7 @@ export const PricingSection: React.FC = () => {
                   <strong className="text-white text-sm font-bold">Özel Yazılım Altyapısı</strong>
                 </div>
                 <p className="text-slate-300 leading-relaxed pt-1">
-                  Gereksiz eklenti çöplüğü ve bakım yükü yok. Yeni nesil bulut mimarisiyle anında açılan sayfalar ve kesintisiz yüksek performans sağlanır.
+                  Gereksiz eklenti çöplüğü ve bakım yükü yok. Hafif, optimize edilmiş modern web altyapısıyla anında açılan sayfalar ve kesintisiz yüksek performans sağlanır.
                 </p>
               </div>
 

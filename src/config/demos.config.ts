@@ -412,7 +412,7 @@ export const DEMO_CATALOG: DemoItem[] = [
       subheadline: 'Mükellefleriniz için her ay güncel takvim ve güvenilir danışmanlık yüzü.',
       stats: [
         { label: 'Takvim', value: 'Otomatik' },
-        { label: 'Lighthouse', value: '95+' },
+        { label: 'Lighthouse', value: '90–95+' },
         { label: 'Mevzuat Dili', value: 'Duyarlı' }
       ]
     }

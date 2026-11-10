@@ -272,11 +272,11 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
                 <div className="text-xs font-bold text-slate-300 mt-1">{formatCurrency(kdvAmount)}</div>
               </div>
               <div className="p-2.5 rounded-xl bg-[#0A0A0C] border border-white/5">
-                <div className="text-[10px] text-amber-400 uppercase font-semibold">Vergi Tasarrufu</div>
+                <div className="text-[10px] text-amber-400 uppercase font-semibold">KV Tasarrufu (%25)</div>
                 <div className="text-xs font-bold text-amber-400 mt-1">-{formatCurrency(corporateTaxSaving)}</div>
               </div>
               <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30">
-                <div className="text-[10px] text-amber-300 font-bold uppercase">Net Maliyet</div>
+                <div className="text-[10px] text-amber-300 font-bold uppercase">Tahmini Net</div>
                 <div className="text-sm font-black text-amber-400 mt-0.5">{formatCurrency(netEffectiveCost)}</div>
               </div>
             </div>
@@ -287,7 +287,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
         <div className="p-6 bg-black border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <div className="text-xs text-slate-400 font-medium">
-              {billingModel === 'waas' ? 'Efektif Başlangıç & Aylık Taahhüt:' : 'Efektif Net Maliyetiniz:'}
+              {billingModel === 'waas' ? 'Tahmini Başlangıç & Aylık Taahhüt:' : 'Tahmini Net Maliyetiniz:'}
             </div>
             <div className="text-xl sm:text-2xl font-black text-amber-400 mt-0.5">
               {formatCurrency(netEffectiveCost)}
@@ -297,7 +297,7 @@ Detayları görüşüp yayına almak için bilgi alabilir miyim?`;
                 </span>
               )}
               <span className="text-xs text-slate-400 font-normal ml-2 block sm:inline">
-                (KDV &amp; Vergi İndirimi Sonrası)
+                (KDV Mahsubu &amp; KV Tasarrufu Sonrası)
               </span>
             </div>
           </div>

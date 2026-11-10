@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { X, Shield, FileText, Lock } from 'lucide-react';
+import { siteConfig } from '@/config/site.config';
 
 interface LegalModalProps {
   isOpen: boolean;
@@ -16,22 +17,29 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
     kvkk: {
       title: 'KVKK Aydınlatma Metni',
       icon: Shield,
-      text: `6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, MediWeb (Şengüller Otomotiv & Bilişim Danışmanlığı - "Firma") olarak, veri sorumlusu sıfatıyla tarafımıza iletilen kişisel verilerinizi (ad, soyad, telefon numarası, e-posta adresi, şirket bilgisi) yalnızca teklif hazırlama, iletişim sağlama, sözleşme süreçlerinin yürütülmesi ve yasal yükümlülüklerin yerine getirilmesi amacıyla işlemekteyiz. Verileriniz üçüncü taraflarla ticari amaçla paylaşılmaz ve yasal süreler boyunca güvenli sunucularda saklanır.`
+      text: `6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, veri sorumlusu sıfatıyla ${siteConfig.legalEntity.providerTitle} (${siteConfig.legalEntity.type} - MediWeb) olarak; tarafımıza iletilen kişisel verilerinizi (ad, soyad, telefon numarası, e-posta adresi, şirket ve sektör bilgisi) yalnızca teklif hazırlama, iletişim sağlama, sözleşme ve faturalandırma süreçlerinin yürütülmesi ve kanuni yükümlülüklerin yerine getirilmesi amacıyla işlemekteyiz. 
+
+Verileriniz açık rızanız ve yasal zorunluluklar haricinde üçüncü taraflarla ticari veya pazarlama amacıyla paylaşılmaz ve mevzuatta öngörülen saklama süreleri boyunca güvenli altyapılarda korunur. KVKK'nın 11. maddesi kapsamındaki haklarınızı info@mediweb.com.tr adresi üzerinden her zaman talep edebilirsiniz.`
     },
     terms: {
       title: 'Hizmet ve Teslimat Sözleşmesi',
       icon: FileText,
-      text: `1. Hizmet Kapsamı: MediWeb, seçilen tasarım ve paket kapsamında web sitesini müşteri içerik onayından itibaren 3–10 iş günü (Başlangıç: 3–5, Profesyonel: 5–7, Kurumsal: 7–10 iş günü) içerisinde anahtar teslim olarak hazırlar ve yüksek hızlı global bulut altyapısına bağlar.
-2. 3 Yıl Domain ve Hosting: Paket bedeline ilk 3 yıl boyunca .com/.com.tr alan adı, SSL sertifikası ve bulut barındırma dahildir. Alan adı doğrudan müşterinin adına tahsis edilir. 3 yıl sonunda müşteri dilerse yıllık standart maliyetle yeniler veya kaynak kodunu devralabilir.
-3. Revizyon Hakları: Başlangıç paketinde 1 tur, Profesyonel pakette 2 tur, Kurumsal pakette 3 tur revizyon hakkı sağlanır.
-4. Fatura ve İade: Tüm fiyatlar KDV hariçtir; faturalandırmada %20 KDV eklenerek resmî e-Fatura/e-Arşiv düzenlenir. Dijital hizmet ve özel alan adı tahsisi başladıktan sonra cayma hakkı kapsam dışıdır; ancak hata garantisi süresince teknik düzeltmeler koşulsuz sağlanır.
-5. Ajans İmzası ve White-Label: Varsayılan olarak hazırlanan sitelerin alt bilgi (footer) alanında 'Mimari: MediWeb' ibaresi yer alır. Müşteri dilerse tek seferlik White-Label bedeli karşılığında bu ibareyi tamamen kaldırtma hakkına sahiptir.
-6. Taksitli / Aylık Model (WaaS): 12 aylık taahhüt süresi dolduğunda sitenin yayın hakkı, alan adı (.com/.com.tr) tescili ve 3 yıllık bulut barındırma hakkı müşteriye devredilir. 13. aydan itibaren zorunlu aylık ödeme kesilir; site asla kapatılmaz veya rehin tutulmaz. Bağımsız sunucuya taşıma ve yazılım geliştirme için gerekli tam kaynak kod devri ise lisans protokolü kapsamında ek bir opsiyondur.`
+      text: `1. Taraflar ve Kapsam: İşbu sözleşme kapsamında hizmet sağlayıcı ${siteConfig.legalEntity.providerTitle} (${siteConfig.legalEntity.type} - ${siteConfig.legalEntity.taxOffice} - ${siteConfig.legalEntity.city}) ile müşteri arasında akdedilir. MediWeb, seçilen kurumsal mimari ve paket kapsamında web sitesini müşteri içerik ve tasarım onayından itibaren 3–10 iş günü (Başlangıç: 3–5, Profesyonel: 5–7, Kurumsal: 7–10 iş günü) içerisinde anahtar teslim olarak hazırlar ve yüksek hızlı modern web altyapısına bağlar.
+
+2. 3 Yıl Domain ve Hosting Güvencesi: Paket bedeline ilk 3 yıl boyunca .com/.com.tr alan adı tahsisi, SSL güvenlik sertifikası ve bulut barındırma dahildir. Alan adı doğrudan müşterinin adına veya tüzel kişiliğine tescil edilir; tam mülkiyet müşteridedir. 3 yıl sonunda müşteri dilerse yıllık standart maliyetle (tahmini ~2.500–3.500 ₺/yıl) yeniler veya isteğe bağlı kaynak kod devir modülüyle kendi sunucusuna taşıyabilir.
+
+3. Garanti Kapsamı & Rutin Bakım: Başlangıç paketinde 15 gün, Profesyonel pakette 30 gün, Kurumsal pakette 60 gün sözleşmeli hata garantisi sağlanır; bu süre boyunca yazılımsal teknik düzeltmeler koşulsuz ücretsizdir. Profesyonel pakette ilk 1 ay, Kurumsal pakette ilk 3 ay rutin içerik güncelleme desteği dahildir. Garanti süresi sonrasındaki düzenli içerik güncelleme ve geliştirme talepleri isteğe bağlı aylık bakım anlaşması (2.500 ₺/ay) ile yürütülür.
+
+4. Fatura, Vergi & Muhasebe: Tüm fiyatlar KDV hariçtir; faturalandırmada %20 KDV eklenerek resmî e-Arşiv / e-Fatura düzenlenir. Fatura bedelinin tek seferde doğrudan gider mi yazılacağı yoksa aktifleştirilip amortismana mı tabi tutulacağı müşterinin mali müşavirinin muhasebe takdirindedir. Dijital hizmet ve özel alan adı tahsisi başladıktan sonra cayma hakkı kapsam dışıdır; ancak garanti süresince teknik aksaklıklar koşulsuz giderilir.
+
+5. Kaynak Kod & Bağımsız Lisans: Standart teslimat bulut barındırma dahil anahtar teslim yayını kapsar. Yazılımın kaynak kodlarının müşteri bünyesine aktarılması ve bağımsız sunucularda ajans harici geliştirilmesi 'Tam Kaynak Kod & Bağımsız Lisans Devri' ek modülü (+%75) kapsamında protokole bağlanır.
+
+6. Taksitli / Aylık Model (WaaS): 12 aylık taahhüt süresi dolduğunda sitenin yayın hakkı, alan adı (.com/.com.tr) tescili ve 3 yıllık bulut barındırma hakkı müşteriye devredilir. 13. aydan itibaren zorunlu aylık ödeme kesilir; site asla kapatılmaz veya rehin tutulmaz. Müşteri 13. aydan sonra dilerse aylık teknik bakımı sonlandırabilir veya isteğe bağlı sürdürebilir.`
     },
     privacy: {
       title: 'Gizlilik ve Çerez Politikası',
       icon: Lock,
-      text: `MediWeb web sitesi, kullanıcı deneyimini iyileştirmek ve site trafiğini analiz etmek için temel ve analitik çerezler kullanmaktadır. Ziyaretçilerin IP adresleri ve form bilgileri SSL 256-bit şifreleme ile korunur. Bilgileriniz hiçbir koşulda spam veya yetkisiz pazarlama amacıyla kullanılmaz.`
+      text: `MediWeb web sitesi, kullanıcı deneyimini iyileştirmek ve site trafiğini analiz etmek için temel ve analitik çerezler kullanmaktadır. Ziyaretçilerin form bilgileri ve iletişim verileri SSL 256-bit şifreleme ile korunur. Bilgileriniz hiçbir koşulda spam veya yetkisiz pazarlama amacıyla kullanılmaz.`
     }
   }[type];
 

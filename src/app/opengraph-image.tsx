@@ -110,7 +110,7 @@ export default async function Image() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <span style={{ fontSize: '12px', color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Performans</span>
-              <span style={{ fontSize: '18px', fontWeight: 700, color: '#F8FAFC' }}>Lighthouse 95+</span>
+              <span style={{ fontSize: '18px', fontWeight: 700, color: '#F8FAFC' }}>Lighthouse 90–95+</span>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <span style={{ fontSize: '12px', color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Teslim Süresi</span>
