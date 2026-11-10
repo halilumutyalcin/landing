@@ -102,17 +102,26 @@ export const DemoCard: React.FC<DemoCardProps> = ({ demo, onOpenPreview }) => {
         {/* Delivery & Pricing Cue & Actions */}
         <div>
           <div className="flex items-center justify-between text-xs text-zinc-400 mb-3 pt-3 border-t border-white/5">
-            <span>Anahtar Teslim Kurulum</span>
-            <span className="text-white font-medium">17.500 ₺'den başlayan</span>
+            <span className="text-[11px] text-zinc-400">Anahtar Teslim 3–10 Gün</span>
+            <span className="text-amber-400 font-semibold text-xs">17.500 ₺'den Başlayan</span>
           </div>
 
-          <Link
-            href={`/tasarimlar/${demo.slug}`}
-            className="w-full text-center py-2.5 px-4 rounded-xl bg-white/[0.04] hover:bg-white text-zinc-300 hover:text-black font-semibold text-xs border border-white/[0.08] hover:border-white transition-all flex items-center justify-center gap-2 group/btn"
-          >
-            <span>Canlı Demoyu İncele</span>
-            <ArrowRight className="w-3.5 h-3.5 text-zinc-400 group-hover/btn:text-black group-hover/btn:translate-x-0.5 transition-all" />
-          </Link>
+          <div className="grid grid-cols-2 gap-2">
+            <button
+              onClick={() => onOpenPreview(demo)}
+              className="py-2.5 px-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-xs shadow-md transition-all flex items-center justify-center gap-1.5"
+            >
+              <Eye className="w-3.5 h-3.5 text-black" />
+              <span>Canlı Demo</span>
+            </button>
+            <Link
+              href={`/tasarimlar/${demo.slug}`}
+              className="py-2.5 px-3 rounded-xl bg-white/[0.05] hover:bg-white text-zinc-200 hover:text-black font-semibold text-xs border border-white/[0.08] hover:border-white transition-all flex items-center justify-center gap-1.5 group/btn"
+            >
+              <span>Tasarım Detayı</span>
+              <ArrowRight className="w-3.5 h-3.5 text-zinc-400 group-hover/btn:text-black group-hover/btn:translate-x-0.5 transition-all" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

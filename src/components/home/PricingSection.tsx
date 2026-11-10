@@ -680,27 +680,57 @@ export const PricingSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Integrated Trust Guarantees Footer Strip (No awkward second card) */}
-          <div className="border-t border-white/10 bg-black p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300">
-            <div className="flex items-start gap-3">
-              <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+          {/* Integrated Trust Guarantees & Clear Post-Sale Terms */}
+          <div className="border-t border-white/10 bg-[#0A0A0C] p-6 sm:p-8 rounded-b-3xl">
+            <div className="mb-6 pb-4 border-b border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
-                <strong className="text-white block mb-0.5">Sürpriz Ek Ücret Yok</strong>
-                <span className="text-slate-400">Anlaşılan net fiyat geçerlidir. "Sunucu açılışı" veya "SSL bedeli" adı altında gizli faturalar çıkmaz.</span>
+                <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-amber-400" />
+                  <span>Satış Sonrası Şeffaf Koşullar (Sürpriz Yok)</span>
+                </h4>
+                <p className="text-xs text-zinc-400 mt-0.5">
+                  İşletmenizin haklarını koruyan, sözleşmeyle güvence altına alınmış net şartlar.
+                </p>
               </div>
+              <span className="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20 self-start sm:self-auto">
+                ✓ Sözleşmeli Güvence
+              </span>
             </div>
-            <div className="flex items-start gap-3">
-              <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-              <div>
-                <strong className="text-white block mb-0.5">Görerek Karar Verme</strong>
-                <span className="text-slate-400">Beğendiğiniz canlı demoyu görmeden karar vermezsiniz; ne teslim alacağınızı en baştan bilirsiniz.</span>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 text-xs text-slate-300">
+              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                <strong className="text-white block font-bold text-[12px]">3 Yıl Sonunda Ne Olur?</strong>
+                <p className="text-[11px] text-zinc-400 leading-relaxed">
+                  Zorunlu ajans faturası çıkmaz; 4. yıldan itibaren sadece alan adı + bulut sunucu maliyetine (~1.500–2.500 ₺/yıl) devam eder.
+                </p>
               </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-              <div>
-                <strong className="text-white block mb-0.5">15–60 Gün Hata Garantisi</strong>
-                <span className="text-slate-400">Teslimattan sonra paket kapsamındaki sözleşmeli garanti süresince bildirilen yazılımsal hatalara en geç 1–2 iş günü içinde teknik müdahale başlatılır ve kritik işlevler öncelikle çözülür; müşteri kaynaklı yeni içerik ve tasarım revizyonları ise isteğe bağlı bakım kapsamındadır.</span>
+
+              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                <strong className="text-white block font-bold text-[12px]">Alan Adı Mülkiyeti</strong>
+                <p className="text-[11px] text-zinc-400 leading-relaxed">
+                  Alan adınız ilk günden doğrudan adınıza veya şirketiniz adına tescil edilir. Rehin veya kilit asla uygulanmaz.
+                </p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                <strong className="text-white block font-bold text-[12px]">Ek Sayfa İhtiyacı</strong>
+                <p className="text-[11px] text-zinc-400 leading-relaxed">
+                  İhtiyacınız büyüdüğünde sayfa başı ~1.500 ₺ net birim fiyatla modüler olarak kolayca yeni sayfalar eklenir.
+                </p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                <strong className="text-white block font-bold text-[12px]">Revizyon & Garanti</strong>
+                <p className="text-[11px] text-zinc-400 leading-relaxed">
+                  Paketinize göre 1–3 tur revizyon hakkı ve 15–60 gün yazılım hata garantisi (1–2 iş gününde müdahale taahhüdü).
+                </p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                <strong className="text-white block font-bold text-[12px]">İçerik & Görseller</strong>
+                <p className="text-[11px] text-zinc-400 leading-relaxed">
+                  Sektörünüze uygun lisanslı görseller ve taslak metinler tarafımızdan hazırlanır; nihai onayınızla yayına alınır.
+                </p>
               </div>
             </div>
           </div>

@@ -19,52 +19,59 @@ export const HeroSection: React.FC = () => {
           {/* Left Column: Authoritative, Prestigious Positioning (8 Cols) */}
           <div className="lg:col-span-8 space-y-7 text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08]">
-              Markanıza yakışan ilk izlenim.{' '}
-              <span className="text-zinc-400 font-normal block mt-2">
-                Firmanıza özel web mimarisi, paketinize göre 3–10 iş gününde yayında.
+              İşletmenize özel web siteniz,{' '}
+              <span className="text-amber-400 block mt-2">
+                3–10 iş gününde yayında.
               </span>
             </h1>
 
             <p className="text-base sm:text-lg text-zinc-300 max-w-2xl leading-relaxed">
-              Aylarca süren belirsiz ajans süreçlerine ve sürpriz yenileme faturalarına son. 
-              İç mimarlık, hukuk, klinik, sanayi, mali müşavirlik ve emlak sektörüne özel geliştirilmiş 16 prestijli mimariyi inceleyin; 
-              içerik onayınızdan itibaren paketinize göre 3–10 iş gününde anahtar teslim yayına alalım. <strong>İlk 3 yıl hosting ve alan adı dahil sabit fiyat güvencesi.</strong>
+              Markanızı dijitalde güçlü gösteren, mobil uyumlu, SEO altyapısı hazır ve size özel tasarlanmış web siteleri. 
+              Aylarca süren ajans belirsizliklerine ve sürpriz faturalara son: Sektörünüze özel çalışan canlı mimarimizi 
+              satın almadan önce deneyimleyin, onayınızla birlikte anahtar teslim yayına alalım. <strong>İlk 3 yıl domain + hosting dahil.</strong>
             </p>
 
-            {/* Direct Action Button */}
-            <div className="pt-2">
+            {/* Direct Dual Action Buttons */}
+            <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
               <a
                 href="#tasarimlar"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold text-sm shadow-xl shadow-white/10 transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-sm shadow-xl shadow-amber-400/20 transition-all hover:-translate-y-0.5"
               >
-                <span>16 Canlı Mimarimizi İnceleyin</span>
+                <span>Canlı Demoları İncele</span>
                 <ArrowRight className="w-4 h-4 text-black" />
+              </a>
+
+              <a
+                href="#paketler"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#0A0A0C] hover:bg-zinc-800 text-white font-bold text-sm border border-white/[0.12] transition-all hover:-translate-y-0.5"
+              >
+                <span>Paketleri ve Fiyatları Gör</span>
               </a>
             </div>
 
             {/* 3 Clear Authority Badges */}
             <div className="pt-8 border-t border-white/[0.08] grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-slate-300 max-w-3xl">
               <div className="flex items-start gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <Clock className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block mb-0.5">3 Yıl Hosting Dahil</strong>
-                  <span className="text-slate-400">İlk 3 yıl sıfır yenileme masrafı</span>
+                  <strong className="text-white block mb-0.5 text-sm sm:text-xs">3–10 İş Günü</strong>
+                  <span className="text-slate-400">İçerik onayından itibaren taahhütlü teslim</span>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Clock className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <ShieldCheck className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block mb-0.5">3–10 İş Gününde Lansman</strong>
-                  <span className="text-slate-400">İçerik onayından itibaren</span>
+                  <strong className="text-white block mb-0.5 text-sm sm:text-xs">3 Yıl Domain + Hosting</strong>
+                  <span className="text-slate-400">İlk 3 yıl sıfır yenileme masrafı dahil</span>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
                 <Zap className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block mb-0.5">Çalışan Canlı Demo</strong>
-                  <span className="text-slate-400">Önceden deneyimleyip seçin</span>
+                  <strong className="text-white block mb-0.5 text-sm sm:text-xs">Canlı Tasarım Demosu</strong>
+                  <span className="text-slate-400">Satın almadan önce çalışan siteyi görün</span>
                 </div>
               </div>
             </div>

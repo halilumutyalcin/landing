@@ -185,7 +185,19 @@ export const ContactSection: React.FC = () => {
                     <input
                       id="contact-phone"
                       {...register('phone')}
+                      onChange={(e) => {
+                        let val = e.target.value.replace(/\D/g, '');
+                        if (val.startsWith('0')) val = val.substring(1);
+                        let formatted = '0';
+                        if (val.length > 0) formatted += val.substring(0, 3);
+                        if (val.length > 3) formatted += ' ' + val.substring(3, 6);
+                        if (val.length > 6) formatted += ' ' + val.substring(6, 8);
+                        if (val.length > 8) formatted += ' ' + val.substring(8, 10);
+                        e.target.value = formatted;
+                        register('phone').onChange(e);
+                      }}
                       placeholder="05XX XXX XX XX"
+                      maxLength={14}
                       className="w-full bg-[#090C14] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus-visible:ring-2 focus-visible:ring-blue-500"
                     />
                     {errors.phone && (
