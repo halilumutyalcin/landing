@@ -222,7 +222,7 @@ export const PricingSection: React.FC = () => {
         </div>
 
         {/* Global 3-Year Domain & Hosting Inclusion Banner */}
-        <div className="max-w-3xl mx-auto mb-10 p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-amber-500/10 border border-amber-500/25 text-center flex flex-col sm:flex-row items-center justify-center gap-2.5 text-xs text-zinc-200 shadow-lg">
+        <div className="max-w-3xl mx-auto mb-6 p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-amber-500/10 border border-amber-500/25 text-center flex flex-col sm:flex-row items-center justify-center gap-2.5 text-xs text-zinc-200 shadow-lg">
           <div className="flex items-center gap-1.5 text-amber-400 font-bold shrink-0">
             <ShieldCheck className="w-4 h-4" />
             <span>Tüm Paketlerimizde Standart:</span>
@@ -230,6 +230,18 @@ export const PricingSection: React.FC = () => {
           <span className="text-zinc-300">
             İlk 3 yıl alan adı (.com / .com.tr), SSL sertifikası ve yüksek hızlı bulut barındırma fiyata dahildir, <strong>3 yıl boyunca ek yenileme masrafı çıkmaz.</strong>
           </span>
+        </div>
+
+        {/* Payment & Installment Assurance Badges (2A) */}
+        <div className="max-w-3xl mx-auto mb-10 flex flex-wrap items-center justify-center gap-3 text-xs text-zinc-300">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0A0A0C] border border-white/[0.08] text-zinc-300 shadow-md">
+            <CreditCard className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+            <span>Tüm Kurumsal &amp; Şahıs Kartlarına <strong>3–6 Taksit İmkanı</strong> (PayTR Güvencesiyle)</span>
+          </div>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0A0A0C] border border-white/[0.08] text-zinc-300 shadow-md">
+            <FileCheck2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+            <span>Resmi E-Fatura &amp; %100 Gider Gösterme / KDV İndirimi</span>
+          </div>
         </div>
 
         {/* 3 Packages Cards - Pure Background Separation, Zero Borders */}
@@ -347,8 +359,12 @@ export const PricingSection: React.FC = () => {
                           </div>
                         )}
                         <div className="text-xs text-zinc-300 font-medium mt-2 flex items-center gap-1.5 pt-2 border-t border-white/5">
-                          <ShieldCheck className="w-4 h-4 shrink-0" />
+                          <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
                           <span>İlk 3 Yıl Domain + SSL + Bulut Barındırma Dahil</span>
+                        </div>
+                        <div className="text-[11px] text-zinc-400 font-medium mt-1.5 flex items-center gap-1.5 pt-1.5 border-t border-white/5">
+                          <CreditCard className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                          <span>Kredi kartına <strong>3–6 taksit</strong> imkanı mevcuttur</span>
                         </div>
                       </>
                     )}
@@ -493,6 +509,10 @@ export const PricingSection: React.FC = () => {
               </div>
               <div className="text-[10px] text-emerald-400 mt-2 font-mono">
                 ✓ 9.500 ₺ Paket İndirimi Dahil
+              </div>
+              <div className="text-[11px] text-zinc-300 mt-2 font-medium flex items-center gap-1.5 pt-2 border-t border-white/10">
+                <CreditCard className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                <span>Kredi Kartına <strong>3–6 Taksit</strong> İmkanı</span>
               </div>
             </div>
           </div>
