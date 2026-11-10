@@ -36,6 +36,8 @@ export const ContactSection: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isKvkkModalOpen, setIsKvkkModalOpen] = useState(false);
   const [selectedDesignBanner, setSelectedDesignBanner] = useState<string | null>(null);
+  const [requestType, setRequestType] = useState<'demo' | 'proposal'>('demo');
+  const [referenceCode, setReferenceCode] = useState<string>('');
 
   const {
     register,
@@ -64,8 +66,22 @@ export const ContactSection: React.FC = () => {
       }
     };
 
+    const handleTaxApplied = (e: Event) => {
+      const ce = e as CustomEvent<{ packageId: string; companyType: string; netCost: number; packageName: string }>;
+      if (ce.detail) {
+        setValue('selectedPackage', ce.detail.packageId);
+        setValue('message', `${ce.detail.packageName} için simüle edilen net maliyet: ${ce.detail.netCost.toLocaleString('tr-TR')} ₺ (${ce.detail.companyType}). Resmi teklif görüşmesi talep ediyorum.`);
+        setSelectedDesignBanner(`${ce.detail.packageName} (Tahmini Net: ${ce.detail.netCost.toLocaleString('tr-TR')} ₺)`);
+        setRequestType('proposal');
+      }
+    };
+
     window.addEventListener('select-design', handleSelectDesign);
-    return () => window.removeEventListener('select-design', handleSelectDesign);
+    window.addEventListener('tax-calculation-applied', handleTaxApplied);
+    return () => {
+      window.removeEventListener('select-design', handleSelectDesign);
+      window.removeEventListener('tax-calculation-applied', handleTaxApplied);
+    };
   }, [setValue]);
 
   const onSubmit = (data: ContactFormData) => {
@@ -75,7 +91,12 @@ export const ContactSection: React.FC = () => {
       ? 'Profesyonel (32.500 ₺)' 
       : 'Kurumsal (59.900 ₺)';
 
-    const customMessage = `Merhaba, web sitesi teklif talebi:\n• İsim: ${data.fullName}\n• Telefon: ${data.phone}\n• E-posta: ${data.email}\n• Sektör: ${data.sector}\n• Seçilen Tasarım: ${data.selectedDesign}\n• Seçilen Paket: ${pkgName}\n• Not: ${data.message || 'Yok'}`;
+    const ref = `MED-${Math.floor(100000 + Math.random() * 900000)}`;
+    setReferenceCode(ref);
+
+    const typeLabel = requestType === 'demo' ? 'Ücretsiz Canlı Demo Talebi' : 'Resmî Fiyat & Kurulum Teklifi';
+
+    const customMessage = `Merhaba MediWeb! Web sitesi başvurusu:\n• Başvuru / Referans No: ${ref}\n• Talep Türü: ${typeLabel}\n• İsim: ${data.fullName}\n• Telefon: ${data.phone}\n• E-posta: ${data.email}\n• Sektör: ${data.sector}\n• Seçilen Mimari: ${data.selectedDesign}\n• Tercih Edilen Paket: ${pkgName}\n• Not: ${data.message || 'Yok'}`;
 
     window.open(generateWhatsAppUrl({ customMessage }), '_blank');
     setIsSubmitted(true);
@@ -217,24 +238,60 @@ export const ContactSection: React.FC = () => {
                 <div className="w-16 h-16 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 mx-auto">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold text-white font-display">
-                  Talebiniz Alındı!
-                </h3>
-                <p className="text-sm text-slate-300 max-w-md mx-auto">
-                  WhatsApp mesajınız hazırlandı. En geç 30 dakika içerisinde müşteri temsilcimiz sizinle irtibata geçecektir.
+                <div className="space-y-1">
+                  <span className="px-3 py-1 rounded-lg bg-amber-400/15 border border-amber-400/30 text-amber-400 font-mono font-bold text-xs inline-block">
+                    Başvuru Takip Kodu: {referenceCode}
+                  </span>
+                  <h3 className="text-2xl font-bold text-white font-display mt-2">
+                    Talebiniz Başarıyla Alındı!
+                  </h3>
+                </div>
+                <p className="text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
+                  Başvurunuz sistemimize kaydedildi ve WhatsApp bildiriminiz hazırlandı. Ekibimiz mesai saatlerinde <strong>en geç 30 dakika içinde</strong> sizinle irtibata geçecektir.
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}
                   className="px-6 py-2.5 rounded-xl bg-white text-black font-semibold text-xs hover:bg-zinc-200 transition-colors"
                 >
-                  Yeni Form Doldur
+                  Yeni Başvuru Doldur
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-                <h3 className="text-xl font-bold text-white font-display mb-4 pb-2 border-b border-white/10">
-                  Teklif & Kurulum Talep Formu
-                </h3>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-white/10 gap-2">
+                  <h3 className="text-lg font-bold text-white font-display">
+                    {requestType === 'demo' ? 'Ücretsiz Canlı Demo Talebi' : 'Resmî Fiyat Teklifi & Kurulum'}
+                  </h3>
+                  <span className="text-[11px] text-emerald-400 font-medium">
+                    ⚡ Ortalama 30 dk içinde geri dönüş
+                  </span>
+                </div>
+
+                {/* Dual Conversion Goal Switcher */}
+                <div className="grid grid-cols-2 p-1 rounded-xl bg-black/60 border border-white/10 gap-1">
+                  <button
+                    type="button"
+                    onClick={() => setRequestType('demo')}
+                    className={`py-2 px-3 rounded-lg text-xs font-bold transition-all text-center ${
+                      requestType === 'demo' 
+                        ? 'bg-amber-400 text-black shadow-md' 
+                        : 'text-zinc-400 hover:text-white'
+                    }`}
+                  >
+                    ✨ Ücretsiz Canlı Demo Talebi
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setRequestType('proposal')}
+                    className={`py-2 px-3 rounded-lg text-xs font-bold transition-all text-center ${
+                      requestType === 'proposal' 
+                        ? 'bg-white text-black shadow-md' 
+                        : 'text-zinc-400 hover:text-white'
+                    }`}
+                  >
+                    📋 Resmî Fiyat Teklifi Al
+                  </button>
+                </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>

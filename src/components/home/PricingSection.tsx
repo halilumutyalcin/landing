@@ -473,6 +473,14 @@ export const PricingSection: React.FC = () => {
                 Yeni kurulan veya kurumsal kabuk değiştiren şirketlerin en büyük problemi; logoyu birine, web sitesini birine, haritayı birine yaptırıp zaman ve para kaybetmektir. 
                 Tüm kurumsal dijital varlığınızı tek elden, tek muhatapla ve 7–10 iş gününde anahtar teslim kuruyoruz.
               </p>
+
+              {/* Explicit Value Math / Delta Breakdown */}
+              <div className="mt-4 p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300">
+                <strong className="text-white block mb-0.5">Profesyonel Paketten (32.500 ₺) Farkı Nedir?</strong>
+                <span>
+                  Ayrı alındığında 49.000 ₺ tutan; Profesyonel Web Sitesi + Vektörel Logo Tasarımı (9.500 ₺) + Kurumsal Kimlik &amp; Kartvizit (3.500 ₺) + Google Harita &amp; Yerel SEO (3.500 ₺) tek pakette birleşir. <strong>Sadece +7.000 ₺ farkla tüm kurumsal kimliğiniz tek elden kurulur.</strong>
+                </span>
+              </div>
             </div>
 
             <div className="p-5 rounded-2xl bg-black/40 lg:min-w-[280px] shrink-0">
@@ -486,57 +494,77 @@ export const PricingSection: React.FC = () => {
                 <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
                 <span>İlk 3 Yıl Domain + Hosting Dahil</span>
               </div>
+              <div className="text-[10px] text-emerald-400 mt-2 font-mono">
+                ✓ 9.500 ₺ Paket İndirimi Dahil
+              </div>
             </div>
           </div>
 
-          {/* 4 Core Pillars Grid - Exact Visual Alignment with Value Pillars */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
+          {/* 4 Core Pillars Grid - Included vs Optional Scope */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
               <div className="flex items-center gap-2.5">
                 <Palette className="w-5 h-5 text-amber-400 shrink-0" />
                 <strong className="text-white text-sm font-bold">
-                  1. Logo & Renkler
+                  1. Logo &amp; Renkler (Dahil)
                 </strong>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed pt-1">
-                Tüm mecralara ve matbaa baskısına uyumlu, vektörel formatlarda (SVG, PDF, PNG) teslim edilen özgün logo tasarımı ve kurumsal renk rehberi.
+                Vektörel logo tasarımı (SVG, PDF, PNG) ve kurumsal renk rehberi.
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
               <div className="flex items-center gap-2.5">
                 <CreditCard className="w-5 h-5 text-amber-400 shrink-0" />
                 <strong className="text-white text-sm font-bold">
-                  2. Marka Kimliği
+                  2. Marka Kimliği (Dahil)
                 </strong>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed pt-1">
-                Matbaa baskısına hazır PDF formatında kartvizit, antetli kağıt, fatura şablonu ve kurumsal e-posta imza tasarımı.
+                Baskıya hazır PDF formatında kartvizit, antetli kağıt ve kurumsal e-posta imza şablonu.
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
               <div className="flex items-center gap-2.5">
                 <MapPin className="w-5 h-5 text-amber-400 shrink-0" />
                 <strong className="text-white text-sm font-bold">
-                  3. Google Haritalar & SEO
+                  3. Google Haritalar (Dahil)
                 </strong>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed pt-1">
-                Google İşletme Profili teknik kurulumu, yerel arama optimizasyonu ve resmî doğrulama başvurusunun başlatılması (onay süreci Google prosedürlerine bağlıdır).
+                Google İşletme Profili teknik kurulumu, yerel arama optimizasyonu ve resmi doğrulama başvurusu.
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
               <div className="flex items-center gap-2.5">
                 <Zap className="w-5 h-5 text-amber-400 shrink-0" />
                 <strong className="text-white text-sm font-bold">
-                  4. Ultra Hızlı Site + 3 Yıl
+                  4. Profesyonel Site (Dahil)
                 </strong>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed pt-1">
-                10 sayfaya kadar Profesyonel paket web sitesi, statik sayfalarda Lighthouse 90–95+ performans optimizasyonu ve ilk 3 yıl hosting ve alan adı dahil.
+                10 sayfaya kadar Profesyonel paket web sitesi, 90–95+ hız ve ilk 3 yıl domain + hosting dahil.
               </p>
+            </div>
+          </div>
+
+          {/* Included vs Optional Clear Scope Badges */}
+          <div className="p-4 rounded-xl bg-black/40 border border-white/5 mb-8 flex flex-wrap items-center justify-between gap-4 text-xs">
+            <div className="flex flex-wrap items-center gap-3 text-slate-300">
+              <span className="font-bold text-white">Paket Kapsamı:</span>
+              <span className="text-emerald-400">✓ Web Sitesi</span>
+              <span className="text-emerald-400">✓ Logo &amp; Kimlik</span>
+              <span className="text-emerald-400">✓ Google Harita Kaydı</span>
+              <span className="text-emerald-400">✓ 3 Yıl Hosting &amp; SSL</span>
+            </div>
+            <div className="flex flex-wrap items-center gap-3 text-slate-400 text-[11px]">
+              <span>İsteğe Bağlı Ekler:</span>
+              <span>— Ek Dil Mimarisi</span>
+              <span>— Reklam Medya Bütçesi</span>
+              <span>— Özel Yazılım Modülü</span>
             </div>
           </div>
 
@@ -712,7 +740,7 @@ export const PricingSection: React.FC = () => {
 
           {/* 4 Concrete Real-World Scenarios */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-8">
-            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 transition-colors">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-white/20 transition-colors">
               <div className="flex items-center gap-2.5 mb-2">
                 <Building2 className="w-5 h-5 text-amber-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Bayi &amp; Cari Hesap Portalı</h4>
@@ -722,7 +750,7 @@ export const PricingSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 transition-colors">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-white/20 transition-colors">
               <div className="flex items-center gap-2.5 mb-2">
                 <Calendar className="w-5 h-5 text-amber-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Online Randevu &amp; SMS Otomasyonu</h4>
@@ -732,7 +760,7 @@ export const PricingSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 transition-colors">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-white/20 transition-colors">
               <div className="flex items-center gap-2.5 mb-2">
                 <Server className="w-5 h-5 text-amber-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Ön Muhasebe &amp; ERP Entegrasyonu</h4>
@@ -742,7 +770,7 @@ export const PricingSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-500/30 transition-colors">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-white/20 transition-colors">
               <div className="flex items-center gap-2.5 mb-2">
                 <FileCheck2 className="w-5 h-5 text-amber-400 shrink-0" />
                 <h4 className="text-sm font-bold text-white">Online Evrak &amp; Rapor Sorgulama</h4>

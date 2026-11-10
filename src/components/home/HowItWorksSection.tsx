@@ -75,7 +75,7 @@ export const HowItWorksSection: React.FC = () => {
               return (
                 <div
                   key={item.step}
-                  className="p-6 sm:p-7 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] hover:border-amber-500/40 shadow-xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group"
+                  className="p-6 sm:p-7 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20 shadow-xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group"
                 >
                   <div>
                     {/* Step Number + Naked Icon */}

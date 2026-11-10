@@ -4,7 +4,10 @@ import React, { useState } from 'react';
 import { 
   Building2, 
   UserCheck, 
-  CheckCircle2 
+  CheckCircle2,
+  Printer,
+  ArrowRight,
+  Sparkles
 } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
 import { formatCurrency } from '@/lib/utils';
@@ -25,12 +28,38 @@ export const TaxCalculatorSection: React.FC = () => {
 
   const currentPkg = packagesInfo[selectedPackageId] || packagesInfo.pro;
   const currentKdv = Math.round(currentPkg.price * 0.20);
+  const totalWithKdv = currentPkg.price + currentKdv;
   const effectiveTaxRate = companyType === 'ltd' ? 25 : gvRate;
   const currentTaxSaving = Math.round(currentPkg.price * (effectiveTaxRate / 100));
   // Net effective cost = price - tax saving (if KDV is offset, KDV is cash neutral; if not offset, +KDV)
   const currentNetCost = canOffsetKdv 
     ? currentPkg.price - currentTaxSaving 
     : (currentPkg.price + currentKdv) - currentTaxSaving;
+
+  const handleTransferToForm = () => {
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(
+        new CustomEvent('tax-calculation-applied', {
+          detail: {
+            packageId: selectedPackageId,
+            companyType: companyType === 'ltd' ? 'LTD. / A.Ş. (%25 KV)' : `Şahıs İşletmesi (%${gvRate} GV)`,
+            netCost: currentNetCost,
+            packageName: currentPkg.name,
+          },
+        })
+      );
+      const target = document.getElementById('iletisim');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handlePrint = () => {
+    if (typeof window !== 'undefined') {
+      window.print();
+    }
+  };
 
   return (
     <section id="vergi-avantaji" className="py-20 bg-black">
@@ -184,16 +213,20 @@ export const TaxCalculatorSection: React.FC = () => {
 
               <div className="space-y-2 text-xs">
                 <div className="flex items-center justify-between text-zinc-400">
-                  <span>Paket Fatura Bedeli:</span>
+                  <span>Fatura Bedeli (KDV Hariç):</span>
                   <span className="text-white font-medium">{formatCurrency(currentPkg.price)}</span>
                 </div>
                 <div className="flex items-center justify-between text-zinc-400">
-                  <span>+ %20 KDV:</span>
+                  <span>+ %20 KDV Tutarı:</span>
                   <span className="text-zinc-300">{formatCurrency(currentKdv)}</span>
+                </div>
+                <div className="flex items-center justify-between text-zinc-400 pb-1 border-b border-white/5 font-semibold">
+                  <span className="text-zinc-300">Fatura Toplamı (KDV Dahil):</span>
+                  <span className="text-white">{formatCurrency(totalWithKdv)}</span>
                 </div>
                 {canOffsetKdv && (
                   <div className="flex items-center justify-between text-emerald-400">
-                    <span>KDV Mahsubu:</span>
+                    <span>KDV Mahsubu İndirimi:</span>
                     <span className="font-semibold">-{formatCurrency(currentKdv)}</span>
                   </div>
                 )}
@@ -216,6 +249,26 @@ export const TaxCalculatorSection: React.FC = () => {
                     ? 'KDV mahsubu ve vergi matrah indirimi sonrası işletmenizin cebinden çıkan tahmini net tutar.' 
                     : 'Vergi matrah indirimi sonrası tahmini net maliyet (KDV mahsup edilmediğinde).'}
                 </div>
+              </div>
+
+              {/* Action Buttons: Transfer to Form & Print/PDF */}
+              <div className="pt-3 border-t border-white/10 space-y-2 print:hidden">
+                <button
+                  type="button"
+                  onClick={handleTransferToForm}
+                  className="w-full py-2.5 px-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-xs shadow-md transition-all flex items-center justify-center gap-1.5"
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-black" />
+                  <span>Bu Hesaplamayla Teklif Al (Forma Aktar)</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={handlePrint}
+                  className="w-full py-2 px-3 rounded-xl bg-white/[0.04] hover:bg-white/10 text-zinc-300 text-xs font-semibold transition-all flex items-center justify-center gap-1.5 border border-white/10"
+                >
+                  <Printer className="w-3.5 h-3.5" />
+                  <span>Hesaplama Özetini Yazdır / PDF Kaydet</span>
+                </button>
               </div>
             </div>
 

@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import Link from 'next/link';
+import { ChevronDown, ChevronUp, ArrowRight } from 'lucide-react';
 import { DEMO_CATALOG, DemoItem } from '@/config/demos.config';
 import { SectorTabs } from './SectorTabs';
 import { DemoCard } from './DemoCard';
@@ -76,9 +77,9 @@ export const DemoGrid: React.FC<DemoGridProps> = ({ initialSector = 'all' }) => 
           ))}
         </div>
 
-        {/* Expand / Show More Demos Button for 'all' */}
+        {/* Expand / Show More Demos Button for 'all' + Direct Gallery Link */}
         {activeSector === 'all' && filteredDemos.length > 6 && (
-          <div className="mt-12 text-center">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
             <button
               onClick={() => setShowAllDemos(!showAllDemos)}
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#111114] hover:bg-zinc-800 border border-white/10 text-white font-semibold text-sm transition-all shadow-md"
@@ -94,6 +95,14 @@ export const DemoGrid: React.FC<DemoGridProps> = ({ initialSector = 'all' }) => 
                 <ChevronDown className="w-4 h-4 text-amber-400" />
               )}
             </button>
+
+            <Link
+              href="/tasarimlar"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/[0.04] hover:bg-white text-zinc-300 hover:text-black border border-white/10 hover:border-white font-semibold text-sm transition-all"
+            >
+              <span>Tüm Tasarım Galerisini Sayfada Gör</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         )}
 
