@@ -76,11 +76,11 @@ export const siteConfig = {
   email: 'info@mediweb.com.tr',
   address: 'Doğu Mah. Erol Kaya Cad. No:94, Pendik / İstanbul',
   legalEntity: {
-    providerTitle: 'Şengüller Otomotiv & Bilişim Danışmanlığı',
-    type: 'Şahıs İşletmesi (Gerçek Kişi Ticari İşletme)',
+    title: 'Şengüller Otomotiv & Bilişim Danışmanlığı - Halil Umut Yalçın',
+    businessType: 'Şahıs İşletmesi',
     taxOffice: 'Pendik Vergi Dairesi',
-    taxNumber: 'Teklif ve sözleşme faturasında yer alır',
-    city: 'İstanbul / Pendik',
+    taxNumber: 'VKN: Resmî Sözleşmede Belirtilir',
+    city: 'Pendik / İstanbul',
   },
   
   metrics: [
@@ -311,8 +311,8 @@ export const siteConfig = {
     {
       id: 'google-review',
       icon: 'Star',
-      title: 'Google İşletme Profili (Haritalar) Kurulumu',
-      description: 'Google Harita kaydı, temel profil doğrulaması ve yol tarifi entegrasyonu.',
+      title: 'Google İşletme Profili & Tarafsız Yorum Standı',
+      description: 'Tüm müşterilere doğrudan ve tarafsız inceleme bağlantısı sunan masaüstü QR stant tasarımı ve Google politikalarına uyumlu yerel rehberlik. (Not: Hukuk ve sağlık sektörlerinde meslek kuralları gereği danışan/hasta yorumu kullanımı kısıtlıdır.)',
       pricing: 'Kurulum paketi ~3.500 ₺',
     },
     {
@@ -417,7 +417,7 @@ export const siteConfig = {
     {
       category: 'surec',
       question: 'Belirtilen teslim süresi nasıl işler, süreçte gecikme yaşanır mı?',
-      answer: 'Teslimat süremiz (Başlangıç: 3–5 iş günü, Profesyonel: 5–7 iş günü, Kurumsal: 7–10 iş günü), logonuzu ve kurumsal içerik onayınızı teslim ettiğiniz andan itibaren başlar. Mimari ve teknik altyapı önceden test edilip hazırlandığı için ajans içi gecikme yaşanmaz; revizyon ve içerik onayları zamanında verildiği sürece takvim dakik şekilde işler.'
+      answer: 'Teslimat takvimimiz (Başlangıç: 3–5 iş günü, Profesyonel: 5–7 iş günü, Kurumsal: 7–10 iş günü), logonuzu ve kurumsal içerik onayınızı teslim ettiğiniz andan itibaren başlar. Süreç sözleşmeyle güvence altındadır; ajans kaynaklı olası her iş günü gecikme için müşteriye sözleşmeli olarak 1 ay ücretsiz rutin bakım hediye edilir. Müşteri kaynaklı onay ve içerik bekleme süreleri teslimat takvimine ilave edilir.'
     },
     {
       category: 'hosting',
@@ -426,8 +426,18 @@ export const siteConfig = {
     },
     {
       category: 'paketler',
+      question: '12 Ay Taksitli (WaaS) modelde 13. aydan sonra ne olur? Çıkış koşulları nelerdir?',
+      answer: '12 aylık taahhüt tamamlandığında sitenin yayın hakkı, alan adı (.com/.com.tr) tescili ve 3 yıllık bulut barındırma hakkı tamamen size devredilir; 13. aydan itibaren zorunlu aylık ödeme tamamen biter. Siteniz asla kapatılmaz, kilitlenmez veya rehin tutulmaz. 13. aydan sonra dilerseniz aylık teknik bakımı sonlandırabilir veya isteğe bağlı (2.500 ₺/ay) olarak devam ettirebilirsiniz. 12 aydan önce erken çıkış talep edilirse, kalan taksitler kapatılarak alan adı ve 3 yıllık barındırma hakkı devralınabilir.'
+    },
+    {
+      category: 'paketler',
       question: 'Kaynak kodlar bana veriliyor mu? Size bağımlı kalır mıyım?',
-      answer: 'Başlangıç, Profesyonel ve Kurumsal paketlerimizde site, size ait alan adı üzerinde yüksek hızlı bulut altyapısında anahtar teslim yayınlanır. Kendi bağımsız sunucunuzda barındırmak ve geliştirmek için gerekli olan tam kaynak kod devri isteğe bağlı bir eklentidir (+%75 lisans devir bedeli). Siteniz bizim barındırmamızda kaldığı sürece ilk 3 yıl hiçbir ek sunucu veya SSL faturası ödemezsiniz; 3. yılın bitiminde de kendi sunucunuza taşıyabilir veya standart alan adı yenilemesiyle devam edebilirsiniz.'
+      answer: 'Başlangıç, Profesyonel ve Kurumsal paketlerimizde site, size ait alan adı üzerinde yüksek hızlı modern bulut altyapısında anahtar teslim yayınlanır. Kendi bağımsız sunucunuzda barındırmak ve geliştirmek için gerekli olan tam kaynak kod devri isteğe bağlı bir eklentidir (+%75 lisans devir bedeli). Siteniz bizim barındırmamızda kaldığı sürece ilk 3 yıl hiçbir ek sunucu veya SSL faturası ödemezsiniz; 3. yılın bitiminde de kendi sunucunuza taşıyabilir veya standart alan adı yenilemesiyle devam edebilirsiniz.'
+    },
+    {
+      category: 'revizyon',
+      question: 'Teslimattan sonra hata çıkarsa veya değişiklik gerekirse süreç nasıl işler?',
+      answer: 'Paket kapsamındaki sözleşmeli garanti süresi (15/30/60 gün) boyunca yazılımsal teknik hatalara bildirimden itibaren 1–2 iş günü içinde öncelikli müdahale edilir. Müşteri kaynaklı yeni sayfa ekleme, tasarım değişikliği veya kapsam dışı talepler ise isteğe bağlı aylık bakım anlaşması (2.500 ₺/ay) çerçevesinde yürütülür.'
     },
     {
       category: 'surec',
@@ -440,11 +450,6 @@ export const siteConfig = {
       answer: 'Müşterilerimizin çoğunda hazır metin veya fotoğraf bulunmuyor. Seçtiğiniz sektöre uygun kurumsal taslak içerikleri ve yüksek çözünürlüklü lisanslı görsel havuzunu biz sağlıyoruz. Siz yalnızca faaliyet alanlarınızı ve iletişim detaylarınızı inceleyip onaylıyorsunuz.'
     },
     {
-      category: 'revizyon',
-      question: 'İleride telefon, adres veya hizmet listemizde değişiklik gerekirse ne yapıyoruz?',
-      answer: 'Teslimattan sonraki ilk 30 gün boyunca metin ve iletişim güncellemeleri ücretsizdir. Sonrasında acil küçük değişiklikler (yılda 4 sefere kadar) ücretsiz sağlanır. Düzenli içerik, blog veya görsel girişleri içinse isteğe bağlı aylık bakım planımız mevcuttur.'
-    },
-    {
       category: 'surec',
       question: 'Site yayına girince Google aramalarında hemen birinci sırada çıkar mıyız?',
       answer: 'Siteniz seçtiğiniz paketin kapsamına göre teslim edilir. Başlangıç paketimizde temel SEO altyapısı (sitemap, meta etiketler); Profesyonel ve Kurumsal paketlerimizde ise detaylı JSON-LD Schema ve Google İşletme Profili (Harita) entegrasyonu dahildir. Google sıralamaları arama motorunun kendi algoritmasına bağlıdır; hiçbir dürüst ajans 1. sıra garantisi veremez, biz de vermiyoruz.'
@@ -452,7 +457,7 @@ export const siteConfig = {
     {
       category: 'paketler',
       question: 'Fatura kesiyor musunuz? Şirketime gider olarak gösterebilir miyim?',
-      answer: 'Tüm fiyatlarımız KDV hariçtir; faturalandırmada %20 KDV eklenerek resmî e-Arşiv / e-Fatura düzenlenir. Faturanızı şirket gideri olarak kullanabilir; vergi avantajı ve KDV mahsubu detayları için mali müşavirinize danışabilirsiniz.'
+      answer: 'Tüm fiyatlarımız KDV hariçtir; faturalandırmada %20 KDV eklenerek resmî e-Arşiv / e-Fatura düzenlenir. Faturanın doğrudan gider mi yazılacağı yoksa aktifleştirilip amortismana mı tabi tutulacağı işletmenizin mali müşavirinin takdirine bağlıdır.'
     }
   ] as FaqItem[]
 };

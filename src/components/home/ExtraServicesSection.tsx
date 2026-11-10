@@ -87,7 +87,7 @@ const SERVICE_GROUPS: ServiceGroup[] = [
   },
   {
     groupTitle: 'Büyüme, İtibar & Rutin Güvence',
-    groupDesc: 'Google aramalarında öne çıkaran, müşteri yorumlarını artıran ve sitenizi sürekli güncel tutan destek.',
+    groupDesc: 'Google İşletme Profili ve yerel görünürlük çalışmalarıyla sitenizi ve harita profilinizi güncel tutan destek.',
     services: [
       {
         id: 'advanced-seo',
@@ -105,8 +105,8 @@ const SERVICE_GROUPS: ServiceGroup[] = [
       },
       {
         id: 'google-review',
-        title: 'Google Yorum & İtibar Kurgusu',
-        description: 'Masaüstü QR stant tasarımı, memnun müşteri yönlendirme linki ve ilk 10 organik inceleme stratejisi.',
+        title: 'Google İşletme Profili & Tarafsız Yorum Standı',
+        description: 'Tüm müşterilere doğrudan ve tarafsız inceleme bağlantısı sunan masaüstü QR stant tasarımı ve Google politikalarına uyumlu yerel rehberlik. (Not: Hukuk ve sağlık sektörlerinde meslek kuralları gereği danışan/hasta yorumu kullanımı kısıtlıdır.)',
         pricing: 'Kurulum paketi ~3.500 ₺',
         icon: Star,
       },

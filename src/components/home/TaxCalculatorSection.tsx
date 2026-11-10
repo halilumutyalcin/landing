@@ -77,12 +77,22 @@ export const TaxCalculatorSection: React.FC = () => {
               </div>
             </div>
           )}
+
+          {/* Yardımcı Not: Gelir vergisi dilimi açıklaması */}
+          <p className="text-xs text-slate-400 text-center max-w-xl">
+            Gelir vergisi diliminize göre vergi avantajı %15 ile %40 arasında değişir. Yukarıdaki butonlardan işletmenizin vergi dilimini seçerek tahmini tasarrufunuzu ve net maliyetinizi anında görebilirsiniz.
+          </p>
+        </div>
+
+        {/* Mobil Kaydırma İpucu */}
+        <div className="sm:hidden text-center text-[11px] text-amber-400/90 mb-2 flex items-center justify-center gap-1.5 font-medium">
+          <span>← Tabloyu sağa/sola kaydırarak tüm sütunları inceleyebilirsiniz →</span>
         </div>
 
         {/* Tax Table */}
         <div className="bg-[#0A0A0C] rounded-2xl overflow-hidden shadow-xl mb-8 border border-white/[0.08]">
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs sm:text-sm">
+            <table className="w-full text-left text-xs sm:text-sm min-w-[640px]">
               <thead className="bg-[#0C0F17] text-slate-400 uppercase text-[11px] font-bold border-b border-white/5">
                 <tr>
                   <th className="py-4 px-5">Paket Adı</th>

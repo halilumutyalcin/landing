@@ -394,7 +394,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                       <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
                       <div>
                         <strong className="text-white block text-xs sm:text-sm">Kopuk Destek Süreci Yok</strong>
-                        <span className="text-slate-300 text-xs">Teslimat sonrasında yalnız bırakmayız; sözleşmeli hata garantisi (15/30/60 gün) süresince teknik aksaklıkları koşulsuz giderir, sonrasında ise isteğe bağlı aylık bakım paketleriyle doğrudan teknik muhatap sunarız.</span>
+                        <span className="text-slate-300 text-xs">Teslimat sonrasında yalnız bırakmayız; sözleşmeli garanti süresince (15/30/60 gün) bildirilen yazılımsal aksaklıklara 1–2 iş günü içinde öncelikli müdahale eder, sonrasında ise isteğe bağlı aylık bakım anlaşmasıyla doğrudan teknik muhatap sunarız (müşteri kaynaklı yeni içerik ve tasarım revizyonları bakım kapsamındadır).</span>
                       </div>
                     </div>
                   </div>

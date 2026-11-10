@@ -71,7 +71,7 @@ export const PricingSection: React.FC = () => {
       title: '3. Satış, Dönüşüm & İletişim Araçları',
       items: [
         { feature: 'WhatsApp entegrasyonu', starter: 'Sabit WhatsApp butonu', pro: 'Hazır mesajlı buton', enterprise: 'Departman yönlendirmeli akıllı buton' },
-        { feature: 'Google Haritalar (İşletme)', starter: 'Harita iframe yerleşimi', pro: 'Profil kaydı, optimizasyon & yorum desteği', enterprise: 'Tam optimizasyon + QR stant tasarımı' },
+        { feature: 'Google Haritalar (İşletme)', starter: 'Harita iframe yerleşimi', pro: 'Profil kaydı, yerel optimizasyon & yol tarifi desteği', enterprise: 'Tam yerel optimizasyon + tarafsız QR stant tasarımı' },
         { feature: 'Sosyal medya bağlantıları', starter: 'Bağlantı ikonları', pro: 'Bağlantılar + Open Graph paylaşım kartı', enterprise: 'Open Graph zengin önizleme kartları' },
         { feature: 'Form e-posta bildirimi', starter: 'Temel bildirim', pro: 'Anlık e-posta bildirimi', enterprise: 'Çoklu yetkili bildirimi & SMS opsiyonu' },
       ]
@@ -82,7 +82,7 @@ export const PricingSection: React.FC = () => {
         { feature: 'Temel SEO altyapısı', starter: 'Meta, sitemap, robots.txt', pro: 'Dahil', enterprise: 'Dahil' },
         { feature: 'Gelişmiş SEO & Schema', starter: '—', pro: 'JSON-LD Schema & Search Console', enterprise: 'Sayfa bazlı derin SEO & iç bağlantı mimarisi' },
         { feature: 'Google Analytics & Search Console', starter: 'Temel Analytics', pro: 'Analytics + Search Console kurulumu', enterprise: 'İleri seviye hedef & dönüşüm takibi' },
-        { feature: 'Site hız optimizasyonu', starter: 'Temel (Yüksek Hızlı Bulut Ağı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri Seviye (Lighthouse 95+)' },
+        { feature: 'Site hız optimizasyonu', starter: 'Temel (Yüksek Hızlı Bulut Ağı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri Seviye (Statik Sayfalarda 90–95+)' },
         { feature: 'Güvenlik / SSL sertifikası', starter: '3 Yıl Ücretsiz SSL', pro: '3 Yıl Ücretsiz SSL', enterprise: '3 Yıl Kurumsal SSL & DDoS koruması' },
       ]
     },
@@ -131,7 +131,7 @@ export const PricingSection: React.FC = () => {
         <div className="max-w-3xl mx-auto mb-10 p-3.5 rounded-xl bg-zinc-900/60 border border-white/10 text-center flex items-center justify-center gap-2.5 text-xs text-zinc-300">
           <Clock className="w-4 h-4 text-amber-400 shrink-0" />
           <span>
-            <strong>Dakik Teslim Taahhüdü:</strong> Her proje için teslimat takvimi sözleşmeyle belirlenir; gecikme ve ucu açık süreçler yaşanmaz.
+            <strong>Sözleşmeli Teslimat Güvencesi:</strong> Teslim takvimi içerik onayından itibaren sözleşmeyle belirlenir (3–10 iş günü). Ajans kaynaklı olası gecikmelerde her iş günü için 1 ay ücretsiz rutin bakım hediye edilir.
           </span>
         </div>
 
@@ -224,7 +224,7 @@ export const PricingSection: React.FC = () => {
               13. Ay Güvencesi: Asla Rehin, Kilit veya Zorunlu Abonelik Yok
             </strong>
             <p className="text-zinc-300 leading-relaxed">
-              12 aylık taahhüt tamamlandığında sitenin yayın hakkı, alan adı (.com / .com.tr) tescili ve 3 yıllık bulut barındırma hakkı müşteriye devredilir. 13. aydan itibaren zorunlu aylık ödeme durur; dilerseniz aylık teknik bakım hizmetini sonlandırabilir veya isteğe bağlı sürdürebilirsiniz. Siteniz asla kapatılmaz veya rehin tutulmaz. (Kendi sunucunuzda bağımsız geliştirme için gerekli olan tam kaynak kod devri ise lisans protokolü kapsamında ek bir opsiyondur.)
+              12 aylık taahhüt tamamlandığında sitenin yayın hakkı, alan adı (.com / .com.tr) tescili ve 3 yıllık bulut barındırma hakkı müşteriye devredilir. 13. aydan itibaren zorunlu aylık ödeme durur; dilerseniz aylık teknik bakım hizmetini sonlandırabilir veya isteğe bağlı sürdürebilirsiniz. Siteniz asla kapatılmaz veya rehin tutulmaz. 12 aydan önce erken çıkış talep edilmesi durumunda ise, yalnızca kalan taksit tutarları tek seferde kapatılarak alan adı ve 3 yıllık barındırma hakkı eksiksiz devralınabilir. (Kendi sunucunuzda bağımsız geliştirme için gerekli olan tam kaynak kod devri ise lisans protokolü kapsamında ek bir opsiyondur.)
             </p>
           </div>
         </div>
@@ -686,7 +686,7 @@ export const PricingSection: React.FC = () => {
               <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
               <div>
                 <strong className="text-white block mb-0.5">15–60 Gün Hata Garantisi</strong>
-                <span className="text-slate-400">Teslimattan sonra fark edilen tüm teknik aksaklıklar ekibimizce anında ve ücretsiz giderilir.</span>
+                <span className="text-slate-400">Teslimattan sonra paket kapsamındaki sözleşmeli garanti süresince bildirilen yazılımsal hatalara en geç 1–2 iş günü içinde öncelikli müdahale edilir; müşteri kaynaklı yeni içerik ve tasarım revizyonları ise isteğe bağlı bakım kapsamındadır.</span>
               </div>
             </div>
           </div>

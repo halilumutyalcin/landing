@@ -77,8 +77,8 @@ export const Footer: React.FC = () => {
                 <span>{siteConfig.phoneDisplay}</span>
               </div>
               <div className="pt-2 border-t border-white/5 text-[11px] text-slate-400 space-y-0.5">
-                <div><span className="text-slate-300 font-semibold">Hizmet Sağlayıcı:</span> {siteConfig.legalEntity.providerTitle} ({siteConfig.legalEntity.type})</div>
-                <div><span className="text-slate-300 font-semibold">Vergi Dairesi:</span> {siteConfig.legalEntity.taxOffice} · {siteConfig.legalEntity.taxNumber} · {siteConfig.legalEntity.city}</div>
+                <div><span className="text-slate-300 font-semibold">Hizmet Sağlayıcı:</span> {siteConfig.legalEntity.title}, {siteConfig.legalEntity.businessType}</div>
+                <div><span className="text-slate-300 font-semibold">Vergi Dairesi:</span> {siteConfig.legalEntity.taxOffice} · {siteConfig.legalEntity.city}</div>
               </div>
             </div>
           </div>
