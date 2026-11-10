@@ -4,8 +4,7 @@ import React, { useState } from 'react';
 import { 
   Building2, 
   UserCheck, 
-  CheckCircle2,
-  Printer
+  CheckCircle2
 } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
 import { formatCurrency } from '@/lib/utils';
@@ -32,12 +31,6 @@ export const TaxCalculatorSection: React.FC = () => {
   const currentNetCost = canOffsetKdv 
     ? currentPkg.price - currentTaxSaving 
     : (currentPkg.price + currentKdv) - currentTaxSaving;
-
-  const handlePrint = () => {
-    if (typeof window !== 'undefined') {
-      window.print();
-    }
-  };
 
   return (
     <section id="vergi-avantaji" className="py-20 bg-black">
@@ -180,18 +173,6 @@ export const TaxCalculatorSection: React.FC = () => {
                   />
                   <span>%20 KDV beyannamemde mahsup edilebiliyor</span>
                 </label>
-              </div>
-
-              {/* Print / Save Action */}
-              <div className="pt-2 print:hidden">
-                <button
-                  type="button"
-                  onClick={handlePrint}
-                  className="w-full py-2.5 px-3 rounded-xl bg-white/[0.04] hover:bg-white/10 text-zinc-300 text-xs font-semibold transition-all flex items-center justify-center gap-1.5 border border-white/10"
-                >
-                  <Printer className="w-3.5 h-3.5" />
-                  <span>Hesaplama Özetini Yazdır / PDF Kaydet</span>
-                </button>
               </div>
             </div>
 
