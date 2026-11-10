@@ -34,7 +34,6 @@ export const ContactSection: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isKvkkModalOpen, setIsKvkkModalOpen] = useState(false);
   const [selectedDesignBanner, setSelectedDesignBanner] = useState<string | null>(null);
-  const [requestType, setRequestType] = useState<'demo' | 'proposal'>('demo');
   const [referenceCode, setReferenceCode] = useState<string>('');
 
   const {
@@ -70,7 +69,6 @@ export const ContactSection: React.FC = () => {
         setValue('selectedPackage', ce.detail.packageId);
         setValue('message', `${ce.detail.packageName} için simüle edilen net maliyet: ${ce.detail.netCost.toLocaleString('tr-TR')} ₺ (${ce.detail.companyType}). Resmi teklif görüşmesi talep ediyorum.`);
         setSelectedDesignBanner(`${ce.detail.packageName} (Tahmini Net: ${ce.detail.netCost.toLocaleString('tr-TR')} ₺)`);
-        setRequestType('proposal');
       }
     };
 
@@ -92,9 +90,7 @@ export const ContactSection: React.FC = () => {
     const ref = `MED-${Math.floor(100000 + Math.random() * 900000)}`;
     setReferenceCode(ref);
 
-    const typeLabel = requestType === 'demo' ? 'Ücretsiz Canlı Demo Talebi' : 'Resmî Fiyat & Kurulum Teklifi';
-
-    const customMessage = `Merhaba MediWeb! Web sitesi başvurusu:\n• Başvuru / Referans No: ${ref}\n• Talep Türü: ${typeLabel}\n• İsim: ${data.fullName}\n• Telefon: ${data.phone}\n• E-posta: ${data.email}\n• Sektör: ${data.sector}\n• Seçilen Mimari: ${data.selectedDesign}\n• Tercih Edilen Paket: ${pkgName}\n• Not: ${data.message || 'Yok'}`;
+    const customMessage = `Merhaba MediWeb! Web sitesi teklif ve bilgi başvurusu:\n• Referans No: ${ref}\n• İsim: ${data.fullName}\n• Telefon: ${data.phone}\n• E-posta: ${data.email}\n• Sektör: ${data.sector}\n• Seçilen Mimari: ${data.selectedDesign}\n• Tercih Edilen Paket: ${pkgName}\n• Not: ${data.message || 'Yok'}`;
 
     window.open(generateWhatsAppUrl({ customMessage }), '_blank');
     setIsSubmitted(true);
@@ -219,39 +215,18 @@ export const ContactSection: React.FC = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-white/10 gap-2">
-                  <h3 className="text-lg font-bold text-white font-display">
-                    {requestType === 'demo' ? 'Ücretsiz Canlı Demo Talebi' : 'Resmî Fiyat Teklifi & Kurulum'}
-                  </h3>
-                  <span className="text-[11px] text-emerald-400 font-medium">
-                    Ortalama 30 dakika içinde geri dönüş
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-white/10 gap-2">
+                  <div>
+                    <h3 className="text-xl font-bold text-white font-display">
+                      Projenizi Birlikte Başlatalım
+                    </h3>
+                    <p className="text-xs text-zinc-400 mt-0.5">
+                      İhtiyaçlarınızı iletin, aynı gün içinde size özel teklif ve kurulum takvimi hazırlayalım.
+                    </p>
+                  </div>
+                  <span className="text-[11px] text-emerald-400 font-medium shrink-0 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20 self-start sm:self-auto">
+                    Ortalama 30 dk içinde geri dönüş
                   </span>
-                </div>
-
-                {/* Dual Conversion Goal Switcher */}
-                <div className="grid grid-cols-2 p-1 rounded-xl bg-black/60 border border-white/10 gap-1">
-                  <button
-                    type="button"
-                    onClick={() => setRequestType('demo')}
-                    className={`py-2 px-3 rounded-lg text-xs font-bold transition-all text-center ${
-                      requestType === 'demo' 
-                        ? 'bg-amber-400 text-black shadow-md' 
-                        : 'text-zinc-400 hover:text-white'
-                    }`}
-                  >
-                    Ücretsiz Canlı Demo Talebi
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setRequestType('proposal')}
-                    className={`py-2 px-3 rounded-lg text-xs font-bold transition-all text-center ${
-                      requestType === 'proposal' 
-                        ? 'bg-white text-black shadow-md' 
-                        : 'text-zinc-400 hover:text-white'
-                    }`}
-                  >
-                    Resmî Fiyat Teklifi Al
-                  </button>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

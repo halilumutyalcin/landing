@@ -63,19 +63,6 @@ export const WhyUsUnifiedSection: React.FC = () => {
         {/* Interactive Unified Segmented Tabs - Mobile-Friendly Responsive & Desktop Grid */}
         <div className="mb-8 sm:mb-10 w-full max-w-4xl lg:max-w-5xl mx-auto flex sm:grid sm:grid-cols-3 overflow-x-auto p-1.5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] gap-1.5 sm:gap-2 shadow-inner print:hidden [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <button
-            onClick={() => setActiveTab('agency-vs-us')}
-            className={`flex-1 shrink-0 sm:shrink sm:w-full min-w-[125px] sm:min-w-0 px-2.5 sm:px-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center whitespace-nowrap ${
-              activeTab === 'agency-vs-us'
-                ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
-                : 'text-zinc-400 hover:text-white'
-            }`}
-          >
-            <Scale className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'agency-vs-us' ? 'text-black' : 'text-amber-400'}`} />
-            <span className="hidden sm:inline">Geleneksel Ajans vs. Biz</span>
-            <span className="sm:hidden text-xs">Ajans vs. Biz</span>
-          </button>
-
-          <button
             onClick={() => setActiveTab('wp-vs-next')}
             className={`flex-1 shrink-0 sm:shrink sm:w-full min-w-[125px] sm:min-w-0 px-2.5 sm:px-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center whitespace-nowrap ${
               activeTab === 'wp-vs-next'
@@ -86,6 +73,19 @@ export const WhyUsUnifiedSection: React.FC = () => {
             <Zap className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'wp-vs-next' ? 'text-black' : 'text-amber-400'}`} />
             <span className="hidden sm:inline">WordPress vs. Hızlı Mimari</span>
             <span className="sm:hidden text-xs">WordPress vs. Hız</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('agency-vs-us')}
+            className={`flex-1 shrink-0 sm:shrink sm:w-full min-w-[125px] sm:min-w-0 px-2.5 sm:px-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center whitespace-nowrap ${
+              activeTab === 'agency-vs-us'
+                ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
+                : 'text-zinc-400 hover:text-white'
+            }`}
+          >
+            <Scale className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'agency-vs-us' ? 'text-black' : 'text-amber-400'}`} />
+            <span className="hidden sm:inline">Geleneksel Ajans vs. Biz</span>
+            <span className="sm:hidden text-xs">Ajans vs. Biz</span>
           </button>
 
           <button

@@ -173,7 +173,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
             </div>
 
             <Link
-              href="/tasarimlar"
+              href="/#tasarimlar"
               className="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:text-zinc-300 font-bold self-start md:self-auto"
             >
               <span>Tüm 16 Mimarimizi Gör</span>
