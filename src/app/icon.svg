@@ -1,4 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#FFFFFF"/>
-  <path d="M8 23V9H11.5L16 16.5L20.5 9H24V23H20.8V13.8L16.8 20.2H15.2L11.2 13.8V23H8Z" fill="#000000"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121216" />
+      <stop offset="100%" stop-color="#070709" />
+    </linearGradient>
+
+    <!-- Glowing Accent Halo -->
+    <radialGradient id="halo" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.32" />
+      <stop offset="60%" stop-color="#F59E0B" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Border Subtle Glow -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.8" />
+      <stop offset="35%" stop-color="#F59E0B" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.08" />
+    </linearGradient>
+
+    <!-- Monogram Amber/Gold Gradient -->
+    <linearGradient id="mGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A" />
+      <stop offset="25%" stop-color="#FBBF24" />
+      <stop offset="70%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow for M -->
+    <filter id="mShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <!-- Squircle Base -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)" />
+  <rect width="64" height="64" rx="16" fill="url(#halo)" />
+
+  <!-- Crisp Outer Rim / Border -->
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="15.25" stroke="url(#borderGrad)" stroke-width="1.5" />
+
+  <!-- Modern Geometric Monogram "M" -->
+  <path
+    d="M 13.5 48 V 16.5 C 13.5 15.67 14.17 15 15 15 H 20.2 C 20.8 15 21.36 15.36 21.6 15.91 L 32 32.8 L 42.4 15.91 C 42.64 15.36 43.2 15 43.8 15 H 49 C 49.83 15 50.5 15.67 50.5 16.5 V 48 C 50.5 48.83 49.83 49.5 49 49.5 H 44.5 C 43.67 49.5 43 48.83 43 48 V 26.2 L 34.1 40.4 C 33.7 41.05 32.96 41.45 32 41.45 C 31.04 41.45 30.3 41.05 29.9 40.4 L 21 26.2 V 48 C 21 48.83 20.33 49.5 19.5 49.5 H 15 C 14.17 49.5 13.5 48.83 13.5 48 Z"
+    fill="url(#mGrad)"
+    filter="url(#mShadow)"
+  />
+
+  <!-- Subtle High-Tech Architectural Accent Dot at Center Apex -->
+  <circle cx="32" cy="18" r="2" fill="#FDE68A" opacity="0.9" />
 </svg>

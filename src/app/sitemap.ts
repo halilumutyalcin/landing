@@ -2,10 +2,10 @@ import { MetadataRoute } from 'next';
 import { DEMO_CATALOG } from '@/config/demos.config';
 import { SECTORS_SEO_DATA } from '@/config/sectors.config';
 import { LOCATIONS_SEO_DATA } from '@/config/locations.config';
-import { siteConfig } from '@/config/site.config';
+import { getBaseUrl } from '@/lib/utils';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = `https://${siteConfig.domain}`;
+  const baseUrl = getBaseUrl();
 
   // 1. Core static routes
   const staticRoutes: MetadataRoute.Sitemap = [

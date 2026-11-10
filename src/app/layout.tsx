@@ -4,19 +4,32 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { FloatingWhatsApp } from '@/components/layout/FloatingWhatsApp';
 import { siteConfig } from '@/config/site.config';
+import { getBaseUrl } from '@/lib/utils';
 
 import { JsonLd } from '@/components/seo/JsonLd';
 
+const baseUrl = getBaseUrl();
+
 export const metadata: Metadata = {
-  metadataBase: new URL(`https://${siteConfig.domain}`),
+  metadataBase: new URL(baseUrl),
   title: {
     default: `Kurumsal Web Tasarım Ajansı & Sektörel Vitrinler | ${siteConfig.name}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: 'WordPress karmaşasına ve ağır eklenti yüküne son. Hukuk, klinik, sanayi/imalat ve mali müşavirlere özel 16 canlı web mimarisi. 3–10 iş gününde anahtar teslim kurulum, 3 yıl boyunca sıfır ek masraf güvencesi.',
   alternates: {
-    canonical: `https://${siteConfig.domain}`,
+    canonical: baseUrl,
   },
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/manifest.webmanifest',
   keywords: [
     'kurumsal web tasarım ajansı',
     'hukuk bürosu web sitesi',
@@ -39,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Kurumsal Web Tasarım Ajansı & Sektörel Vitrinler | ${siteConfig.name}`,
     description: 'WordPress karmaşasına ve ağır eklenti yüküne son. Sektörünüze özel geliştirilmiş kurumsal web mimarisi. 3–10 iş gününde anahtar teslim, 3 yıl domain + hosting dahil.',
-    url: `https://${siteConfig.domain}`,
+    url: baseUrl,
     siteName: siteConfig.name,
     locale: 'tr_TR',
     type: 'website',

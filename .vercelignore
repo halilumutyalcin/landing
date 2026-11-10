@@ -1,0 +1,6 @@
+.git
+.vscode
+.agents
+SCROLLYTELLING_REHBERI.md
+*.log
+tsconfig.tsbuildinfo
