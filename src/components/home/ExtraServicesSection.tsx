@@ -11,8 +11,6 @@ import {
   Code2, 
   PenTool, 
   Star,
-  ShieldCheck,
-  ShieldOff,
   Sparkles
 } from 'lucide-react';
 
@@ -31,33 +29,6 @@ interface ServiceGroup {
 }
 
 const SERVICE_GROUPS: ServiceGroup[] = [
-  {
-    groupTitle: 'Dijital Pazarlama & SEO',
-    groupDesc: 'Sitenizin ve işletmenizin Google aramalarında ve haritalarda yerel olarak öne çıkmasını sağlayan büyüme modülleri.',
-    services: [
-      {
-        id: 'advanced-seo',
-        title: 'Aylık İleri SEO & Harita Yönetimi',
-        description: 'Sektörel anahtar kelime takibi, Google Harita optimizasyonu ve yerel arama görünürlüğü.',
-        pricing: 'Aylık 6.500 ₺\'den başlayan',
-        icon: TrendingUp,
-      },
-      {
-        id: 'google-review',
-        title: 'Google İşletme Profili & Tarafsız Yorum Standı',
-        description: 'Tüm müşterilere doğrudan ve tarafsız inceleme bağlantısı sunan masaüstü QR stant tasarımı ve yerel işletme rehberliği.',
-        pricing: 'Kurulum paketi ~3.500 ₺',
-        icon: Star,
-      },
-      {
-        id: 'whatsapp-business',
-        title: 'WhatsApp Business & Dönüşüm Köprüsü',
-        description: 'Departman seçimi (Satış, Destek, Randevu), otomatik karşılama ve mesai dışı hazır yanıt kurgusu.',
-        pricing: 'Tek seferlik kurulum',
-        icon: MessageSquare,
-      },
-    ],
-  },
   {
     groupTitle: 'Teknik Altyapı & Entegrasyon',
     groupDesc: 'İşletmenizin operasyonlarını kolaylaştıran otomasyon, bağımsızlık ve yönetim altyapıları.',
@@ -89,6 +60,33 @@ const SERVICE_GROUPS: ServiceGroup[] = [
         description: 'Sitenizi kendi bağımsız sunucunuza taşımak isterseniz tüm kaynak kodlar ve bağımsız kullanım lisansı devredilir.',
         pricing: '+%75 Lisans Devri (Başlangıç: 13.125 ₺, Pro: 24.375 ₺, Kurumsal: 44.925 ₺)',
         icon: Code2,
+      },
+    ],
+  },
+  {
+    groupTitle: 'Dijital Pazarlama & SEO',
+    groupDesc: 'Sitenizin ve işletmenizin Google aramalarında ve haritalarda yerel olarak öne çıkmasını sağlayan büyüme modülleri.',
+    services: [
+      {
+        id: 'advanced-seo',
+        title: 'Aylık İleri SEO & Harita Yönetimi',
+        description: 'Sektörel anahtar kelime takibi, Google Harita optimizasyonu ve yerel arama görünürlüğü.',
+        pricing: 'Aylık 6.500 ₺\'den başlayan',
+        icon: TrendingUp,
+      },
+      {
+        id: 'google-review',
+        title: 'Google İşletme Profili & Tarafsız Yorum Standı',
+        description: 'Tüm müşterilere doğrudan ve tarafsız inceleme bağlantısı sunan masaüstü QR stant tasarımı ve yerel işletme rehberliği.',
+        pricing: 'Kurulum paketi ~3.500 ₺',
+        icon: Star,
+      },
+      {
+        id: 'whatsapp-business',
+        title: 'WhatsApp Business & Dönüşüm Köprüsü',
+        description: 'Departman seçimi (Satış, Destek, Randevu), otomatik karşılama ve mesai dışı hazır yanıt kurgusu.',
+        pricing: 'Tek seferlik kurulum',
+        icon: MessageSquare,
       },
     ],
   },
@@ -129,15 +127,16 @@ const SERVICE_GROUPS: ServiceGroup[] = [
 ];
 
 export const ExtraServicesSection: React.FC = () => {
-  const [activeTab, setActiveTab] = React.useState<number>(0);
+  // SEO is 2nd tab (index 1) and opens by default as requested
+  const [activeTab, setActiveTab] = React.useState<number>(1);
 
   const categories = [
-    { id: 0, label: 'SEO & Dijital Pazarlama', count: SERVICE_GROUPS[0].services.length },
-    { id: 1, label: 'Teknik & Entegrasyon', count: SERVICE_GROUPS[1].services.length },
+    { id: 0, label: 'Teknik & Entegrasyon', count: SERVICE_GROUPS[0].services.length },
+    { id: 1, label: 'SEO & Dijital Pazarlama', count: SERVICE_GROUPS[1].services.length },
     { id: 2, label: 'İçerik & Marka Kimliği', count: SERVICE_GROUPS[2].services.length },
   ];
 
-  const currentGroup = SERVICE_GROUPS[activeTab] || SERVICE_GROUPS[0];
+  const currentGroup = SERVICE_GROUPS[activeTab] || SERVICE_GROUPS[1];
 
   return (
     <section id="ek-hizmetler" className="py-20 bg-black">
@@ -179,55 +178,49 @@ export const ExtraServicesSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Selected Tab Content - Clean & Non-repetitive */}
-        <div className="max-w-5xl mx-auto space-y-6 animate-in fade-in duration-200">
-          <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <div>
-              <h3 className="text-base font-bold text-white tracking-tight">
-                {currentGroup.groupTitle}
-              </h3>
-              <p className="text-xs text-slate-400 mt-0.5">
-                {currentGroup.groupDesc}
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {currentGroup.services.map((service) => {
-              const Icon = service.icon;
-
-              return (
-                <div 
-                  key={service.id}
-                  className="p-5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
-                >
-                  <div>
-                    {/* Title + Icon */}
-                    <div className="flex items-start gap-3 mb-2.5">
-                      <Icon className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-                      <div>
-                        <h4 className="text-sm font-bold text-white leading-snug">
-                          {service.title}
-                        </h4>
-                        <span className="text-[11px] font-semibold text-amber-400 font-mono block mt-0.5">
-                          {service.pricing}
-                        </span>
-                      </div>
-                    </div>
-
-                    <p className="text-xs text-zinc-300 leading-relaxed pl-8">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+        {/* Group Subheading Description */}
+        <div className="text-center max-w-2xl mx-auto mb-8 animate-in fade-in duration-200">
+          <p className="text-xs sm:text-sm text-zinc-400">
+            {currentGroup.groupDesc}
+          </p>
         </div>
 
-        {/* Section Footer Note */}
-        <div className="mt-10 text-center text-xs text-slate-400">
-          İhtiyacınız olan ek bir entegrasyon varsa teklif aşamasında paketinize esnekçe dahil edilebilir.
+        {/* Dynamic Service Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {currentGroup.services.map((srv) => {
+            const Icon = srv.icon;
+            const isSpecial = srv.id === '360-launch';
+
+            return (
+              <div
+                key={srv.id}
+                className={`p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 relative group ${
+                  isSpecial
+                    ? 'bg-[#0A0A0C] border border-amber-500/30 shadow-lg'
+                    : 'bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20'
+                }`}
+              >
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                    <Icon className="w-5 h-5 text-amber-400" />
+                  </div>
+                  <h3 className="text-base font-bold text-white mb-2">
+                    {srv.title}
+                  </h3>
+                  <p className="text-xs text-zinc-400 leading-relaxed mb-4">
+                    {srv.description}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs">
+                  <span className="text-[11px] text-zinc-400">Yatırım:</span>
+                  <span className="font-semibold text-amber-400 text-xs">
+                    {srv.pricing}
+                  </span>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
       </div>

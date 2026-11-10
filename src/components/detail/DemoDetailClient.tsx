@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { 
   ArrowLeft, 
   Monitor, 
-  Tablet, 
   Smartphone, 
   Check, 
   Layers, 
@@ -27,7 +26,7 @@ interface DemoDetailClientProps {
 }
 
 export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
-  const [device, setDevice] = useState<'desktop' | 'tablet' | 'mobile'>('desktop');
+  const [device, setDevice] = useState<'desktop' | 'mobile'>('desktop');
   const [selectedPackageTier, setSelectedPackageTier] = useState<'starter' | 'pro' | 'enterprise'>('pro');
   const [relatedPreviewDemo, setRelatedPreviewDemo] = useState<DemoItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -40,7 +39,6 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
 
   const deviceWidths = {
     desktop: 'w-full max-w-5xl h-[650px]',
-    tablet: 'w-[768px] max-w-full h-[650px]',
     mobile: 'w-[375px] max-w-full h-[650px]',
   };
 
@@ -64,11 +62,11 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 py-4 mb-6 border-b border-white/10">
           <div className="flex items-center gap-3">
             <Link
-              href="/tasarimlar"
+              href="/#tasarimlar"
               className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors flex items-center gap-1.5 text-xs font-semibold"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span className="hidden sm:inline">Tüm Tasarımlara Dön</span>
+              <span>Ana Sayfaya Dön</span>
             </Link>
             <div>
               <div className="flex items-center gap-2">
@@ -95,16 +93,6 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
               >
                 <Monitor className="w-4 h-4" />
                 <span className="hidden md:inline text-[11px]">Masaüstü</span>
-              </button>
-              <button
-                onClick={() => setDevice('tablet')}
-                className={`p-2 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1 ${
-                  device === 'tablet' ? 'bg-brand-600 text-white shadow' : 'text-slate-400 hover:text-white'
-                }`}
-                title="Tablet Görünüm"
-              >
-                <Tablet className="w-4 h-4" />
-                <span className="hidden md:inline text-[11px]">Tablet</span>
               </button>
               <button
                 onClick={() => setDevice('mobile')}
@@ -135,7 +123,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
         </div>
 
         {/* 2. BÜYÜK CANLI ÖNİZLEME ÇERÇEVESİ */}
-        <div className="bg-[#090D16] border border-white/10 rounded-3xl p-3 sm:p-6 mb-16 flex items-center justify-center shadow-2xl overflow-hidden">
+        <div className="bg-[#0A0A0C] border border-white/10 rounded-3xl p-3 sm:p-6 mb-16 flex items-center justify-center shadow-2xl overflow-hidden">
           <div className={`transition-all duration-300 bg-black rounded-2xl border border-white/10 shadow-2xl overflow-hidden flex flex-col ${deviceWidths[device]}`}>
             {/* Mock browser header */}
             <div className="bg-[#1E293B] px-4 py-2.5 flex items-center justify-between border-b border-white/5 shrink-0">

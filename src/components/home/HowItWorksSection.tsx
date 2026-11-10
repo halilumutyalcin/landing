@@ -106,11 +106,6 @@ export const HowItWorksSection: React.FC = () => {
               );
             })}
           </div>
-
-          {/* Process Timeline Caveat Note */}
-          <div className="mt-8 text-center text-xs text-zinc-400 max-w-2xl mx-auto leading-relaxed">
-            * <em>Not: Taahhüt edilen 3–10 iş günü teslimat süresi, içerik ve logo onayınızın iletildiği andan itibaren başlar. Tasarım revizyon onayları ve müşteri geri dönüş hızına bağlı olarak lansman günü esneyebilir.</em>
-          </div>
         </div>
 
       </div>

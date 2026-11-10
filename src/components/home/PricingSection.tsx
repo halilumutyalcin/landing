@@ -127,14 +127,6 @@ export const PricingSection: React.FC = () => {
     <section id="paketler" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* High-Trust Delivery Commitment Banner */}
-        <div className="max-w-3xl mx-auto mb-10 p-3.5 rounded-xl bg-zinc-900/60 border border-white/10 text-center flex items-center justify-center gap-2.5 text-xs text-zinc-300">
-          <Clock className="w-4 h-4 text-amber-400 shrink-0" />
-          <span>
-            <strong>Sözleşmeli Teslimat Güvencesi:</strong> Teslim takvimi içerik onayından itibaren sözleşmeyle belirlenir (3–10 iş günü). Ajans kaynaklı olası gecikmelerde taahhüt edilen tarihten sonraki her 5 iş günü için 1 ay ücretsiz rutin bakım hediye edilir (en fazla 3 ay ile sınırlıdır).
-          </span>
-        </div>
-
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
@@ -227,6 +219,17 @@ export const PricingSection: React.FC = () => {
               Alan adınız (.com / .com.tr) ilk günden itibaren doğrudan sizin veya şirketinizin adına tescil edilir; asla rehin veya kilit altında tutulmaz. 12 aylık taksit taahhüdü tamamlandığında zorunlu aylık ödeme kesilir. Web siteniz bulut altyapımızda 3 yıllık barındırma süresi boyunca ek sunucu veya SSL ücreti çıkmadan kesintisiz yayında kalmaya devam eder. 13. aydan itibaren aylık teknik bakımı sonlandırabilir veya isteğe bağlı (2.500 ₺/ay) olarak sürdürebilirsiniz. 12 aydan önce erken çıkış talep edilirse yalnızca kalan taksit borcu kapatılır. Sitenizi bağımsız başka bir sunucuya taşımak isterseniz kaynak kod devir modülü (+%75 lisans devir bedeli) uygulanır.
             </p>
           </div>
+        </div>
+
+        {/* Global 3-Year Domain & Hosting Inclusion Banner */}
+        <div className="max-w-3xl mx-auto mb-10 p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-amber-500/10 border border-amber-500/25 text-center flex flex-col sm:flex-row items-center justify-center gap-2.5 text-xs text-zinc-200 shadow-lg">
+          <div className="flex items-center gap-1.5 text-amber-400 font-bold shrink-0">
+            <ShieldCheck className="w-4 h-4" />
+            <span>Tüm Paketlerimizde Standart:</span>
+          </div>
+          <span className="text-zinc-300">
+            İlk 3 yıl alan adı (.com / .com.tr), SSL sertifikası ve yüksek hızlı bulut barındırma fiyata dahildir — <strong>3 yıl boyunca ek yenileme masrafı çıkmaz.</strong>
+          </span>
         </div>
 
         {/* 3 Packages Cards - Pure Background Separation, Zero Borders */}
@@ -636,54 +639,54 @@ export const PricingSection: React.FC = () => {
         </div>
 
         {/* Integrated Trust Guarantees & Clear Post-Sale Terms */}
-        <div className="mt-8 rounded-3xl bg-[#0A0A0C] border border-white/[0.08] p-6 sm:p-8 max-w-5xl mx-auto shadow-2xl">
+        <div className="mt-8 rounded-3xl bg-gradient-to-b from-amber-500/[0.04] via-[#0A0A0C] to-[#0A0A0C] border border-amber-500/20 p-6 sm:p-8 max-w-5xl mx-auto shadow-2xl relative overflow-hidden">
           <div className="mb-6 pb-4 border-b border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
-              <h4 className="text-sm font-bold text-white flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-amber-400" />
+              <h4 className="text-base font-bold text-white flex items-center gap-2">
+                <ShieldCheck className="w-5 h-5 text-amber-400" />
                 <span>Satış Sonrası Şeffaf Koşullar (Sürpriz Yok)</span>
               </h4>
-              <p className="text-xs text-zinc-400 mt-0.5">
+              <p className="text-xs text-zinc-400 mt-1">
                 İşletmenizin haklarını koruyan, sözleşmeyle güvence altına alınmış net şartlar.
               </p>
             </div>
-            <span className="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20 self-start sm:self-auto">
+            <span className="text-[11px] font-semibold text-amber-400 bg-amber-500/10 px-3 py-1 rounded-lg border border-amber-500/30 self-start sm:self-auto">
               ✓ Sözleşmeli Güvence
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 text-xs text-slate-300">
-            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-              <strong className="text-white block font-bold text-[12px]">3 Yıl Sonunda Ne Olur?</strong>
-              <p className="text-[11px] text-zinc-400 leading-relaxed">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3.5 text-xs text-slate-300">
+            <div className="p-3.5 rounded-xl bg-black/60 border border-white/[0.08] hover:border-amber-400/30 transition-all space-y-1.5">
+              <strong className="text-amber-400 block font-bold text-xs">3 Yıl Sonunda Ne Olur?</strong>
+              <p className="text-[11px] text-zinc-300 leading-relaxed">
                 Zorunlu ajans faturası çıkmaz; 4. yıldan itibaren sadece alan adı + bulut sunucu maliyetine (~1.500–2.500 ₺/yıl) devam eder.
               </p>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-              <strong className="text-white block font-bold text-[12px]">Alan Adı Mülkiyeti</strong>
-              <p className="text-[11px] text-zinc-400 leading-relaxed">
+            <div className="p-3.5 rounded-xl bg-black/60 border border-white/[0.08] hover:border-amber-400/30 transition-all space-y-1.5">
+              <strong className="text-amber-400 block font-bold text-xs">Alan Adı Mülkiyeti</strong>
+              <p className="text-[11px] text-zinc-300 leading-relaxed">
                 Alan adınız ilk günden doğrudan adınıza veya şirketiniz adına tescil edilir. Rehin veya kilit asla uygulanmaz.
               </p>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-              <strong className="text-white block font-bold text-[12px]">Ek Sayfa İhtiyacı</strong>
-              <p className="text-[11px] text-zinc-400 leading-relaxed">
+            <div className="p-3.5 rounded-xl bg-black/60 border border-white/[0.08] hover:border-amber-400/30 transition-all space-y-1.5">
+              <strong className="text-amber-400 block font-bold text-xs">Ek Sayfa İhtiyacı</strong>
+              <p className="text-[11px] text-zinc-300 leading-relaxed">
                 İhtiyacınız büyüdüğünde sayfa başı ~1.500 ₺ net birim fiyatla modüler olarak kolayca yeni sayfalar eklenir.
               </p>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-              <strong className="text-white block font-bold text-[12px]">Revizyon & Garanti</strong>
-              <p className="text-[11px] text-zinc-400 leading-relaxed">
+            <div className="p-3.5 rounded-xl bg-black/60 border border-white/[0.08] hover:border-amber-400/30 transition-all space-y-1.5">
+              <strong className="text-amber-400 block font-bold text-xs">Revizyon & Garanti</strong>
+              <p className="text-[11px] text-zinc-300 leading-relaxed">
                 Paketinize göre 1–3 tur revizyon hakkı ve 15–60 gün yazılım hata garantisi (1–2 iş gününde müdahale taahhüdü).
               </p>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-              <strong className="text-white block font-bold text-[12px]">İçerik & Görseller</strong>
-              <p className="text-[11px] text-zinc-400 leading-relaxed">
+            <div className="p-3.5 rounded-xl bg-black/60 border border-white/[0.08] hover:border-amber-400/30 transition-all space-y-1.5">
+              <strong className="text-amber-400 block font-bold text-xs">İçerik & Görseller</strong>
+              <p className="text-[11px] text-zinc-300 leading-relaxed">
                 Sektörünüze uygun lisanslı görseller ve taslak metinler tarafımızdan hazırlanır; nihai onayınızla yayına alınır.
               </p>
             </div>

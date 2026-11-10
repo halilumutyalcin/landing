@@ -173,11 +173,6 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/bolgeler" className="hover:text-white transition-colors">
-                  Hizmet Bölgelerimiz (13 İlçe)
-                </Link>
-              </li>
-              <li>
                 <button 
                   onClick={() => setLegalModalType('kvkk')}
                   className="hover:text-white transition-colors text-left"

@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { 
   X, 
   Monitor, 
-  Tablet, 
   Smartphone, 
   ExternalLink, 
   ArrowRight, 
@@ -29,13 +28,12 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
   isOpen,
   onClose,
 }) => {
-  const [device, setDevice] = useState<'desktop' | 'tablet' | 'mobile'>('desktop');
+  const [device, setDevice] = useState<'desktop' | 'mobile'>('desktop');
 
   if (!isOpen || !demo) return null;
 
   const deviceWidths = {
     desktop: 'w-full max-w-6xl h-[75vh]',
-    tablet: 'w-[768px] max-w-full h-[75vh]',
     mobile: 'w-[375px] max-w-full h-[75vh]',
   };
 
@@ -80,18 +78,6 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
             >
               <Monitor className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">Masaüstü</span>
-            </button>
-            <button
-              onClick={() => setDevice('tablet')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
-                device === 'tablet'
-                  ? 'bg-brand-600 text-white shadow'
-                  : 'text-slate-400 hover:text-white'
-              }`}
-              title="Tablet Görünümü"
-            >
-              <Tablet className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Tablet</span>
             </button>
             <button
               onClick={() => setDevice('mobile')}
@@ -142,7 +128,7 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
         </div>
 
         {/* Viewport Frame Area */}
-        <div className="flex-1 bg-[#090D16] p-2 sm:p-6 flex items-center justify-center overflow-auto">
+        <div className="flex-1 bg-[#0A0A0C] p-2 sm:p-6 flex items-center justify-center overflow-auto">
           <div
             className={`transition-all duration-300 bg-black rounded-xl border border-white/10 shadow-2xl overflow-hidden flex flex-col ${deviceWidths[device]}`}
           >
