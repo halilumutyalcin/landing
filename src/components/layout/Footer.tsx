@@ -157,7 +157,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} MediWeb · Şengüller Otomotiv &amp; Bilişim Danışmanlığı. Tüm hakları saklıdır.</p>
+          <p>© {new Date().getFullYear()} MediWeb · {siteConfig.legalEntity.title}. Tüm hakları saklıdır.</p>
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5 text-slate-400">
               <span className="w-2 h-2 rounded-full bg-amber-400"></span>

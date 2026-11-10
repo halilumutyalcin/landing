@@ -293,7 +293,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                     </h3>
                   </div>
                   <span className="text-[11px] text-slate-400 font-medium">
-                    Şengüller & MediWeb Ekibi · Mühendislik Notu
+                    MediWeb Mimarlık & Geliştirme Ekibi · Not
                   </span>
                 </div>
 
@@ -306,7 +306,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                 </p>
 
                 <div className="pt-4 border-t border-white/5 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
-                  <span className="text-white font-semibold">Şengüller Otomotiv & Bilişim / MediWeb Ekibi</span>
+                  <span className="text-white font-semibold">MediWeb Mimarlık &amp; Yazılım Ekibi</span>
                   <span className="text-emerald-400 font-medium flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5" />
                     <span>Pendik / İstanbul</span>

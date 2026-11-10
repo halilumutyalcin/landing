@@ -227,8 +227,9 @@ export const PricingSection: React.FC = () => {
             <ShieldCheck className="w-4 h-4" />
             <span>Tüm Paketlerimizde Standart:</span>
           </div>
-          <span className="text-zinc-300">
-            İlk 3 yıl alan adı (.com / .com.tr), SSL sertifikası ve yüksek hızlı bulut barındırma fiyata dahildir; <strong>3 yıl boyunca ek yenileme masrafı çıkmaz.</strong>
+          <span className="text-zinc-300 leading-relaxed">
+            İlk 3 yıl alan adı (.com / .com.tr), SSL sertifikası ve yüksek hızlı bulut barındırma fiyata dahildir;<br />
+            <strong className="text-white">3 yıl boyunca ek yenileme masrafı çıkmaz.</strong>
           </span>
         </div>
 

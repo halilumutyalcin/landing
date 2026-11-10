@@ -172,7 +172,7 @@ export const TrustBarSection: React.FC = () => {
           <div className="mt-8 pt-6 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-4 text-[11px] text-zinc-400">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Resmi Hizmet Sağlayıcı: Şengüller Otomotiv & Bilişim Danışmanlığı (Pendik V.D. VKN: 40228303866)</span>
+              <span>Resmi Hizmet Sağlayıcı: Ahmet Hakan Cansız (Pendik V.D. Vergi No: 2020589059)</span>
             </div>
             <div className="flex items-center gap-4">
               <span>✓ Sözleşmeli Teslimat</span>

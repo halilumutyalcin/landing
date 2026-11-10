@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'MediWeb Mimarlık & Geliştirme Ekibi' }],
   creator: 'MediWeb',
-  publisher: 'MediWeb · Şengüller Otomotiv & Bilişim Danışmanlığı',
+  publisher: `MediWeb · ${siteConfig.legalEntity.title}`,
   openGraph: {
     title: `Kurumsal Web Tasarım Ajansı & Sektörel Vitrinler | ${siteConfig.name}`,
     description: 'WordPress karmaşasına ve ağır eklenti yüküne son. Sektörünüze özel geliştirilmiş kurumsal web mimarisi. 3–10 iş gününde anahtar teslim, 3 yıl domain + hosting dahil.',
