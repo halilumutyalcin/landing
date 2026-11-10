@@ -272,7 +272,7 @@ export const ContactSection: React.FC = () => {
                     >
                       KVKK Aydınlatma Metni
                     </button>
-                    'ni okudum; kişisel verilerimin teklif hazırlama ve iletişim amacıyla işlenmesini kabul ediyorum.
+                    'ni okudum ve anladım.
                   </label>
                 </div>
 

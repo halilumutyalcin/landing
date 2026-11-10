@@ -38,7 +38,7 @@ const SERVICE_GROUPS: ServiceGroup[] = [
       {
         id: 'ai-assistant',
         title: 'Sitede AI Akıllı Asistan',
-        description: 'Ziyaretçi sorularını 7/24 yanıtlayan, SSS içeriğinizden öğrenen ve mesai dışı doğrudan teklif toplayan yapay zeka chatbot.',
+        description: 'Ziyaretçi sorularını 7/24 yanıtlayan, SSS içeriğinizden öğrenen ve mesai dışı doğrudan teklif toplayan yapay zeka chatbot. (Kullanıcı verileri güvenli model sağlayıcı üzerinden işlenir; hukuk ve sağlıkta teşhis veya hukuki tavsiye vermez).',
         pricing: 'Tek seferlik kurulum + lisans',
         icon: Bot,
       },
@@ -80,7 +80,7 @@ const SERVICE_GROUPS: ServiceGroup[] = [
         id: 'source-code',
         title: 'Tam Kaynak Kod & Bağımsız Lisans Teslimi',
         description: 'Tüm paketlerimiz bulut barındırma dahil anahtar teslim yayınlanır. Kendi bağımsız sunucunuzda çalıştırmak veya teknik ekibinize devretmek isterseniz; proje kaynak kodları ve bağımsız kullanım lisansı bu modül kapsamında tam teslim edilir.',
-        pricing: 'Paket bedeline ek +%75',
+        pricing: '+%75 Lisans Devri (Başlangıç: 13.125 ₺, Pro: 24.375 ₺, Kurumsal: 44.925 ₺)',
         icon: Code2,
       },
     ],

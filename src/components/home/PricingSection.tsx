@@ -127,11 +127,17 @@ export const PricingSection: React.FC = () => {
     <section id="paketler" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
+        {/* Real-world Capacity / Queue Indicator */}
+        <div className="max-w-xl mx-auto mb-4 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-center flex items-center justify-center gap-2 text-[11px] text-emerald-400 font-medium">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+          <span>Canlı Kapasite: Kalite ve teslimat hızımızı korumak adına sınırlı sayıda proje alıyoruz. Sıradaki uygun başlangıç takvimi: <strong>2 iş günü sonrası</strong></span>
+        </div>
+
         {/* High-Trust Delivery Commitment Banner */}
         <div className="max-w-3xl mx-auto mb-10 p-3.5 rounded-xl bg-zinc-900/60 border border-white/10 text-center flex items-center justify-center gap-2.5 text-xs text-zinc-300">
           <Clock className="w-4 h-4 text-amber-400 shrink-0" />
           <span>
-            <strong>Sözleşmeli Teslimat Güvencesi:</strong> Teslim takvimi içerik onayından itibaren sözleşmeyle belirlenir (3–10 iş günü). Ajans kaynaklı olası gecikmelerde her iş günü için 1 ay ücretsiz rutin bakım hediye edilir.
+            <strong>Sözleşmeli Teslimat Güvencesi:</strong> Teslim takvimi içerik onayından itibaren sözleşmeyle belirlenir (3–10 iş günü). Ajans kaynaklı olası gecikmelerde taahhüt edilen tarihten sonraki her 5 iş günü için 1 ay ücretsiz rutin bakım hediye edilir (en fazla 3 ay ile sınırlıdır).
           </span>
         </div>
 
@@ -221,10 +227,10 @@ export const PricingSection: React.FC = () => {
           <ShieldCheck className="w-6 h-6 text-amber-400 shrink-0 mt-0.5" />
           <div className="space-y-1.5">
             <strong className="text-white block font-bold text-sm">
-              13. Ay Güvencesi: Asla Rehin, Kilit veya Zorunlu Abonelik Yok
+              13. Ay Güvencesi: Alan Adı İlk Günden Sizindir, Zorunlu Aylık Ödeme Biter
             </strong>
             <p className="text-zinc-300 leading-relaxed">
-              12 aylık taahhüt tamamlandığında sitenin yayın hakkı, alan adı (.com / .com.tr) tescili ve 3 yıllık bulut barındırma hakkı müşteriye devredilir. 13. aydan itibaren zorunlu aylık ödeme durur; dilerseniz aylık teknik bakım hizmetini sonlandırabilir veya isteğe bağlı sürdürebilirsiniz. Siteniz asla kapatılmaz veya rehin tutulmaz. 12 aydan önce erken çıkış talep edilmesi durumunda ise, yalnızca kalan taksit tutarları tek seferde kapatılarak alan adı ve 3 yıllık barındırma hakkı eksiksiz devralınabilir. (Kendi sunucunuzda bağımsız geliştirme için gerekli olan tam kaynak kod devri ise lisans protokolü kapsamında ek bir opsiyondur.)
+              Alan adınız (.com / .com.tr) ilk günden itibaren doğrudan sizin veya şirketinizin adına tescil edilir; asla rehin veya kilit altında tutulmaz. 12 aylık taksit taahhüdü tamamlandığında zorunlu aylık ödeme kesilir. Web siteniz bulut altyapımızda 3 yıllık barındırma süresi boyunca ek sunucu veya SSL ücreti çıkmadan kesintisiz yayında kalmaya devam eder. 13. aydan itibaren aylık teknik bakımı sonlandırabilir veya isteğe bağlı (2.500 ₺/ay) olarak sürdürebilirsiniz. 12 aydan önce erken çıkış talep edilirse yalnızca kalan taksit borcu kapatılır. Sitenizi bağımsız başka bir sunucuya taşımak isterseniz kaynak kod devir modülü (+%75 lisans devir bedeli) uygulanır.
             </p>
           </div>
         </div>
@@ -267,10 +273,10 @@ export const PricingSection: React.FC = () => {
                     : 'bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20'
                 }`}
               >
-                {/* Ribbon - Tek Seferlikte En Çok Tercih Edilen, Abonelikte Mülkiyet Devri Rozeti */}
+                {/* Ribbon - Tek Seferlikte En Çok Tercih Edilen, Abonelikte 12 Ay Taahhüt */}
                 {billingMode === 'waas' ? (
                   <div className="absolute text-center -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-amber-400 text-black text-[11px] font-black tracking-wide shadow-xl select-none whitespace-nowrap">
-                    12 Ay Sonra Mülkiyet Devri
+                    12 Ay Taahhütlü · Sonra Aylık Ödeme Yok
                   </div>
                 ) : isPro ? (
                   <div className="absolute text-center -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black text-[11px] font-black tracking-wide shadow-xl border border-white/20 select-none">
@@ -323,14 +329,18 @@ export const PricingSection: React.FC = () => {
                     </div>
 
                     {billingMode === 'waas' ? (
-                      <div className="text-xs text-zinc-300 font-medium mt-2 flex flex-col gap-1 pt-2 border-t border-white/5">
-                        <div className="flex items-center gap-1.5 text-amber-400 font-semibold">
-                          <ShieldCheck className="w-4 h-4 shrink-0" />
-                          <span>12 Ay Taahhütlü · Sonrasında Aylık Ödeme Yok</span>
+                      <div className="text-xs text-zinc-300 font-medium mt-2 flex flex-col gap-1.5 pt-2 border-t border-white/5">
+                        <div className="flex items-center justify-between text-[11px]">
+                          <span className="text-slate-400">12 Ay Toplam Taahhüt:</span>
+                          <span className="font-bold text-white">{pkg.waasTotal12MonthsFormatted} + KDV</span>
                         </div>
-                        <p className="text-[11px] text-zinc-400 leading-normal">
-                          12 ay sonunda sitenin yayın hakkı, alan adı ve 3 yıllık hosting hakkı size devredilir; aylık ödeme biter.
-                        </p>
+                        <div className="text-[10px] text-zinc-400">
+                          ({pkg.waasSetupFormatted} Peşinat + 12 × {pkg.waasMonthlyFormatted}/ay)
+                        </div>
+                        <div className="flex items-center gap-1.5 text-amber-400 font-semibold text-[11px] pt-1 border-t border-white/5">
+                          <ShieldCheck className="w-4 h-4 shrink-0" />
+                          <span>Alan adı baştan adınıza tescil edilir · 13. ayda ödeme biter</span>
+                        </div>
                       </div>
                     ) : (
                       <>
@@ -690,7 +700,7 @@ export const PricingSection: React.FC = () => {
               <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
               <div>
                 <strong className="text-white block mb-0.5">15–60 Gün Hata Garantisi</strong>
-                <span className="text-slate-400">Teslimattan sonra paket kapsamındaki sözleşmeli garanti süresince bildirilen yazılımsal hatalara en geç 1–2 iş günü içinde öncelikli müdahale edilir; müşteri kaynaklı yeni içerik ve tasarım revizyonları ise isteğe bağlı bakım kapsamındadır.</span>
+                <span className="text-slate-400">Teslimattan sonra paket kapsamındaki sözleşmeli garanti süresince bildirilen yazılımsal hatalara en geç 1–2 iş günü içinde teknik müdahale başlatılır ve kritik işlevler öncelikle çözülür; müşteri kaynaklı yeni içerik ve tasarım revizyonları ise isteğe bağlı bakım kapsamındadır.</span>
               </div>
             </div>
           </div>
@@ -760,7 +770,7 @@ export const PricingSection: React.FC = () => {
                 <h4 className="text-sm font-bold text-white">Online Evrak &amp; Rapor Sorgulama</h4>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Otomotiv ekspertiz raporları, laboratuvar tahlil sonuçları veya sertifikaların plaka/TC/barkod ile webden anında güvenli sorgulanması.
+                Otomotiv ekspertiz raporları, analiz sonuçları veya sertifikaların belge no / barkod ile webden sorgulanması. (Özel nitelikli sağlık ve tahlil verisi içeren projelerde KVKK mevzuatına uygun teknik ve hukuki fizibilite değerlendirmesi yapılır).
               </p>
             </div>
           </div>

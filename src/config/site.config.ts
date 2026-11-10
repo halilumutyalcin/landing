@@ -24,7 +24,12 @@ export interface PackageItem {
   waasSetupFormatted: string;
   waasMonthlyPrice: number;
   waasMonthlyFormatted: string;
+  waasTotal12Months: number;
+  waasTotal12MonthsFormatted: string;
   waasCommitment: string;
+  // Kaynak Kod Devri
+  sourceCodePrice: number;
+  sourceCodePriceFormatted: string;
 }
 
 export interface ComparisonMatrixRow {
@@ -128,11 +133,15 @@ export const siteConfig = {
       ],
       isPopular: false,
       ctaText: 'Başlangıç Paketini Seç',
-      waasSetupPrice: 2500,
-      waasSetupFormatted: '2.500 ₺',
+      waasSetupPrice: 5000,
+      waasSetupFormatted: '5.000 ₺',
       waasMonthlyPrice: 1450,
       waasMonthlyFormatted: '1.450 ₺',
-      waasCommitment: 'Sabit Fiyatlı Model',
+      waasTotal12Months: 22400,
+      waasTotal12MonthsFormatted: '22.400 ₺',
+      waasCommitment: '12 Ay Taahhütlü Model',
+      sourceCodePrice: 13125,
+      sourceCodePriceFormatted: '+13.125 ₺',
     },
     {
       id: 'pro',
@@ -172,11 +181,15 @@ export const siteConfig = {
       ],
       isPopular: true,
       ctaText: 'En Çok Tercih Edileni Seç',
-      waasSetupPrice: 4500,
-      waasSetupFormatted: '4.500 ₺',
-      waasMonthlyPrice: 2450,
-      waasMonthlyFormatted: '2.450 ₺',
-      waasCommitment: 'Sabit Fiyatlı Model',
+      waasSetupPrice: 7500,
+      waasSetupFormatted: '7.500 ₺',
+      waasMonthlyPrice: 2650,
+      waasMonthlyFormatted: '2.650 ₺',
+      waasTotal12Months: 39300,
+      waasTotal12MonthsFormatted: '39.300 ₺',
+      waasCommitment: '12 Ay Taahhütlü Model',
+      sourceCodePrice: 24375,
+      sourceCodePriceFormatted: '+24.375 ₺',
     },
     {
       id: 'enterprise',
@@ -210,11 +223,15 @@ export const siteConfig = {
       notIncluded: [],
       isPopular: false,
       ctaText: 'Kurumsal Paketi Seç',
-      waasSetupPrice: 8500,
-      waasSetupFormatted: '8.500 ₺',
-      waasMonthlyPrice: 4250,
-      waasMonthlyFormatted: '4.250 ₺',
-      waasCommitment: 'Sabit Fiyatlı Model',
+      waasSetupPrice: 12500,
+      waasSetupFormatted: '12.500 ₺',
+      waasMonthlyPrice: 4850,
+      waasMonthlyFormatted: '4.850 ₺',
+      waasTotal12Months: 70700,
+      waasTotal12MonthsFormatted: '70.700 ₺',
+      waasCommitment: '12 Ay Taahhütlü Model',
+      sourceCodePrice: 44925,
+      sourceCodePriceFormatted: '+44.925 ₺',
     }
   ] as PackageItem[],
 
@@ -256,7 +273,7 @@ export const siteConfig = {
       id: 'ai-assistant',
       icon: 'Bot',
       title: 'Sitede AI Akıllı Asistan',
-      description: 'Ziyaretçi sorularını 7/24 yanıtlayan, SSS içeriğinizden öğrenen ve mesai dışı teklif toplayan yapay zeka chatbot entegrasyonu.',
+      description: 'Ziyaretçi sorularını 7/24 yanıtlayan, SSS içeriğinizden öğrenen ve mesai dışı teklif toplayan yapay zeka chatbot. (Kullanıcı verileri güvenli model sağlayıcı üzerinden işlenir; hukuk ve sağlıkta teşhis veya hukuki tavsiye vermez).',
       pricing: 'Tek seferlik kurulum + lisans',
     },
     {
@@ -297,9 +314,9 @@ export const siteConfig = {
     {
       id: 'source-code',
       icon: 'Code2',
-      title: 'Tam Kaynak Kod Teslimi',
-      description: 'Sitenin tüm kaynak kodlarının ve varlıklarının teslim edilmesi. Kendi sunucunuzda bağımsız barındırma imkanı.',
-      pricing: 'Paket bedeline ek +%75',
+      title: 'Tam Kaynak Kod & Bağımsız Lisans Devri',
+      description: 'Sitenin tüm kaynak kodlarının ve varlıklarının teslim edilmesi. Kendi bağımsız sunucunuzda kurum içi ekibinizle barındırma ve geliştirme imkanı.',
+      pricing: '+%75 Lisans Devri (Başlangıç: 13.125 ₺, Pro: 24.375 ₺, Kurumsal: 44.925 ₺)',
     },
     {
       id: 'content-writing',
@@ -417,27 +434,27 @@ export const siteConfig = {
     {
       category: 'surec',
       question: 'Belirtilen teslim süresi nasıl işler, süreçte gecikme yaşanır mı?',
-      answer: 'Teslimat takvimimiz (Başlangıç: 3–5 iş günü, Profesyonel: 5–7 iş günü, Kurumsal: 7–10 iş günü), logonuzu ve kurumsal içerik onayınızı teslim ettiğiniz andan itibaren başlar. Süreç sözleşmeyle güvence altındadır; ajans kaynaklı olası her iş günü gecikme için müşteriye sözleşmeli olarak 1 ay ücretsiz rutin bakım hediye edilir. Müşteri kaynaklı onay ve içerik bekleme süreleri teslimat takvimine ilave edilir.'
+      answer: 'Teslimat takvimimiz (Başlangıç: 3–5 iş günü, Profesyonel: 5–7 iş günü, Kurumsal: 7–10 iş günü), logonuzu ve kurumsal içerik onayınızı teslim ettiğiniz andan itibaren başlar. Süreç sözleşmeyle güvence altındadır; ajans kaynaklı olası gecikmelerde taahhüt edilen tarihten sonraki her 5 iş günü için müşteriye sözleşmeli olarak 1 ay ücretsiz rutin bakım hediye edilir (azami 3 ay ile sınırlıdır). Müşteri kaynaklı onay ve içerik bekleme süreleri teslimat takvimine ilave edilir.'
     },
     {
       category: 'hosting',
       question: '3 yıl sonra ne olacak? Domain kimin adına ve 4. yıl maliyeti nedir?',
-      answer: 'Alan adınız (domain) doğrudan sizin veya şirketinizin adına tescil edilir; tam mülkiyet ve DNS kontrolü sizdedir. İlk 3 yıl boyunca barındırma (hosting) ve SSL için ek ücret ödemezsiniz. 4. yıldan itibaren ise barındırma ve alan adı sağlayıcısının resmi güncel tarifesi üzerinden (tahmini yıllık ~2.500–3.500 ₺ bandında) devam eder. Siteniz asla kapatılmaz veya kilitlenmez; 3. yılın bitiminde şeffaf bir yenileme hatırlatması sunulur.'
+      answer: 'Alan adınız (domain) ilk günden itibaren doğrudan sizin veya şirketinizin adına tescil edilir; tam mülkiyet ve DNS kontrolü sizdedir. İlk 3 yıl boyunca bulut barındırma (hosting) ve SSL için ek ücret ödemezsiniz. 4. yıldan itibaren ise barındırma ve alan adı sağlayıcısının resmi güncel tarifesi üzerinden (tahmini yıllık ~2.500–3.500 ₺ bandında) devam eder. Siteniz asla kapatılmaz veya kilitlenmez; 3. yılın bitiminde şeffaf bir yenileme hatırlatması sunulur.'
     },
     {
       category: 'paketler',
       question: '12 Ay Taksitli (WaaS) modelde 13. aydan sonra ne olur? Çıkış koşulları nelerdir?',
-      answer: '12 aylık taahhüt tamamlandığında sitenin yayın hakkı, alan adı (.com/.com.tr) tescili ve 3 yıllık bulut barındırma hakkı tamamen size devredilir; 13. aydan itibaren zorunlu aylık ödeme tamamen biter. Siteniz asla kapatılmaz, kilitlenmez veya rehin tutulmaz. 13. aydan sonra dilerseniz aylık teknik bakımı sonlandırabilir veya isteğe bağlı (2.500 ₺/ay) olarak devam ettirebilirsiniz. 12 aydan önce erken çıkış talep edilirse, kalan taksitler kapatılarak alan adı ve 3 yıllık barındırma hakkı devralınabilir.'
+      answer: 'Alan adınız ilk günden itibaren doğrudan sizin/şirketinizin adına tescil edilir; asla rehin veya kilit altında tutulmaz. 12 aylık taahhüt tamamlandığında zorunlu aylık ödeme tamamen biter. Web siteniz bulut altyapımızda 3 yıllık barındırma süresi boyunca kesintisiz yayında kalır. 13. aydan sonra dilerseniz aylık teknik bakımı sonlandırabilir veya isteğe bağlı (2.500 ₺/ay) olarak devam ettirebilirsiniz. 12 aydan önce erken çıkış talep edilirse, yalnızca kalan taksit borcu kapatılarak hizmetten ayrılınabilir.'
     },
     {
       category: 'paketler',
       question: 'Kaynak kodlar bana veriliyor mu? Size bağımlı kalır mıyım?',
-      answer: 'Başlangıç, Profesyonel ve Kurumsal paketlerimizde site, size ait alan adı üzerinde yüksek hızlı modern bulut altyapısında anahtar teslim yayınlanır. Kendi bağımsız sunucunuzda barındırmak ve geliştirmek için gerekli olan tam kaynak kod devri isteğe bağlı bir eklentidir (+%75 lisans devir bedeli). Siteniz bizim barındırmamızda kaldığı sürece ilk 3 yıl hiçbir ek sunucu veya SSL faturası ödemezsiniz; 3. yılın bitiminde de kendi sunucunuza taşıyabilir veya standart alan adı yenilemesiyle devam edebilirsiniz.'
+      answer: 'Başlangıç, Profesyonel ve Kurumsal paketlerimizde site, size ait alan adı üzerinde yüksek hızlı modern bulut altyapısında anahtar teslim yayınlanır. Kendi bağımsız sunucunuzda barındırmak ve geliştirmek için gerekli olan tam kaynak kod devri isteğe bağlı bir eklentidir (+%75 lisans devir bedeli: Başlangıç için 13.125 ₺, Pro için 24.375 ₺, Kurumsal için 44.925 ₺). Siteniz bizim barındırmamızda kaldığı sürece ilk 3 yıl hiçbir ek sunucu veya SSL faturası ödemezsiniz. Ayrıca sözleşmemiz uyarınca: Ajansımızın ticari faaliyetini herhangi bir sebeple sonlandırması durumunda tüm kaynak kodlar müşteriye bedelsiz teslim edilir.'
     },
     {
       category: 'revizyon',
       question: 'Teslimattan sonra hata çıkarsa veya değişiklik gerekirse süreç nasıl işler?',
-      answer: 'Paket kapsamındaki sözleşmeli garanti süresi (15/30/60 gün) boyunca yazılımsal teknik hatalara bildirimden itibaren 1–2 iş günü içinde öncelikli müdahale edilir. Müşteri kaynaklı yeni sayfa ekleme, tasarım değişikliği veya kapsam dışı talepler ise isteğe bağlı aylık bakım anlaşması (2.500 ₺/ay) çerçevesinde yürütülür.'
+      answer: 'Paket kapsamındaki sözleşmeli garanti süresi (15/30/60 gün) boyunca yazılımsal teknik hatalara bildirimden itibaren 1–2 iş günü içinde teknik müdahale başlatılır ve kritik hatalar öncelikle çözülür. Müşteri kaynaklı yeni sayfa ekleme, tasarım değişikliği veya kapsam dışı talepler ise isteğe bağlı aylık bakım anlaşması (2.500 ₺/ay) çerçevesinde yürütülür.'
     },
     {
       category: 'surec',
