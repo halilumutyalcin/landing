@@ -228,7 +228,7 @@ export const PricingSection: React.FC = () => {
             <span>Tüm Paketlerimizde Standart:</span>
           </div>
           <span className="text-zinc-300">
-            İlk 3 yıl alan adı (.com / .com.tr), SSL sertifikası ve yüksek hızlı bulut barındırma fiyata dahildir — <strong>3 yıl boyunca ek yenileme masrafı çıkmaz.</strong>
+            İlk 3 yıl alan adı (.com / .com.tr), SSL sertifikası ve yüksek hızlı bulut barındırma fiyata dahildir, <strong>3 yıl boyunca ek yenileme masrafı çıkmaz.</strong>
           </span>
         </div>
 
