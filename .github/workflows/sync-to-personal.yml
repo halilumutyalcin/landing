@@ -26,7 +26,8 @@ jobs:
             echo "Error: PERSONAL_REPO_TOKEN secret is not set."
             exit 1
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "halilumutyalcin"
+          git config user.email "umutyalcin3737@gmail.com"
+          git commit --amend --reset-author --no-edit || true
           git remote add personal "https://halilumutyalcin:${PERSONAL_TOKEN}@github.com/halilumutyalcin/landing.git"
           git push --force personal main
