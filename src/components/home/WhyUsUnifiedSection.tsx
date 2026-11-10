@@ -60,42 +60,45 @@ export const WhyUsUnifiedSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Interactive Unified Segmented Tabs - Unconstrained Full Width */}
-        <div className="mb-10 w-full max-w-4xl lg:max-w-5xl mx-auto grid grid-cols-3 p-1.5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] gap-1.5 sm:gap-2 shadow-inner print:hidden">
+        {/* Interactive Unified Segmented Tabs - Mobile-Friendly Responsive & Desktop Grid */}
+        <div className="mb-8 sm:mb-10 w-full max-w-4xl lg:max-w-5xl mx-auto flex sm:grid sm:grid-cols-3 overflow-x-auto p-1.5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] gap-1.5 sm:gap-2 shadow-inner print:hidden [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <button
             onClick={() => setActiveTab('agency-vs-us')}
-            className={`w-full px-2 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
+            className={`flex-1 shrink-0 sm:shrink sm:w-full min-w-[125px] sm:min-w-0 px-2.5 sm:px-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center whitespace-nowrap ${
               activeTab === 'agency-vs-us'
                 ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
                 : 'text-zinc-400 hover:text-white'
             }`}
           >
             <Scale className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'agency-vs-us' ? 'text-black' : 'text-amber-400'}`} />
-            <span className="whitespace-nowrap">Geleneksel Ajans vs. Biz</span>
+            <span className="hidden sm:inline">Geleneksel Ajans vs. Biz</span>
+            <span className="sm:hidden text-xs">Ajans vs. Biz</span>
           </button>
 
           <button
             onClick={() => setActiveTab('wp-vs-next')}
-            className={`w-full px-2 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
+            className={`flex-1 shrink-0 sm:shrink sm:w-full min-w-[125px] sm:min-w-0 px-2.5 sm:px-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center whitespace-nowrap ${
               activeTab === 'wp-vs-next'
                 ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
                 : 'text-zinc-400 hover:text-white'
             }`}
           >
             <Zap className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'wp-vs-next' ? 'text-black' : 'text-amber-400'}`} />
-            <span className="whitespace-nowrap">WordPress vs. Hızlı Mimari</span>
+            <span className="hidden sm:inline">WordPress vs. Hızlı Mimari</span>
+            <span className="sm:hidden text-xs">WordPress vs. Hız</span>
           </button>
 
           <button
             onClick={() => setActiveTab('principles')}
-            className={`w-full px-2 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
+            className={`flex-1 shrink-0 sm:shrink sm:w-full min-w-[125px] sm:min-w-0 px-2.5 sm:px-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center whitespace-nowrap ${
               activeTab === 'principles'
                 ? 'bg-white text-black shadow-lg shadow-white/10 ring-1 ring-white'
                 : 'text-zinc-400 hover:text-white'
             }`}
           >
             <ShieldCheck className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === 'principles' ? 'text-black' : 'text-amber-400'}`} />
-            <span className="whitespace-nowrap">Şeffaf İlkelerimiz &amp; Taahhütler</span>
+            <span className="hidden sm:inline">Şeffaf İlkelerimiz &amp; Taahhütler</span>
+            <span className="sm:hidden text-xs">İlkeler &amp; Güvence</span>
           </button>
         </div>
 
@@ -140,112 +143,124 @@ export const WhyUsUnifiedSection: React.FC = () => {
           <div 
             ref={containerRef}
             onMouseDown={() => setIsDragging(true)}
-              onMouseUp={() => setIsDragging(false)}
-              onMouseLeave={() => setIsDragging(false)}
-              onMouseMove={handleMouseMove}
-              onTouchMove={handleTouchMove}
-              className="relative w-full h-[460px] sm:h-[480px] rounded-3xl overflow-hidden select-none shadow-2xl cursor-ew-resize bg-[#0A0A0C]"
+            onMouseUp={() => setIsDragging(false)}
+            onMouseLeave={() => setIsDragging(false)}
+            onMouseMove={handleMouseMove}
+            onTouchStart={() => setIsDragging(true)}
+            onTouchEnd={() => setIsDragging(false)}
+            onTouchMove={handleTouchMove}
+            className="relative w-full h-[520px] sm:h-[480px] rounded-3xl overflow-hidden select-none shadow-2xl cursor-ew-resize bg-[#0A0A0C]"
+          >
+            {/* AFTER (MediWeb / Right Side) */}
+            <div className="absolute inset-0 bg-[#0C1422] p-5 sm:p-10 flex flex-col justify-between">
+              <div className="text-right max-w-[240px] sm:max-w-md ml-auto">
+                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-amber-400 mb-1 block">
+                  Yeni Nesil MediWeb Mimarisi
+                </span>
+                <h3 className="text-base sm:text-2xl font-bold text-white mb-1.5 leading-tight">
+                  Yüksek Prestij &amp; Anında Açılış Hızı
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-300 leading-snug">
+                  Yüksek hızlı bulut altyapısıyla anında açılan,<br />
+                  müşteriyi doğrudan WhatsApp ve aramaya bağlayan modern yapı
+                </p>
+              </div>
+
+              {/* Metrics Showcase Right */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto">
+                <div className="p-4 rounded-xl bg-black/40">
+                  <div className="text-xs font-bold text-white mb-1">Lighthouse Skoru</div>
+                  <div className="text-3xl font-black text-white">90–95+</div>
+                  <div className="text-[11px] text-zinc-400 mt-1">Statik Sayfalarda</div>
+                </div>
+
+                <div className="p-4 rounded-xl bg-black/40">
+                  <div className="text-xs font-bold text-amber-400 mb-1">Google Uyumu</div>
+                  <div className="text-3xl font-black text-white">Hazır</div>
+                  <div className="text-[11px] text-zinc-300 mt-1">Harita &amp; SEO Kayıtlı</div>
+                </div>
+
+                <div className="p-4 rounded-xl bg-black/40">
+                  <div className="text-xs font-bold text-amber-400 mb-1">Sunucu Faturası</div>
+                  <div className="text-3xl font-black text-white">3 Yıl 0 ₺</div>
+                  <div className="text-[11px] text-cyan-300 mt-1">Sürpriz Ek Masraf Yok</div>
+                </div>
+
+                <div className="p-4 rounded-xl bg-black/40">
+                  <div className="text-xs font-bold text-amber-400 mb-1">Çökme &amp; Güvenlik</div>
+                  <div className="text-3xl font-black text-white">Düşük Risk</div>
+                  <div className="text-[11px] text-zinc-300 mt-1">Statik Mimari Güvenliği</div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-6 text-[11px] sm:text-sm text-slate-300 font-medium max-w-[220px] sm:max-w-none ml-auto">
+                <span className="flex items-center gap-1.5 text-zinc-300">
+                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 shrink-0" />
+                  3–10 İş Gününde Canlıda
+                </span>
+                <span className="flex items-center gap-1.5 text-zinc-300">
+                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 shrink-0" />
+                  Doğrudan İletişim Kanalları
+                </span>
+              </div>
+            </div>
+
+            {/* BEFORE (Old WordPress / Left Side Layer - Clipped) */}
+            <div 
+              className="absolute inset-0 bg-[#160B0F] p-5 sm:p-10 flex flex-col justify-between overflow-hidden shadow-2xl transition-none pointer-events-none select-none"
+              style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
             >
-              {/* AFTER (MediWeb / Right Side) */}
-              <div className="absolute inset-0 bg-[#0C1422] p-6 sm:p-10 flex flex-col justify-between">
-                <div className="text-right">
-                  <span className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-1 block">
-                    Yeni Nesil MediWeb Mimarisi
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">Yüksek Prestij &amp; Anında Açılış Hızı</h3>
-                  <p className="text-xs sm:text-sm text-slate-300">Yüksek hızlı bulut altyapısıyla anında açılan, müşteriyi doğrudan WhatsApp ve aramaya bağlayan modern yapı</p>
+              <div className="text-left max-w-[240px] sm:max-w-md mr-auto">
+                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400 mb-1 block">
+                  Geleneksel WordPress Siteleri
+                </span>
+                <h3 className="text-base sm:text-2xl font-bold text-white mb-1.5 leading-tight">
+                  Yavaş, Karmaşık &amp; Bakım İsteyen
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-300 leading-snug">
+                  Ağır eklenti yüküyle yavaşlayan ve<br />
+                  her yıl sunucu faturası çıkaran eski sistemler
+                </p>
+              </div>
+
+              {/* Metrics Showcase Left */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto">
+                <div className="p-4 rounded-xl bg-black/40">
+                  <div className="text-xs font-bold text-rose-400 mb-1">Açılış Hızı</div>
+                  <div className="text-3xl font-black text-white">Yavaş</div>
+                  <div className="text-[11px] text-rose-300 mt-1">Ağır Veritabanı Yükü</div>
                 </div>
 
-                {/* Metrics Showcase Right */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto">
-                  <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-white mb-1">Lighthouse Skoru</div>
-                    <div className="text-3xl font-black text-white">90–95+</div>
-                    <div className="text-[11px] text-zinc-400 mt-1">Statik Sayfalarda</div>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-amber-400 mb-1">Google Uyumu</div>
-                    <div className="text-3xl font-black text-white">Hazır</div>
-                    <div className="text-[11px] text-zinc-300 mt-1">Harita &amp; SEO Kayıtlı</div>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-amber-400 mb-1">Sunucu Faturası</div>
-                    <div className="text-3xl font-black text-white">3 Yıl 0 ₺</div>
-                    <div className="text-[11px] text-cyan-300 mt-1">Sürpriz Ek Masraf Yok</div>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-amber-400 mb-1">Çökme &amp; Güvenlik</div>
-                    <div className="text-3xl font-black text-white">Düşük Risk</div>
-                    <div className="text-[11px] text-zinc-300 mt-1">Statik Mimari Güvenliği</div>
-                  </div>
+                <div className="p-4 rounded-xl bg-black/40">
+                  <div className="text-xs font-bold text-amber-400 mb-1">Google Uyumu</div>
+                  <div className="text-3xl font-black text-white">Sınırlı</div>
+                  <div className="text-[11px] text-amber-300 mt-1">Optimizasyon Gerektiren CMS</div>
                 </div>
 
-                <div className="flex flex-wrap items-center justify-end gap-3 sm:gap-6 text-xs sm:text-sm text-slate-300 font-medium">
-                  <span className="flex items-center gap-1.5 text-zinc-300">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
-                    3–10 İş Gününde Canlıda
-                  </span>
-                  <span className="flex items-center gap-1.5 text-zinc-300">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
-                    Doğrudan İletişim Kanalları
-                  </span>
+                <div className="p-4 rounded-xl bg-black/40">
+                  <div className="text-xs font-bold text-red-400 mb-1">Yıllık Masraf</div>
+                  <div className="text-3xl font-black text-white">Sürekli</div>
+                  <div className="text-[11px] text-red-300 mt-1">Hosting, SSL, Eklenti Faturası</div>
+                </div>
+
+                <div className="p-4 rounded-xl bg-black/40">
+                  <div className="text-xs font-bold text-orange-400 mb-1">Çökme Riski</div>
+                  <div className="text-3xl font-black text-white">Yüksek</div>
+                  <div className="text-[11px] text-orange-300 mt-1">Sürekli Güncelleme ve Hata</div>
                 </div>
               </div>
 
-              {/* BEFORE (Old WordPress / Left Side Layer - Clipped) */}
-              <div 
-                className="absolute inset-0 bg-[#160B0F] p-6 sm:p-10 flex flex-col justify-between overflow-hidden shadow-2xl transition-none pointer-events-none select-none"
-                style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
-              >
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-rose-400 mb-1 block">
-                    Geleneksel WordPress Siteleri
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">Yavaş, Karmaşık &amp; Bakım İsteyen</h3>
-                  <p className="text-xs sm:text-sm text-slate-300">Ağır eklenti yüküyle yavaşlayan ve her yıl sunucu faturası çıkaran eski sistemler</p>
-                </div>
-
-                {/* Metrics Showcase Left */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto">
-                  <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-rose-400 mb-1">Açılış Hızı</div>
-                    <div className="text-3xl font-black text-white">Yavaş</div>
-                    <div className="text-[11px] text-rose-300 mt-1">Ağır Veritabanı Yükü</div>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-amber-400 mb-1">Google Uyumu</div>
-                    <div className="text-3xl font-black text-white">Sınırlı</div>
-                    <div className="text-[11px] text-amber-300 mt-1">Optimizasyon Gerektiren CMS</div>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-red-400 mb-1">Yıllık Masraf</div>
-                    <div className="text-3xl font-black text-white">Sürekli</div>
-                    <div className="text-[11px] text-red-300 mt-1">Hosting, SSL, Eklenti Faturası</div>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-black/40">
-                    <div className="text-xs font-bold text-orange-400 mb-1">Çökme Riski</div>
-                    <div className="text-3xl font-black text-white">Yüksek</div>
-                    <div className="text-[11px] text-orange-300 mt-1">Sürekli Güncelleme ve Hata</div>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-sm text-slate-300 font-medium">
-                  <span className="flex items-center gap-1.5 text-rose-300">
-                    <XCircle className="w-4 h-4 text-rose-400 shrink-0" />
-                    Haftalarca Süren Belirsizlik
-                  </span>
-                  <span className="flex items-center gap-1.5 text-rose-300">
-                    <XCircle className="w-4 h-4 text-rose-400 shrink-0" />
-                    Sürekli Bozulabilen Formlar
-                  </span>
-                </div>
+              <div className="flex flex-wrap items-center gap-2 sm:gap-6 text-[11px] sm:text-sm text-slate-300 font-medium max-w-[220px] sm:max-w-none mr-auto">
+                <span className="flex items-center gap-1.5 text-rose-300">
+                  <XCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-rose-400 shrink-0" />
+                  Haftalarca Süren Belirsizlik
+                </span>
+                <span className="flex items-center gap-1.5 text-rose-300">
+                  <XCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-rose-400 shrink-0" />
+                  Sürekli Bozulabilen Formlar
+                </span>
               </div>
+            </div>
 
               {/* Slider Divider Line & Handle Knob */}
               <div 
