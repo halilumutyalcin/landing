@@ -19,6 +19,21 @@ export const HeroSection: React.FC = () => {
           
           {/* Left Column: Authoritative, Prestigious Positioning (8 Cols) */}
           <div className="lg:col-span-8 space-y-7 text-left">
+            {/* Live Infrastructure Status Badge (2B Social Proof) */}
+            <a 
+              href="#tasarimlar" 
+              className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#0A0A0C] border border-white/[0.08] hover:border-amber-400/30 text-xs shadow-md transition-all group"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+              <span className="text-zinc-300 font-medium">
+                Aktif <strong className="text-white">4 Ana Sektörde Canlı Mimari</strong> Teste Açık
+              </span>
+              <span className="text-white/20">|</span>
+              <span className="text-amber-400 font-semibold group-hover:translate-x-0.5 transition-transform">
+                Tıklayıp Deneyin →
+              </span>
+            </a>
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08]">
               İşletmenize özel web siteniz,{' '}
               <span className="text-amber-400 block mt-2">

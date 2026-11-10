@@ -43,8 +43,9 @@ export const DemoGrid: React.FC<DemoGridProps> = ({ initialSector = 'all' }) => 
         
         {/* Section Header - Clean & Direct */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="text-sm font-semibold text-amber-400 mb-2">
-            Görerek Karar Verin
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-xs font-semibold text-amber-400 mb-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span>Şu An Aktif 4 Sektörde Yayında Olan Canlı Mimariler</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
             Sektörel Canlı Vitrin Mimarileri
