@@ -267,12 +267,16 @@ export const PricingSection: React.FC = () => {
                     : 'bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20'
                 }`}
               >
-                {/* Popular Ribbon - Yüksek Okunabilirlik ve Kontrast */}
-                {isPro && (
+                {/* Ribbon - Tek Seferlikte En Çok Tercih Edilen, Abonelikte Mülkiyet Devri Rozeti */}
+                {billingMode === 'waas' ? (
+                  <div className="absolute text-center -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-amber-400 text-black text-[11px] font-black tracking-wide shadow-xl select-none whitespace-nowrap">
+                    12 Ay Sonra Mülkiyet Devri
+                  </div>
+                ) : isPro ? (
                   <div className="absolute text-center -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black text-[11px] font-black tracking-wide shadow-xl border border-white/20 select-none">
                     En Çok Tercih Edilen Paket
                   </div>
-                )}
+                ) : null}
 
                 <div>
                   {/* Top Header - Ortalı & Tek Satır İsim, Süre Altta */}
