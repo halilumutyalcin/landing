@@ -115,7 +115,6 @@ export const siteConfig = {
       animations: 'Temel fade-in ve scroll geçişleri',
       features: [
         'Tek sayfa (One Page) veya 5 sayfaya kadar kurumsal mimari',
-        '3 Yıl Domain (.com / .com.tr) + Yüksek Hızlı Bulut Barındırma Dahil',
         'Mobil ve Tablet Tam Uyumlu Responsive Tasarım',
         'Temel SEO Altyapısı (Sitemap, Meta, Robots.txt)',
         'Sabit WhatsApp İletişim Butonu & Hızlı Mesaj',
@@ -162,7 +161,6 @@ export const siteConfig = {
       animations: 'Gelişmiş — parallax, mikro hover efektleri, pürüzsüz geçişler',
       features: [
         '10 Sayfaya Kadar Kurumsal Site Mimarisi',
-        '3 Yıl Domain (.com / .com.tr) + Yüksek Hızlı Bulut Barındırma Dahil',
         'Sektörel Mevzuat Uyumu (TBB, Sağlık Bakanlığı, TÜRMOB kurallarına duyarlı dil)',
         'Google Haritalar (İşletme Profili) Kaydı & Doğrulaması',
         'Google Search Console Bağlantısı & JSON-LD Schema',
