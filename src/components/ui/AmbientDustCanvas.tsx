@@ -37,25 +37,37 @@ export const AmbientDustCanvas: React.FC = () => {
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
 
-    // Mouse coordinates with silky smooth lerp (no snapping or stepping)
+    // Mouse coordinates - start offscreen until first mousemove
     let mouse = {
-      x: width / 2,
-      y: height / 2,
-      targetX: width / 2,
-      targetY: height / 2,
-      isMoving: false,
+      x: -2000,
+      y: -2000,
+      targetX: -2000,
+      targetY: -2000,
     };
-    let mouseTimeout: NodeJS.Timeout;
+    let isInsideWindow = false;
 
     const handleMouseMove = (e: MouseEvent) => {
       mouse.targetX = e.clientX;
       mouse.targetY = e.clientY;
-      mouse.isMoving = true;
+      isInsideWindow = true;
 
-      clearTimeout(mouseTimeout);
-      mouseTimeout = setTimeout(() => {
-        mouse.isMoving = false;
-      }, 2000);
+      // Snap immediately on first move so there's zero fly-in from wrong location
+      if (mouse.x < -1000) {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      }
+    };
+
+    const handleMouseLeave = () => {
+      isInsideWindow = false;
+    };
+
+    const handleMouseEnter = (e: MouseEvent) => {
+      mouse.targetX = e.clientX;
+      mouse.targetY = e.clientY;
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+      isInsideWindow = true;
     };
 
     const handleResize = () => {
@@ -66,6 +78,8 @@ export const AmbientDustCanvas: React.FC = () => {
     };
 
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    window.addEventListener('mouseleave', handleMouseLeave);
+    window.addEventListener('mouseenter', handleMouseEnter);
     window.addEventListener('resize', handleResize);
 
     // Warm luxury palette: Amber, Gold, and glowing Champagne
@@ -86,7 +100,7 @@ export const AmbientDustCanvas: React.FC = () => {
         const radius = Math.random() * 2.0 + 0.8;
         const baseVx = (Math.random() - 0.5) * 0.3;
         const baseVy = -Math.random() * 0.35 - 0.1; // Gentle upward thermal float
-        const hasHalo = Math.random() > 0.4; // Soft halo for realistic glow without box blur
+        const hasHalo = Math.random() > 0.4;
 
         particles.push({
           x: Math.random() * width,
@@ -96,7 +110,7 @@ export const AmbientDustCanvas: React.FC = () => {
           vy: baseVy,
           baseVx,
           baseVy,
-          baseAlpha: Math.random() * 0.28 + 0.18, // Dense and visible, perfectly balanced
+          baseAlpha: Math.random() * 0.28 + 0.18,
           color,
           hasHalo,
           wobbleSpeed: Math.random() * 0.018 + 0.006,
@@ -121,18 +135,23 @@ export const AmbientDustCanvas: React.FC = () => {
 
       ctx.clearRect(0, 0, width, height);
 
-      // Silky lerping with 0.06 factor for buttery soft pursuit
-      mouse.x += (mouse.targetX - mouse.x) * 0.06;
-      mouse.y += (mouse.targetY - mouse.y) * 0.06;
-
-      // Update full-screen GPU shader spotlight coordinates (NO raster tiles, NO box banding)
-      if (glowRef.current) {
-        glowRef.current.style.setProperty('--glow-x', `${mouse.x.toFixed(1)}px`);
-        glowRef.current.style.setProperty('--glow-y', `${mouse.y.toFixed(1)}px`);
-        glowRef.current.style.opacity = mouse.isMoving ? '1' : '0.5';
+      // Tight, responsive tracking (0.22 factor) so glow and cursor stay strictly unified
+      if (isInsideWindow) {
+        mouse.x += (mouse.targetX - mouse.x) * 0.22;
+        mouse.y += (mouse.targetY - mouse.y) * 0.22;
       }
 
-      // Draw floating golden particles with anti-aliased concentric halos (Zero square artifacts)
+      // Update full-screen GPU radial spotlight directly - strictly centered at cursor
+      if (glowRef.current) {
+        if (isInsideWindow && mouse.x > -500) {
+          glowRef.current.style.background = `radial-gradient(circle 650px at ${mouse.x.toFixed(1)}px ${mouse.y.toFixed(1)}px, rgba(245, 158, 11, 0.08) 0%, rgba(245, 158, 11, 0.04) 25%, rgba(245, 158, 11, 0.015) 50%, rgba(245, 158, 11, 0.003) 70%, transparent 85%)`;
+          glowRef.current.style.opacity = '1';
+        } else {
+          glowRef.current.style.opacity = '0';
+        }
+      }
+
+      // Draw floating golden particles
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
 
@@ -142,18 +161,20 @@ export const AmbientDustCanvas: React.FC = () => {
         const wobbleY = Math.sin(p.wobbleAngle) * p.wobbleRadius;
 
         // Smooth quadratic mouse proximity interaction
-        const dx = p.x - mouse.x;
-        const dy = p.y - mouse.y;
-        const dist = Math.hypot(dx, dy);
-        const maxDist = 170;
-
         let proximityBoost = 0;
-        if (dist < maxDist && dist > 0) {
-          const norm = 1 - dist / maxDist;
-          const force = norm * norm * 1.2; // Smooth quadratic falloff
-          p.vx += (dx / dist) * force * 0.5;
-          p.vy += (dy / dist) * force * 0.5;
-          proximityBoost = norm * norm * 0.38; // Quadratic brightening near cursor
+        if (isInsideWindow) {
+          const dx = p.x - mouse.x;
+          const dy = p.y - mouse.y;
+          const dist = Math.hypot(dx, dy);
+          const maxDist = 180;
+
+          if (dist < maxDist && dist > 0) {
+            const norm = 1 - dist / maxDist;
+            const force = norm * norm * 1.2;
+            p.vx += (dx / dist) * force * 0.5;
+            p.vy += (dy / dist) * force * 0.5;
+            proximityBoost = norm * norm * 0.4;
+          }
         }
 
         // Velocity damping back to base float
@@ -171,7 +192,7 @@ export const AmbientDustCanvas: React.FC = () => {
 
         const currentAlpha = Math.min(p.baseAlpha + proximityBoost, 0.85);
 
-        // 1. Soft anti-aliased outer halo for glowing motes (NO box blur, NO raster squares)
+        // 1. Soft anti-aliased outer halo for glowing motes
         if (p.hasHalo) {
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.radius * 2.8, 0, Math.PI * 2);
@@ -191,22 +212,21 @@ export const AmbientDustCanvas: React.FC = () => {
 
     return () => {
       cancelAnimationFrame(animationFrameId);
-      clearTimeout(mouseTimeout);
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseleave', handleMouseLeave);
+      window.removeEventListener('mouseenter', handleMouseEnter);
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   return (
     <>
-      {/* 1. Full-Screen GPU Fragment Shader Radial Spotlight (Mathematically smooth, zero tile banding) */}
+      {/* 1. Full-Screen GPU Fragment Shader Radial Spotlight (Strictly centered at cursor) */}
       <div
         ref={glowRef}
         aria-hidden="true"
-        className="fixed inset-0 pointer-events-none z-10 transition-opacity duration-700 ease-out"
+        className="fixed inset-0 pointer-events-none z-10 transition-opacity duration-300 ease-out"
         style={{
-          background:
-            'radial-gradient(750px circle at var(--glow-x, 50vw) var(--glow-y, 50vh), rgba(245, 158, 11, 0.075) 0%, rgba(245, 158, 11, 0.04) 25%, rgba(245, 158, 11, 0.015) 50%, rgba(245, 158, 11, 0.003) 70%, transparent 85%)',
           mixBlendMode: 'screen',
           opacity: 0,
         }}
