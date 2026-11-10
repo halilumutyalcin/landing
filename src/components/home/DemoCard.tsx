@@ -7,7 +7,8 @@ import {
   Eye, 
   ArrowRight, 
   Check, 
-  MessageSquare
+  MessageSquare,
+  Sparkles
 } from 'lucide-react';
 import { DemoItem } from '@/config/demos.config';
 import { generateWhatsAppUrl } from '@/lib/utils';
@@ -19,6 +20,23 @@ interface DemoCardProps {
 }
 
 export const DemoCard: React.FC<DemoCardProps> = ({ demo, onOpenPreview }) => {
+  const handleChooseDesign = () => {
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(
+        new CustomEvent('select-design', {
+          detail: {
+            design: demo.name,
+            sector: demo.sectorId,
+          },
+        })
+      );
+      const target = document.getElementById('iletisim');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <div className="bg-[#0A0A0C] border border-white/[0.08] hover:border-amber-500/40 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group">
       {/* Thumbnail Area */}
@@ -100,28 +118,38 @@ export const DemoCard: React.FC<DemoCardProps> = ({ demo, onOpenPreview }) => {
         </div>
 
         {/* Delivery & Pricing Cue & Actions */}
-        <div>
-          <div className="flex items-center justify-between text-xs text-zinc-400 mb-3 pt-3 border-t border-white/5">
+        <div className="space-y-2.5">
+          <div className="flex items-center justify-between text-xs text-zinc-400 pt-3 border-t border-white/5">
             <span className="text-[11px] text-zinc-400">Anahtar Teslim 3–10 Gün</span>
             <span className="text-amber-400 font-semibold text-xs">17.500 ₺'den Başlayan</span>
           </div>
 
+          {/* 1. Canlı Demo & 2. Tasarım Detayı */}
           <div className="grid grid-cols-2 gap-2">
             <button
               onClick={() => onOpenPreview(demo)}
-              className="py-2.5 px-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-xs shadow-md transition-all flex items-center justify-center gap-1.5"
+              className="py-2.5 px-3 rounded-xl bg-white/[0.08] hover:bg-white text-zinc-200 hover:text-black font-semibold text-xs transition-all flex items-center justify-center gap-1.5 border border-white/10 hover:border-white"
             >
-              <Eye className="w-3.5 h-3.5 text-black" />
+              <Eye className="w-3.5 h-3.5" />
               <span>Canlı Demo</span>
             </button>
             <Link
               href={`/tasarimlar/${demo.slug}`}
-              className="py-2.5 px-3 rounded-xl bg-white/[0.05] hover:bg-white text-zinc-200 hover:text-black font-semibold text-xs border border-white/[0.08] hover:border-white transition-all flex items-center justify-center gap-1.5 group/btn"
+              className="py-2.5 px-3 rounded-xl bg-white/[0.04] hover:bg-white/10 text-zinc-300 font-medium text-xs border border-white/[0.08] transition-all flex items-center justify-center gap-1.5 group/btn"
             >
-              <span>Tasarım Detayı</span>
-              <ArrowRight className="w-3.5 h-3.5 text-zinc-400 group-hover/btn:text-black group-hover/btn:translate-x-0.5 transition-all" />
+              <span>Detayları Gör</span>
+              <ArrowRight className="w-3.5 h-3.5 text-zinc-400 group-hover/btn:translate-x-0.5 transition-all" />
             </Link>
           </div>
+
+          {/* 3. Bu Tasarımı İstiyorum (High-Conversion Action) */}
+          <button
+            onClick={handleChooseDesign}
+            className="w-full py-2.5 px-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-xs shadow-md transition-all flex items-center justify-center gap-2 group/btn"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-black" />
+            <span>Bu Tasarımı İstiyorum (Teklif Al)</span>
+          </button>
         </div>
       </div>
     </div>

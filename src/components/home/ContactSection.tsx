@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -8,7 +8,11 @@ import {
   CheckCircle2, 
   Phone, 
   Mail, 
-  MapPin
+  MapPin,
+  Clock,
+  Zap,
+  Sparkles,
+  ShieldCheck
 } from 'lucide-react';
 import { DEMO_CATALOG } from '@/config/demos.config';
 import { siteConfig } from '@/config/site.config';
@@ -31,10 +35,12 @@ type ContactFormData = z.infer<typeof contactSchema>;
 export const ContactSection: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isKvkkModalOpen, setIsKvkkModalOpen] = useState(false);
+  const [selectedDesignBanner, setSelectedDesignBanner] = useState<string | null>(null);
 
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors, isSubmitting },
     reset,
   } = useForm<ContactFormData>({
@@ -45,6 +51,22 @@ export const ContactSection: React.FC = () => {
       selectedPackage: 'pro',
     },
   });
+
+  useEffect(() => {
+    const handleSelectDesign = (e: Event) => {
+      const customEvent = e as CustomEvent<{ design: string; sector: string }>;
+      if (customEvent.detail) {
+        setValue('selectedDesign', customEvent.detail.design);
+        if (customEvent.detail.sector) {
+          setValue('sector', customEvent.detail.sector);
+        }
+        setSelectedDesignBanner(customEvent.detail.design);
+      }
+    };
+
+    window.addEventListener('select-design', handleSelectDesign);
+    return () => window.removeEventListener('select-design', handleSelectDesign);
+  }, [setValue]);
 
   const onSubmit = (data: ContactFormData) => {
     const pkgName = data.selectedPackage === 'starter' 
@@ -111,33 +133,85 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Direct Discovery Call Action */}
-            <div className="p-5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] space-y-3">
-              <div className="text-xs font-bold text-amber-400 uppercase tracking-wider">
-                Karar Vermeden Önce Görüşelim
+            {/* Direct Discovery Call & 4 High-Trust Guarantees */}
+            <div className="space-y-4">
+              <div className="p-5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] space-y-3">
+                <div className="text-xs font-bold text-amber-400 uppercase tracking-wider">
+                  Karar Vermeden Önce Görüşelim
+                </div>
+                <h4 className="text-base font-bold text-white">
+                  15 Dakikalık Ücretsiz Keşif &amp; Demo İnceleme
+                </h4>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  Hangi mimarinin sektörünüze ve hedeflerinize en uygun olduğunu uzman ekibimizle birlikte 15 dakikalık telefon veya Google Meet görüşmesinde değerlendirin.
+                </p>
+                <a
+                  href={generateWhatsAppUrl({
+                    customMessage: 'Merhaba MediWeb ekibi! Firmam için 15 dakikalık online keşif ve demo inceleme görüşmesi planlamak istiyorum.',
+                  })}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5 text-amber-400" />
+                  <span>15 Dk. Keşif Görüşmesi Planla</span>
+                </a>
               </div>
-              <h4 className="text-base font-bold text-white">
-                15 Dakikalık Ücretsiz Keşif & Demo İnceleme Görüşmesi
-              </h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Hangi mimarinin sektörünüze ve hedeflerinize en uygun olduğunu uzman ekibimizle birlikte 15 dakikalık telefon veya Google Meet görüşmesinde değerlendirin.
-              </p>
-              <a
-                href={generateWhatsAppUrl({
-                  customMessage: 'Merhaba MediWeb ekibi! Firmam için 15 dakikalık online keşif ve demo inceleme görüşmesi planlamak istiyorum.',
-                })}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-colors"
-              >
-                <Phone className="w-3.5 h-3.5 text-amber-400" />
-                <span>15 Dk. Keşif Görüşmesi Planla</span>
-              </a>
+
+              {/* 4 Trust Highlights Beside Form */}
+              <div className="grid grid-cols-2 gap-3 text-xs">
+                <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                  <div className="flex items-center gap-1.5 text-amber-400 font-bold">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Ücretsiz Demo</span>
+                  </div>
+                  <p className="text-[11px] text-zinc-400">Satın almadan önce canlı çalışan siteyi test edin.</p>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                  <div className="flex items-center gap-1.5 text-emerald-400 font-bold">
+                    <Clock className="w-3.5 h-3.5" />
+                    <span>~30 Dk. Yanıt</span>
+                  </div>
+                  <p className="text-[11px] text-zinc-400">Mesai saatlerinde teklifiniz anında hazırlanır.</p>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                  <div className="flex items-center gap-1.5 text-blue-400 font-bold">
+                    <Zap className="w-3.5 h-3.5" />
+                    <span>4 Adımda Teslim</span>
+                  </div>
+                  <p className="text-[11px] text-zinc-400">Sözleşmeli 3–10 iş gününde yayına alınır.</p>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                  <div className="flex items-center gap-1.5 text-amber-400 font-bold">
+                    <ShieldCheck className="w-3.5 h-3.5" />
+                    <span>3 Yıl Altyapı</span>
+                  </div>
+                  <p className="text-[11px] text-zinc-400">Hosting ve SSL için 0 ₺ yenileme garantisi.</p>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Right Column: Clean Form (No heavy artificial border styling) */}
           <div className="lg:col-span-7 bg-[#0A0A0C] border border-white/[0.08] rounded-3xl p-6 sm:p-10 shadow-2xl relative">
+            {selectedDesignBanner && (
+              <div className="mb-4 p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-between text-xs text-amber-400 animate-in fade-in">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 shrink-0" />
+                  <span>Seçilen Tasarım: <strong>{selectedDesignBanner}</strong></span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedDesignBanner(null)}
+                  className="text-zinc-400 hover:text-white text-[11px]"
+                >
+                  ✕
+                </button>
+              </div>
+            )}
             {isSubmitted ? (
               <div className="py-12 text-center space-y-4">
                 <div className="w-16 h-16 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 mx-auto">

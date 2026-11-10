@@ -269,7 +269,7 @@ export const PricingSection: React.FC = () => {
                 transition={{ duration: 0.35, ease: 'easeInOut' }}
                 className={`rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-all relative ${
                   isPro
-                    ? 'bg-[#0A0A0C] border-2 border-amber-500/30 shadow-2xl lg:-translate-y-2'
+                    ? 'bg-[#0A0A0C] border-2 border-amber-400 shadow-[0_0_40px_rgba(245,158,11,0.18)] lg:-translate-y-3 z-10'
                     : 'bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20'
                 }`}
               >
@@ -279,8 +279,8 @@ export const PricingSection: React.FC = () => {
                     12 Ay Taahhütlü · Sonra Aylık Ödeme Yok
                   </div>
                 ) : isPro ? (
-                  <div className="absolute text-center -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black text-[11px] font-black tracking-wide shadow-xl border border-white/20 select-none">
-                    En Çok Tercih Edilen Paket
+                  <div className="absolute text-center -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-amber-400 text-black text-[11px] font-black tracking-wide shadow-xl ring-2 ring-amber-300 select-none">
+                    ⭐ En Çok Tercih Edilen Paket
                   </div>
                 ) : null}
 
@@ -444,11 +444,11 @@ export const PricingSection: React.FC = () => {
                     rel="noopener noreferrer"
                     className={`w-full py-3.5 rounded-xl font-bold text-sm tracking-normal flex items-center justify-center gap-2.5 transition-all shadow-md ${
                       isPro
-                        ? 'bg-white hover:bg-zinc-200 text-black font-bold shadow-lg shadow-white/10'
+                        ? 'bg-amber-400 hover:bg-amber-300 text-black font-extrabold shadow-lg shadow-amber-400/25 ring-1 ring-amber-300'
                         : 'bg-white/10 hover:bg-white/15 text-white border border-white/10'
                     }`}
                   >
-                    <WhatsAppIcon className="w-4 h-4 fill-emerald-400 shrink-0" />
+                    <WhatsAppIcon className={`w-4 h-4 shrink-0 ${isPro ? 'fill-black' : 'fill-emerald-400'}`} />
                     <span>
                       {billingMode === 'waas' ? 'Abonelikle Başla (WhatsApp)' : 'Bu Paketi Seç & WhatsApp ile Başla'}
                     </span>
@@ -630,111 +630,59 @@ export const PricingSection: React.FC = () => {
             </div>
         </div>
 
-        {/* UNIFIED Master Value & Guarantee Block: "Ne İçin Ödeme Yapıyorsunuz?" */}
-        <div className="mt-8 rounded-3xl bg-[#0A0A0C] max-w-5xl mx-auto shadow-2xl overflow-hidden">
-          
-          {/* Header & 3 Value Pillars */}
-          <div className="p-7 sm:p-10">
-            <div className="text-center max-w-2xl mx-auto mb-10">
-              <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
-                Değer & Yatırım Mantığı
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                Ne İçin Ödeme Yapıyorsunuz?
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-300 mt-2">
-                Bir şablon satın almıyorsunuz; işinizi büyüten, 3 yıl boyunca sunucu derdini sıfırlayan anahtar teslim bir kurumsal dijital varlık ediniyorsunuz.
+        {/* Integrated Trust Guarantees & Clear Post-Sale Terms */}
+        <div className="mt-8 rounded-3xl bg-[#0A0A0C] border border-white/[0.08] p-6 sm:p-8 max-w-5xl mx-auto shadow-2xl">
+          <div className="mb-6 pb-4 border-b border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-amber-400" />
+                <span>Satış Sonrası Şeffaf Koşullar (Sürpriz Yok)</span>
+              </h4>
+              <p className="text-xs text-zinc-400 mt-0.5">
+                İşletmenizin haklarını koruyan, sözleşmeyle güvence altına alınmış net şartlar.
+              </p>
+            </div>
+            <span className="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20 self-start sm:self-auto">
+              ✓ Sözleşmeli Güvence
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 text-xs text-slate-300">
+            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+              <strong className="text-white block font-bold text-[12px]">3 Yıl Sonunda Ne Olur?</strong>
+              <p className="text-[11px] text-zinc-400 leading-relaxed">
+                Zorunlu ajans faturası çıkmaz; 4. yıldan itibaren sadece alan adı + bulut sunucu maliyetine (~1.500–2.500 ₺/yıl) devam eder.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300">
-              <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
-                <div className="flex items-center gap-2.5">
-                  <Server className="w-5 h-5 text-amber-400 shrink-0" />
-                  <strong className="text-white text-sm font-bold">İlk 3 Yıl Domain &amp; Bulut Barındırma Dahil</strong>
-                </div>
-                <p className="text-slate-300 leading-relaxed pt-1">
-                  Alan adı, SSL güvenlik sertifikası ve yüksek hızlı global bulut barındırma için ilk 36 ay boyunca 1 TL dahi sunucu faturası ödemezsiniz.
-                </p>
-              </div>
+            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+              <strong className="text-white block font-bold text-[12px]">Alan Adı Mülkiyeti</strong>
+              <p className="text-[11px] text-zinc-400 leading-relaxed">
+                Alan adınız ilk günden doğrudan adınıza veya şirketiniz adına tescil edilir. Rehin veya kilit asla uygulanmaz.
+              </p>
+            </div>
 
-              <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
-                <div className="flex items-center gap-2.5">
-                  <Zap className="w-5 h-5 text-amber-400 shrink-0" />
-                  <strong className="text-white text-sm font-bold">Özel Yazılım Altyapısı</strong>
-                </div>
-                <p className="text-slate-300 leading-relaxed pt-1">
-                  Gereksiz eklenti çöplüğü ve bakım yükü yok. Hafif, optimize edilmiş modern web altyapısıyla anında açılan sayfalar ve kesintisiz yüksek performans sağlanır.
-                </p>
-              </div>
+            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+              <strong className="text-white block font-bold text-[12px]">Ek Sayfa İhtiyacı</strong>
+              <p className="text-[11px] text-zinc-400 leading-relaxed">
+                İhtiyacınız büyüdüğünde sayfa başı ~1.500 ₺ net birim fiyatla modüler olarak kolayca yeni sayfalar eklenir.
+              </p>
+            </div>
 
-              <div className="p-5 rounded-2xl bg-white/[0.02] space-y-2">
-                <div className="flex items-center gap-2.5">
-                  <PhoneCall className="w-5 h-5 text-amber-400 shrink-0" />
-                  <strong className="text-white text-sm font-bold">Dönüşüm & WhatsApp Köprüsü</strong>
-                </div>
-                <p className="text-slate-300 leading-relaxed pt-1">
-                  Sadece şık görünmekle kalmaz; ziyaretçiyi doğru kanaldan (WhatsApp, arama veya randevu formu) iletişime geçmeye teşvik eden net arayüz hiyerarşisiyle kurgulanır.
-                </p>
-              </div>
+            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+              <strong className="text-white block font-bold text-[12px]">Revizyon & Garanti</strong>
+              <p className="text-[11px] text-zinc-400 leading-relaxed">
+                Paketinize göre 1–3 tur revizyon hakkı ve 15–60 gün yazılım hata garantisi (1–2 iş gününde müdahale taahhüdü).
+              </p>
+            </div>
+
+            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+              <strong className="text-white block font-bold text-[12px]">İçerik & Görseller</strong>
+              <p className="text-[11px] text-zinc-400 leading-relaxed">
+                Sektörünüze uygun lisanslı görseller ve taslak metinler tarafımızdan hazırlanır; nihai onayınızla yayına alınır.
+              </p>
             </div>
           </div>
-
-          {/* Integrated Trust Guarantees & Clear Post-Sale Terms */}
-          <div className="border-t border-white/10 bg-[#0A0A0C] p-6 sm:p-8 rounded-b-3xl">
-            <div className="mb-6 pb-4 border-b border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <div>
-                <h4 className="text-sm font-bold text-white flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-amber-400" />
-                  <span>Satış Sonrası Şeffaf Koşullar (Sürpriz Yok)</span>
-                </h4>
-                <p className="text-xs text-zinc-400 mt-0.5">
-                  İşletmenizin haklarını koruyan, sözleşmeyle güvence altına alınmış net şartlar.
-                </p>
-              </div>
-              <span className="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20 self-start sm:self-auto">
-                ✓ Sözleşmeli Güvence
-              </span>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 text-xs text-slate-300">
-              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-                <strong className="text-white block font-bold text-[12px]">3 Yıl Sonunda Ne Olur?</strong>
-                <p className="text-[11px] text-zinc-400 leading-relaxed">
-                  Zorunlu ajans faturası çıkmaz; 4. yıldan itibaren sadece alan adı + bulut sunucu maliyetine (~1.500–2.500 ₺/yıl) devam eder.
-                </p>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-                <strong className="text-white block font-bold text-[12px]">Alan Adı Mülkiyeti</strong>
-                <p className="text-[11px] text-zinc-400 leading-relaxed">
-                  Alan adınız ilk günden doğrudan adınıza veya şirketiniz adına tescil edilir. Rehin veya kilit asla uygulanmaz.
-                </p>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-                <strong className="text-white block font-bold text-[12px]">Ek Sayfa İhtiyacı</strong>
-                <p className="text-[11px] text-zinc-400 leading-relaxed">
-                  İhtiyacınız büyüdüğünde sayfa başı ~1.500 ₺ net birim fiyatla modüler olarak kolayca yeni sayfalar eklenir.
-                </p>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-                <strong className="text-white block font-bold text-[12px]">Revizyon & Garanti</strong>
-                <p className="text-[11px] text-zinc-400 leading-relaxed">
-                  Paketinize göre 1–3 tur revizyon hakkı ve 15–60 gün yazılım hata garantisi (1–2 iş gününde müdahale taahhüdü).
-                </p>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-                <strong className="text-white block font-bold text-[12px]">İçerik & Görseller</strong>
-                <p className="text-[11px] text-zinc-400 leading-relaxed">
-                  Sektörünüze uygun lisanslı görseller ve taslak metinler tarafımızdan hazırlanır; nihai onayınızla yayına alınır.
-                </p>
-              </div>
-            </div>
-          </div>
-
         </div>
 
         {/* Custom Software & Enterprise Integration Architecture Section */}

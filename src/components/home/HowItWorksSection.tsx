@@ -14,30 +14,34 @@ export const HowItWorksSection: React.FC = () => {
   const steps = [
     {
       step: '01',
-      title: 'Mimarınızı Canlıda Test Edin',
-      desc: 'Katalogdaki 16 çalışan canlı vitrinden firmanızın kurumsal ağırlığına en uygun olanı seçin. Ne alacağınızı baştan canlı görün.',
-      milestone: 'Görerek Karar Verme',
+      title: 'Brief & İhtiyaç Analizi',
+      duration: '1. İş Günü',
+      desc: 'Hedef kitleniz, kurumsal renkleriniz ve beğendiğiniz canlı mimari belirlenir. Ne teslim alacağınızı en baştan bilirsiniz.',
+      milestone: 'Kapsam & Mimari Seçimi',
       icon: Eye,
     },
     {
       step: '02',
-      title: 'Paketinizi Belirleyin',
-      desc: 'İhtiyacınıza göre Başlangıç (Tek Sayfa), Profesyonel (10 Sayfa) veya Kurumsal paketi seçin. Net, sabit tek fiyat.',
-      milestone: 'Sürpriz Ek Masraf Yok',
+      title: 'Tasarım & İçerik Uyarlaması',
+      duration: '2–4. İş Günü',
+      desc: 'Logonuz, faaliyet alanlarınız ve sektörel fotoğraflarınız mimariye giydirilir. SEO altyapısı ve mobil uyum kodlanır.',
+      milestone: 'Özel Mimari Kurulumu',
       icon: FileCheck,
     },
     {
       step: '03',
-      title: 'Bilgilerinizi WhatsApp\'tan İletin',
-      desc: 'Logonuzu, hizmetlerinizi ve fotoğraflarınızı tek bir mesajla gönderin. Metniniz yoksa sektör şablonlarımızla biz toparlarız.',
-      milestone: 'Zahmetsiz Aktarım',
+      title: 'Revizyon & Müşteri Onayı',
+      duration: '1–2 İş Günü*',
+      desc: 'Sitenin çalışan canlı taslağını telefonunuzda ve bilgisayarınızda incelersiniz. Varsa düzeltmeleriniz anında uygulanır.',
+      milestone: 'Nihai Müşteri Onayı',
       icon: Send,
     },
     {
       step: '04',
-      title: '3–10 İş Gününde Canlıdasınız',
-      desc: 'İçerik onayınızdan itibaren paketinize göre belirlenen net sürede Google uyumu ve ilk 3 yıl barındırmanızla siteniz eksiksiz yayına alınır.',
-      milestone: '3 Yıl Barındırma Dahil',
+      title: 'Alan Adı Bağlantısı & Lansman',
+      duration: 'Son İş Günü',
+      desc: 'Alan adınız bağlanır, kurumsal SSL sertifikası devreye alınır, Google Haritalar entegre edilir ve siteniz anahtar teslim yayına girer.',
+      milestone: '3 Yıl Barındırma Başlar',
       icon: Rocket,
     },
   ];
@@ -63,7 +67,7 @@ export const HowItWorksSection: React.FC = () => {
         {/* Process Flow Timeline with Connecting Line */}
         <div className="relative">
           {/* Connecting Flow Line for Desktop */}
-          <div className="hidden lg:block absolute top-14 left-10 right-10 h-0.5 bg-gradient-to-r from-blue-500/20 via-emerald-500/30 to-blue-500/20 pointer-events-none" />
+          <div className="hidden lg:block absolute top-14 left-10 right-10 h-0.5 bg-gradient-to-r from-amber-500/20 via-emerald-500/30 to-amber-500/20 pointer-events-none" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative z-10">
             {steps.map((item) => {
@@ -75,14 +79,16 @@ export const HowItWorksSection: React.FC = () => {
                 >
                   <div>
                     {/* Step Number + Naked Icon */}
-                    <div className="flex items-center justify-between mb-5">
+                    <div className="flex items-center justify-between mb-4">
                       <span className="text-3xl sm:text-4xl font-black font-mono text-white tracking-tight">
                         {item.step}
                       </span>
-                      <Icon className="w-5 h-5 text-zinc-400 group-hover:text-amber-400 transition-colors" />
+                      <span className="px-2 py-0.5 rounded-md bg-white/[0.05] border border-white/5 text-[11px] font-semibold text-amber-400">
+                        {item.duration}
+                      </span>
                     </div>
 
-                    <h3 className="text-base sm:text-lg font-bold text-white mb-2.5 leading-snug">
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-2 leading-snug">
                       {item.title}
                     </h3>
 
@@ -93,12 +99,17 @@ export const HowItWorksSection: React.FC = () => {
 
                   {/* Milestone Footnote */}
                   <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs font-semibold">
-                    <span className="text-amber-400">{item.milestone}</span>
-                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+                    <span className="text-zinc-400 group-hover:text-amber-400 transition-colors">{item.milestone}</span>
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                   </div>
                 </div>
               );
             })}
+          </div>
+
+          {/* Process Timeline Caveat Note */}
+          <div className="mt-8 text-center text-xs text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+            * <em>Not: Taahhüt edilen 3–10 iş günü teslimat süresi, içerik ve logo onayınızın iletildiği andan itibaren başlar. Tasarım revizyon onayları ve müşteri geri dönüş hızına bağlı olarak lansman günü esneyebilir.</em>
           </div>
         </div>
 
