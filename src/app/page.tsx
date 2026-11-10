@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { HeroSection } from '@/components/home/HeroSection';
-import { TrustBarSection } from '@/components/home/TrustBarSection';
 import { DemoGrid } from '@/components/home/DemoGrid';
 import { PricingSection } from '@/components/home/PricingSection';
 import { TaxCalculatorSection } from '@/components/home/TaxCalculatorSection';
@@ -33,10 +32,7 @@ export default function HomePage() {
       {/* 1. HERO: Sektörünüze Özel Mimari, 3-10 İş Gününde Lansman, İlk 3 Yıl Hosting Dahil */}
       <HeroSection />
 
-      {/* 2. GÜVEN & SOSYAL KANIT BÖLÜMÜ: Doğrulanabilir Metrikler & Gerçek Müşteri Deneyimleri */}
-      <TrustBarSection />
-
-      {/* 3. CANLI SEKTÖREL VİTRİN MİMARİLERİ */}
+      {/* 2. CANLI SEKTÖREL VİTRİN MİMARİLERİ */}
       <DemoGrid />
 
       {/* 4. NASIL ÇALIŞIR? (4 KOLAY ADIMDA SÜREÇ - FİYATTAN ÖNCE SÜREÇ GÜVENİ) */}

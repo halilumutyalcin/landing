@@ -10,9 +10,7 @@ import {
   Mail, 
   MapPin,
   Clock,
-  Zap,
-  Sparkles,
-  ShieldCheck
+  Sparkles
 } from 'lucide-react';
 import { DEMO_CATALOG } from '@/config/demos.config';
 import { siteConfig } from '@/config/site.config';
@@ -154,65 +152,28 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Direct Discovery Call & 4 High-Trust Guarantees */}
-            <div className="space-y-4">
-              <div className="p-5 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] space-y-3">
-                <div className="text-xs font-bold text-amber-400 uppercase tracking-wider">
-                  Karar Vermeden Önce Görüşelim
-                </div>
-                <h4 className="text-base font-bold text-white">
-                  15 Dakikalık Ücretsiz Keşif &amp; Demo İnceleme
-                </h4>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Hangi mimarinin sektörünüze ve hedeflerinize en uygun olduğunu uzman ekibimizle birlikte 15 dakikalık telefon veya Google Meet görüşmesinde değerlendirin.
-                </p>
-                <a
-                  href={generateWhatsAppUrl({
-                    customMessage: 'Merhaba MediWeb ekibi! Firmam için 15 dakikalık online keşif ve demo inceleme görüşmesi planlamak istiyorum.',
-                  })}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-colors"
-                >
-                  <Phone className="w-3.5 h-3.5 text-amber-400" />
-                  <span>15 Dk. Keşif Görüşmesi Planla</span>
-                </a>
+            {/* Direct Discovery Call */}
+            <div className="p-6 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] space-y-3">
+              <div className="text-xs font-bold text-amber-400 uppercase tracking-wider">
+                Karar Vermeden Önce Görüşelim
               </div>
-
-              {/* 4 Trust Highlights Beside Form */}
-              <div className="grid grid-cols-2 gap-3 text-xs">
-                <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-                  <div className="flex items-center gap-1.5 text-amber-400 font-bold">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>Ücretsiz Demo</span>
-                  </div>
-                  <p className="text-[11px] text-zinc-400">Satın almadan önce canlı çalışan siteyi test edin.</p>
-                </div>
-
-                <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-                  <div className="flex items-center gap-1.5 text-emerald-400 font-bold">
-                    <Clock className="w-3.5 h-3.5" />
-                    <span>~30 Dk. Yanıt</span>
-                  </div>
-                  <p className="text-[11px] text-zinc-400">Mesai saatlerinde teklifiniz anında hazırlanır.</p>
-                </div>
-
-                <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-                  <div className="flex items-center gap-1.5 text-blue-400 font-bold">
-                    <Zap className="w-3.5 h-3.5" />
-                    <span>4 Adımda Teslim</span>
-                  </div>
-                  <p className="text-[11px] text-zinc-400">Sözleşmeli 3–10 iş gününde yayına alınır.</p>
-                </div>
-
-                <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
-                  <div className="flex items-center gap-1.5 text-amber-400 font-bold">
-                    <ShieldCheck className="w-3.5 h-3.5" />
-                    <span>3 Yıl Altyapı</span>
-                  </div>
-                  <p className="text-[11px] text-zinc-400">Hosting ve SSL için 0 ₺ yenileme garantisi.</p>
-                </div>
-              </div>
+              <h4 className="text-base font-bold text-white">
+                15 Dakikalık Ücretsiz Keşif &amp; Demo İnceleme
+              </h4>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Hangi mimarinin sektörünüze ve hedeflerinize en uygun olduğunu uzman ekibimizle birlikte 15 dakikalık telefon veya Google Meet görüşmesinde değerlendirin.
+              </p>
+              <a
+                href={generateWhatsAppUrl({
+                  customMessage: 'Merhaba MediWeb ekibi! Firmam için 15 dakikalık online keşif ve demo inceleme görüşmesi planlamak istiyorum.',
+                })}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-colors"
+              >
+                <Phone className="w-3.5 h-3.5 text-amber-400" />
+                <span>15 Dk. Keşif Görüşmesi Planla</span>
+              </a>
             </div>
           </div>
 
@@ -263,7 +224,7 @@ export const ContactSection: React.FC = () => {
                     {requestType === 'demo' ? 'Ücretsiz Canlı Demo Talebi' : 'Resmî Fiyat Teklifi & Kurulum'}
                   </h3>
                   <span className="text-[11px] text-emerald-400 font-medium">
-                    ⚡ Ortalama 30 dk içinde geri dönüş
+                    Ortalama 30 dakika içinde geri dönüş
                   </span>
                 </div>
 
@@ -278,7 +239,7 @@ export const ContactSection: React.FC = () => {
                         : 'text-zinc-400 hover:text-white'
                     }`}
                   >
-                    ✨ Ücretsiz Canlı Demo Talebi
+                    Ücretsiz Canlı Demo Talebi
                   </button>
                   <button
                     type="button"
@@ -289,7 +250,7 @@ export const ContactSection: React.FC = () => {
                         : 'text-zinc-400 hover:text-white'
                     }`}
                   >
-                    📋 Resmî Fiyat Teklifi Al
+                    Resmî Fiyat Teklifi Al
                   </button>
                 </div>
 

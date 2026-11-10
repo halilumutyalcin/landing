@@ -5,9 +5,7 @@ import {
   Building2, 
   UserCheck, 
   CheckCircle2,
-  Printer,
-  ArrowRight,
-  Sparkles
+  Printer
 } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
 import { formatCurrency } from '@/lib/utils';
@@ -31,29 +29,9 @@ export const TaxCalculatorSection: React.FC = () => {
   const totalWithKdv = currentPkg.price + currentKdv;
   const effectiveTaxRate = companyType === 'ltd' ? 25 : gvRate;
   const currentTaxSaving = Math.round(currentPkg.price * (effectiveTaxRate / 100));
-  // Net effective cost = price - tax saving (if KDV is offset, KDV is cash neutral; if not offset, +KDV)
   const currentNetCost = canOffsetKdv 
     ? currentPkg.price - currentTaxSaving 
     : (currentPkg.price + currentKdv) - currentTaxSaving;
-
-  const handleTransferToForm = () => {
-    if (typeof window !== 'undefined') {
-      window.dispatchEvent(
-        new CustomEvent('tax-calculation-applied', {
-          detail: {
-            packageId: selectedPackageId,
-            companyType: companyType === 'ltd' ? 'LTD. / A.Ş. (%25 KV)' : `Şahıs İşletmesi (%${gvRate} GV)`,
-            netCost: currentNetCost,
-            packageName: currentPkg.name,
-          },
-        })
-      );
-      const target = document.getElementById('iletisim');
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
 
   const handlePrint = () => {
     if (typeof window !== 'undefined') {
@@ -78,197 +56,191 @@ export const TaxCalculatorSection: React.FC = () => {
           </p>
         </div>
 
-        {/* INTERACTIVE CALCULATOR CARD */}
+        {/* BALANCED 2-COLUMN SIMULATOR CARD */}
         <div className="max-w-4xl mx-auto bg-[#0A0A0C] border border-white/[0.08] rounded-3xl p-6 sm:p-8 mb-12 shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             
-            {/* Left Controls (7 cols) */}
-            <div className="lg:col-span-7 space-y-6">
-              {/* 1. Paket Seçimi */}
-              <div>
-                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                  1. Paketinizi Seçin
-                </label>
-                <div className="grid grid-cols-3 gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setSelectedPackageId('starter')}
-                    className={`p-3 rounded-xl border text-center transition-all ${
-                      selectedPackageId === 'starter'
-                        ? 'bg-white text-black border-white font-bold shadow-lg'
-                        : 'bg-white/[0.03] text-zinc-300 border-white/10 hover:border-white/20'
-                    }`}
-                  >
-                    <div className="text-xs font-bold truncate">Başlangıç</div>
-                    <div className="text-[11px] mt-0.5 opacity-80">17.500 ₺</div>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setSelectedPackageId('pro')}
-                    className={`p-3 rounded-xl border text-center transition-all ${
-                      selectedPackageId === 'pro'
-                        ? 'bg-white text-black border-white font-bold shadow-lg'
-                        : 'bg-white/[0.03] text-zinc-300 border-white/10 hover:border-white/20'
-                    }`}
-                  >
-                    <div className="text-xs font-bold truncate">Profesyonel</div>
-                    <div className="text-[11px] mt-0.5 opacity-80">32.500 ₺</div>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setSelectedPackageId('enterprise')}
-                    className={`p-3 rounded-xl border text-center transition-all ${
-                      selectedPackageId === 'enterprise'
-                        ? 'bg-white text-black border-white font-bold shadow-lg'
-                        : 'bg-white/[0.03] text-zinc-300 border-white/10 hover:border-white/20'
-                    }`}
-                  >
-                    <div className="text-xs font-bold truncate">Kurumsal</div>
-                    <div className="text-[11px] mt-0.5 opacity-80">59.900 ₺</div>
-                  </button>
-                </div>
-              </div>
-
-              {/* 2. Şirket Türü */}
-              <div>
-                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                  2. Şirket Türünüz & Vergi Diliminiz
-                </label>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setCompanyType('ltd')}
-                    className={`p-3 rounded-xl border flex items-center gap-2.5 transition-all text-left ${
-                      companyType === 'ltd'
-                        ? 'bg-amber-400 text-black border-amber-400 font-bold shadow-lg'
-                        : 'bg-white/[0.03] text-zinc-300 border-white/10 hover:border-white/20'
-                    }`}
-                  >
-                    <Building2 className="w-4 h-4 shrink-0" />
-                    <div>
-                      <div className="text-xs font-bold">LTD. / A.Ş.</div>
-                      <div className="text-[10px] opacity-80">%25 Kurumlar Vergisi</div>
-                    </div>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setCompanyType('individual')}
-                    className={`p-3 rounded-xl border flex items-center gap-2.5 transition-all text-left ${
-                      companyType === 'individual'
-                        ? 'bg-amber-400 text-black border-amber-400 font-bold shadow-lg'
-                        : 'bg-white/[0.03] text-zinc-300 border-white/10 hover:border-white/20'
-                    }`}
-                  >
-                    <UserCheck className="w-4 h-4 shrink-0" />
-                    <div>
-                      <div className="text-xs font-bold">Gerçek Kişi / Şahıs</div>
-                      <div className="text-[10px] opacity-80">%{gvRate} Gelir Vergisi Dilimi</div>
-                    </div>
-                  </button>
-                </div>
-
-                {/* GV Dilim Seçimi */}
-                {companyType === 'individual' && (
-                  <div className="mt-2.5 p-3 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-between text-xs animate-in fade-in">
-                    <span className="text-zinc-400 text-[11px]">Gelir Vergisi Diliminiz:</span>
-                    <div className="flex items-center gap-1">
-                      {gvRates.map((rate) => (
-                        <button
-                          key={rate}
-                          type="button"
-                          onClick={() => setGvRate(rate)}
-                          className={`px-2 py-0.5 rounded text-[11px] font-bold transition-all ${
-                            gvRate === rate
-                              ? 'bg-amber-400 text-black'
-                              : 'text-zinc-400 hover:text-white bg-white/5'
-                          }`}
-                        >
-                          %{rate}
-                        </button>
-                      ))}
-                    </div>
+            {/* Left Column: Selections */}
+            <div className="flex flex-col justify-between space-y-6">
+              <div className="space-y-5">
+                {/* 1. Paket Seçimi */}
+                <div>
+                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                    1. Paket Seçimi
+                  </label>
+                  <div className="grid grid-cols-3 gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setSelectedPackageId('starter')}
+                      className={`p-3 rounded-xl border text-center transition-all ${
+                        selectedPackageId === 'starter'
+                          ? 'bg-white text-black border-white font-bold shadow-md'
+                          : 'bg-white/[0.03] text-zinc-300 border-white/10 hover:border-white/20'
+                      }`}
+                    >
+                      <div className="text-xs font-bold truncate">Başlangıç</div>
+                      <div className="text-[11px] mt-0.5 opacity-80">17.500 ₺</div>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedPackageId('pro')}
+                      className={`p-3 rounded-xl border text-center transition-all ${
+                        selectedPackageId === 'pro'
+                          ? 'bg-white text-black border-white font-bold shadow-md'
+                          : 'bg-white/[0.03] text-zinc-300 border-white/10 hover:border-white/20'
+                      }`}
+                    >
+                      <div className="text-xs font-bold truncate">Profesyonel</div>
+                      <div className="text-[11px] mt-0.5 opacity-80">32.500 ₺</div>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedPackageId('enterprise')}
+                      className={`p-3 rounded-xl border text-center transition-all ${
+                        selectedPackageId === 'enterprise'
+                          ? 'bg-white text-black border-white font-bold shadow-md'
+                          : 'bg-white/[0.03] text-zinc-300 border-white/10 hover:border-white/20'
+                      }`}
+                    >
+                      <div className="text-xs font-bold truncate">Kurumsal</div>
+                      <div className="text-[11px] mt-0.5 opacity-80">59.900 ₺</div>
+                    </button>
                   </div>
-                )}
-              </div>
+                </div>
 
-              {/* 3. KDV Mahsup Seçeneği */}
-              <div className="pt-1">
-                <label className="flex items-center gap-2.5 cursor-pointer select-none text-xs text-zinc-300">
+                {/* 2. Şirket Türü */}
+                <div>
+                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                    2. Şirket Türünüz
+                  </label>
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setCompanyType('ltd')}
+                      className={`p-3 rounded-xl border flex items-center gap-2.5 transition-all text-left ${
+                        companyType === 'ltd'
+                          ? 'bg-amber-400 text-black border-amber-400 font-bold shadow-md'
+                          : 'bg-white/[0.03] text-zinc-300 border-white/10 hover:border-white/20'
+                      }`}
+                    >
+                      <Building2 className="w-4 h-4 shrink-0" />
+                      <div>
+                        <div className="text-xs font-bold">LTD. / A.Ş.</div>
+                        <div className="text-[10px] opacity-80">%25 Kurumlar V.</div>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setCompanyType('individual')}
+                      className={`p-3 rounded-xl border flex items-center gap-2.5 transition-all text-left ${
+                        companyType === 'individual'
+                          ? 'bg-amber-400 text-black border-amber-400 font-bold shadow-md'
+                          : 'bg-white/[0.03] text-zinc-300 border-white/10 hover:border-white/20'
+                      }`}
+                    >
+                      <UserCheck className="w-4 h-4 shrink-0" />
+                      <div>
+                        <div className="text-xs font-bold">Şahıs İşletmesi</div>
+                        <div className="text-[10px] opacity-80">%{gvRate} Gelir V. Dilimi</div>
+                      </div>
+                    </button>
+                  </div>
+
+                  {/* GV Dilim Seçimi */}
+                  {companyType === 'individual' && (
+                    <div className="mt-2.5 p-2.5 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-between text-xs animate-in fade-in">
+                      <span className="text-zinc-400 text-[11px]">Vergi Dilimi:</span>
+                      <div className="flex items-center gap-1">
+                        {gvRates.map((rate) => (
+                          <button
+                            key={rate}
+                            type="button"
+                            onClick={() => setGvRate(rate)}
+                            className={`px-2 py-0.5 rounded text-[11px] font-bold transition-all ${
+                              gvRate === rate
+                                ? 'bg-amber-400 text-black'
+                                : 'text-zinc-400 hover:text-white bg-white/5'
+                            }`}
+                          >
+                            %{rate}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* 3. KDV Mahsup Seçeneği */}
+                <label className="flex items-center gap-2.5 cursor-pointer select-none text-xs text-zinc-300 pt-1">
                   <input
                     type="checkbox"
                     checked={canOffsetKdv}
                     onChange={(e) => setCanOffsetKdv(e.target.checked)}
                     className="w-4 h-4 rounded accent-amber-400 cursor-pointer"
                   />
-                  <span>KDV mükellefiyim ve beyannamemde %20 KDV mahsubu yapabiliyorum</span>
+                  <span>%20 KDV beyannamemde mahsup edilebiliyor</span>
                 </label>
               </div>
-            </div>
 
-            {/* Right Live Simulation Output Card (5 cols) */}
-            <div className="lg:col-span-5 bg-black/60 border border-white/[0.1] rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
-              <div className="text-xs font-bold text-amber-400 uppercase tracking-wider pb-2 border-b border-white/10">
-                Tahmini Maliyet Özeti
-              </div>
-
-              <div className="space-y-2 text-xs">
-                <div className="flex items-center justify-between text-zinc-400">
-                  <span>Fatura Bedeli (KDV Hariç):</span>
-                  <span className="text-white font-medium">{formatCurrency(currentPkg.price)}</span>
-                </div>
-                <div className="flex items-center justify-between text-zinc-400">
-                  <span>+ %20 KDV Tutarı:</span>
-                  <span className="text-zinc-300">{formatCurrency(currentKdv)}</span>
-                </div>
-                <div className="flex items-center justify-between text-zinc-400 pb-1 border-b border-white/5 font-semibold">
-                  <span className="text-zinc-300">Fatura Toplamı (KDV Dahil):</span>
-                  <span className="text-white">{formatCurrency(totalWithKdv)}</span>
-                </div>
-                {canOffsetKdv && (
-                  <div className="flex items-center justify-between text-emerald-400">
-                    <span>KDV Mahsubu İndirimi:</span>
-                    <span className="font-semibold">-{formatCurrency(currentKdv)}</span>
-                  </div>
-                )}
-                <div className="flex items-center justify-between text-amber-400">
-                  <span>Tahmini {companyType === 'ltd' ? 'KV' : 'GV'} Tasarrufu (%{effectiveTaxRate}):</span>
-                  <span className="font-semibold">-{formatCurrency(currentTaxSaving)}</span>
-                </div>
-              </div>
-
-              {/* Net Output Box */}
-              <div className="pt-3 border-t border-white/10">
-                <div className="text-[11px] text-zinc-400 mb-0.5">
-                  Tahmini Fiili Net Maliyet:
-                </div>
-                <div className="text-2xl sm:text-3xl font-black text-white font-display">
-                  {formatCurrency(currentNetCost)}
-                </div>
-                <div className="text-[10px] text-zinc-400 mt-1 leading-tight">
-                  {canOffsetKdv 
-                    ? 'KDV mahsubu ve vergi matrah indirimi sonrası işletmenizin cebinden çıkan tahmini net tutar.' 
-                    : 'Vergi matrah indirimi sonrası tahmini net maliyet (KDV mahsup edilmediğinde).'}
-                </div>
-              </div>
-
-              {/* Action Buttons: Transfer to Form & Print/PDF */}
-              <div className="pt-3 border-t border-white/10 space-y-2 print:hidden">
-                <button
-                  type="button"
-                  onClick={handleTransferToForm}
-                  className="w-full py-2.5 px-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-xs shadow-md transition-all flex items-center justify-center gap-1.5"
-                >
-                  <Sparkles className="w-3.5 h-3.5 text-black" />
-                  <span>Bu Hesaplamayla Teklif Al (Forma Aktar)</span>
-                </button>
+              {/* Print / Save Action */}
+              <div className="pt-2 print:hidden">
                 <button
                   type="button"
                   onClick={handlePrint}
-                  className="w-full py-2 px-3 rounded-xl bg-white/[0.04] hover:bg-white/10 text-zinc-300 text-xs font-semibold transition-all flex items-center justify-center gap-1.5 border border-white/10"
+                  className="w-full py-2.5 px-3 rounded-xl bg-white/[0.04] hover:bg-white/10 text-zinc-300 text-xs font-semibold transition-all flex items-center justify-center gap-1.5 border border-white/10"
                 >
                   <Printer className="w-3.5 h-3.5" />
                   <span>Hesaplama Özetini Yazdır / PDF Kaydet</span>
                 </button>
+              </div>
+            </div>
+
+            {/* Right Column: Calculated Output Panel */}
+            <div className="bg-black/70 border border-white/[0.1] rounded-2xl p-6 flex flex-col justify-between shadow-xl">
+              <div>
+                <div className="text-xs font-bold text-amber-400 uppercase tracking-wider pb-3 border-b border-white/10">
+                  Tahmini Maliyet Özeti ({currentPkg.name})
+                </div>
+
+                <div className="space-y-2.5 text-xs pt-4">
+                  <div className="flex items-center justify-between text-zinc-400">
+                    <span>Fatura Bedeli (KDV Hariç):</span>
+                    <span className="text-white font-medium">{formatCurrency(currentPkg.price)}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-zinc-400">
+                    <span>+ %20 KDV Tutarı:</span>
+                    <span className="text-zinc-300">{formatCurrency(currentKdv)}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-zinc-400 pb-2 border-b border-white/5 font-semibold">
+                    <span className="text-zinc-300">Fatura Toplamı (KDV Dahil):</span>
+                    <span className="text-white">{formatCurrency(totalWithKdv)}</span>
+                  </div>
+                  {canOffsetKdv && (
+                    <div className="flex items-center justify-between text-emerald-400">
+                      <span>KDV Mahsubu İndirimi:</span>
+                      <span className="font-semibold">-{formatCurrency(currentKdv)}</span>
+                    </div>
+                  )}
+                  <div className="flex items-center justify-between text-amber-400">
+                    <span>Tahmini {companyType === 'ltd' ? 'KV' : 'GV'} Tasarrufu (%{effectiveTaxRate}):</span>
+                    <span className="font-semibold">-{formatCurrency(currentTaxSaving)}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Net Output Box */}
+              <div className="pt-4 border-t border-white/10 mt-4">
+                <div className="text-[11px] text-zinc-400 mb-0.5">
+                  Tahmini Fiili Net Maliyet:
+                </div>
+                <div className="text-3xl font-black text-white font-display">
+                  {formatCurrency(currentNetCost)}
+                </div>
+                <div className="text-[11px] text-zinc-400 mt-2 leading-relaxed">
+                  {canOffsetKdv 
+                    ? 'KDV mahsubu ve vergi matrah indirimi sonrası işletmenizin cebinden çıkan tahmini net tutardır.' 
+                    : 'Vergi matrah indirimi sonrası tahmini net maliyettir (KDV mahsup edilmediğinde).'}
+                </div>
               </div>
             </div>
 

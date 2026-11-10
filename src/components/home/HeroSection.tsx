@@ -5,7 +5,8 @@ import {
   ArrowRight, 
   ShieldCheck, 
   Clock, 
-  Zap
+  Zap,
+  Smartphone
 } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
@@ -18,12 +19,6 @@ export const HeroSection: React.FC = () => {
           
           {/* Left Column: Authoritative, Prestigious Positioning (8 Cols) */}
           <div className="lg:col-span-8 space-y-7 text-left">
-            {/* Value Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-semibold text-amber-400">
-              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-              <span>Satın Almadan Önce Kendi Sektörünüzün Canlı Demosunu Deneyimleyin</span>
-            </div>
-
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08]">
               İşletmenize özel web siteniz,{' '}
               <span className="text-amber-400 block mt-2">
@@ -158,7 +153,7 @@ export const HeroSection: React.FC = () => {
               {/* Floating Mobile Preview Device Chip */}
               <div className="absolute -bottom-5 -left-5 bg-[#141418] border border-white/20 rounded-2xl p-3 shadow-2xl flex items-center gap-3 backdrop-blur-xl animate-in fade-in slide-in-from-bottom-2">
                 <div className="w-8 h-8 rounded-xl bg-amber-400 text-black flex items-center justify-center font-bold text-xs">
-                  📱
+                  <Smartphone className="w-4 h-4 text-black" />
                 </div>
                 <div>
                   <div className="text-xs font-bold text-white">Mobil & Tablet Uyumlu</div>

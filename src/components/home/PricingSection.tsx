@@ -127,12 +127,6 @@ export const PricingSection: React.FC = () => {
     <section id="paketler" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Real-world Capacity / Queue Indicator */}
-        <div className="max-w-xl mx-auto mb-4 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-center flex items-center justify-center gap-2 text-[11px] text-emerald-400 font-medium">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-          <span>Canlı Kapasite: Kalite ve teslimat hızımızı korumak adına sınırlı sayıda proje alıyoruz. Sıradaki uygun başlangıç takvimi: <strong>2 iş günü sonrası</strong></span>
-        </div>
-
         {/* High-Trust Delivery Commitment Banner */}
         <div className="max-w-3xl mx-auto mb-10 p-3.5 rounded-xl bg-zinc-900/60 border border-white/10 text-center flex items-center justify-center gap-2.5 text-xs text-zinc-300">
           <Clock className="w-4 h-4 text-amber-400 shrink-0" />
@@ -280,7 +274,7 @@ export const PricingSection: React.FC = () => {
                   </div>
                 ) : isPro ? (
                   <div className="absolute text-center -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-amber-400 text-black text-[11px] font-black tracking-wide shadow-xl ring-2 ring-amber-300 select-none">
-                    ⭐ En Çok Tercih Edilen Paket
+                    En Çok Tercih Edilen Paket
                   </div>
                 ) : null}
 
@@ -548,23 +542,6 @@ export const PricingSection: React.FC = () => {
               <p className="text-xs text-slate-300 leading-relaxed pt-1">
                 10 sayfaya kadar Profesyonel paket web sitesi, 90–95+ hız ve ilk 3 yıl domain + hosting dahil.
               </p>
-            </div>
-          </div>
-
-          {/* Included vs Optional Clear Scope Badges */}
-          <div className="p-4 rounded-xl bg-black/40 border border-white/5 mb-8 flex flex-wrap items-center justify-between gap-4 text-xs">
-            <div className="flex flex-wrap items-center gap-3 text-slate-300">
-              <span className="font-bold text-white">Paket Kapsamı:</span>
-              <span className="text-emerald-400">✓ Web Sitesi</span>
-              <span className="text-emerald-400">✓ Logo &amp; Kimlik</span>
-              <span className="text-emerald-400">✓ Google Harita Kaydı</span>
-              <span className="text-emerald-400">✓ 3 Yıl Hosting &amp; SSL</span>
-            </div>
-            <div className="flex flex-wrap items-center gap-3 text-slate-400 text-[11px]">
-              <span>İsteğe Bağlı Ekler:</span>
-              <span>— Ek Dil Mimarisi</span>
-              <span>— Reklam Medya Bütçesi</span>
-              <span>— Özel Yazılım Modülü</span>
             </div>
           </div>
 
