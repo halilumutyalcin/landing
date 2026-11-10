@@ -70,11 +70,11 @@ export default function SectorsIndexPage() {
           {SECTORS_SEO_DATA.map((sector) => (
             <div
               key={sector.slug}
-              className="rounded-2xl bg-[#0A0A0C] hover:bg-[#121214] p-7 flex flex-col justify-between transition-all group hover:-translate-y-1 shadow-xl"
+              className="rounded-2xl bg-[#0A0A0C] border border-white/[0.08] hover:border-amber-400/30 p-7 flex flex-col justify-between transition-all group hover:-translate-y-1 shadow-xl"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                  <span className="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 text-[10px] font-bold uppercase tracking-wider border border-amber-500/20">
                     {sector.badge}
                   </span>
                   <span className="text-xs text-slate-400 font-medium">
@@ -94,7 +94,7 @@ export default function SectorsIndexPage() {
                 <div className="space-y-2 mb-6 pt-4 border-t border-white/5">
                   {sector.keyFeatures.slice(0, 3).map((feat, fIdx) => (
                     <div key={fIdx} className="flex items-start gap-2 text-xs text-slate-200">
-                      <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                      <Check className="w-3.5 h-3.5 text-zinc-400 shrink-0 mt-0.5" />
                       <span className="line-clamp-1">{feat}</span>
                     </div>
                   ))}
@@ -102,16 +102,16 @@ export default function SectorsIndexPage() {
               </div>
 
               <div className="pt-4 border-t border-white/5 flex items-center justify-between">
-                <span className="text-xs font-semibold text-emerald-400">
-                  3 Yıl Barındırma Dahil
+                <span className="text-xs font-semibold text-amber-400">
+                  İlk 3 Yıl Hosting Dahil
                 </span>
 
                 <Link
                   href={`/sektorler/${sector.slug}`}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold text-xs font-bold transition-colors"
+                  className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-xs shadow-md transition-all"
                 >
                   <span>Çözümü İncele</span>
-                  <ArrowRight className="w-3 h-3" />
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </div>

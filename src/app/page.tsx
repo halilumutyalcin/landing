@@ -11,7 +11,6 @@ import { WhyUsUnifiedSection } from '@/components/home/WhyUsUnifiedSection';
 import { ExtraServicesSection } from '@/components/home/ExtraServicesSection';
 import { FaqSection } from '@/components/home/FaqSection';
 import { ContactSection } from '@/components/home/ContactSection';
-import { AmbientDustCanvas } from '@/components/ui/AmbientDustCanvas';
 import { MobileBottomBar } from '@/components/layout/MobileBottomBar';
 import { Calculator } from 'lucide-react';
 
@@ -26,9 +25,6 @@ export default function HomePage() {
 
   return (
     <div className="relative">
-      {/* Ambient Interactive Dust & Glow Canvas Layer */}
-      <AmbientDustCanvas />
-
       {/* 1. HERO: Sektörünüze Özel Mimari, 3-10 İş Gününde Lansman, İlk 3 Yıl Hosting Dahil */}
       <HeroSection />
 

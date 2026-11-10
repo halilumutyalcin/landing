@@ -7,6 +7,7 @@ import { siteConfig } from '@/config/site.config';
 import { getBaseUrl } from '@/lib/utils';
 
 import { JsonLd } from '@/components/seo/JsonLd';
+import { AmbientDustCanvas } from '@/components/ui/AmbientDustCanvas';
 
 const baseUrl = getBaseUrl();
 
@@ -99,7 +100,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen bg-black text-[#F8FAFC] antialiased selection:bg-brand-500 selection:text-white">
+      <body className="min-h-screen bg-black text-[#F8FAFC] antialiased selection:bg-amber-400 selection:text-black relative">
+        <AmbientDustCanvas />
         <JsonLd />
         <Navbar />
         <main className="min-h-screen">

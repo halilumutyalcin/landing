@@ -83,11 +83,11 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
 
           <div className="flex items-center gap-3">
             {/* Viewport Switcher */}
-            <div className="flex items-center bg-[#111827] p-1 rounded-xl border border-white/10">
+            <div className="flex items-center bg-black/60 p-1 rounded-xl border border-white/[0.08]">
               <button
                 onClick={() => setDevice('desktop')}
                 className={`p-2 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1 ${
-                  device === 'desktop' ? 'bg-brand-600 text-white shadow' : 'text-slate-400 hover:text-white'
+                  device === 'desktop' ? 'bg-white text-black font-bold shadow' : 'text-slate-400 hover:text-white'
                 }`}
                 title="Masaüstü Görünüm"
               >
@@ -97,7 +97,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
               <button
                 onClick={() => setDevice('mobile')}
                 className={`p-2 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1 ${
-                  device === 'mobile' ? 'bg-brand-600 text-white shadow' : 'text-slate-400 hover:text-white'
+                  device === 'mobile' ? 'bg-amber-400 text-black font-bold shadow' : 'text-slate-400 hover:text-white'
                 }`}
                 title="Mobil Görünüm"
               >
@@ -155,19 +155,19 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
           {/* Sol Kolon: Hedef Kitle & Vurgular */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="bg-[#111827] border border-card-border rounded-3xl p-7 shadow-xl">
+            <div className="bg-[#0A0A0C] border border-white/[0.08] rounded-3xl p-7 shadow-2xl">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
+                <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
                   <Target className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white font-display">
                     Bu Tasarım Kimler İçin?
                   </h3>
-                  <p className="text-xs text-slate-400">Sektörel Uygunluk & Hedef Kitle</p>
+                  <p className="text-xs text-zinc-400">Sektörel Uygunluk & Hedef Kitle</p>
                 </div>
               </div>
-              <p className="text-sm text-slate-300 leading-relaxed bg-white/5 p-4 rounded-2xl border border-white/5">
+              <p className="text-sm text-zinc-300 leading-relaxed bg-white/[0.02] p-4 rounded-2xl border border-white/5">
                 {demo.targetAudience}
               </p>
 
@@ -175,10 +175,10 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
               <div className="grid grid-cols-3 gap-3 mt-6 pt-6 border-t border-white/10">
                 {demo.highlights.stats.map((st, idx) => (
                   <div key={idx} className="text-center p-3 rounded-xl bg-black border border-white/5">
-                    <div className="text-base sm:text-lg font-black text-brand-400 font-display">
+                    <div className="text-base sm:text-lg font-black text-amber-400 font-display">
                       {st.value}
                     </div>
-                    <div className="text-[10px] text-slate-400 font-medium mt-0.5">
+                    <div className="text-[10px] text-zinc-400 font-medium mt-0.5">
                       {st.label}
                     </div>
                   </div>
@@ -189,22 +189,22 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
 
           {/* Sağ Kolon: Öne Çıkan Özellikler */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="bg-[#111827] border border-card-border rounded-3xl p-7 shadow-xl">
+            <div className="bg-[#0A0A0C] border border-white/[0.08] rounded-3xl p-7 shadow-2xl">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
                   <FileCheck className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white font-display">
                     Tasarımın Öne Çıkan Özellikleri
                   </h3>
-                  <p className="text-xs text-slate-400">Sektöre Özel Entegre Fonksiyonlar</p>
+                  <p className="text-xs text-zinc-400">Sektöre Özel Entegre Fonksiyonlar</p>
                 </div>
               </div>
 
               <div className="space-y-3">
                 {demo.keyFeatures.map((feat, idx) => (
-                  <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/5 text-xs sm:text-sm text-slate-200">
+                  <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs sm:text-sm text-zinc-200">
                     <Check className="w-4 h-4 text-zinc-400 shrink-0 mt-0.5" />
                     <span>{feat}</span>
                   </div>
@@ -215,17 +215,17 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
         </div>
 
         {/* 5. "PAKETLERE GÖRE SAYFA YAPISI" (INTERACTIVE BREAKDOWN) */}
-        <div className="bg-[#111827] border border-brand-500/30 rounded-3xl p-6 sm:p-10 shadow-2xl mb-16">
+        <div className="bg-[#0A0A0C] border border-amber-500/25 rounded-3xl p-6 sm:p-10 shadow-2xl mb-16">
           <div className="text-center max-w-3xl mx-auto mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 text-brand-300 text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold uppercase tracking-wider mb-2">
               <Layers className="w-3.5 h-3.5" />
               <span>Tasarım ≠ Paket Modeli</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display">
               Bu Tasarım Paketlere Göre Nasıl Uyarlanır?
             </h3>
-            <p className="text-xs sm:text-sm text-slate-400 mt-1">
-              Aşağıdaki paketlerden birini seçtiğinizde "{demo.name}" tasarımı seçtiğiniz mimariye göre inşa edilir.
+            <p className="text-xs sm:text-sm text-zinc-400 mt-1">
+              Aşağıdaki paketlerden birini seçtiğinizde "{demo.name}" mimarisi kurumsal kimliğinize uyarlanır.
             </p>
           </div>
 
@@ -275,10 +275,10 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
           </div>
 
           {/* Active Package Breakdown Details */}
-          <div className="bg-black border border-white/10 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
+          <div className="bg-black/60 border border-white/10 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
               <div>
-                <span className="text-xs font-bold text-brand-400 uppercase tracking-wider">
+                <span className="text-xs font-bold text-amber-400 uppercase tracking-wider">
                   {selectedPkgConfig?.name} Paket Kapsamında Sayfa Akışı
                 </span>
                 <h4 className="text-xl font-bold text-white mt-1">
@@ -298,7 +298,7 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                 {getBreakdownPages().map((pageName, idx) => (
                   <div key={idx} className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/5 text-xs text-slate-200">
-                    <span className="w-5 h-5 rounded-md bg-brand-500/20 text-brand-300 font-mono text-[10px] font-bold flex items-center justify-center shrink-0">
+                    <span className="w-5 h-5 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20 text-[10px] font-bold flex items-center justify-center shrink-0">
                       {idx + 1}
                     </span>
                     <span className="font-medium">{pageName}</span>
@@ -342,8 +342,8 @@ export const DemoDetailClient: React.FC<DemoDetailClientProps> = ({ demo }) => {
                 </p>
               </div>
               <Link
-                href={`/tasarimlar?sector=${demo.sectorId}`}
-                className="text-xs font-semibold text-brand-400 hover:underline flex items-center gap-1"
+                href="/#tasarimlar"
+                className="text-xs font-semibold text-amber-400 hover:text-white flex items-center gap-1"
               >
                 <span>Tümünü Gör</span>
                 <ChevronRight className="w-4 h-4" />

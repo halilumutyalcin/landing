@@ -83,13 +83,13 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
             </p>
 
             {/* Key Stats Bar */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-6 p-4 rounded-2xl bg-black/40 mb-8 max-w-xl">
+            <div className="grid grid-cols-3 gap-3 sm:gap-6 p-4 sm:p-5 rounded-2xl bg-black/60 border border-white/[0.08] mb-8 max-w-xl shadow-lg">
               {sector.stats.map((stat, idx) => (
                 <div key={idx} className="text-center sm:text-left">
-                  <div className="text-xl sm:text-2xl font-black text-amber-400 font-mono">
+                  <div className="text-lg sm:text-2xl font-black text-amber-400 font-display tracking-tight leading-none mb-1">
                     {stat.value}
                   </div>
-                  <div className="text-[11px] text-slate-400 font-medium mt-0.5">
+                  <div className="text-[11px] sm:text-xs text-zinc-400 font-medium">
                     {stat.label}
                   </div>
                 </div>
@@ -138,13 +138,13 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
           {sector.sectorSpecificNeeds.map((need, idx) => (
             <div 
               key={idx} 
-              className="p-6 sm:p-7 rounded-2xl bg-[#0A0A0C] hover:bg-[#121214] transition-all space-y-2"
+              className="p-6 sm:p-7 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] hover:border-amber-400/30 transition-all space-y-2 shadow-lg group"
             >
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs shrink-0 group-hover:scale-105 transition-transform">
                   0{idx + 1}
                 </div>
-                <h3 className="text-base sm:text-lg font-bold text-white">
+                <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
                   {need.title}
                 </h3>
               </div>
@@ -185,7 +185,7 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
             {relatedDemos.map((demo) => (
               <div
                 key={demo.id}
-                className="rounded-2xl bg-[#0A0A0C] overflow-hidden flex flex-col justify-between transition-all group hover:-translate-y-1"
+                className="rounded-2xl bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20 overflow-hidden flex flex-col justify-between transition-all group hover:-translate-y-1 shadow-xl"
               >
                 <div>
                   <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
@@ -231,15 +231,14 @@ export const SectorDetailClient: React.FC<SectorDetailClientProps> = ({ sector }
                   <Link
                     href={`/preview/${demo.slug}`}
                     target="_blank"
-                    className="py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-bold flex items-center justify-center gap-1.5 transition-colors"
+                    className="py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-black text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-md"
                   >
-                    <span>Canlı İncele</span>
-                    <ExternalLink className="w-3 h-3 text-slate-400" />
+                    <span>Canlı İncele ↗</span>
                   </Link>
 
                   <Link
                     href={`/tasarimlar/${demo.slug}`}
-                    className="py-2.5 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold text-xs font-bold flex items-center justify-center gap-1.5 transition-colors"
+                    className="py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/10 text-zinc-300 border border-white/[0.08] text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors"
                   >
                     <span>Detaylar</span>
                     <ArrowRight className="w-3 h-3" />
