@@ -3,18 +3,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
-  Sparkles, 
   ShieldCheck, 
-  Zap, 
-  Clock, 
   Mail, 
   Phone, 
   MapPin, 
-  MessageSquare, 
   ArrowUpRight 
 } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
-import { SECTORS } from '@/config/demos.config';
 import { generateWhatsAppUrl } from '@/lib/utils';
 import { LegalModal } from './LegalModal';
 
@@ -49,7 +44,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3">
@@ -65,61 +60,21 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex flex-col gap-2 pt-2 text-xs text-slate-300">
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-brand-400 shrink-0" />
+                <MapPin className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>{siteConfig.address}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-brand-400 shrink-0" />
+                <Mail className="w-4 h-4 text-amber-400 shrink-0" />
                 <a href={`mailto:${siteConfig.email}`} className="hover:text-white transition-colors">{siteConfig.email}</a>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-brand-400 shrink-0" />
+                <Phone className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>{siteConfig.phoneDisplay}</span>
               </div>
               <div className="pt-2 border-t border-white/5 text-[11px] text-slate-400 space-y-0.5">
                 <div><span className="text-slate-300 font-semibold">Hizmet Sağlayıcı:</span> {siteConfig.legalEntity.title}, {siteConfig.legalEntity.businessType} · {siteConfig.legalEntity.taxOffice} · {siteConfig.legalEntity.taxNumber}</div>
               </div>
             </div>
-          </div>
-
-          {/* Sektörel Çözümler (SEO & Vitrin) */}
-          <div>
-            <h5 className="text-sm font-bold text-white uppercase tracking-wider mb-4 font-display">
-              Sektörel Çözümler
-            </h5>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li>
-                <Link href="/sektorler/dis-klinigi-web-sitesi" className="hover:text-white transition-colors">
-                  Diş Kliniği Web Sitesi
-                </Link>
-              </li>
-              <li>
-                <Link href="/sektorler/hukuk-burosu-web-sitesi" className="hover:text-white transition-colors">
-                  Hukuk Bürosu Web Sitesi
-                </Link>
-              </li>
-              <li>
-                <Link href="/sektorler/mimarlik-web-sitesi" className="hover:text-white transition-colors">
-                  Mimarlık Ofisi Web Sitesi
-                </Link>
-              </li>
-              <li>
-                <Link href="/sektorler/sanayi-imalat-web-sitesi" className="hover:text-white transition-colors">
-                  Sanayi & İmalatçı Web Sitesi
-                </Link>
-              </li>
-              <li>
-                <Link href="/sektorler/mali-musavir-web-sitesi" className="hover:text-white transition-colors">
-                  Mali Müşavir & YMM Sitesi
-                </Link>
-              </li>
-              <li>
-                <Link href="/sektorler" className="text-amber-400 font-semibold hover:text-zinc-300 transition-colors flex items-center gap-1 pt-1">
-                  <span>Tüm Sektörel Paketler</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </Link>
-              </li>
-            </ul>
           </div>
 
           {/* Paketler & Hizmetler */}

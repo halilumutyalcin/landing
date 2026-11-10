@@ -341,13 +341,13 @@ export const ContactSection: React.FC = () => {
                     type="checkbox"
                     id="kvkk-consent"
                     required
-                    className="mt-0.5 rounded bg-zinc-900 border-white/20 text-amber-500 focus:ring-amber-400"
+                    className="mt-0.5 w-4 h-4 rounded bg-zinc-900 border-white/20 text-amber-400 accent-amber-400 focus:ring-amber-400 cursor-pointer"
                   />
-                  <label htmlFor="kvkk-consent" className="text-[11px] text-slate-400 leading-snug">
+                  <label htmlFor="kvkk-consent" className="text-[11px] text-slate-400 leading-snug select-none cursor-pointer">
                     <button
                       type="button"
                       onClick={() => setIsKvkkModalOpen(true)}
-                      className="text-amber-400 hover:text-amber-300 underline font-medium inline"
+                      className="text-amber-400 hover:text-amber-300 underline font-medium inline mr-1"
                     >
                       KVKK Aydınlatma Metni
                     </button>
