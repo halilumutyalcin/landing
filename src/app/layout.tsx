@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { FloatingWhatsApp } from '@/components/layout/FloatingWhatsApp';
 import { siteConfig } from '@/config/site.config';
 import { getBaseUrl } from '@/lib/utils';
 
@@ -108,7 +107,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <FloatingWhatsApp />
       </body>
     </html>
   );

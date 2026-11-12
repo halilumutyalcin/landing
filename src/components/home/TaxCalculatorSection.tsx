@@ -7,7 +7,6 @@ import {
   Receipt,
   Hourglass,
   ArrowRight,
-  Info,
   AlertCircle
 } from 'lucide-react';
 import { formatCurrency } from '@/lib/utils';
@@ -72,10 +71,6 @@ export const TaxCalculatorSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-xs font-semibold text-amber-400 mb-3">
-            <Info className="w-3.5 h-3.5" />
-            <span>Varsayımsal Vergi Simülasyonu</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
             Şirketler İçin Tahmini Net Maliyet Hesabı
           </h2>

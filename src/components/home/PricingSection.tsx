@@ -222,8 +222,8 @@ export const PricingSection: React.FC = () => {
                 </p>
               </div>
             </div>
-            <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-amber-400/10 text-amber-300 border border-amber-400/20 self-start sm:self-auto">
-              Alan Adı Baştan Adınızadır
+            <span className="text-xs text-amber-400 font-medium self-start sm:self-auto">
+              Alan adı baştan adınızadır
             </span>
           </div>
 
@@ -507,20 +507,15 @@ export const PricingSection: React.FC = () => {
         </div>
 
         {/* Payment & Installment Assurance (Under Packages) */}
-        <div className="max-w-2xl mx-auto -mt-4 mb-14 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0A0A0C] border border-white/[0.08] text-xs text-zinc-300 shadow-lg">
-            <CreditCard className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-            <span>Tüm Kurumsal ve Şahıs Kartlarına <strong>3–6 Taksit İmkanı</strong> (PayTR Güvencesiyle)</span>
-          </div>
+        <div className="max-w-2xl mx-auto -mt-4 mb-14 text-center flex items-center justify-center gap-2 text-xs text-zinc-400">
+          <CreditCard className="w-4 h-4 text-amber-400 shrink-0" />
+          <span>Tüm Kurumsal ve Şahıs Kartlarına <strong>3–6 Taksit İmkanı</strong> (PayTR Güvencesiyle)</span>
         </div>
 
         {/* 360° Dijital Lansman Paketi - High-Ticket All-in-One Solution for New & Rebranding Companies */}
         <div className="mb-14 rounded-3xl bg-[#0A0A0C] border border-amber-500/30 p-7 sm:p-10 shadow-2xl relative overflow-hidden">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8 pb-8 border-b border-white/10">
             <div className="max-w-2xl">
-              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
-                <span>Tek Elden Çözüm · Sıfırdan Zirveye</span>
-              </div>
               <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                 360° Dijital Lansman Paketi
               </h3>
@@ -748,7 +743,7 @@ export const PricingSection: React.FC = () => {
                 İşletmenizin haklarını koruyan, sözleşmeyle güvence altına alınmış net şartlar.
               </p>
             </div>
-            <span className="text-[11px] font-semibold text-amber-400 bg-amber-500/10 px-3 py-1 rounded-lg border border-amber-500/30 self-start sm:self-auto">
+            <span className="text-xs font-semibold text-amber-400 self-start sm:self-auto">
               ✓ Sözleşmeli Güvence
             </span>
           </div>

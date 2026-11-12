@@ -224,8 +224,9 @@ export const ContactSection: React.FC = () => {
                       İhtiyaçlarınızı iletin, aynı gün içinde size özel teklif ve içerik onayından itibaren başlayan net kurulum takvimini iletelim.
                     </p>
                   </div>
-                  <span className="text-[11px] text-emerald-400 font-medium shrink-0 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20 self-start sm:self-auto">
-                    Ortalama 30 dk içinde geri dönüş
+                  <span className="text-xs text-zinc-400 font-medium shrink-0 self-start sm:self-auto flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    <span>Ortalama 30 dk içinde geri dönüş</span>
                   </span>
                 </div>
 
