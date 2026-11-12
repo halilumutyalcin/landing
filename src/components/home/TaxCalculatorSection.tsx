@@ -6,8 +6,7 @@ import {
   UserCheck,
   Receipt,
   Hourglass,
-  ArrowRight,
-  AlertCircle
+  ArrowRight
 } from 'lucide-react';
 import { formatCurrency } from '@/lib/utils';
 
@@ -325,23 +324,6 @@ export const TaxCalculatorSection: React.FC = () => {
             </div>
 
           </div>
-        </div>
-
-        {/* Explicit Professional Assumptions Footnote */}
-        <div className="max-w-4xl mx-auto p-4 rounded-2xl bg-white/[0.02] border border-white/5 text-[11px] text-zinc-400 leading-relaxed space-y-1">
-          <div className="flex items-center gap-1.5 text-zinc-300 font-semibold mb-1">
-            <AlertCircle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-            <span>Vergisel Varsayımlar ve Resmî Hatırlatma:</span>
-          </div>
-          <p>
-            • Hesaplama, şirketin ilgili dönemde yeterli vergi matrahı (kârı) bulunduğu ve ödenecek KDV/vergi çıktığı varsayımına dayanır.
-          </p>
-          <p>
-            • Faturanın doğrudan pazarlama gideri mi yoksa 267 Diğer Maddi Olmayan Duran Varlıklar altında amortisman yoluyla mı muhasebeleştirileceği şirketinizin mali müşaviri tarafından takdir edilir.
-          </p>
-          <p>
-            • Bu simülatördeki tutarlar bağlayıcı bir fiyat teklifi veya kesin vergi garantisi değildir; genel muhasebe ilkelerine dayalı tahmini projeksiyondur.
-          </p>
         </div>
 
       </div>

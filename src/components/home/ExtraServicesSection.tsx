@@ -201,10 +201,8 @@ export const ExtraServicesSection: React.FC = () => {
                 }`}
               >
                 <div>
-                  <div className="flex items-center gap-3.5 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                      <Icon className="w-5 h-5 text-amber-400" />
-                    </div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <Icon className="w-5 h-5 text-amber-400 shrink-0 group-hover:scale-110 transition-transform" />
                     <h3 className="text-sm sm:text-base font-bold text-white leading-snug">
                       {srv.title}
                     </h3>
@@ -215,10 +213,18 @@ export const ExtraServicesSection: React.FC = () => {
                 </div>
 
                 <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs">
-                  <span className="text-[11px] text-zinc-400">Yatırım:</span>
-                  <span className="font-semibold text-amber-400 text-xs">
-                    {srv.pricing}
-                  </span>
+                  {srv.id !== 'source-code' ? (
+                    <>
+                      <span className="text-[11px] text-zinc-400">Yatırım:</span>
+                      <span className="font-semibold text-amber-400 text-xs">
+                        {srv.pricing}
+                      </span>
+                    </>
+                  ) : (
+                    <span className="font-semibold text-amber-400 text-xs w-full">
+                      {srv.pricing}
+                    </span>
+                  )}
                 </div>
               </div>
             );

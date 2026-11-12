@@ -556,7 +556,7 @@ export const PricingSection: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-2 font-bold">
                     <span className="text-slate-300">360° Paket Avantajı:</span>
-                    <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-mono text-[11px]">
+                    <span className="text-emerald-400 font-mono text-xs">
                       9.500 ₺ Tasarruf
                     </span>
                   </div>
