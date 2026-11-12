@@ -208,16 +208,73 @@ export const PricingSection: React.FC = () => {
           </div>
         </div>
 
-        {/* 13th-Month Ownership Guarantee Callout for WaaS */}
-        <div className={`max-w-4xl mx-auto mb-10 p-5 rounded-2xl bg-[#0A0A0C] border border-amber-500/30 flex items-start gap-4 text-xs text-zinc-300 shadow-2xl ${billingMode === 'waas' ? 'block' : 'hidden print:block'}`}>
-          <ShieldCheck className="w-6 h-6 text-amber-400 shrink-0 mt-0.5" />
-          <div className="space-y-1.5">
-            <strong className="text-white block font-bold text-sm">
-              13. Ay Güvencesi: Alan Adı İlk Günden Sizindir, Zorunlu Aylık Ödeme Biter
-            </strong>
-            <p className="text-zinc-300 leading-relaxed">
-              Alan adınız (.com / .com.tr) ilk günden itibaren doğrudan sizin veya şirketinizin adına tescil edilir; asla rehin veya kilit altında tutulmaz. 12 aylık taksit taahhüdü tamamlandığında zorunlu aylık ödeme kesilir. Web siteniz bulut altyapımızda 3 yıllık barındırma süresi boyunca ek sunucu veya SSL ücreti çıkmadan kesintisiz yayında kalmaya devam eder. 13. aydan itibaren aylık teknik bakımı sonlandırabilir veya isteğe bağlı (2.500 ₺/ay) olarak sürdürebilirsiniz. 12 aydan önce erken çıkış talep edilirse yalnızca kalan taksit borcu kapatılır. Sitenizi bağımsız başka bir sunucuya taşımak isterseniz kaynak kod devir modülü (+%75 lisans devir bedeli) uygulanır.
-            </p>
+        {/* 12. Ay Sonunda Ne Değişiyor? / Şeffaf Hizmet Takvimi (WaaS Modunda) */}
+        <div className={`max-w-5xl mx-auto mb-10 p-6 sm:p-8 rounded-3xl bg-[#0A0A0C] border border-amber-500/30 shadow-2xl ${billingMode === 'waas' ? 'block animate-in fade-in duration-300' : 'hidden print:block'}`}>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 mb-5 border-b border-white/10">
+            <div className="flex items-center gap-3">
+              <ShieldCheck className="w-6 h-6 text-amber-400 shrink-0" />
+              <div>
+                <h4 className="text-base sm:text-lg font-bold text-white font-display">
+                  12. Ay Sonunda Ne Değişiyor? Şeffaf Zaman Çizelgesi
+                </h4>
+                <p className="text-xs text-zinc-400">
+                  Taksitli abonelik modelimizde hiçbir sürpriz ek masraf veya zorunlu kilit kuralı yoktur.
+                </p>
+              </div>
+            </div>
+            <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-amber-400/10 text-amber-300 border border-amber-400/20 self-start sm:self-auto">
+              Alan Adı Baştan Adınızadır
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+            {/* 1. Ödeme Planı Tamamlanır */}
+            <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+              <div className="flex items-center gap-2 text-amber-400 font-bold">
+                <span className="w-5 h-5 rounded-full bg-amber-400/20 flex items-center justify-center text-xs">1</span>
+                <span>12. Ay: Ödeme Biter</span>
+              </div>
+              <strong className="text-white block text-xs">Ödeme Planı Tamamlanır</strong>
+              <p className="text-slate-400 leading-relaxed text-[11px]">
+                Seçilen paketin 12 aylık taksitleri sona erer; zorunlu aylık ödeme tamamen kesilir.
+              </p>
+            </div>
+
+            {/* 2. Hosting & Domain Devam Eder */}
+            <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+              <div className="flex items-center gap-2 text-emerald-400 font-bold">
+                <span className="w-5 h-5 rounded-full bg-emerald-400/20 flex items-center justify-center text-xs">2</span>
+                <span>1–3. Yıl: 0 ₺ Masraf</span>
+              </div>
+              <strong className="text-white block text-xs">Hosting Kesintisiz Sürer</strong>
+              <p className="text-slate-400 leading-relaxed text-[11px]">
+                İlk 3 yıl boyunca yüksek hızlı bulut barındırma, SSL ve alan adı fiyata dahil olmaya devam eder.
+              </p>
+            </div>
+
+            {/* 3. Bakım Tercihe Bağlı Olur */}
+            <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+              <div className="flex items-center gap-2 text-amber-400 font-bold">
+                <span className="w-5 h-5 rounded-full bg-amber-400/20 flex items-center justify-center text-xs">3</span>
+                <span>13. Aydan İtibaren</span>
+              </div>
+              <strong className="text-white block text-xs">Bakım Tercihe Bağlıdır</strong>
+              <p className="text-slate-400 leading-relaxed text-[11px]">
+                İsteğe bağlı aylık teknik bakım (2.500 ₺/ay) alınabilir veya sonlandırılabilir; site yayında kalır.
+              </p>
+            </div>
+
+            {/* 4. 4. Yıldan İtibaren */}
+            <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+              <div className="flex items-center gap-2 text-zinc-300 font-bold">
+                <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-xs">4</span>
+                <span>4. Yıldan İtibaren</span>
+              </div>
+              <strong className="text-white block text-xs">Altyapı Yenileme</strong>
+              <p className="text-slate-400 leading-relaxed text-[11px]">
+                3 yıl dolduğunda sadece resmî maliyetine alan adı ve bulut barındırma yenileme tarifesi başlar.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -472,28 +529,68 @@ export const PricingSection: React.FC = () => {
                 Tüm kurumsal dijital varlığınızı tek elden, tek muhatapla ve 7–10 iş gününde anahtar teslim kuruyoruz.
               </p>
 
-              {/* Explicit Value Math / Delta Breakdown */}
-              <div className="mt-4 p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300">
-                <strong className="text-white block mb-0.5">Profesyonel Paketten (32.500 ₺) Farkı Nedir?</strong>
-                <span>
-                  Ayrı alındığında 49.000 ₺ tutan; Profesyonel Web Sitesi + Vektörel Logo Tasarımı (9.500 ₺) + Kurumsal Kimlik &amp; Kartvizit (3.500 ₺) + Google Harita &amp; Yerel SEO (3.500 ₺) tek pakette birleşir. <strong>Sadece +7.000 ₺ farkla tüm kurumsal kimliğiniz tek elden kurulur.</strong>
-                </span>
+              {/* Explicit Itemized Value Breakdown */}
+              <div className="mt-5 p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs">
+                <div className="flex items-center justify-between font-bold text-white mb-2.5 pb-2 border-b border-amber-500/20">
+                  <span className="text-amber-300">Ayrı Ayrı Alındığında Hizmet Değeri:</span>
+                  <span className="text-zinc-400">Tekil Fiyat</span>
+                </div>
+                <div className="space-y-1.5 text-slate-300">
+                  <div className="flex justify-between">
+                    <span>• Profesyonel Web Sitesi (10 Sayfaya Kadar):</span>
+                    <span className="font-mono text-zinc-200">32.500 ₺</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>• Vektörel Logo Tasarımı &amp; Renk Paleti:</span>
+                    <span className="font-mono text-zinc-200">9.500 ₺</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>• Kurumsal Kimlik &amp; Kartvizit / Antetli:</span>
+                    <span className="font-mono text-zinc-200">3.500 ₺</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>• Google Haritalar &amp; Yerel SEO Doğrulaması:</span>
+                    <span className="font-mono text-zinc-200">3.500 ₺</span>
+                  </div>
+                </div>
+
+                <div className="mt-3 pt-3 border-t border-amber-500/20 flex flex-wrap items-center justify-between gap-3 text-xs">
+                  <div className="flex items-center gap-2">
+                    <span className="text-slate-400">Ayrı Ayrı Toplamı:</span>
+                    <span className="line-through text-rose-400 font-bold font-mono">49.000 ₺</span>
+                  </div>
+                  <div className="flex items-center gap-2 font-bold">
+                    <span className="text-slate-300">360° Paket Avantajı:</span>
+                    <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-mono text-[11px]">
+                      9.500 ₺ Tasarruf
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-black/40 lg:min-w-[280px] shrink-0">
-              <div className="flex items-baseline gap-2">
-                <span className="text-3xl sm:text-4xl font-black text-white">
-                  39.500 ₺
-                </span>
-                <span className="text-xs text-slate-400 font-medium">+ KDV (Tek Seferlik)</span>
+            <div className="p-6 rounded-2xl bg-black/60 border border-amber-400/30 lg:min-w-[300px] shrink-0 flex flex-col justify-between shadow-2xl">
+              <div>
+                <div className="text-xs text-zinc-400 line-through font-mono">
+                  49.000 ₺ Ayrı Ayrı Toplamı
+                </div>
+                <div className="flex items-baseline gap-2 mt-1">
+                  <span className="text-3xl sm:text-4xl font-black text-amber-400 font-display">
+                    39.500 ₺
+                  </span>
+                  <span className="text-xs text-slate-400 font-medium">+ KDV (Tek Sefer)</span>
+                </div>
+                <div className="text-[11px] text-zinc-300 mt-2 font-semibold flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>İlk 3 Yıl Domain + Hosting Dahil</span>
+                </div>
+                <div className="text-[11px] text-emerald-400 mt-1 font-semibold">
+                  ✓ Profesyonel Pakete (+7.000 ₺) Farkla Hepsi Dahil
+                </div>
               </div>
-              <div className="text-[11px] text-amber-400 mt-1 font-semibold flex items-center gap-1.5">
-                <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
-                <span>İlk 3 Yıl Domain + Hosting Dahil</span>
-              </div>
-              <div className="text-[10px] text-emerald-400 mt-2 font-mono">
-                ✓ 9.500 ₺ Paket İndirimi Dahil
+
+              <div className="mt-4 pt-3 border-t border-white/10 text-[11px] text-zinc-400 leading-snug">
+                Logoyu ayrı, web sitesini ayrı kişiye yaptırma karmaşasına son: Tek muhatapla anahtar teslim lansman.
               </div>
             </div>
           </div>

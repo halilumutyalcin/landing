@@ -114,7 +114,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              Formu doldurabilir veya doğrudan WhatsApp üzerinden beğendiğiniz tasarımı iletebilirsiniz. Ekibimiz aynı gün içinde içerik planınızı çıkarır ve kuruluma başlar.
+              Formu doldurabilir veya doğrudan WhatsApp üzerinden beğendiğiniz tasarımı iletebilirsiniz. Ekibimiz aynı gün içinde başvurunuzu inceler ve ön hazırlığı başlatır; taahhüt edilen 3–10 iş günü teslimat süreci ise logo ve içerik onayınızın tamamlanmasıyla resmi olarak başlar.
             </p>
 
             {/* Clean Editorial Contact Details - Pure naked icons, no boxed cards */}
@@ -221,7 +221,7 @@ export const ContactSection: React.FC = () => {
                       Projenizi Birlikte Başlatalım
                     </h3>
                     <p className="text-xs text-zinc-400 mt-0.5">
-                      İhtiyaçlarınızı iletin, aynı gün içinde size özel teklif ve kurulum takvimi hazırlayalım.
+                      İhtiyaçlarınızı iletin, aynı gün içinde size özel teklif ve içerik onayından itibaren başlayan net kurulum takvimini iletelim.
                     </p>
                   </div>
                   <span className="text-[11px] text-emerald-400 font-medium shrink-0 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20 self-start sm:self-auto">

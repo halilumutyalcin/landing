@@ -14,11 +14,11 @@ export const HeroSection: React.FC = () => {
     <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Asymmetrical Layout with Clean, Empty Right Side as requested */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        {/* Asymmetrical Layout with Clean, Balanced Proportions */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left Column: Authoritative, Prestigious Positioning (8 Cols) */}
-          <div className="lg:col-span-8 space-y-7 text-left">
+          {/* Left Column: Authoritative, Prestigious Positioning (7 Cols) */}
+          <div className="lg:col-span-7 space-y-8 text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08]">
               İşletmenize özel web siteniz,{' '}
               <span className="text-amber-400 block mt-2">
@@ -79,8 +79,8 @@ export const HeroSection: React.FC = () => {
 
           </div>
 
-          {/* Right Column: High-Impact Realistic Browser & Device Mockup */}
-          <div className="hidden lg:block lg:col-span-4">
+          {/* Right Column: High-Impact Realistic Browser & Device Mockup (5 Cols - Larger & Bolder) */}
+          <div className="hidden lg:block lg:col-span-5">
             <div className="relative group">
               {/* Outer Glow Halo */}
               <div className="absolute -inset-1.5 bg-gradient-to-r from-amber-500/20 via-blue-500/10 to-amber-500/20 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
@@ -104,9 +104,9 @@ export const HeroSection: React.FC = () => {
                 </div>
 
                 {/* Preview Image with Realistic Website UI */}
-                <div className="relative aspect-[4/3] bg-zinc-950 overflow-hidden">
+                <div className="relative aspect-[16/11] bg-zinc-950 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1000&q=80"
+                    src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80"
                     alt="MedWeb Canlı Hukuk & Danışmanlık Web Sitesi Mimarisi"
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
@@ -118,7 +118,7 @@ export const HeroSection: React.FC = () => {
                       Lexora · Hukuk Mimarisi
                     </span>
                     <span className="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-emerald-500/90 text-black shadow">
-                      Lighthouse 95+
+                      Lighthouse 95+ (Statik)
                     </span>
                   </div>
 
@@ -156,8 +156,8 @@ export const HeroSection: React.FC = () => {
                   <Smartphone className="w-4 h-4 text-black" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-white">Mobil & Tablet Uyumlu</div>
-                  <div className="text-[10px] text-emerald-400 font-medium">0.8s Ultra Hızlı Açılış</div>
+                  <div className="text-xs font-bold text-white">Mobil &amp; Tablet Uyumlu</div>
+                  <div className="text-[10px] text-emerald-400 font-medium">Statik Mimari · Anlık Açılış</div>
                 </div>
               </div>
 

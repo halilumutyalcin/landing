@@ -43,8 +43,8 @@ export const DemoGrid: React.FC<DemoGridProps> = ({ initialSector = 'all' }) => 
         
         {/* Section Header - Clean & Direct */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="text-sm font-semibold text-amber-400 mb-2">
-            Görerek Karar Verin
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-xs font-semibold text-amber-400 mb-3">
+            <span>6 Ana Sektör · 16 Canlı Mimari Yayında</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
             Sektörel Canlı Vitrin Mimarileri
@@ -76,24 +76,29 @@ export const DemoGrid: React.FC<DemoGridProps> = ({ initialSector = 'all' }) => 
           ))}
         </div>
 
-        {/* Expand / Show More Demos Button for 'all' */}
+        {/* Expand / Show More Demos Banner for 'all' */}
         {activeSector === 'all' && filteredDemos.length > 6 && (
-          <div className="mt-12 flex items-center justify-center">
-            <button
-              onClick={() => setShowAllDemos(!showAllDemos)}
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#111114] hover:bg-zinc-800 border border-white/10 text-white font-semibold text-sm transition-all shadow-md"
-            >
-              <span>
-                {showAllDemos
-                  ? 'Daha Az Tasarım Göster'
-                  : `Kalan 10 Mimarimizi İnceleyin (Toplam ${filteredDemos.length} Tasarım)`}
-              </span>
-              {showAllDemos ? (
-                <ChevronUp className="w-4 h-4 text-amber-400" />
-              ) : (
-                <ChevronDown className="w-4 h-4 text-amber-400" />
-              )}
-            </button>
+          <div className="mt-14 max-w-2xl mx-auto p-6 rounded-2xl bg-[#0A0A0C] border border-white/[0.08] hover:border-amber-400/30 transition-all text-center space-y-3 shadow-xl">
+            <div className="text-xs text-zinc-400">
+              Şu an 6 ana amiral gemisi vitrinde. Sağlık, Hukuk, Mimarlık, Sanayi, Mali Müşavirlik ve Emlak sektörlerine ait tüm 16 çalışan mimari yayındadır.
+            </div>
+            <div>
+              <button
+                onClick={() => setShowAllDemos(!showAllDemos)}
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-xs sm:text-sm transition-all shadow-lg shadow-amber-400/20"
+              >
+                <span>
+                  {showAllDemos
+                    ? 'Vitrine Dön (İlk 6 Tasarımı Göster)'
+                    : `Kalan 10 Mimarimizi İnceleyin (Toplam ${filteredDemos.length} Tasarım) ↓`}
+                </span>
+                {showAllDemos ? (
+                  <ChevronUp className="w-4 h-4 text-black" />
+                ) : (
+                  <ChevronDown className="w-4 h-4 text-black" />
+                )}
+              </button>
+            </div>
           </div>
         )}
 
