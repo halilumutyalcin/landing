@@ -72,9 +72,9 @@ export interface PrincipleItem {
 
 export const siteConfig = {
   name: 'MediWeb',
-  domain: 'mediweb.com.tr',
+  domain: 'land.halilumutyalcin.com',
   tagline: 'Sektörünüze Özel Kurumsal Web Mimarisi. Canlı demoyu görün, onaylayın; anahtar teslim yayına alalım.',
-  description: 'Web sitesi için haftalarca beklemenize ve sürpriz yenileme faturalarıyla karşılaşmanıza gerek yok. Sektörünüze özel geliştirilmiş kurumsal mimariler, ilk 3 yıl hosting ve alan adı dahil sabit fiyat güvencesiyle.',
+  description: 'Web sitesi için haftalarca beklemenize gerek yok. Sektörünüze özel geliştirilmiş kurumsal mimariler, ilk 3 yıl alan adı ve bulut barındırma dahil sabit fiyat güvencesiyle.',
   whatsappNumber: '905456201135',
   whatsappDisplay: '+90 545 620 11 35',
   phoneDisplay: '+90 545 620 11 35',
@@ -89,8 +89,8 @@ export const siteConfig = {
   },
   
   metrics: [
-    { value: '3 Yıl', label: 'Hosting & Alan Adı Dahil', icon: 'ShieldCheck', sub: 'İlk 3 yıl sıfır yenileme maliyeti' },
-    { value: '90–95+', label: 'Lighthouse Performans Skoru', icon: 'Zap', sub: 'Statik ve temel sayfalarda' },
+    { value: '3 Yıl', label: 'Domain & Hosting Dahil', icon: 'ShieldCheck', sub: '3 yıl boyunca domain ve hosting yenileme masrafı yok' },
+    { value: '95+', label: 'Google Hız Puanı (Desktop/Mobil)', icon: 'Zap', sub: 'Statik ve optimize mimari' },
     { value: '3–10 Gün', label: 'Pakete Göre Teslim Süresi', icon: 'Clock', sub: 'İçerik onayından itibaren' },
     { value: '16 Mimari', label: '6 Sektöre Özel Canlı Vitrin', icon: 'Sparkles', sub: 'Görerek seçebileceğiniz altyapı' },
   ],

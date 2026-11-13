@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       `${location.name.toLowerCase()} web tasarım`,
       `${location.name.toLowerCase()} kurumsal web sitesi`,
       `${location.name.toLowerCase()} web yazılım ajansı`,
-      '3 yıl sıfır ek masraf güvencesi',
+      '3 yıl hosting ve domain dahil',
       siteConfig.name,
     ],
     openGraph: {

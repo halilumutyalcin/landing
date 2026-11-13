@@ -7,7 +7,8 @@ import {
   Mail, 
   Phone, 
   MapPin, 
-  ArrowUpRight 
+  ArrowUpRight,
+  FileText 
 } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
 import { generateWhatsAppUrl } from '@/lib/utils';
@@ -130,25 +131,28 @@ export const Footer: React.FC = () => {
               <li>
                 <button 
                   onClick={() => setLegalModalType('kvkk')}
-                  className="hover:text-white transition-colors text-left"
+                  className="hover:text-white transition-colors text-left flex items-center gap-1.5 underline-offset-4 hover:underline cursor-pointer group py-0.5"
                 >
-                  KVKK Aydınlatma Metni
+                  <FileText className="w-3.5 h-3.5 text-amber-400/80 group-hover:text-amber-400 shrink-0" />
+                  <span>KVKK Aydınlatma Metni</span>
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => setLegalModalType('terms')}
-                  className="hover:text-white transition-colors text-left"
+                  className="hover:text-white transition-colors text-left flex items-center gap-1.5 underline-offset-4 hover:underline cursor-pointer group py-0.5"
                 >
-                  Hizmet Sözleşmesi
+                  <FileText className="w-3.5 h-3.5 text-amber-400/80 group-hover:text-amber-400 shrink-0" />
+                  <span>Hizmet Sözleşmesi &amp; Şartlar</span>
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => setLegalModalType('privacy')}
-                  className="hover:text-white transition-colors text-left"
+                  className="hover:text-white transition-colors text-left flex items-center gap-1.5 underline-offset-4 hover:underline cursor-pointer group py-0.5"
                 >
-                  Gizlilik & Çerez Politikası
+                  <FileText className="w-3.5 h-3.5 text-amber-400/80 group-hover:text-amber-400 shrink-0" />
+                  <span>Gizlilik &amp; Çerez Politikası</span>
                 </button>
               </li>
             </ul>

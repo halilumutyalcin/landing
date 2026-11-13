@@ -240,7 +240,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
               {location.name} İçin Şeffaf Paketler
             </h2>
             <p className="text-xs sm:text-sm text-slate-400">
-              Sürpriz maliyet yok. 3 yıl boyunca sıfır ek masraf güvencesiyle anahtar teslim teslimat.
+              3 yıl boyunca alan adı ve bulut barındırma yenileme masrafı olmadan anahtar teslim teslimat.
             </p>
           </div>
 

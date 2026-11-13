@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'İstanbul Hizmet Bölgelerimiz — İlçe Bazlı Kurumsal Web Mimarisi | MediWeb',
-    description: 'İstanbul genelinde 13 ana ticaret merkezine özel hızlı, sözleşmeli hata korumalı ve 3 yıl sıfır ek masraflı kurumsal web altyapısı.',
+    description: 'İstanbul genelinde 13 ana ticaret merkezine özel hızlı, sözleşmeli hata korumalı ve 3 yıl domain + hosting dahil kurumsal web altyapısı.',
     url: `https://${siteConfig.domain}/bolgeler`,
     siteName: siteConfig.name,
     images: ['/opengraph-image'],
@@ -39,7 +39,7 @@ export default function BolgelerIndexPage() {
           </h1>
 
           <p className="text-base text-slate-300 leading-relaxed">
-            Haftalarca süren ajans toplantılarını unutun. İstanbul’un ana ticaret akslarındaki işletmeler için 3–10 iş gününde canlıda, <strong>3 yıl boyunca sıfır ek masraf güvencesiyle</strong> çalışan modern web vitrinleri inşa ediyoruz.
+            Haftalarca süren ajans toplantılarını unutun. İstanbul’un ana ticaret akslarındaki işletmeler için 3–10 iş gününde canlıda, <strong>3 yıl boyunca alan adı ve hosting yenileme masrafı olmadan</strong> çalışan modern web vitrinleri inşa ediyoruz.
           </p>
         </div>
 

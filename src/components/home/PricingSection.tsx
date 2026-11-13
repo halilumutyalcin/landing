@@ -328,14 +328,14 @@ export const PricingSection: React.FC = () => {
                     : 'bg-[#0A0A0C] border border-white/[0.08] hover:border-white/20'
                 }`}
               >
-                {/* Ribbon - Tek Seferlikte En Çok Tercih Edilen, Abonelikte 12 Ay Taahhüt */}
+                {/* Ribbon - Abonelikte 12 Ay Taahhüt, Profesyonelde Popüler Standart */}
                 {billingMode === 'waas' ? (
                   <div className="absolute text-center -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-amber-400 text-black text-[11px] font-black tracking-wide shadow-xl select-none whitespace-nowrap">
                     12 Ay Taahhütlü · Sonra Aylık Ödeme Yok
                   </div>
                 ) : isPro ? (
-                  <div className="absolute text-center -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-amber-400 text-black text-[11px] font-black tracking-wide shadow-xl ring-2 ring-amber-300 select-none">
-                    En Çok Tercih Edilen Paket
+                  <div className="absolute text-center -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-[#1A1A1E] text-zinc-300 border border-white/15 text-[11px] font-bold tracking-wide select-none">
+                    Popüler Web Mimarisi
                   </div>
                 ) : null}
 
@@ -513,7 +513,12 @@ export const PricingSection: React.FC = () => {
         </div>
 
         {/* 360° Dijital Lansman Paketi - High-Ticket All-in-One Solution for New & Rebranding Companies */}
-        <div className="mb-14 rounded-3xl bg-[#0A0A0C] border border-amber-500/30 p-7 sm:p-10 shadow-2xl relative overflow-hidden">
+        <div className="mb-14 rounded-3xl bg-[#0A0A0C] border-2 border-amber-400/80 p-7 sm:p-10 shadow-[0_0_50px_rgba(245,158,11,0.12)] relative overflow-hidden">
+          {/* Most Recommended Tag */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400 text-black text-xs font-black tracking-wide mb-4 shadow-lg select-none">
+            <span>⭐ EN ÇOK TERCİH EDİLEN · MAKSİMUM DEĞER</span>
+          </div>
+
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8 pb-8 border-b border-white/10">
             <div className="max-w-2xl">
               <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
@@ -685,7 +690,7 @@ export const PricingSection: React.FC = () => {
                     <tr className="bg-[#0A0D14] border-b border-white/10 text-slate-300">
                       <th className="p-4 sm:p-5 font-bold text-white w-1/4">Özellik / Kriter</th>
                       <th className="p-4 sm:p-5 font-bold text-zinc-300 w-1/4">Başlangıç (17.500 ₺)</th>
-                      <th className="p-4 sm:p-5 font-bold text-emerald-400 bg-zinc-900/60 border-x border-amber-500/30 w-1/4">
+                      <th className="p-4 sm:p-5 font-bold text-white bg-zinc-900/60 border-x border-amber-500/30 w-1/4">
                         Profesyonel (32.500 ₺)
                       </th>
                       <th className="p-4 sm:p-5 font-bold text-amber-400 w-1/4">Kurumsal (59.900 ₺)</th>

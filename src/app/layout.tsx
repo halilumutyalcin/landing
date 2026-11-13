@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     default: `Kurumsal Web Tasarım Ajansı & Sektörel Vitrinler | ${siteConfig.name}`,
     template: `%s | ${siteConfig.name}`,
   },
-  description: 'WordPress karmaşasına ve ağır eklenti yüküne son. Hukuk, klinik, sanayi/imalat ve mali müşavirlere özel 16 canlı web mimarisi. 3–10 iş gününde anahtar teslim kurulum, 3 yıl boyunca sıfır ek masraf güvencesi.',
+  description: 'WordPress karmaşasına ve ağır eklenti yüküne son. Hukuk, klinik, sanayi/imalat ve mali müşavirlere özel 16 canlı web mimarisi. 3–10 iş gününde anahtar teslim kurulum, 3 yıl boyunca alan adı ve hosting yenileme masrafı yok.',
   alternates: {
     canonical: baseUrl,
   },
