@@ -514,9 +514,9 @@ export const PricingSection: React.FC = () => {
 
         {/* 360° Dijital Lansman Paketi - High-Ticket All-in-One Solution for New & Rebranding Companies */}
         <div className="mb-14 rounded-3xl bg-[#0A0A0C] border-2 border-amber-400/80 p-7 sm:p-10 shadow-[0_0_50px_rgba(245,158,11,0.12)] relative overflow-hidden">
-          {/* Most Recommended Tag */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400 text-black text-xs font-black tracking-wide mb-4 shadow-lg select-none">
-            <span>⭐ EN ÇOK TERCİH EDİLEN · MAKSİMUM DEĞER</span>
+          {/* Most Recommended Tag - Clean Typography */}
+          <div className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">
+            En Çok Tercih Edilen · Maksimum Değer
           </div>
 
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8 pb-8 border-b border-white/10">
