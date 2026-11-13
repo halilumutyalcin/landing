@@ -12,6 +12,9 @@ const config: Config = {
       colors: {
         background: '#000000',
         foreground: '#EDEDED',
+        muted: '#A1A1AA',
+        border: 'rgba(255, 255, 255, 0.08)',
+        danger: '#EF4444',
         brand: {
           50: '#FFFBEB',
           100: '#FEF3C7',
@@ -24,6 +27,7 @@ const config: Config = {
           800: '#92400E',
           900: '#78350F',
           950: '#451A03',
+          glow: 'rgba(245, 158, 11, 0.15)',
         },
         surface: {
           50: '#18181B',
@@ -35,6 +39,7 @@ const config: Config = {
           amber: '#F59E0B',
           warm: '#FF6B00',
           emerald: '#10B981',
+          danger: '#EF4444',
         },
         card: {
           DEFAULT: '#0A0A0C',
