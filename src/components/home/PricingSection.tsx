@@ -62,7 +62,7 @@ export const PricingSection: React.FC = () => {
         { feature: 'Ana Sayfa (Hero & Vitrin)', starter: 'Dahil', pro: 'Dahil', enterprise: 'Dahil' },
         { feature: 'Hakkımızda sayfası', starter: 'Bölüm olarak (One-Page)', pro: 'Ayrı özel sayfa', enterprise: 'Zengin hikaye & zaman tüneli sayfası' },
         { feature: 'Hizmetler / Ürünler', starter: 'Bölüm olarak (3-6 hizmet)', pro: 'Ayrı detay sayfaları', enterprise: 'Gelişmiş mimari & filtreli detay sayfaları' },
-        { feature: 'Blog / Haberler modülü', starter: '—', pro: 'Opsiyonel / Temel altyapı', enterprise: 'Kategori, etiket ve yazar destekli' },
+        { feature: 'Blog / Haberler modülü', starter: '—', pro: 'Dahil (Kategori & Yazar Desteği)', enterprise: 'Dahil (Kategori, Etiket & Yazar Desteği + 5 SEO Makalesi)' },
         { feature: 'İletişim sayfası', starter: 'Temel bölüm', pro: 'Ayrı sayfa & Google Harita', enterprise: 'Gelişmiş sayfa, departman seçimi & harita' },
         { feature: 'İletişim formu', starter: 'Temel form', pro: 'E-posta bildirimli gelişmiş form', enterprise: 'Dosya ekli, çoklu e-posta & SMS bildirimli' },
       ]
@@ -71,7 +71,7 @@ export const PricingSection: React.FC = () => {
       title: '3. Satış, Dönüşüm & İletişim Araçları',
       items: [
         { feature: 'WhatsApp entegrasyonu', starter: 'Sabit WhatsApp butonu', pro: 'Hazır mesajlı buton', enterprise: 'Departman yönlendirmeli akıllı buton' },
-        { feature: 'Google Haritalar (İşletme)', starter: 'Harita iframe yerleşimi', pro: 'Profil kaydı, yerel optimizasyon & yol tarifi desteği', enterprise: 'Tam yerel optimizasyon + tarafsız QR stant tasarımı' },
+        { feature: 'Google Haritalar (İşletme)', starter: 'Harita iframe yerleşimi', pro: 'Profil kaydı, yerel optimizasyon & yol tarifi desteği', enterprise: 'Tam yerel optimizasyon + QR lokasyon kartı & stant tasarımı' },
         { feature: 'Sosyal medya bağlantıları', starter: 'Bağlantı ikonları', pro: 'Bağlantılar + Open Graph paylaşım kartı', enterprise: 'Open Graph zengin önizleme kartları' },
         { feature: 'Form e-posta bildirimi', starter: 'Temel bildirim', pro: 'Anlık e-posta bildirimi', enterprise: 'Çoklu yetkili bildirimi & SMS opsiyonu' },
       ]
@@ -83,7 +83,7 @@ export const PricingSection: React.FC = () => {
         { feature: 'Gelişmiş SEO & Schema', starter: '—', pro: 'JSON-LD Schema & Search Console', enterprise: 'Sayfa bazlı derin SEO & iç bağlantı mimarisi' },
         { feature: 'Google Analytics & Search Console', starter: 'Temel Analytics', pro: 'Analytics + Search Console kurulumu', enterprise: 'İleri seviye hedef & dönüşüm takibi' },
         { feature: 'Site hız optimizasyonu', starter: 'Temel (Yüksek Hızlı Bulut Ağı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri Seviye (Statik Sayfalarda 90–95+)' },
-        { feature: 'Güvenlik / SSL sertifikası', starter: '3 Yıl Ücretsiz SSL', pro: '3 Yıl Ücretsiz SSL', enterprise: '3 Yıl Kurumsal SSL & DDoS koruması' },
+        { feature: 'Güvenlik / SSL sertifikası', starter: '3 Yıl Ücretsiz SSL', pro: '3 Yıl Ücretsiz SSL', enterprise: '3 Yıl Yüksek Güvenlikli SSL & DDoS Koruması' },
       ]
     },
     {
@@ -92,7 +92,7 @@ export const PricingSection: React.FC = () => {
         { feature: 'Özel animasyonlar', starter: 'Temel fade-in ve scroll', pro: 'Gelişmiş hover ve mikro efektler', enterprise: 'Premium aurora glow & zengin etkileşimler' },
         { feature: 'Özel içerik bileşenleri', starter: 'Temel bileşenler', pro: 'Sektöre özel akordeon, sayaç, kartlar', enterprise: 'İhtiyaca özel modüler dinamik bileşenler' },
         { feature: 'Yönetilebilir içerik yapısı', starter: '—', pro: '—', enterprise: 'Modüler ve genişletilebilir mimari' },
-        { feature: 'Admin / CMS altyapısı', starter: '—', pro: 'Opsiyonel (~9.900 ₺)', enterprise: 'Opsiyonel (~9.900 ₺)' },
+        { feature: 'Admin / CMS altyapısı', starter: '—', pro: 'Opsiyonel (~9.900 ₺)', enterprise: 'Dahil (Kolay Yönetim Paneli)' },
         { feature: 'Tasarım revizyon hakkı', starter: '1 Tur revizyon', pro: '2 Tur revizyon', enterprise: '3 Tur revizyon' },
         { feature: 'Yayınlama & 3 Yıl Hosting', starter: '3 Yıl Domain + SSL + Bulut Barındırma Dahil', pro: '3 Yıl Domain + SSL + Bulut Barındırma Dahil', enterprise: '3 Yıl Domain + SSL + Bulut Barındırma Dahil' },
         { feature: 'Teknik destek & Garanti', starter: '15 gün hata garantisi', pro: '30 gün garanti + 1 ay bakım dahil', enterprise: '60 gün garanti + 3 ay bakım dahil' },
@@ -335,7 +335,7 @@ export const PricingSection: React.FC = () => {
                   </div>
                 ) : isPro ? (
                   <div className="absolute text-center -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-[#1A1A1E] text-zinc-300 border border-white/15 text-[11px] font-bold tracking-wide select-none">
-                    Popüler Web Mimarisi
+                    Gelişmiş Web Mimarisi
                   </div>
                 ) : null}
 
@@ -509,14 +509,14 @@ export const PricingSection: React.FC = () => {
         {/* Payment & Installment Assurance (Under Packages) */}
         <div className="max-w-2xl mx-auto -mt-4 mb-14 text-center flex items-center justify-center gap-2 text-xs text-zinc-400">
           <CreditCard className="w-4 h-4 text-amber-400 shrink-0" />
-          <span>Tüm Kurumsal ve Şahıs Kartlarına <strong>3–6 Taksit İmkanı</strong> (PayTR Güvencesiyle)</span>
+          <span>Tüm Kurumsal ve Şahıs Kredi Kartlarına <strong>3–6 Taksit İmkanı</strong> (Yasal banka komisyonu/vade farkı ödeme adımında yansıtılır)</span>
         </div>
 
         {/* 360° Dijital Lansman Paketi - High-Ticket All-in-One Solution for New & Rebranding Companies */}
         <div className="mb-14 rounded-3xl bg-[#0A0A0C] border-2 border-amber-400/80 p-7 sm:p-10 shadow-[0_0_50px_rgba(245,158,11,0.12)] relative overflow-hidden">
           {/* Most Recommended Tag - Clean Typography */}
           <div className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">
-            En Çok Tercih Edilen · Maksimum Değer
+            Önerilen Tam Paket · Tüm İhtiyaçlar Tek Çatıda
           </div>
 
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8 pb-8 border-b border-white/10">
@@ -757,7 +757,7 @@ export const PricingSection: React.FC = () => {
             <div className="p-3.5 rounded-xl bg-black/60 border border-white/[0.08] hover:border-amber-400/30 transition-all space-y-1.5">
               <strong className="text-amber-400 block font-bold text-xs">3 Yıl Sonunda Ne Olur?</strong>
               <p className="text-[11px] text-zinc-300 leading-relaxed">
-                Zorunlu ajans faturası çıkmaz; 4. yıldan itibaren sadece alan adı + bulut sunucu maliyetine (~1.500–2.500 ₺/yıl) devam eder.
+                Zorunlu ajans faturası çıkmaz; 4. yıldan itibaren sadece alan adı + bulut sunucu maliyetine (~2.500–3.500 ₺/yıl) devam eder.
               </p>
             </div>
 

@@ -177,7 +177,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                 <div className="p-4 rounded-xl bg-black/40">
                   <div className="text-xs font-bold text-amber-400 mb-1">Google Uyumu</div>
                   <div className="text-3xl font-black text-white">Hazır</div>
-                  <div className="text-[11px] text-zinc-300 mt-1">Harita &amp; SEO Kayıtlı</div>
+                  <div className="text-[11px] text-zinc-300 mt-1">Teknik SEO (Harita Pakete Göre)</div>
                 </div>
 
                 <div className="p-4 rounded-xl bg-black/40">
@@ -233,8 +233,8 @@ export const WhyUsUnifiedSection: React.FC = () => {
 
                 <div className="p-4 rounded-xl bg-black/40">
                   <div className="text-xs font-bold text-amber-400 mb-1">Google Uyumu</div>
-                  <div className="text-3xl font-black text-white">Sınırlı</div>
-                  <div className="text-[11px] text-amber-300 mt-1">Optimizasyon Gerektiren CMS</div>
+                  <div className="text-3xl font-black text-white">Değişken</div>
+                  <div className="text-[11px] text-amber-300 mt-1">Tipik Olarak Tema Şişkinliği</div>
                 </div>
 
                 <div className="p-4 rounded-xl bg-black/40">
@@ -245,8 +245,8 @@ export const WhyUsUnifiedSection: React.FC = () => {
 
                 <div className="p-4 rounded-xl bg-black/40">
                   <div className="text-xs font-bold text-orange-400 mb-1">Çökme Riski</div>
-                  <div className="text-3xl font-black text-white">Yüksek</div>
-                  <div className="text-[11px] text-orange-300 mt-1">Sürekli Güncelleme ve Hata</div>
+                  <div className="text-3xl font-black text-white">Yüksek*</div>
+                  <div className="text-[11px] text-orange-300 mt-1">Eklenti Açıkları &amp; Çakışmalar</div>
                 </div>
               </div>
 
@@ -401,7 +401,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                       <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
                       <div>
                         <strong className="text-white block text-xs sm:text-sm">Sürpriz Yenileme ve Lisans Masrafları Yok</strong>
-                        <span className="text-slate-300 text-xs">İlk 3 yıl alan adı ve bulut barındırma fiyata dahildir; 4. yıldan itibaren sadece maliyetine devam eder.</span>
+                        <span className="text-slate-300 text-xs">İlk 3 yıl alan adı ve bulut barındırma fiyata dahildir; 4. yıldan itibaren sadece sağlayıcı maliyetine (yıllık tahmini ~2.500–3.500 ₺) devam eder.</span>
                       </div>
                     </div>
 

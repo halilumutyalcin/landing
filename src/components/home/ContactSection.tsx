@@ -226,7 +226,7 @@ export const ContactSection: React.FC = () => {
                   </div>
                   <span className="text-xs text-zinc-400 font-medium shrink-0 self-start sm:self-auto flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                    <span>Ortalama 30 dk içinde geri dönüş</span>
+                    <span>Mesai saatleri içinde ortalama 30 dk içinde geri dönüş</span>
                   </span>
                 </div>
 

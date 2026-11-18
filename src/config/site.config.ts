@@ -178,7 +178,7 @@ export const siteConfig = {
         'Anahtar Teslim Metin Yazarlığı (Ek Hizmet)',
       ],
       isPopular: true,
-      ctaText: 'En Çok Tercih Edileni Seç',
+      ctaText: 'Profesyonel Paketi Seç',
       waasSetupPrice: 7500,
       waasSetupFormatted: '7.500 ₺',
       waasMonthlyPrice: 2650,
@@ -209,9 +209,10 @@ export const siteConfig = {
       features: [
         '20 Sayfaya Kadar Geniş Kurumsal İçerik Mimarisi',
         '2 Dil Dahil (Türkçe + İngilizce Tam Altyapısı)',
+        'Kolay İçerik Yönetim Paneli (Metin, Görsel ve Blog Güncelleme Dahil)',
         'Tarafımızca Yazılmış 5 Adet SEO Uyumlu Blog Makalesi',
         'Anahtar Teslim İçerik Üretimi & Profesyonel Görsel Yerleşimi',
-        'Google Haritalar Tam Optimizasyon + QR Kodlu Lokasyon & İletişim Kartı',
+        'Google Haritalar Tam Optimizasyon + QR Kodlu Lokasyon Kartı & Standı',
         'Departman Yönlendirmeli Gelişmiş WhatsApp Sistemi',
         '10 Adet Kurumsal E-posta DNS Kurulumu',
         'Sayfa Bazlı Birebir SEO ve İç Bağlantı Mimarisi',
@@ -365,18 +366,18 @@ export const siteConfig = {
     { feature: 'İletişim sayfası', starter: 'Temel bölüm', pro: '✓ Ayrı sayfa & Google Harita', enterprise: '✓ Gelişmiş sayfa, departman seçimi & harita' },
     { feature: 'İletişim formu', starter: 'Temel form', pro: '✓ E-posta bildirimli gelişmiş form', enterprise: '✓ Dosya ekli, çoklu e-posta & SMS bildirimli' },
     { feature: 'WhatsApp entegrasyonu', starter: '✓ Sabit WhatsApp butonu', pro: '✓ Hazır mesajlı buton', enterprise: '✓ Departman yönlendirmeli akıllı buton' },
-    { feature: 'Google Haritalar (İşletme)', starter: 'Harita iframe yerleşimi', pro: '✓ Profil kaydı, optimizasyon & yol tarifi desteği', enterprise: '✓ Tam optimizasyon + QR lokasyon kartı' },
+    { feature: 'Google Haritalar (İşletme)', starter: 'Harita iframe yerleşimi', pro: '✓ Profil kaydı, optimizasyon & yol tarifi desteği', enterprise: '✓ Tam optimizasyon + QR lokasyon kartı & stant tasarımı' },
     { feature: 'Sosyal medya bağlantıları', starter: '✓ Bağlantı ikonları', pro: '✓ Bağlantılar + Open Graph paylaşım kartı', enterprise: '✓ Open Graph zengin önizleme kartları' },
     { feature: 'Temel SEO altyapısı', starter: '✓ Meta, sitemap, robots.txt', pro: '✓ Dahil', enterprise: '✓ Dahil' },
     { feature: 'Gelişmiş SEO & Schema', starter: '—', pro: '✓ JSON-LD Schema & Search Console', enterprise: '✓ Sayfa bazlı derin SEO & iç bağlantı mimarisi' },
     { feature: 'Google Analytics & Search Console', starter: 'Temel Analytics', pro: '✓ Analytics + Search Console kurulumu', enterprise: '✓ İleri seviye hedef & dönüşüm takibi' },
     { feature: 'Site hız optimizasyonu', starter: 'Temel (Yüksek Hızlı Altyapı)', pro: 'Gelişmiş (Lighthouse 90+)', enterprise: 'İleri Seviye (Statik Sayfalarda 90–95+)' },
-    { feature: 'Güvenlik / SSL sertifikası', starter: '✓ 3 Yıl Ücretsiz SSL', pro: '✓ 3 Yıl Ücretsiz SSL', enterprise: '✓ 3 Yıl Kurumsal SSL & DDoS koruması' },
+    { feature: 'Güvenlik / SSL sertifikası', starter: '✓ 3 Yıl Ücretsiz SSL', pro: '✓ 3 Yıl Ücretsiz SSL', enterprise: '✓ 3 Yıl Yüksek Güvenlikli SSL & DDoS Koruması' },
     { feature: 'Form e-posta bildirimi', starter: 'Temel bildirim', pro: '✓ Anlık e-posta bildirimi', enterprise: '✓ Çoklu yetkili bildirimi & SMS opsiyonu' },
     { feature: 'Özel animasyonlar', starter: 'Temel fade-in ve scroll', pro: 'Gelişmiş hover ve mikro efektler', enterprise: 'Premium aurora glow & zengin etkileşimler' },
     { feature: 'Özel içerik bileşenleri', starter: 'Temel bileşenler', pro: '✓ Sektöre özel akordeon, sayaç, kartlar', enterprise: '✓ İhtiyaca özel modüler dinamik bileşenler' },
     { feature: 'Yönetilebilir içerik yapısı', starter: '—', pro: '—', enterprise: '✓ Modüler ve genişletilebilir mimari' },
-    { feature: 'Admin / CMS altyapısı', starter: '—', pro: 'Opsiyonel (~9.900 ₺)', enterprise: 'Opsiyonel (~9.900 ₺)' },
+    { feature: 'Admin / CMS altyapısı', starter: '—', pro: 'Opsiyonel (~9.900 ₺)', enterprise: '✓ Dahil (Kolay Yönetim Paneli)' },
     { feature: 'Tasarım revizyon hakkı', starter: '1 Tur revizyon', pro: '2 Tur revizyon', enterprise: '3 Tur revizyon' },
     { feature: 'Yayınlama & 3 Yıl Hosting', starter: '✓ 3 Yıl Domain + SSL + Bulut Barındırma Dahil', pro: '✓ 3 Yıl Domain + SSL + Bulut Barındırma Dahil', enterprise: '✓ 3 Yıl Domain + SSL + Bulut Barındırma Dahil' },
     { feature: 'Teknik destek & Garanti', starter: '15 gün hata garantisi', pro: '30 gün garanti + 1 ay bakım dahil', enterprise: '60 gün garanti + 3 ay bakım dahil' },
@@ -435,14 +436,19 @@ export const siteConfig = {
       answer: 'Alan adınız (.com / .com.tr / .net vb.) ilk günden itibaren doğrudan sizin veya şirketinizin adına tescil edilir. DNS yönetim yetkisi ve tam mülkiyeti sizdedir; asla rehin veya kilit altında tutulmaz.'
     },
     {
+      category: 'mevzuat',
+      question: 'Hazırlanan siteler avukatlık, sağlık ve mali müşavirlik reklam yasaklarına uygun mu?',
+      answer: 'Evet, tam uyumludur. Türkiye Barolar Birliği (TBB) Reklam Yasağı Yönetmeliği, Sağlık Bakanlığı Sağlık Hizmetlerinde Tanıtım ve Bilgilendirme Faaliyetleri Yönetmeliği ve TÜRMOB mesleki mevzuatına titizlikle dikkat ediyoruz. Sitelerimizde haksız rekabet oluşturabilecek unsurlara ve mevzuata aykırı yönlendirmelere asla yer verilmez; yalnızca kurumsal, şeffaf ve meslek kurallarının izin verdiği bilgilendirici içerik mimarisi kurulur.'
+    },
+    {
       category: 'hosting',
       question: '3 yıllık ücretsiz hosting süresi dolunca ne oluyor? 4. yıl masrafı nedir?',
-      answer: 'İlk 3 yıl boyunca alan adı, bulut barındırma ve SSL için 0 ₺ ödersiniz. 4. yıldan itibaren herhangi bir zorunlu ajans yönetim primi çıkmaz; yalnızca sağlayıcının maliyetine (güncel kurlarla yıllık tahmini ~1.500–2.500 ₺ bandında) devam eder. Siteniz asla kapatılmaz veya kilitlenmez.'
+      answer: 'İlk 3 yıl boyunca alan adı, bulut barındırma ve SSL için 0 ₺ ödersiniz. 4. yıldan itibaren herhangi bir zorunlu ajans yönetim primi çıkmaz; yalnızca sağlayıcının maliyetine (güncel piyasa şartlarıyla yıllık tahmini ~2.500–3.500 ₺ bandında) devam eder. Siteniz asla kapatılmaz veya kilitlenmez.'
     },
     {
       category: 'yonetim',
       question: 'Web sitesini kendim yönetebilir miyim? İçerik yönetim paneli (CMS) var mı?',
-      answer: 'Sitelerimiz ultra yüksek hız ve sıfır eklenti açığı için modern mimariyle kodlanır. İçerikleri (metin, blog, fotoğraflar) kendiniz güncellemek isterseniz isteğe bağlı Headless CMS yönetim paneli (~9.900 ₺) entegre edilir. Panel istemezseniz, rutin içerik güncellemelerinizi aylık bakım desteğimiz (2.500 ₺/ay) kapsamında biz gerçekleştiririz.'
+      answer: 'Kurumsal paketimizde kolay içerik yönetim paneli (metin, görsel ve blog güncellemeleri) standart olarak dahildir. Profesyonel ve Başlangıç paketlerimizde ise sitelerimiz ultra yüksek hız ve güvenlik için statik mimariyle kodlanır; içerikleri kendiniz güncellemek isterseniz isteğe bağlı Headless CMS yönetim paneli (~9.900 ₺) entegre edilir. Panel tercih etmeyen müşterilerimizin rutin güncellemelerini aylık bakım desteğimiz (2.500 ₺/ay) kapsamında biz gerçekleştiririz.'
     },
     {
       category: 'genisleme',

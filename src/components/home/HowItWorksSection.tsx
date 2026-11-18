@@ -23,7 +23,7 @@ export const HowItWorksSection: React.FC = () => {
     {
       step: '02',
       title: 'Tasarım & İçerik Uyarlaması',
-      duration: '2–4. İş Günü',
+      duration: '1–3. İş Günü',
       desc: 'Logonuz, faaliyet alanlarınız ve sektörel fotoğraflarınız mimariye giydirilir. SEO altyapısı ve mobil uyum kodlanır.',
       milestone: 'Özel Mimari Kurulumu',
       icon: FileCheck,
@@ -40,7 +40,7 @@ export const HowItWorksSection: React.FC = () => {
       step: '04',
       title: 'Alan Adı Bağlantısı & Lansman',
       duration: 'Son İş Günü',
-      desc: 'Alan adınız bağlanır, kurumsal SSL sertifikası devreye alınır, Google Haritalar entegre edilir ve siteniz anahtar teslim yayına girer.',
+      desc: 'Alan adınız bağlanır, yüksek güvenlikli SSL sertifikası devreye alınır, Google Haritalar entegre edilir ve siteniz anahtar teslim yayına girer.',
       milestone: '3 Yıl Barındırma Başlar',
       icon: Rocket,
     },
@@ -106,6 +106,12 @@ export const HowItWorksSection: React.FC = () => {
               );
             })}
           </div>
+        </div>
+
+        {/* Süre ve Yıldız Açıklaması */}
+        <div className="mt-10 text-center text-xs text-zinc-400 max-w-2xl mx-auto space-y-1.5 border-t border-white/5 pt-6">
+          <p>* 3. Adımdaki süre, müşterinin revizyon taleplerini iletme ve geri bildirim hızına bağlı olarak değişiklik gösterebilir.</p>
+          <p>Toplam teslim süresi içerik onayından itibaren seçilen paketin kapsamına göre <strong>3–10 iş günüdür</strong> (Başlangıç: 3–5 gün, Profesyonel: 5–7 gün, Kurumsal: 7–10 gün).</p>
         </div>
 
       </div>

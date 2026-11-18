@@ -30,7 +30,7 @@ export const HeroSection: React.FC = () => {
             </h1>
 
             <p className="text-base sm:text-lg text-zinc-300 max-w-2xl leading-relaxed">
-              Markanızı dijitalde güçlü gösteren, mobil uyumlu, SEO altyapısı hazır ve size özel tasarlanmış web siteleri. 
+              Markanızı dijitalde güçlü gösteren, mobil uyumlu, SEO altyapısı hazır; sektörünüze özel mimariden markanıza uyarlanmış kurumsal web siteleri. 
               Aylarca süren ajans belirsizliklerine ve sürpriz faturalara son: Sektörünüze özel çalışan canlı mimarimizi 
               satın almadan önce deneyimleyin, onayınızla birlikte anahtar teslim yayına alalım. <strong>3 yıl boyunca alan adı ve hosting yenileme masrafı yok.</strong>
             </p>
@@ -169,7 +169,7 @@ export const HeroSection: React.FC = () => {
                   <Smartphone className="w-4 h-4 text-black" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-white">Mobil &amp; Tablet Uyumlu</div>
+                  <div className="text-xs font-bold text-white">Mobil & Tablet Uyumlu</div>
                   <div className="text-[10px] text-zinc-400 font-medium">Statik Mimari · Anlık Açılış</div>
                 </div>
               </div>

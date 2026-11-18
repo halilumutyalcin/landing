@@ -147,8 +147,8 @@ export const TaxCalculatorSection: React.FC = () => {
                     >
                       <Hourglass className="w-4 h-4 shrink-0 mt-0.5" />
                       <div>
-                        <div className="text-xs font-bold">Amortisman (3 Yıl)</div>
-                        <div className="text-[10px] opacity-80">Yıllık %33,33 itfa payı</div>
+                        <div className="text-xs font-bold">Amortisman (Örnek 3 Yıl)</div>
+                        <div className="text-[10px] opacity-80">Varsayımsal %33,33 itfa*</div>
                       </div>
                     </button>
                   </div>
@@ -309,8 +309,12 @@ export const TaxCalculatorSection: React.FC = () => {
                 <p className="text-[11px] text-zinc-400 mt-2 leading-relaxed">
                   {treatmentMethod === 'expense'
                     ? 'Yeterli kâr matrahı ve KDV mahsubu sağlandığında aynı yıl içinde işletmenize yansıyan tahmini net tutardır.'
-                    : 'Fatura 3 yılda itfa edildiğinde yıllık vergi avantajı sonrası 3. yıl sonundaki kümülatif net maliyettir.'}
+                    : 'Fatura 3 yılda itfa edildiğinde yıllık vergi avantajı sonrası 3. yıl sonundaki kümülatif tahmini net maliyettir.'}
                 </p>
+
+                <div className="mt-4 pt-3 border-t border-white/5 text-[10px] text-zinc-400 leading-relaxed">
+                  * <strong>Yasal Hatırlatma:</strong> Web yazılım harcamalarının doğrudan gider veya amortisman ayrımı firmanızın mali müşaviri tarafından VUK tebliğlerine göre belirlenir. Bu hesaplama tahmini senaryo modellemesidir.
+                </div>
 
                 <button
                   type="button"

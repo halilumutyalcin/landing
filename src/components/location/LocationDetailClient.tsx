@@ -257,7 +257,7 @@ export const LocationDetailClient: React.FC<LocationDetailClientProps> = ({ loca
                 <div>
                   {pkg.isPopular && (
                     <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-[10px] uppercase font-black tracking-wider bg-amber-400 text-black shadow-md">
-                      En Çok Tercih Edilen
+                      Önerilen Paket
                     </span>
                   )}
 
