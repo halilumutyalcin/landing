@@ -227,8 +227,8 @@ export const WhyUsUnifiedSection: React.FC = () => {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 my-auto">
                 <div className="p-4 rounded-xl bg-black/40">
                   <div className="text-xs font-bold text-rose-400 mb-1">Açılış Hızı</div>
-                  <div className="text-3xl font-black text-white">Yavaş</div>
-                  <div className="text-[11px] text-rose-300 mt-1">Ağır Veritabanı Yükü</div>
+                  <div className="text-3xl font-black text-white">Yavaş*</div>
+                  <div className="text-[11px] text-rose-300 mt-1">Ağır Eklentili Yapılarda</div>
                 </div>
 
                 <div className="p-4 rounded-xl bg-black/40">
@@ -273,9 +273,14 @@ export const WhyUsUnifiedSection: React.FC = () => {
               </div>
             </div>
 
-            <p className="text-center text-xs text-slate-400">
-              Kaydırıcıyı sağa ve sola sürükleyerek geleneksel eklenti bağımlı siteler ile modern bulut mimarimiz arasındaki performans farkını doğrudan karşılaştırın.
-            </p>
+            <div className="text-center space-y-1">
+              <p className="text-xs text-slate-400">
+                Kaydırıcıyı sağa ve sola sürükleyerek geleneksel eklenti bağımlı siteler ile modern bulut mimarimiz arasındaki performans farkını doğrudan karşılaştırın.
+              </p>
+              <p className="text-[11px] text-zinc-400">
+                * Yavaşlık ve çökme riski; çok sayıda 3. taraf eklenti, güncellenmeyen temalar ve optimize edilmemiş veritabanı barındıran tipik WordPress kurulumları için geçerlidir.
+              </p>
+            </div>
           </div>
 
         {/* TAB 3: Şeffaf İlkelerimiz & Kurucu Notu */}
@@ -293,7 +298,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                     </h3>
                   </div>
                   <span className="text-[11px] text-slate-400 font-medium">
-                    MediWeb Mimarlık & Geliştirme Ekibi · Not
+                    Ahmet Hakan Cansız · Kurucu Notu
                   </span>
                 </div>
 
@@ -302,14 +307,14 @@ export const WhyUsUnifiedSection: React.FC = () => {
                 </p>
 
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  Biz bu belirsizlikleri ortadan kaldırmak için ürünleştirilmiş ajans modelini benimsedik: <strong>Canlı demoyu önceden test edin</strong>, kurumsal kimliğinize uyarlayalım; içerik onayınızdan itibaren <strong>3–10 iş gününde anahtar teslim</strong> yayına alın. İlk 3 yıl alan adı ve bulut barındırma dahil sabit fiyat güvencesiyle.
+                  Bu belirsizlikleri ortadan kaldırmak için ürünleştirilmiş web geliştirme modelini kurdum: <strong>Canlı demoyu önceden test edin</strong>, kurumsal kimliğinize uyarlayalım; içerik onayınızdan itibaren <strong>3–10 iş gününde anahtar teslim</strong> yayına alın. İlk 3 yıl alan adı ve bulut barındırma dahil sabit fiyat güvencesiyle.
                 </p>
 
                 <div className="pt-4 border-t border-white/5 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
-                  <span className="text-white font-semibold">MediWeb Mimarlık &amp; Yazılım Ekibi</span>
+                  <span className="text-white font-semibold">Ahmet Hakan Cansız · Kurucu &amp; Web Mimarı</span>
                   <span className="text-emerald-400 font-medium flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5" />
-                    <span>Pendik / İstanbul</span>
+                    <span>Pendik / İstanbul (Vergi No: 2020589059)</span>
                   </span>
                 </div>
               </div>
@@ -400,7 +405,7 @@ export const WhyUsUnifiedSection: React.FC = () => {
                     <div className="flex items-start gap-2.5">
                       <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-white block text-xs sm:text-sm">Sürpriz Yenileme ve Lisans Masrafları Yok</strong>
+                        <strong className="text-white block text-xs sm:text-sm">Zorunlu Yenileme Masrafı Yok</strong>
                         <span className="text-slate-300 text-xs">İlk 3 yıl alan adı ve bulut barındırma fiyata dahildir; 4. yıldan itibaren sadece sağlayıcı maliyetine (yıllık tahmini ~2.500–3.500 ₺) devam eder.</span>
                       </div>
                     </div>

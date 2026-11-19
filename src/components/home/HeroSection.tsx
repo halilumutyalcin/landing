@@ -128,9 +128,9 @@ export const HeroSection: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-black/85 backdrop-blur-md text-zinc-200 border border-white/15 hover:border-amber-400/50 hover:text-white transition-all flex items-center gap-1 shadow"
-                      title="Google PageSpeed ile Canlı Skoru Doğrula"
+                      title="Google PageSpeed Insights ile Canlı Skoru Doğrula"
                     >
-                      <span>Google Hız: 98/100</span>
+                      <span>PageSpeed Canlı Skoru Doğrula</span>
                       <ExternalLink className="w-3 h-3 text-amber-400" />
                     </a>
                   </div>

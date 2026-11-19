@@ -161,7 +161,7 @@ export const siteConfig = {
       animations: 'Gelişmiş — parallax, mikro hover efektleri, pürüzsüz geçişler',
       features: [
         '10 Sayfaya Kadar Kurumsal Site Mimarisi',
-        'Sektörel Mevzuat Uyumu (TBB, Sağlık Bakanlığı, TÜRMOB kurallarına duyarlı dil)',
+        'Mevzuata Duyarlı İçerik Yaklaşımı (TBB, Sağlık Bakanlığı, TÜRMOB kurallarına duyarlı dil)',
         'Google Haritalar (İşletme Profili) Kaydı & Doğrulaması',
         'Google Search Console Bağlantısı & JSON-LD Schema',
         'Blog / Duyuru Altyapısı (Kategori & Yazar Desteği)',
@@ -438,47 +438,47 @@ export const siteConfig = {
     {
       category: 'mevzuat',
       question: 'Hazırlanan siteler avukatlık, sağlık ve mali müşavirlik reklam yasaklarına uygun mu?',
-      answer: 'Evet, tam uyumludur. Türkiye Barolar Birliği (TBB) Reklam Yasağı Yönetmeliği, Sağlık Bakanlığı Sağlık Hizmetlerinde Tanıtım ve Bilgilendirme Faaliyetleri Yönetmeliği ve TÜRMOB mesleki mevzuatına titizlikle dikkat ediyoruz. Sitelerimizde haksız rekabet oluşturabilecek unsurlara ve mevzuata aykırı yönlendirmelere asla yer verilmez; yalnızca kurumsal, şeffaf ve meslek kurallarının izin verdiği bilgilendirici içerik mimarisi kurulur.'
+      answer: 'Sitelerimizi avukatlık, sağlık ve mali müşavirlik meslek kurallarına duyarlı, bilgilendirici ve ağırbaşlı bir dille hazırlıyoruz. Hasta yorumu, önce/sonra görseli, garanti ve başarı vaadi gibi reklam sayılabilecek öğeleri bu sektörlerin şablonlarında varsayılan olarak kullanmıyoruz. Meslek kuralları zaman zaman değişebildiği için nihai içerik onayı ve mevzuata uyum sorumluluğu meslek mensubuna aittir; gerekirse meslek odanıza danışmanızı öneririz.'
     },
     {
       category: 'hosting',
       question: '3 yıllık ücretsiz hosting süresi dolunca ne oluyor? 4. yıl masrafı nedir?',
-      answer: 'İlk 3 yıl boyunca alan adı, bulut barındırma ve SSL için 0 ₺ ödersiniz. 4. yıldan itibaren herhangi bir zorunlu ajans yönetim primi çıkmaz; yalnızca sağlayıcının maliyetine (güncel piyasa şartlarıyla yıllık tahmini ~2.500–3.500 ₺ bandında) devam eder. Siteniz asla kapatılmaz veya kilitlenmez.'
+      answer: 'İlk 3 yıl boyunca (yayın tarihinden itibaren 36 ay) alan adı, bulut barındırma ve SSL için ek ücret ödemezsiniz. 3. yılın bitiminde şeffaf bir yenileme hatırlatması sunulur; 4. yıldan itibaren herhangi bir zorunlu ajans kârı çıkmaz, doğrudan barındırma altyapısının resmi maliyetine (yıllık tahmini ~2.500–3.500 ₺ bandında) devam edebilirsiniz. Yenileme yapılmaması durumunda servis süresi dolar; ancak alan adı ilk günden sizin adınıza tescilli olduğundan dilediğiniz sağlayıcıya transfer edilebilir.'
     },
     {
       category: 'yonetim',
       question: 'Web sitesini kendim yönetebilir miyim? İçerik yönetim paneli (CMS) var mı?',
-      answer: 'Kurumsal paketimizde kolay içerik yönetim paneli (metin, görsel ve blog güncellemeleri) standart olarak dahildir. Profesyonel ve Başlangıç paketlerimizde ise sitelerimiz ultra yüksek hız ve güvenlik için statik mimariyle kodlanır; içerikleri kendiniz güncellemek isterseniz isteğe bağlı Headless CMS yönetim paneli (~9.900 ₺) entegre edilir. Panel tercih etmeyen müşterilerimizin rutin güncellemelerini aylık bakım desteğimiz (2.500 ₺/ay) kapsamında biz gerçekleştiririz.'
+      answer: 'Başlangıç ve Profesyonel paketlerimizde siteler, maksimum hız ve güvenlik sunan statik mimariyle kodlanır; blog ve duyuru yazıları dahil rutin içerik güncellemeleri ilk ay / isteğe bağlı aylık bakım desteğimiz (2.500 ₺/ay) kapsamında ekibimizce gerçekleştirilir. Kendi ekibinizin doğrudan içerik girebileceği Headless CMS paneli ise opsiyonel (~9.900 ₺ + KDV) olarak entegre edilebilir; Kurumsal paketimizde bu panel standart olarak dahildir.'
     },
     {
       category: 'genisleme',
       question: 'Sonradan yeni sayfa veya yeni hizmetler ekleyebilir miyim?',
-      answer: 'Evet. Mimarimiz tamamen modülerdir. İleride ek bir hizmet sayfası, yeni bir yabancı dil veya departman eklemek istediğinizde sayfa başı ~1.500 ₺ net birim fiyatla mevcut sitenize zahmetsizce entegre edilir.'
+      answer: 'Evet. Mimarimiz tamamen modülerdir. İleride ek bir hizmet sayfası veya departman eklemek istediğinizde sayfa başı ~1.500 ₺ (KDV hariç), ek yabancı dil altyapısı ise dil başına ~7.500 ₺ (KDV hariç) olarak mevcut sitenize zahmetsizce entegre edilir.'
     },
     {
       category: 'seo',
       question: 'Google aramalarında hemen birinci sırada çıkar mıyız?',
-      answer: 'Başlangıç paketimizde temel SEO (meta, sitemap); Profesyonel ve Kurumsal paketlerimizde ise gelişmiş JSON-LD Schema ve Google Harita yerel optimizasyonu dahildir. Google sıralamaları arama motorunun kendi algoritmasına ve sektörel rekabete bağlıdır; hiçbir dürüst ajans 1. sıra garantisi veremez, biz de vermiyoruz. Ancak Google\'ın en sevdiği teknik altyapıyı (statik sayfalarda 90–95+ hız) eksiksiz teslim ediyoruz.'
+      answer: 'Başlangıç paketimizde temel SEO (meta, sitemap); Profesyonel ve Kurumsal paketlerimizde ise gelişmiş JSON-LD Schema ve Google Harita yerel optimizasyonu dahildir. Google sıralamaları arama motorunun kendi algoritmasına ve sektörel rekabete bağlıdır; hiçbir dürüst ajans 1. sıra garantisi veremez, biz de vermiyoruz. Sayfa hızı ve teknik SEO temellerini (statik sayfalarda yüksek Lighthouse performansı, sitemap, meta etiketleri ve JSON-LD) eksiksiz teslim ediyoruz.'
     },
     {
       category: 'revizyon',
       question: 'Revizyon hakkım kaç tane? Tasarım içime sinmezse ne olur?',
-      answer: 'Satın almadan önce çalışan canlı demoyu incelediğiniz için ne çıkacağını baştan bilirsiniz. Paketlerimizde Başlangıç için 1 tur, Profesyonel için 2 tur, Kurumsal için 3 tur revizyon hakkı dahildir. Logonuz, renkleriniz ve kurumsal metinleriniz tam onayınızı alana kadar titizlikle uyarlanır.'
+      answer: 'Paketlerimizde Başlangıç için 1 tur, Profesyonel için 2 tur, Kurumsal için 3 tur tasarım revizyon hakkı dahildir. Paketinizdeki revizyon turları bittiğinde ek revizyonlar kapsamına göre belirlenen birim bedel (tur başı veya sayfa başı) üzerinden projelendirilir. Yayına alma öncesinde memnun kalmazsanız sözleşmedeki iade ve fesih koşulları geçerlidir.'
     },
     {
       category: 'destek',
       question: 'Teknik destek nasıl sağlanıyor ve garanti süresi nedir?',
-      answer: 'Teslimattan sonra paketinize göre 15, 30 veya 60 gün yazılımsal teknik hata garantisi verilir. Bildirilen teknik aksaklıklara 1–2 iş günü içinde doğrudan müdahale edilir. Profesyonel pakette ilk 1 ay, Kurumsal pakette ilk 3 ay rutin teknik bakım fiyata dahildir.'
+      answer: 'Teslimattan sonra paketinize göre 15, 30 veya 60 gün yazılımsal teknik hata garantisi verilir. Bildirilen teknik aksaklıklara hafta içi mesai saatlerinde (Pazartesi-Cuma 09:00–18:00) WhatsApp veya e-posta üzerinden en geç 1–2 iş günü içinde ilk teknik inceleme başlatılır; kritik işlevsel aksaklıklar öncelikle giderilir. Profesyonel pakette ilk 1 ay, Kurumsal pakette ilk 3 ay rutin teknik bakım fiyata dahildir.'
     },
     {
       category: 'tasima',
       question: 'Web sitesini başka bir firmaya veya kendi bağımsız sunucuma taşıyabilir miyim?',
-      answer: 'Alan adınız zaten ilk günden adınızadır. Siteniz bulut altyapımızda kaldığı sürece ilk 3 yıl barındırma için tek kuruş ödemezsiniz. Sitenizi kendi bağımsız sunucunuza taşımak veya yazılım ekibinize devretmek isterseniz, kaynak kod devir modülü (+%75 lisans devir bedeli) ile tam mülkiyet teslim edilir. Ayrıca ajansımızın ticari faaliyetini sonlandırması halinde tüm kaynak kodlar müşteriye bedelsiz teslim edilir.'
+      answer: 'Alan adınız ilk günden sizin adınıza tescillidir. Siteniz bulut altyapımızda kaldığı sürece ilk 3 yıl barındırma için ek ücret ödemezsiniz. Sitenizi kendi bağımsız sunucunuza taşımak veya yazılım ekibinize devretmek isterseniz, kaynak kod devir modülü (+%75 lisans devir bedeli: Başlangıç: +13.125 ₺, Pro: +24.375 ₺, Kurumsal: +44.925 ₺ + KDV) ile kalıcı kullanım lisansıyla teslim edilir (şablonu üçüncü kişilere ticari devir/satış hariçtir). Ayrıca ticari faaliyetin sonlanması (vergi kaydının kapanması, vefat veya 60 günden uzun süreyle erişilemezlik gibi hallerde), sitenin kaynak kodları müşterinin erişebileceği özel arşiv deposu (kod emaneti) üzerinden müşteriye bedelsiz teslim edilir.'
     },
     {
       category: 'fatura',
       question: 'Fatura kesiyor musunuz? Şirketime gider olarak gösterebilir miyim?',
-      answer: 'Tüm fiyatlarımız KDV hariçtir; resmî e-Arşiv / e-Fatura kesilir. Fatura bedeli işletme gideri olarak değerlendirilebilir veya amortismana tabi tutulabilir; KDV mahsubu yapılabilir. Kesin muhasebeleştirme için mali müşavirinize danışmanızı öneririz.'
+      answer: 'Tüm fiyatlarımız KDV hariçtir; resmî e-Arşiv / e-Fatura kesilir. Fatura bedeli işletme gideri olarak değerlendirilebilir veya amortismana tabi tutulabilir; KDV mükellefiyetinize ve vergi matrahınıza bağlı olarak KDV mahsubu yapılabilir. Kesin muhasebeleştirme için mali müşavirinize danışmanızı öneririz.'
     }
   ] as FaqItem[]
 };

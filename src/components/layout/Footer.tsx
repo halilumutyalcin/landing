@@ -129,31 +129,31 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => setLegalModalType('kvkk')}
+                <Link 
+                  href="/kvkk"
                   className="hover:text-white transition-colors text-left flex items-center gap-1.5 underline-offset-4 hover:underline cursor-pointer group py-0.5"
                 >
                   <FileText className="w-3.5 h-3.5 text-amber-400/80 group-hover:text-amber-400 shrink-0" />
                   <span>KVKK Aydınlatma Metni</span>
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => setLegalModalType('terms')}
+                <Link 
+                  href="/sozlesme"
                   className="hover:text-white transition-colors text-left flex items-center gap-1.5 underline-offset-4 hover:underline cursor-pointer group py-0.5"
                 >
                   <FileText className="w-3.5 h-3.5 text-amber-400/80 group-hover:text-amber-400 shrink-0" />
-                  <span>Hizmet Sözleşmesi &amp; Şartlar</span>
-                </button>
+                  <span>Hizmet Sözleşmesi & Şartlar</span>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => setLegalModalType('privacy')}
+                <Link 
+                  href="/gizlilik"
                   className="hover:text-white transition-colors text-left flex items-center gap-1.5 underline-offset-4 hover:underline cursor-pointer group py-0.5"
                 >
                   <FileText className="w-3.5 h-3.5 text-amber-400/80 group-hover:text-amber-400 shrink-0" />
-                  <span>Gizlilik &amp; Çerez Politikası</span>
-                </button>
+                  <span>Gizlilik & Çerez Politikası</span>
+                </Link>
               </li>
             </ul>
           </div>
@@ -165,7 +165,7 @@ export const Footer: React.FC = () => {
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5 text-slate-400">
               <span className="w-2 h-2 rounded-full bg-amber-400"></span>
-              3 Yıl Kesintisiz Barındırma &amp; Yüksek Hızlı CDN Altyapısı
+              3 Yıl Yüksek Erişilebilirlikli Bulut Barındırma &amp; CDN Altyapısı
             </span>
           </div>
         </div>

@@ -226,7 +226,7 @@ export const ContactSection: React.FC = () => {
                   </div>
                   <span className="text-xs text-zinc-400 font-medium shrink-0 self-start sm:self-auto flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                    <span>Mesai saatleri içinde ortalama 30 dk içinde geri dönüş</span>
+                    <span>Hafta içi mesai saatlerinde (09:00–18:00) ortalama 30 dk içinde geri dönüş</span>
                   </span>
                 </div>
 
@@ -335,6 +335,9 @@ export const ContactSection: React.FC = () => {
                     placeholder="Mevcut bir alan adınız var mı, ek yabancı dil veya özel bir modül istiyor musunuz?"
                     className="w-full bg-[#090C14] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus-visible:ring-2 focus-visible:ring-blue-500"
                   />
+                  <p className="text-[10px] text-zinc-500 mt-1">
+                    * Güvenliğiniz için lütfen sağlık durumu, hukuki uyuşmazlık detayları veya ceza mahkumiyeti gibi özel nitelikli kişisel verilerinizi bu alanda paylaşmayınız.
+                  </p>
                 </div>
 
                 <div className="flex items-start gap-2.5 pt-1">

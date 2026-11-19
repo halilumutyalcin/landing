@@ -280,15 +280,15 @@ export const DEMO_CATALOG: DemoItem[] = [
 
   // 3. SANAYİ & İMALATÇI TASARIMLARI
   {
-    id: 'safepoint',
-    slug: 'safepoint',
+    id: 'prometal',
+    slug: 'prometal',
     name: 'ProMetal',
     sectorId: 'sanayi',
     sectorName: 'Sanayi & İmalatçı',
     style: 'Endüstriyel · Güvenilir · Metal',
     themeColor: 'emerald',
     badge: 'Fabrika & İmalat',
-    liveUrl: '/preview/safepoint',
+    liveUrl: '/preview/prometal',
     previewImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
     shortDesc: 'Talaşlı imalat, metal ve plastik kalıp üreticileri için ihracat ve kurumsal müşteri odaklı vitrin.',
     targetAudience: 'Endüstriyel imalatçılar, talaşlı imalat tesisleri, metal ve plastik kalıp üreticileri.',
@@ -348,15 +348,15 @@ export const DEMO_CATALOG: DemoItem[] = [
     }
   },
   {
-    id: 'proguard',
-    slug: 'proguard',
+    id: 'proteknik',
+    slug: 'proteknik',
     name: 'ProTeknik',
     sectorId: 'sanayi',
     sectorName: 'Sanayi & İmalatçı',
     style: 'Modern · Dinamik · Mavi',
     themeColor: 'blue',
     badge: 'Endüstriyel Tedarik',
-    liveUrl: '/preview/proguard',
+    liveUrl: '/preview/proteknik',
     previewImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80',
     shortDesc: 'Geniş ürün kataloğu, teknik malzeme tedariği ve toptan teklif motoru.',
     targetAudience: 'Endüstriyel hırdavat, fabrika sarf malzemeleri ve teknik hırdavat toptancıları.',

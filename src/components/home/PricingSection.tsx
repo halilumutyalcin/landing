@@ -51,7 +51,7 @@ export const PricingSection: React.FC = () => {
       title: '1. Mimari & Genel Kapsam',
       items: [
         { feature: 'Kime uygun?', starter: 'Yeni başlayan işletmeler, tek kişilik ofisler', pro: 'Kurumsal görünüm isteyen işletmeler & KOBİ\'ler', enterprise: 'Profesyonel dijital varlık ve ihracat odaklı firmalar' },
-        { feature: 'Tasarım mimarisi', starter: 'Hazır yapı üzerinde özelleştirilmiş tasarım', pro: 'Markaya özel UI/UX tasarım ve kurumsal renkler', enterprise: 'Tamamen özel UI/UX + gelişmiş etkileşimler' },
+        { feature: 'Tasarım mimarisi', starter: 'Hazır canlı mimari üzerinde sektörel uyarlama', pro: 'Canlı mimari üzerinde markanıza özel renk, tipografi ve sayfa uyarlaması', enterprise: 'Demo mimarisi üzerinde markanıza özel derinlemesine uyarlama + ek etkileşimler' },
         { feature: 'Sayfa yapısı', starter: 'Tek sayfalık landing page veya 5 sayfaya kadar', pro: '10 sayfaya kadar kurumsal yapı', enterprise: '20 sayfaya kadar / ihtiyaca göre' },
         { feature: 'Mobil & tablet uyumluluk', starter: 'Dahil (Responsive Tasarım)', pro: 'Dahil (Responsive Tasarım)', enterprise: 'Dahil (Responsive Tasarım)' },
       ]
@@ -193,7 +193,7 @@ export const PricingSection: React.FC = () => {
               </div>
             ) : (
               <p className="text-xs text-amber-400 font-medium animate-in fade-in duration-200">
-                Peşin bütçe ayırmadan, düşük kurulum bedeli ve 12 ay sabit taksitle başlayın. 12 ay sonunda sitenin yayın hakkı, alan adı ve 3 yıllık hosting tamamen size devredilir; aylık ödeme biter.
+                Düşük kurulum bedeli ve 12 ay sabit taksitle başlayın. Alan adınız ilk günden sizin adınıza tescil edilir. 12 taksit tamamlandığında zorunlu aylık ödeme biter; siteniz, 36 aylık barındırma süresi boyunca ek ücret olmadan yayında kalır. Sitenin kaynak kodunun kendi sunucunuza taşınması isteğe bağlı bir devir modülüdür (+%75 lisans devir bedeli).
               </p>
             )}
 
@@ -218,12 +218,12 @@ export const PricingSection: React.FC = () => {
                   12. Ay Sonunda Ne Değişiyor? Şeffaf Zaman Çizelgesi
                 </h4>
                 <p className="text-xs text-zinc-400">
-                  Taksitli abonelik modelimizde hiçbir sürpriz ek masraf veya zorunlu kilit kuralı yoktur.
+                  Taksitli abonelik modelimizde hiçbir sürpriz ek masraf veya gizli kilit kuralı yoktur.
                 </p>
               </div>
             </div>
             <span className="text-xs text-amber-400 font-medium self-start sm:self-auto">
-              Alan adı baştan adınızadır
+              Alan adı ilk günden sizin adınıza tescillidir
             </span>
           </div>
 
@@ -244,11 +244,11 @@ export const PricingSection: React.FC = () => {
             <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
               <div className="flex items-center gap-2 text-emerald-400 font-bold">
                 <span className="w-5 h-5 rounded-full bg-emerald-400/20 flex items-center justify-center text-xs">2</span>
-                <span>1–3. Yıl: 0 ₺ Masraf</span>
+                <span>İlk 3 Yıl: Ek Masraf Yok</span>
               </div>
               <strong className="text-white block text-xs">Hosting Kesintisiz Sürer</strong>
               <p className="text-slate-400 leading-relaxed text-[11px]">
-                İlk 3 yıl boyunca yüksek hızlı bulut barındırma, SSL ve alan adı fiyata dahil olmaya devam eder.
+                İlk 3 yıl boyunca (36 ay) ek hosting, SSL ve alan adı yenileme masrafı çıkmaz; siteniz güvenle yayında kalır.
               </p>
             </div>
 
@@ -272,7 +272,23 @@ export const PricingSection: React.FC = () => {
               </div>
               <strong className="text-white block text-xs">Altyapı Yenileme</strong>
               <p className="text-slate-400 leading-relaxed text-[11px]">
-                3 yıl dolduğunda sadece resmî maliyetine alan adı ve bulut barındırma yenileme tarifesi başlar.
+                36 ay yayın tarihinden itibaren başlar. Süre dolduğunda yalnızca resmi maliyetine (~2.500–3.500 ₺/yıl) yenilenir.
+              </p>
+            </div>
+          </div>
+
+          {/* Temerrüt, Erken Çıkış & Kaynak Kod Güvencesi */}
+          <div className="mt-6 pt-5 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-4 text-[11px] text-zinc-400 leading-relaxed">
+            <div className="flex items-start gap-2.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0" />
+              <p>
+                <strong className="text-zinc-200">Taksit Temerrüdü &amp; Alan Adı Güvencesi:</strong> Alan adı her durumda sizindir. Taksit ödemelerinde uzun süreli gecikme olması halinde, yazılı ihtar ve 15 iş günü ek süre sonrasında web yayını geçici olarak askıya alınabilir; ödemenin tamamlanmasıyla yayın yeniden açılır. Askıya alma işlemi alan adı mülkiyetini ve DNS yönetim yetkinizi kesinlikle etkilemez.
+              </p>
+            </div>
+            <div className="flex items-start gap-2.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0" />
+              <p>
+                <strong className="text-zinc-200">Erken Çıkış &amp; Bağımsız Lisans:</strong> 12 aylık taahhüt süresinden önce ayrılmak veya siteyi bağımsız sunucunuza taşımak isterseniz; kalan aylık taksitler ve isteğe bağlı kalıcı kaynak kod lisansı (+%75 lisans devir bedeli) ödenerek tam kod arşivi teslim edilir.
               </p>
             </div>
           </div>
@@ -757,7 +773,7 @@ export const PricingSection: React.FC = () => {
             <div className="p-3.5 rounded-xl bg-black/60 border border-white/[0.08] hover:border-amber-400/30 transition-all space-y-1.5">
               <strong className="text-amber-400 block font-bold text-xs">3 Yıl Sonunda Ne Olur?</strong>
               <p className="text-[11px] text-zinc-300 leading-relaxed">
-                Zorunlu ajans faturası çıkmaz; 4. yıldan itibaren sadece alan adı + bulut sunucu maliyetine (~2.500–3.500 ₺/yıl) devam eder.
+                36 aylık barındırma süresi sitenizin canlıya alındığı yayın tarihinden başlar. 3 yıl dolduğunda zorunlu ajans faturası çıkmaz; sadece resmi alan adı + bulut sunucu maliyetine (~2.500–3.500 ₺/yıl) devam eder.
               </p>
             </div>
 
@@ -771,7 +787,7 @@ export const PricingSection: React.FC = () => {
             <div className="p-3.5 rounded-xl bg-black/60 border border-white/[0.08] hover:border-amber-400/30 transition-all space-y-1.5">
               <strong className="text-amber-400 block font-bold text-xs">Ek Sayfa İhtiyacı</strong>
               <p className="text-[11px] text-zinc-300 leading-relaxed">
-                İhtiyacınız büyüdüğünde sayfa başı ~1.500 ₺ net birim fiyatla modüler olarak kolayca yeni sayfalar eklenir.
+                İhtiyacınız büyüdüğünde sayfa başı ~1.500 ₺ (KDV Hariç) birim fiyatla modüler olarak kolayca yeni sayfalar eklenir.
               </p>
             </div>
 

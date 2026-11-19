@@ -293,7 +293,7 @@ export const TaxCalculatorSection: React.FC = () => {
               <div className="pt-4 border-t border-white/10 mt-4">
                 <div className="flex items-baseline justify-between mb-1">
                   <div className="text-[11px] text-zinc-400">
-                    {treatmentMethod === 'expense' ? 'Tahmini Fiili Net Maliyet:' : '3 Yıl Kümülatif Net Maliyet:'}
+                    {treatmentMethod === 'expense' ? 'Tahmini Net Maliyet:' : '3 Yıl Kümülatif Net Maliyet:'}
                   </div>
                   {treatmentMethod === 'amortization' && (
                     <span className="text-[10px] text-amber-400">

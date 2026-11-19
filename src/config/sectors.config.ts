@@ -276,7 +276,7 @@ export const SECTORS_SEO_DATA: SectorConfig[] = [
     heroSubheadline: 'Talaşlı imalat, kalıp, makine üretimi ve endüstriyel tedarik hizmetlerinizi kurumsal şirketlere ve ihracat alıcılarına tanıtan yüksek hızlı mimari.',
     targetAudience: 'Fabrikalar, talaşlı imalat atölyeleri, kalıp ve plastik üreticileri, makine imalatçıları ve sanayi kuruluşları.',
     badge: 'Fabrika & İmalat Çözümü',
-    relatedDemoSlugs: ['safepoint', 'zirvemakine', 'proguard'],
+    relatedDemoSlugs: ['prometal', 'zirvemakine', 'proteknik'],
     sectorSpecificNeeds: [
       {
         title: 'Makine Parkuru & Teknik Kapasite Listesi',
